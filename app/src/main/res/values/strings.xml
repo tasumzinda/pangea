@@ -1,0 +1,106 @@
+<resources>
+    <string name="app_name">Clinical Site Support</string>
+    <string name="action_settings">Settings</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="lessOne">&lt;1</string>
+    <string name="oneToFour">1-4</string>
+    <string name="fiveToNine">5-9</string>
+    <string name="tenToFourteen">10-14</string>
+    <string name="fifteenToNineteen">15-19</string>
+    <string name="twentyPlus">20&#43;</string>
+    <string name="twentyToTwentyFour">20-24</string>
+    <string name="twentyFiveToTwentyNine">25-49</string>
+    <string name="fiftyPlus">50&#43;</string>
+    <string name="date_format_error">Please enter a valid date in this format: 12/02/2016</string>
+
+    <string name="lessFifteen">&lt;15</string>
+    <string name="fifteenPlus">15&#43;</string>
+    <string name="facility_prompt">Select Facility</string>
+    <string name="testedError">Positive tested can not be larger than tested</string>
+
+    <string name="fhs">FHS</string>
+    <string name="opd">OPD</string>
+    <string name="outreach">Outreach</string>
+    <string name="maternity">Maternity</string>
+    <string name="anc">PNC</string>
+    <string name="inpatient">Inpatient</string>
+    <string name="paediatric">Paediatric</string>
+    <string name="pmtct">PMTCT</string>
+    <string name="tb">TB</string>
+    <string name="sti">STI</string>
+    <string name="tb_unit">TB Unit</string>
+    <string name="viac">VIAC Centre</string>
+    <string name="vmmc">VMMC</string>
+
+    <string name="dsd_indvidual_title">HTC_TST: DSD- Individuals</string>
+    <string name="dsd_indvidual_question_one">1. Number of clients Mobilized for PITC</string>
+    <string name="dsd_indvidual_question_two">2. Number of PITC clients receiving GHE talk and offered HIV testing
+    </string>
+    <string name="dsd_indvidual_question_three">3. Number Eligible for testing:</string>
+    <string name="dsd_indvidual_question_four">5. Total individuals testested for the first time and received their
+        results
+    </string>
+    <string name="dsd_indvidual_question_five">6. First time Individuals Tested</string>
+    <string name="dsd_indvidual_question_six">7.Total Positive First Time Individuals</string>
+    <string name="dsd_indvidual_question_seven">8. Total Retested Individuals</string>
+    <string name="dsd_indvidual_question_eight">9. Total Positive Retested Individuals</string>
+    <string name="dsd_indvidual_question_nine">10. Number of newly identified Positives linked to care</string>
+
+    <string name="dsd_couple_title">HTC_TST: DSD- Individuals</string>
+    <string name="dsd_couple_question_one">1. Couples tested</string>
+    <string name="dsd_couple_question_two">2. Couples Positive</string>
+    <string name="dsd_couple_question_three">3. Discordant Couples:</string>
+
+    <string name="txt_new_title">TX_NEW: DSD</string>
+    <string name="txt_new_question_one">1. Total initiated on ART.</string>
+    <string name="txt_new_question_two">2. Total declined ART</string>
+    <string name="txt_new_question_three">3. Total CD4 Tested.</string>
+    <string name="txt_new_question_four">4. Total viral load tested</string>
+
+    <string name="register_title">Registers</string>
+    <string name="month_report_form_title">Monthly Return Form</string>
+    <string name="register_question_one">1. Number who received their results this month - Individuals</string>
+    <string name="register_question_two">2. Number of clients tested HIV positive this month - Individuals</string>
+    <string name="register_question_three">3. Number who received their results this month - Couples</string>
+    <string name="register_question_four">4. Number of clients tested HIV positive this month - Couples</string>
+    <string name="register_question_five">7. Total initiated on ART</string>
+    <string name="register_question_six">8. Total declined ART</string>
+    <string name="register_question_seven">9. Total CD4 Tested</string>
+    <string name="register_question_eight">10. Total viral load tested</string>
+
+    <string name="pmtct_eid">5. PMTCT_EID</string>
+    <string name="pmtct_stat">6 .PMTCT_STAT</string>
+
+    <string name="tx_ret_question_one">Disaggregation Numerator</string>
+    <string name="tx_ret_question_two">Disaggregation Denominator</string>
+
+    <string name="disaggregation">Fine Disaggregation by Age Male and Female</string>
+
+    <string name="entry_point">Disaggregated by Facility Delivery Point Number tested and number tested positive
+    </string>
+    <string name="pitc_positive">1. PITC Inpatient Services Disaggregated by Age/Sex/Result - Positive</string>
+    <string name="pitc_negative">2. PITC Inpatient Services Disaggregated by Age/Sex/Result - Negative</string>
+    <string name="tb_clinics_positive">3. PITC TB Clinics Disaggregated by Age/Sex/Result - Positive</string>
+    <string name="tb_clinics_negative">4. PITC TB Clinics Disaggregated by Age/Sex/Result - Negative</string>
+    <string name="anc_clinics_negative">6. PITC PMTCT (ANC Only) Clinics Disaggregated by Age/Sex/Result - Negative</string>
+    <string name="anc_clinics_positive">5. PITC PMTCT (ANC Only) Clinics Disaggregated by Age/Sex/Result - Positive</string>
+    <string name="pitc_positive_label">Positive &lt; 5</string>
+    <string name="pitc_negative_label">Negative &lt; 5</string>
+
+    <string name="tx_pvls_question_one">Routine Numerator Disaggregation</string>
+    <string name="tx_pvls_question_two">Targeted Numerator Disaggregation</string>
+    <string name="tx_pvls_question_three">Routine Denominator Disaggregation</string>
+    <string name="tx_pvls_question_four">Targeted Denominator Disaggregation</string>
+    <string name="tb_stat_question_one">3.1 Known HIV-Positive At Service Entry</string>
+    <string name="tb_stat_question_two">3.2 New HIV Tested Positive</string>
+    <string name="tb_stat_question_three">3.3 HIV Tested Negative</string>
+    <string name="tb_stat_question_four">Total Number Of New TB Cases</string>
+    <string name="title_activity_htctst">HTCTSTActivity</string>
+    <string name="numerator_disaggregation">Numerator Disaggregation</string>
+    <string name="denominator_disaggregation">Denominator Disagregation</string>
+    <string name="known_positives">Known Positives</string>
+    <string name="new_positives">Newly Tested Positives</string>
+    <string name="new_negatives">New Negatives</string>
+
+</resources>

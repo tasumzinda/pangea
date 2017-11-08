@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar" />
+
+        <Button
+            android:id="@+id/btn_submit"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selectable_item_background"
+            android:text="Submit"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:text="Description: Percentage of registered new and relapse TB cases with documented HIV status"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/TextViewInputStyle"
+            android:text="Select Facility"></TextView>
+
+        <Spinner
+            android:id="@+id/facility"
+            style="@style/SpinnerStyle" />
+        <EditText
+                android:id="@+id/facility_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+            style="@style/TextViewInputStyle"
+            android:text="Select Period"></TextView>
+
+        <Spinner
+            android:id="@+id/period"
+            style="@style/SpinnerStyle" />
+
+        <TextView
+            style="@style/TextViewInputStyle"
+            android:text="Date Completed" />
+
+        <EditText
+            android:id="@+id/dateCreated"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Date Completed" />
+
+        <TextView
+            style="@style/TextViewInputStyle"
+            android:text="Name" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_span="2"
+                android:text="The number of registered new and relapse TB cases with documented HIV test results during the reporting period."
+                android:textStyle="bold" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dip">
+
+                <TextView
+                    style="@style/TextViewInputStyle"
+                    android:text="Numerator" />
+
+                <EditText
+                    android:id="@+id/numerator"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+
+            </TableRow>
+                <Button
+                        android:id="@+id/btn_known_hiv_positive"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Question_1" />
+                <Button
+                        android:id="@+id/btn_new_hiv_positive"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Question_1" />
+                <Button
+                        android:id="@+id/btn_tested_hiv_negative"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Question_1" />
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="?android:attr/dividerHorizontal" />
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_span="2"
+                    android:text="Total number of new and relapsed TB cases, during the reporting period."
+                    android:textStyle="bold" />
+            <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip">
+
+                <TextView
+                        style="@style/TextViewInputStyle"
+                        android:text="Denominator" />
+
+                <EditText
+                        android:id="@+id/denominator"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number" />
+
+            </TableRow>
+            <Button
+                    android:id="@+id/btn_denom_disagg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Question_1" />
+            <!--<Button
+                    android:id="@+id/btn_new_tb_cases"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Question_1" />-->
+            <Button
+                android:id="@+id/btn_save"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/selectable_item_background"
+                android:text="Save"
+                android:textColor="@color/white" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/dividerHorizontal" />
+
+            <Button
+                android:id="@+id/btn_completed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@null"
+                android:drawablePadding="16dp"
+                android:drawableTop="@mipmap/ic_check"
+                android:text="Submitted"
+                android:textAllCaps="false"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
+
+        </TableLayout>
+
+
+    </LinearLayout>
+</ScrollView>

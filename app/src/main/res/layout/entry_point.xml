@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_name"
+                style="@style/TextViewStyle"></TextView>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:text=""
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:text="Tested"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:text="Tested Positive"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/opd" />
+
+                    <EditText
+                        android:id="@+id/testedOPD"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number" />
+
+                    <EditText
+                        android:id="@+id/positiveTestedOPD"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/outreach" />
+
+                    <EditText
+                        android:id="@+id/testedOutreach"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number" />
+
+                    <EditText
+                        android:id="@+id/positiveTestedOutreach"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/anc" />
+
+                    <EditText
+                        android:id="@+id/testedANC"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number" />
+
+                    <EditText
+                        android:id="@+id/positiveTestedANC"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/inpatient" />
+
+                    <EditText
+                        android:id="@+id/testedInpatient"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number" />
+
+                    <EditText
+                        android:id="@+id/positiveTestedInpatient"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/paediatric" />
+
+                    <EditText
+                        android:id="@+id/testedPaediatric"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number" />
+
+                    <EditText
+                        android:id="@+id/positiveTestedPaediatric"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pmtct" />
+
+                    <EditText
+                        android:id="@+id/testedPMTCT"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number" />
+
+                    <EditText
+                        android:id="@+id/positiveTestedPMTCT"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sti" />
+
+                    <EditText
+                        android:id="@+id/testedSTI"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number" />
+
+                    <EditText
+                        android:id="@+id/positiveTestedSTI"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tb" />
+
+                    <EditText
+                        android:id="@+id/testedTB"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number" />
+
+                    <EditText
+                        android:id="@+id/positiveTestedTB"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/viac" />
+
+                    <EditText
+                        android:id="@+id/testedVIAC"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number" />
+
+                    <EditText
+                        android:id="@+id/positiveTestedVIAC"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/vmmc" />
+
+                    <EditText
+                        android:id="@+id/testedVMMC"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number" />
+
+                    <EditText
+                        android:id="@+id/positiveTestedVMMC"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number" />
+
+                </TableRow>
+
+                <Button
+                    android:id="@+id/btn_save"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Save" />
+
+            </TableLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

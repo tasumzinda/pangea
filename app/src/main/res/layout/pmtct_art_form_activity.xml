@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar" />
+
+        <Button
+            android:id="@+id/btn_submit"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selectable_item_background"
+            android:text="Submit"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:text="PMTCT ART Form"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/TextViewInputStyle"
+            android:text="Select Facility"></TextView>
+
+        <Spinner
+            android:id="@+id/facility"
+            style="@style/SpinnerStyle" />
+        <EditText
+                android:id="@+id/facility_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+            style="@style/TextViewInputStyle"
+            android:text="Select Period"></TextView>
+
+        <Spinner
+            android:id="@+id/period"
+            style="@style/SpinnerStyle" />
+
+        <TextView
+            style="@style/TextViewInputStyle"
+            android:text="Date Completed" />
+
+        <EditText
+            android:id="@+id/dateCreated"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Date Completed" />
+
+        <TextView
+            style="@style/TextViewInputStyle"
+            android:text="Name" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dip">
+
+                <TextView
+                    style="@style/TextViewInputStyle"
+                    android:text="Numerator"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/activity_height" />
+
+                <EditText
+                    android:id="@+id/numerator"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dip">
+
+                <TextView
+                    style="@style/TextViewInputStyle"
+                    android:text="Life-long ART – New"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/activity_height" />
+
+                <EditText
+                    android:id="@+id/artnew"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dip">
+
+                <TextView
+                    style="@style/TextViewInputStyle"
+                    android:text="Life-long ART – Already on Treatment"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/activity_height" />
+
+                <EditText
+                    android:id="@+id/artTreatment"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+
+            </TableRow>
+
+            <Button
+                android:id="@+id/btn_save"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/selectable_item_background"
+                android:text="Save"
+                android:textColor="@color/white" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/dividerHorizontal" />
+
+            <Button
+                android:id="@+id/btn_completed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@null"
+                android:drawablePadding="16dp"
+                android:drawableTop="@mipmap/ic_check"
+                android:text="Submitted"
+                android:textAllCaps="false"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
+
+        </TableLayout>
+
+    </LinearLayout>
+</ScrollView>

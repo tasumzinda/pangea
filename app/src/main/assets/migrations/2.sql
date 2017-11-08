@@ -1,0 +1,1 @@
+                 alter table tx_new add column confirmedTB bigint;

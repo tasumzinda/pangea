@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <include layout="@layout/toolbar" />
+
+        <Button
+                android:id="@+id/btn_submit"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/selectable_item_background"
+                android:text="Submit"
+                android:textColor="@color/white" />
+
+        <TextView
+                style="@style/TextViewInputStyle"
+                android:text="Select Facility"></TextView>
+
+        <Spinner
+                android:id="@+id/facility"
+                style="@style/SpinnerStyle" />
+        <EditText
+                android:id="@+id/facility_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+                style="@style/TextViewInputStyle"
+                android:text="Select Period"></TextView>
+
+        <Spinner
+                android:id="@+id/period"
+                style="@style/SpinnerStyle" />
+
+        <TextView
+                style="@style/TextViewInputStyle"
+                android:text="Date Completed" />
+
+        <EditText
+                android:id="@+id/dateCreated"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Date Completed" />
+
+        <TextView
+                style="@style/TextViewInputStyle"
+                android:text="Name" />
+
+        <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Name" />
+        <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_span="2"
+                android:textStyle="bold"
+                android:text="Number of individuals who received HIV Testing Services(HTS) and received their results" />
+
+        <TextView
+                style="@style/TextViewInputStyle"
+                android:text="Numerator" />
+
+        <EditText
+                android:id="@+id/numerator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Numerator"
+                android:inputType="number" />
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="?android:attr/dividerHorizontal" />
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_span="2"
+                    android:textStyle="bold"
+                    android:text="PITC Inpatient Services" />
+        <Button
+                android:id="@+id/btn_pitc_positive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        <Button
+                android:id="@+id/btn_pitc_negative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="?android:attr/dividerHorizontal" />
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_span="2"
+                android:textStyle="bold"
+                android:textSize="17dp"
+                android:text="PITC Paediatric (Under 5 or EPI) Services Disaggregated by Age/Result" />
+            <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip">
+
+                <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pitc_positive_label"
+                        android:textStyle="bold"
+                        android:paddingBottom="@dimen/activity_height" />
+
+                <EditText
+                        android:id="@+id/pitc_positive"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:hint="P"
+                        android:inputType="number" />
+
+            </TableRow>
+
+            <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip">
+
+                <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pitc_negative_label"
+                        android:textStyle="bold"
+                        android:paddingBottom="@dimen/activity_height" />
+
+                <EditText
+                        android:id="@+id/pitc_negative"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:hint="N"
+                        android:inputType="number" />
+
+            </TableRow>
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="?android:attr/dividerHorizontal" />
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_span="2"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:text="PITC Malnutrition Clinics" />
+            <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip">
+
+                <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pitc_positive_label"
+                        android:textStyle="bold"
+                        android:paddingBottom="@dimen/activity_height" />
+
+                <EditText
+                        android:id="@+id/malnutritionPositive"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:hint="P"
+                        android:inputType="number" />
+
+            </TableRow>
+
+            <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip">
+
+                <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="@string/pitc_negative_label"
+                        android:paddingBottom="@dimen/activity_height" />
+
+                <EditText
+                        android:id="@+id/malnutritionNegative"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:hint="N"
+                        android:inputType="number" />
+
+            </TableRow>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="?android:attr/dividerHorizontal" />
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_span="2"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:text="PITC TB Clinics" />
+            <Button
+                    android:id="@+id/btn_tb_clinics_positive"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            <Button
+                    android:id="@+id/btn_tb_clinics_negative"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="?android:attr/dividerHorizontal" />
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_span="2"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:text="PITC PMTCT ANC ONLY Clinics" />
+
+            <Button
+                    android:id="@+id/btn_anc_clinics_positive"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            <Button
+                    android:id="@+id/btn_anc_clinics_negative"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="?android:attr/dividerHorizontal" />
+
+            <Button
+                    android:id="@+id/btn_save"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/selectable_item_background"
+                    android:text="Save"
+                    android:textColor="@color/white" />
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="?android:attr/dividerHorizontal" />
+
+            <Button
+                    android:id="@+id/btn_completed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@null"
+                    android:drawablePadding="16dp"
+                    android:drawableTop="@mipmap/ic_check"
+                    android:text="Submitted"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp" />
+
+        </TableLayout>
+
+    </LinearLayout>
+</ScrollView>

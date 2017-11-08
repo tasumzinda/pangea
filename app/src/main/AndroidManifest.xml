@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="zw.co.ncmp">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+    <application
+            android:name=".business.NCMP"
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme">
+        <meta-data android:name="AA_DB_NAME" android:value="ncmp.db" />
+        <meta-data android:name="AA_DB_VERSION" android:value="2" />
+        <activity
+                android:name=".StartActivity"
+                android:label="@string/app_name"
+                android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".MainActivity"
+                android:label="@string/app_name"
+                android:theme="@style/AppTheme">
+        </activity>
+        <activity
+                android:name=".FacilityActivity"
+                android:label="@string/app_name"
+                android:theme="@style/AppTheme">
+        </activity>
+        <activity
+                android:name=".FacilityListActivity"
+                android:label="@string/app_name"
+                android:theme="@style/AppTheme">
+        </activity>
+        <activity
+                android:name=".FacilityViewActivity"
+                android:label="@string/app_name"
+                android:theme="@style/AppTheme">
+        </activity>
+        <activity
+                android:name=".FacilityChallengeActivity"
+                android:label="@string/app_name"
+                android:theme="@style/AppTheme">
+        </activity>
+        <activity
+                android:name=".FacilityChallengeReviewActivity"
+                android:label="@string/app_name"
+                android:theme="@style/AppTheme">
+        </activity>
+        <activity
+                android:name=".FacilityChallengeReviewListActivity"
+                android:label="@string/app_name"
+                android:theme="@style/AppTheme">
+        </activity>
+        <activity
+                android:name=".FacilityChallengeListActivity"
+                android:label="@string/app_name"
+                android:theme="@style/AppTheme">
+        </activity>
+        <activity
+                android:name=".VisitReportActivity"
+                android:label="@string/app_name"
+                android:theme="@style/AppTheme">
+        </activity>
+        <activity
+                android:name=".VisitReportListActivity"
+                android:label="@string/app_name"
+                android:theme="@style/AppTheme">
+        </activity>
+        <activity
+                android:name=".MentorActivity"
+                android:label="@string/app_name"
+                android:theme="@style/AppTheme">
+        </activity>
+        <activity
+                android:name=".MentorListActivity"
+                android:label="@string/app_name">
+        </activity>
+        <activity
+                android:name=".MenteeActivity"
+                android:label="@string/app_name">
+        </activity>
+        <activity
+                android:name=".MenteeListActivity"
+                android:label="@string/app_name">
+        </activity>
+        <activity
+                android:name=".SettingsActivity"
+                android:label="@string/app_name">
+        </activity>
+        <activity
+                android:name=".LoginActivity"
+                android:label="@string/app_name">
+        </activity>
+        <activity
+                android:name=".CaseFileActivity"
+                android:label="@string/app_name">
+        </activity>
+        <activity
+                android:name=".CaseFileViewActivity"
+                android:label="@string/app_name">
+        </activity>
+        <activity
+                android:name=".CaseFileListActivity"
+                android:label="@string/app_name">
+        </activity>
+        <activity
+                android:name=".CaseMenteeListActivity"
+                android:label="@string/app_name">
+        </activity>
+        <activity
+                android:name=".CaseMentorListActivity"
+                android:label="@string/app_name">
+        </activity>
+        <activity
+                android:name=".ChangePasswordActivity"
+                android:label="@string/app_name">
+        </activity>
+        <activity
+                android:name=".ARTFormActivity"
+                android:label="@string/app_name">
+        </activity>
+        <activity
+                android:name=".StatFormActivity"
+                android:label="@string/app_name">
+        </activity>
+        <activity
+                android:name=".ScreenFormActivity"
+                android:label="@string/app_name">
+        </activity>
+        <activity
+                android:name=".ARTFormListActivity"
+                android:label="@string/app_name">
+        </activity>
+        <activity
+                android:name=".ScreenFormListActivity"
+                android:label="@string/app_name">
+        </activity>
+        <activity
+                android:name=".StatFormListActivity"
+                android:label="@string/app_name">
+        </activity>
+        <activity
+                android:name=".TBSelectionActivity"
+                android:label="@string/app_name">
+        </activity>
+        <activity
+                android:name=".DSDSelectionActivity"
+                android:label="@string/app_name">
+        </activity>
+        <activity
+                android:name=".ODSVSelectionActivity"
+                android:label="@string/app_name">
+        </activity>
+        <activity
+                android:name=".DSDIndividualActivity"
+                android:label="@string/app_name">
+        </activity>
+        <activity
+                android:name=".MonthReportFormActivity"
+                android:label="@string/app_name">
+        </activity>
+        <activity
+                android:name=".RegisterFormActivity"
+                android:label="@string/app_name">
+        </activity>
+        <activity
+                android:name=".TXTNewActivity"
+                android:label="@string/app_name">
+        </activity>
+        <activity
+                android:name=".DSDIndiviudalListActivity"
+                android:label="@string/app_name">
+        </activity>
+        <activity
+                android:name=".MonthReportFormListActivity"
+                android:label="@string/app_name">
+        </activity>
+        <activity
+                android:name=".RegisterFormListActivity"
+                android:label="@string/app_name">
+        </activity>
+        <activity
+                android:name=".DSDFlowPager"
+                android:label="@string/app_name">
+        </activity>
+        <activity
+                android:name=".TXTNewListActivity"
+                android:label="@string/app_name">
+        </activity>
+        <activity
+                android:name=".PMTCTARTFormListActivity"
+                android:label="@string/app_name"/>
+        <activity
+                android:name=".PMTCTARTFormActivity"
+                android:label="@string/app_name"/>
+        <activity
+                android:name=".PMTCTOFormActivity"
+                android:label="@string/app_name"/>
+        <activity
+                android:name=".PMTCTFOFormListActivity"
+                android:label="@string/app_name"/>
+        <activity
+                android:name=".SupplementaryIndicatorFormListActivity"
+                android:label="@string/app_name"/>
+        <activity
+                android:name=".SupplementaryIndicatorFormActivity"
+                android:label="@string/app_name"/>
+        <activity
+                android:name=".TXCURRFormListActivity"
+                android:label="@string/app_name"/>
+        <activity
+                android:name=".TXCURRFormActivity"
+                android:label="@string/app_name"/>
+        <activity
+                android:name=".TXPLSVFormListActivity"
+                android:label="@string/app_name"/>
+        <activity
+                android:name=".TXPLSVFormActivity"
+                android:label="@string/app_name"/>
+        <activity
+                android:name=".TXRETFormListActivity"
+                android:label="@string/app_name"/>
+        <activity
+                android:name=".TXRETFormActivity"
+                android:label="@string/app_name"/>
+
+        <service android:name=".network.PushPullService"/>
+
+        <activity
+                android:name=".HTCTSTActivity"
+                android:label="@string/title_activity_htctst"
+                android:theme="@style/AppTheme">
+        </activity>
+        <activity android:name=".HTCTListActivity"/>
+        <activity android:name=".PMTCTStatActivity"/>
+        <activity android:name=".PMTCTStatListActivity"/>
+        <activity android:name=".PMTCTEIDFormActivity"/>
+        <activity android:name=".PMTCTEIDFormListActivity"/>
+        <activity android:name=".TXNewActivity"/>
+        <activity android:name=".TXNewListActivity"/>
+        <activity android:name=".CommunityBasedDSDActivity"/>
+        <activity android:name=".CommunityBasedDSDListActivity"/>
+        <activity android:name=".COP16SelectionActivity"/>
+        <activity android:name=".COP17SelectionActivity"/>
+        <activity android:name=".DSDIndividualCOP17Activity"/>
+        <activity android:name=".DSDIndividualCOP17ListActivity"/>
+        <activity android:name=".COP17TXNewActivity"/>
+        <activity android:name=".COP17TXNewListActivity"/>
+    </application>
+
+</manifest>

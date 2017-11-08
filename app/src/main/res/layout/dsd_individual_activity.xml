@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar" />
+
+        <TextView
+            android:id="@+id/txt_name"
+            style="@style/TextViewStyle"
+            android:text="@string/dsd_indvidual_title"></TextView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/dividerHorizontal" />
+
+        <Button
+            android:id="@+id/btn_submit"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selectable_item_background"
+            android:text="Submit"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:text="Description: Number of individuals who received HIV Testing and Counselling (HTC) services for HIV and received their test results"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/TextViewInputStyle"
+            android:text="Select Facility"></TextView>
+
+        <Spinner
+            android:id="@+id/facility"
+            style="@style/SpinnerStyle" />
+        <EditText
+                android:id="@+id/facility_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+            style="@style/TextViewInputStyle"
+            android:text="Start Date:" />
+
+        <EditText
+            android:id="@+id/startDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Start" />
+
+        <TextView
+            style="@style/TextViewInputStyle"
+            android:text="End Date" />
+
+        <EditText
+            android:id="@+id/endDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="End" />
+
+        <TextView
+            style="@style/TextViewInputStyle"
+            android:text="Date Completed" />
+
+        <EditText
+            android:id="@+id/dateCreated"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Date Completed" />
+
+        <TextView
+            style="@style/TextViewInputStyle"
+            android:text="Name" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_question_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Question_1" />
+
+            <Button
+                android:id="@+id/btn_question_two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Question_2" />
+
+            <Button
+                android:id="@+id/btn_question_three"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Question_3" />
+
+            <Button
+                android:id="@+id/btn_question_four"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Question_4" />
+
+            <Button
+                android:id="@+id/btn_question_five"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Question_5" />
+
+            <Button
+                android:id="@+id/btn_question_six"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Question_6" />
+
+            <Button
+                android:id="@+id/btn_question_seven"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Question_7" />
+
+            <Button
+                android:id="@+id/btn_question_eight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Question_8" />
+            <Button
+                    android:id="@+id/btn_question_ten"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Question_10" />
+
+            <Button
+                android:id="@+id/btn_question_nine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/entry_point" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_span="2"
+                android:text="Couples Testing"
+                android:textStyle="bold" />
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dip">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:text="Total Couples Tested"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/couplesTested"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dip">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:text="Total Couples Tested Positive"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/couplesPositiveTested"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dip">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:text="Total Couples With Discordant Results"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/couplesDiscordantTested"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+
+            </TableRow>
+
+            <Button
+                android:id="@+id/btn_save"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/selectable_item_background"
+                android:text="Save"
+                android:textColor="@color/white" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/dividerHorizontal" />
+
+            <Button
+                android:id="@+id/btn_completed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@null"
+                android:drawablePadding="16dp"
+                android:drawableTop="@mipmap/ic_check"
+                android:text="Submitted"
+                android:textAllCaps="false"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
+
+        </TableLayout>
+    </LinearLayout>
+</ScrollView>

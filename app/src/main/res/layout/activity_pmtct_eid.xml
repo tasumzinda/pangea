@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+    <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent">
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <include layout="@layout/toolbar" />
+
+            <Button
+                    android:id="@+id/btn_submit"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/selectable_item_background"
+                    android:text="Submit"
+                    android:textColor="@color/white" />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:text="Description: PMTCT EID"
+                    android:textStyle="bold" />
+
+            <TextView
+                    style="@style/TextViewInputStyle"
+                    android:text="Select Facility"></TextView>
+
+            <Spinner
+                    android:id="@+id/facility"
+                    style="@style/SpinnerStyle" />
+            <EditText
+                    android:id="@+id/facility_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    style="@style/TextViewInputStyle"
+                    android:text="Select Period"></TextView>
+
+            <Spinner
+                    android:id="@+id/period"
+                    style="@style/SpinnerStyle" />
+
+            <TextView
+                    style="@style/TextViewInputStyle"
+                    android:text="Date Completed" />
+
+            <EditText
+                    android:id="@+id/dateCreated"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Date Completed" />
+
+            <TextView
+                    style="@style/TextViewInputStyle"
+                    android:text="Name" />
+
+            <EditText
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Name" />
+
+            <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_span="2"
+                        android:textStyle="bold"
+                        android:textSize="17dp"
+                        android:text="Number of infants who had a virologic HIV test within 12 months of birth during the reporting period. Numerator will auto-calculate from the Infant Test Results." />
+
+                <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dip">
+
+                    <TextView
+                            style="@style/TextViewStyle1"
+                            android:text="Numerator"/>
+
+                    <TextView
+                            android:layout_width="250dp"
+                            android:id="@id/numerator"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:paddingBottom="@dimen/fab_margin" />
+                </TableRow>
+
+                <!--<TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dip">
+
+                    <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="60dp"
+                            android:textAllCaps="true"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:text="Infants who received their first virologic test within:"/>
+
+                    <TextView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:textAllCaps="true"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:text="0 - 2 Months"
+                            android:layout_marginStart="5dp"
+                            android:paddingBottom="@dimen/fab_margin" />
+                    <TextView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:textAllCaps="true"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:text="2 - 12 Months"
+                            android:paddingBottom="@dimen/fab_margin" />
+
+                </TableRow>
+
+                <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dip">
+
+                    <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="60dp"
+                            android:textAllCaps="true"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:text="Positive"/>
+
+                    <EditText
+                            android:id="@+id/positiveZeroToTwo"
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number" />
+                    <EditText
+                            android:id="@+id/positiveTwoToTwelve"
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number" />
+                </TableRow>
+                <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dip">
+
+                    <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="60dp"
+                            android:textAllCaps="true"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:text="Negative" />
+
+                    <EditText
+                            android:id="@+id/negativeZeroToTwo"
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number" />
+                    <EditText
+                            android:id="@+id/negativeTwoToTwelve"
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number" />
+                </TableRow>
+                <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dip">
+
+                    <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="60dp"
+                            android:textAllCaps="true"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:text="Collected/Send but no result recorded"/>
+
+                    <EditText
+                            android:id="@+id/collectedZeroToTwo"
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number" />
+                    <EditText
+                            android:id="@+id/collectedTwoToTwelve"
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number" />
+                </TableRow>-->
+                <Button
+                        android:id="@+id/btn_question_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+
+                <Button
+                        android:id="@+id/btn_save"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Save" />
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="?android:attr/dividerHorizontal" />
+
+                <Button
+                        android:id="@+id/btn_completed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@null"
+                        android:drawablePadding="16dp"
+                        android:drawableTop="@mipmap/ic_check"
+                        android:text="Submitted"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/black"
+                        android:textSize="24sp" />
+
+            </TableLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

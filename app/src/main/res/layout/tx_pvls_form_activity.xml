@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar" />
+
+        <Button
+            android:id="@+id/btn_submit"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selectable_item_background"
+            android:text="Submit"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:text="TX PVLS Form"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/TextViewInputStyle"
+            android:text="Select Facility"></TextView>
+
+        <Spinner
+            android:id="@+id/facility"
+            style="@style/SpinnerStyle" />
+        <EditText
+                android:id="@+id/facility_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+            style="@style/TextViewInputStyle"
+            android:text="Select Period"></TextView>
+
+        <Spinner
+            android:id="@+id/period"
+            style="@style/SpinnerStyle" />
+
+        <TextView
+            style="@style/TextViewInputStyle"
+            android:text="Date Completed" />
+
+        <EditText
+            android:id="@+id/dateCreated"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Date Completed" />
+
+        <TextView
+            style="@style/TextViewInputStyle"
+            android:text="Name" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/TextViewInputStyle"
+                android:text="Numerator"></TextView>
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Routine"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textSize="17dp"
+                android:paddingBottom="@dimen/fab_margin" />
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dip">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Routine Numerator Pregnant"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:paddingBottom="@dimen/activity_height" />
+
+                <EditText
+                    android:id="@+id/routineNumeratorPregnant"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:hint="P"
+                    android:inputType="number" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dip">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Routine Numerator Breast Feeding"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:paddingBottom="@dimen/activity_height" />
+
+                <EditText
+                    android:id="@+id/routineNumeratorBreastFeeding"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:hint="BF"
+                    android:inputType="number" />
+
+            </TableRow>
+
+            <Button
+                android:id="@+id/btn_question_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="One" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="?android:attr/dividerHorizontal" />
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Targeted"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textSize="17dp"
+                android:paddingBottom="@dimen/fab_margin" />
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dip">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Targeted Numerator Pregnant"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:paddingBottom="@dimen/activity_height" />
+
+                <EditText
+                    android:id="@+id/targetNumeratorPregnant"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:hint="P"
+                    android:inputType="number" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dip">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Targeted Numerator Breast Feeding"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:paddingBottom="@dimen/activity_height" />
+
+                <EditText
+                    android:id="@+id/targetNumeratorBreastFeeding"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:hint="BF"
+                    android:inputType="number" />
+
+            </TableRow>
+
+            <Button
+                android:id="@+id/btn_question_two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Two" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="?android:attr/dividerHorizontal" />
+
+            <TextView
+                style="@style/TextViewInputStyle"
+                android:text="Denominator"></TextView>
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Routine"
+                android:textStyle="bold"
+                android:textSize="17dp"
+                android:textAllCaps="true"
+                android:paddingBottom="@dimen/fab_margin" />
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dip">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Routine Denominator Pregnant"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:textAllCaps="true"
+                    android:paddingBottom="@dimen/activity_height" />
+
+                <EditText
+                    android:id="@+id/routineDenominatorPregnant"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:hint="P"
+                    android:inputType="number" />
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dip">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Routine Denominator Breast Feeding"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:textAllCaps="true"
+                    android:paddingBottom="@dimen/activity_height" />
+
+                <EditText
+                    android:id="@+id/routineDenominatorBreastFeeding"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:hint="BF"
+                    android:inputType="number" />
+
+            </TableRow>
+
+            <Button
+                android:id="@+id/btn_question_three"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Three" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="?android:attr/dividerHorizontal" />
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Targeted"
+                android:textStyle="bold"
+                android:textSize="17dp"
+                android:textAllCaps="true"
+                android:paddingBottom="@dimen/fab_margin" />
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dip">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Targeted Denominator Pregnant"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:textAllCaps="true"
+                    android:paddingBottom="@dimen/activity_height" />
+
+                <EditText
+                    android:id="@+id/targetDenominatorPregnant"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:hint="P"
+                    android:inputType="number" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dip">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Targeted Denominator Breast Feeding"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:textAllCaps="true"
+                    android:paddingBottom="@dimen/activity_height" />
+
+                <EditText
+                    android:id="@+id/targetDenominatorBreastFeeding"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:hint="BF"
+                    android:inputType="number" />
+
+            </TableRow>
+
+            <Button
+                android:id="@+id/btn_question_four"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Four" />
+
+            <Button
+                android:id="@+id/btn_save"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/selectable_item_background"
+                android:text="Save"
+                android:textColor="@color/white" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/dividerHorizontal" />
+
+            <Button
+                android:id="@+id/btn_completed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@null"
+                android:drawablePadding="16dp"
+                android:drawableTop="@mipmap/ic_check"
+                android:text="Submitted"
+                android:textAllCaps="false"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
+
+        </TableLayout>
+
+    </LinearLayout>
+</ScrollView>

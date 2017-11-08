@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_name"
+                style="@style/TextViewStyle"></TextView>
+
+            <TableLayout
+                android:id="@+id/tableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:text=""
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:text="Female"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:text="Male"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lessFifteen" />
+
+                    <EditText
+                        android:id="@+id/femaleFifteenLess"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:hint="F"
+                        android:inputType="number" />
+
+                    <EditText
+                        android:id="@+id/maleFifteenLess"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:hint="M"
+                        android:inputType="number" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fifteenPlus" />
+
+                    <EditText
+                        android:id="@+id/femaleFifteenPlus"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:hint="F"
+                        android:inputType="number" />
+
+                    <EditText
+                        android:id="@+id/maleFifteenPlus"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:hint="M"
+                        android:inputType="number" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip">
+
+                    <TextView
+                        style="@style/TextViewInputStyle"
+                        android:text="Total" />
+
+                    <TextView
+                        android:id="@+id/femaleTotal"
+                        style="@style/TextViewInputStyle"
+                        android:text="Total" />
+
+                    <TextView
+                        android:id="@+id/maleTotal"
+                        style="@style/TextViewInputStyle"
+                        android:text="Total" />
+
+                </TableRow>
+
+                <Button
+                    android:id="@+id/btn_save"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Save" />
+
+            </TableLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

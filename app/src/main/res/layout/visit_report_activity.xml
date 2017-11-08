@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin">
+
+            <TextView
+                android:id="@+id/txt_name"
+                style="@style/TextViewStyle"></TextView>
+
+            <Button
+                android:id="@+id/btn_load"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select Focus Areas" />
+
+            <TextView
+                android:id="@+id/txt_other"
+                style="@style/TextViewInputStyle"
+                android:text="Please Specify/Describe Focus Area"></TextView>
+
+            <EditText
+                android:id="@+id/others"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top|left"
+                android:hint="Describe the Challenge"
+                android:inputType="textMultiLine"
+                android:lines="5"
+                android:scrollHorizontally="false" />
+
+            <TextView
+                style="@style/TextViewInputStyle"
+                android:text="Additional Comments"></TextView>
+
+            <EditText
+                android:id="@+id/comments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top|left"
+                android:hint="Additional Comments"
+                android:inputType="textMultiLine"
+                android:lines="5"
+                android:scrollHorizontally="false" />
+
+            <TextView
+                style="@style/TextViewInputStyle"
+                android:text="Observation"></TextView>
+
+            <EditText
+                android:id="@+id/observation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top|left"
+                android:hint="Observation Notes"
+                android:inputType="textMultiLine"
+                android:lines="5"
+                android:scrollHorizontally="false" />
+
+            <TextView
+                style="@style/TextViewInputStyle"
+                android:text="DETAIL OF ACTION TAKEN"></TextView>
+
+            <EditText
+                android:id="@+id/action_taken"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top|left"
+                android:hint="Describe in detail the action taken"
+                android:inputType="textMultiLine"
+                android:lines="5"
+                android:scrollHorizontally="false" />
+
+            <TextView
+                style="@style/TextViewInputStyle"
+                android:text="Recommendations"></TextView>
+
+            <EditText
+                android:id="@+id/recommendations"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top|left"
+                android:hint="Recommendations"
+                android:inputType="textMultiLine"
+                android:lines="5"
+                android:scrollHorizontally="false" />
+
+            <TextView
+                style="@style/TextViewInputStyle"
+                android:text="Time Spent at Facility"></TextView>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/hours"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Hours"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/minutes"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:hint="Minutes"
+                    android:inputType="number" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Save" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
+

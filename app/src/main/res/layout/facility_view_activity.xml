@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <TextView
+            android:id="@+id/txt_name"
+            style="@style/TextViewStyle"></TextView>
+
+        <Button
+            android:id="@+id/btn_add_case_file"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Check In" />
+
+        <Button
+            android:id="@+id/btn_view_case_files"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SITE SUPPORT REPORTS" />
+
+        <Button
+            android:id="@+id/btn_load"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="FACILITY CHALLENGES" />
+
+        <Button
+            android:id="@+id/btn_view_mentees"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="FACILITY STAFF" />
+
+        <ListView
+            android:id="@+id/case_file_list_View"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="10.0sp"></ListView>
+
+    </LinearLayout>
+</LinearLayout>

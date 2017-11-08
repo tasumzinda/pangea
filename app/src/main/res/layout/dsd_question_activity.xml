@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_name"
+                style="@style/TextViewStyle"></TextView>
+
+            <TableLayout
+                android:id="@+id/tableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:text=""
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:text="Female"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:text="Male"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lessOne" />
+
+                    <EditText
+                        android:id="@+id/femaleLessThanOne"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:hint="F"
+                        android:inputType="number" />
+
+                    <EditText
+                        android:id="@+id/maleLessThanOne"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:hint="M"
+                        android:inputType="number" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/oneToFour" />
+
+                    <EditText
+                        android:id="@+id/femaleOneToFour"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:hint="F"
+                        android:inputType="number" />
+
+                    <EditText
+                        android:id="@+id/maleOneToFour"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:hint="M"
+                        android:inputType="number" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fiveToNine" />
+
+                    <EditText
+                        android:id="@+id/femaleFiveToNine"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:hint="F"
+                        android:inputType="number" />
+
+                    <EditText
+                        android:id="@+id/maleFiveToNine"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:hint="M"
+                        android:inputType="number" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tenToFourteen" />
+
+                    <EditText
+                        android:id="@+id/femaleTenToFourteen"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:hint="F"
+                        android:inputType="number" />
+
+                    <EditText
+                        android:id="@+id/maleTenToFourteen"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:hint="M"
+                        android:inputType="number" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fifteenToNineteen" />
+
+                    <EditText
+                        android:id="@+id/femaleFifteenToNineteen"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:hint="F"
+                        android:inputType="number" />
+
+                    <EditText
+                        android:id="@+id/maleFifteenToNineteen"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:hint="M"
+                        android:inputType="number" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/twentyToTwentyFour" />
+
+                    <EditText
+                        android:id="@+id/femaleTwentyToTwentyFour"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:hint="M"
+                        android:inputType="number" />
+
+                    <EditText
+                        android:id="@+id/maleTwentyToTwentyFour"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:hint="M"
+                        android:inputType="number" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/twentyFiveToTwentyNine" />
+
+                    <EditText
+                        android:id="@+id/femaleTwentyFiveToFortyNine"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:hint="F"
+                        android:inputType="number" />
+
+                    <EditText
+                        android:id="@+id/maleTwentyFiveToFortyNine"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:hint="M"
+                        android:inputType="number" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fiftyPlus" />
+
+                    <EditText
+                        android:id="@+id/femaleFiftyPlus"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:hint="F"
+                        android:inputType="number" />
+
+                    <EditText
+                        android:id="@+id/maleFiftyPlus"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:hint="M"
+                        android:inputType="number" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip">
+
+                    <TextView
+                        style="@style/TextViewInputStyle"
+                        android:text="Total" />
+
+                    <TextView
+                        android:id="@+id/femaleTotal"
+                        style="@style/TextViewInputStyle"
+                        android:text="Total" />
+
+                    <TextView
+                        android:id="@+id/maleTotal"
+                        style="@style/TextViewInputStyle"
+                        android:text="Total" />
+
+                </TableRow>
+
+                <Button
+                    android:id="@+id/btn_save"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Save" />
+
+            </TableLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
