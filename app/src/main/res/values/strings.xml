@@ -10,7 +10,11 @@
     <string name="fifteenToNineteen">15-19</string>
     <string name="twentyPlus">20&#43;</string>
     <string name="twentyToTwentyFour">20-24</string>
-    <string name="twentyFiveToTwentyNine">25-49</string>
+    <string name="twentyFiveToTwentyNine">25-29</string>
+    <string name="thirtyToThirtyFour">30-34</string>
+    <string name="thirtyFiveToThirtyNine">35-39</string>
+    <string name="fortyToFortyFour">40-44</string>
+    <string name="fortyFiveToFortyNine">45-49</string>
     <string name="fiftyPlus">50&#43;</string>
     <string name="date_format_error">Please enter a valid date in this format: 12/02/2016</string>
 

@@ -156,7 +156,7 @@ public class TXCURRFormActivity extends MenuBar implements View.OnClickListener 
     @Override
     public void onClick(View v) {
 
-        if (v.getId() == btn_save.getId()) {
+        /*if (v.getId() == btn_save.getId()) {
             if (validate()) {
                 form.facility = (Facility) facility.getSelectedItem();
                 form.name = name.getText().toString();
@@ -201,10 +201,10 @@ public class TXCURRFormActivity extends MenuBar implements View.OnClickListener 
         if (v.getId() == dateCreated.getId()) {
             datePickerDialog.show();
 
-        }
+        }*/
     }
 
-    public void questionOne() {
+    /*public void questionOne() {
         final Dialog dialog = new Dialog(context);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.dsd_question_activity);
@@ -355,7 +355,7 @@ public class TXCURRFormActivity extends MenuBar implements View.OnClickListener 
         dialog.setCancelable(true);
         dialog.show();
 
-    }
+    }*/
 
     private void updateLabel(Date date) {
         dateCreated.setText(AppUtil.getStringDate(date));

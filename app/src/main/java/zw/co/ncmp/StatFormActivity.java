@@ -178,7 +178,7 @@ public class StatFormActivity extends MenuBar implements View.OnClickListener {
     @Override
     public void onClick(View v) {
 
-        if (v.getId() == knownHIVPositive.getId()) {
+        /*if (v.getId() == knownHIVPositive.getId()) {
             questionOne();
         }
         if(v.getId() == newHIVPositive.getId()){
@@ -186,12 +186,13 @@ public class StatFormActivity extends MenuBar implements View.OnClickListener {
         }
         if(v.getId() == testedHIVNegative.getId()){
             questionThree();
-        }
+        }*/
+        //the comment below should not be removed
         /*if(v.getId() == newTBCases.getId()){
             questionFive();
         }*/
 
-        if(v.getId() == denomDisagg.getId()){
+        /*if(v.getId() == denomDisagg.getId()){
             questionFour();
         }
 
@@ -234,7 +235,7 @@ public class StatFormActivity extends MenuBar implements View.OnClickListener {
 
         if (v.getId() == dateCreated.getId()) {
             datePickerDialog.show();
-        }
+        }*/
 
     }
 
@@ -243,7 +244,7 @@ public class StatFormActivity extends MenuBar implements View.OnClickListener {
     }
 
 
-    public void questionOne() {
+    /*public void questionOne() {
         final Dialog dialog = new Dialog(context);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.dsd_question_activity);

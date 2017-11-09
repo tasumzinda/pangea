@@ -182,7 +182,7 @@ public class TXNewActivity extends MenuBar implements View.OnClickListener{
 
     @Override
     public void onClick(View v) {
-        if(v.getId() == numDisaggregation.getId()){
+        /*if(v.getId() == numDisaggregation.getId()){
             questionOne();
         }
 
@@ -194,11 +194,13 @@ public class TXNewActivity extends MenuBar implements View.OnClickListener{
                 form.numerator = AppUtil.getLongValue(numerator.getText().toString());
                 form.breastFeeding = AppUtil.getLongValue(breastFeeding.getText().toString());
                 form.confirmedTB = AppUtil.getLongValue(confirmedTB.getText().toString());
-                /*form.prisonAndEnclosedSettings = AppUtil.getLongValue(prison.getText().toString());
+                //Add comment here
+                form.prisonAndEnclosedSettings = AppUtil.getLongValue(prison.getText().toString());
                 form.transGender = AppUtil.getLongValue(transGender.getText().toString());
                 form.fsw = AppUtil.getLongValue(fsw.getText().toString());
                 form.msim = AppUtil.getLongValue(msim.getText().toString());
-                form.pwid = AppUtil.getLongValue(pwid.getText().toString());*/
+                form.pwid = AppUtil.getLongValue(pwid.getText().toString());
+                //to here
                 form.pregnant = AppUtil.getLongValue(pregnant.getText().toString());
                 form.dateCreated = AppUtil.getDate(dateCreated.getText().toString());
                 form.save();
@@ -232,7 +234,7 @@ public class TXNewActivity extends MenuBar implements View.OnClickListener{
 
         if (v.getId() == dateCreated.getId()) {
             datePickerDialog.show();
-        }
+        }*/
 
     }
 
@@ -310,7 +312,7 @@ public class TXNewActivity extends MenuBar implements View.OnClickListener{
 
     }
 
-    public void questionOne() {
+    /*public void questionOne() {
         final Dialog dialog = new Dialog(context);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.dsd_question_activity);
@@ -461,5 +463,5 @@ public class TXNewActivity extends MenuBar implements View.OnClickListener{
         dialog.setCancelable(true);
         dialog.show();
 
-    }
+    }*/
 }

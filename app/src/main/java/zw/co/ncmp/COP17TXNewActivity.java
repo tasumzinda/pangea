@@ -183,7 +183,7 @@ public class COP17TXNewActivity extends MenuBar implements View.OnClickListener 
     @Override
     public void onClick(View v) {
 
-        if (v.getId() == btn_question_one.getId()) {
+        /*if (v.getId() == btn_question_one.getId()) {
             questionOne();
         }
 
@@ -246,14 +246,14 @@ public class COP17TXNewActivity extends MenuBar implements View.OnClickListener 
         if (v.getId() == dateCreated.getId()) {
             datePickerDialog.show();
 
-        }
+        }*/
     }
 
     private void updateLabel(EditText editText, Date date) {
         editText.setText(AppUtil.getStringDate(date));
     }
 
-    public boolean validate() {
+    /*public boolean validate() {
         boolean valid = true;
 
         String name = dateCreated.getText().toString().toString();
@@ -951,7 +951,7 @@ public class COP17TXNewActivity extends MenuBar implements View.OnClickListener 
         dialog.setCancelable(true);
         dialog.show();
 
-    }
+    }*/
 
 
     public void upDateForm() {

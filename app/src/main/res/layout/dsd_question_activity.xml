@@ -215,18 +215,122 @@
                         android:text="@string/twentyFiveToTwentyNine" />
 
                     <EditText
-                        android:id="@+id/femaleTwentyFiveToFortyNine"
+                        android:id="@+id/femaleTwentyFiveToTwentyNine"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:hint="F"
                         android:inputType="number" />
 
                     <EditText
-                        android:id="@+id/maleTwentyFiveToFortyNine"
+                        android:id="@+id/maleTwentyFiveToTwentyNine"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:hint="M"
                         android:inputType="number" />
+
+                </TableRow>
+
+                <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dip">
+
+                    <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/thirtyToThirtyFour" />
+
+                    <EditText
+                            android:id="@+id/femaleThirtyToThirtyFour"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:hint="F"
+                            android:inputType="number" />
+
+                    <EditText
+                            android:id="@+id/maleThirtyToThirtyFour"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:hint="M"
+                            android:inputType="number" />
+
+                </TableRow>
+
+                <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dip">
+
+                    <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/thirtyFiveToThirtyNine" />
+
+                    <EditText
+                            android:id="@+id/femaleThirtyFiveToThirtyNine"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:hint="F"
+                            android:inputType="number" />
+
+                    <EditText
+                            android:id="@+id/maleThirtyFiveToThirtyNine"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:hint="M"
+                            android:inputType="number" />
+
+                </TableRow>
+
+                <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dip">
+
+                    <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/fortyToFortyFour" />
+
+                    <EditText
+                            android:id="@+id/femaleFortyToFortyFour"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:hint="F"
+                            android:inputType="number" />
+
+                    <EditText
+                            android:id="@+id/maleFortyToFortyFour"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:hint="M"
+                            android:inputType="number" />
+
+                </TableRow>
+
+                <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dip">
+
+                    <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/fortyFiveToFortyNine" />
+
+                    <EditText
+                            android:id="@+id/femaleFortyFiveToFortyNine"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:hint="F"
+                            android:inputType="number" />
+
+                    <EditText
+                            android:id="@+id/maleFortyFiveToFortyNine"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:hint="M"
+                            android:inputType="number" />
 
                 </TableRow>
 

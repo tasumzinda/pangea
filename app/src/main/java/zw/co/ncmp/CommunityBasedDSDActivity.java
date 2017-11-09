@@ -12,8 +12,6 @@ import android.view.Window;
 import android.widget.*;
 import zw.co.ncmp.business.CommunityBasedDSD;
 import zw.co.ncmp.business.Facility;
-import zw.co.ncmp.business.Period;
-import zw.co.ncmp.business.RegisterForm;
 import zw.co.ncmp.util.AppUtil;
 
 import java.util.ArrayList;
@@ -353,8 +351,16 @@ public class CommunityBasedDSDActivity extends MenuBar implements View.OnClickLi
         final EditText femaleFifteenToNineteen = (EditText) dialog.findViewById(R.id.femaleFifteenToNineteen);
         final EditText maleTwentyToTwentyFour = (EditText) dialog.findViewById(R.id.maleTwentyToTwentyFour);
         final EditText femaleTwentyToTwentyFour = (EditText) dialog.findViewById(R.id.femaleTwentyToTwentyFour);
-        final EditText maleTwentyFiveToFortyNine = (EditText) dialog.findViewById(R.id.maleTwentyFiveToFortyNine);
-        final EditText femaleTwentyFiveToFortyNine = (EditText) dialog.findViewById(R.id.femaleTwentyFiveToFortyNine);
+        final EditText maleTwentyFiveToTwentyNine = (EditText) dialog.findViewById(R.id.maleTwentyFiveToTwentyNine);
+        final EditText femaleTwentyFiveToTwentyNine = (EditText) dialog.findViewById(R.id.femaleTwentyFiveToTwentyNine);
+        final EditText maleThirtyToThirtyFour = (EditText) dialog.findViewById(R.id.maleThirtyToThirtyFour);
+        final EditText femaleThirtyToThirtyFour = (EditText) dialog.findViewById(R.id.femaleThirtyToThirtyFour);
+        final EditText maleThirtyFiveToThirtyNine = (EditText) dialog.findViewById(R.id.maleThirtyFiveToThirtyNine);
+        final EditText femaleThirtyFiveToThirtyNine = (EditText) dialog.findViewById(R.id.femaleThirtyFiveToThirtyNine);
+        final EditText maleFortyToFortyFour = (EditText) dialog.findViewById(R.id.maleFortyToFortyFour);
+        final EditText femaleFortyToFortyFour = (EditText) dialog.findViewById(R.id.femaleFortyToFortyFour);
+        final EditText maleFortyFiveToFortyNine = (EditText) dialog.findViewById(R.id.maleFortyFiveToFortyNine);
+        final EditText femaleFortyFiveToFortyNine = (EditText) dialog.findViewById(R.id.femaleFortyFiveToFortyNine);
         final EditText maleFiftyPlus = (EditText) dialog.findViewById(R.id.maleFiftyPlus);
         final EditText femaleFiftyPlus = (EditText) dialog.findViewById(R.id.femaleFiftyPlus);
 
@@ -371,8 +377,16 @@ public class CommunityBasedDSDActivity extends MenuBar implements View.OnClickLi
             femaleFifteenToNineteen.setText(AppUtil.getLongValue(registerForm.femaleFifteenToNineteen1));
             maleTwentyToTwentyFour.setText(AppUtil.getLongValue(registerForm.maleTwentyToTwentyFour1));
             femaleTwentyToTwentyFour.setText(AppUtil.getLongValue(registerForm.femaleTwentyToTwentyFour1));
-            maleTwentyFiveToFortyNine.setText(AppUtil.getLongValue(registerForm.maleTwentyFiveToFortyNine1));
-            femaleTwentyFiveToFortyNine.setText(AppUtil.getLongValue(registerForm.femaleTwentyFiveToFortyNine1));
+            maleTwentyFiveToTwentyNine.setText(AppUtil.getLongValue(registerForm.maleTwentyFiveToTwentyNine1));
+            femaleTwentyFiveToTwentyNine.setText(AppUtil.getLongValue(registerForm.femaleTwentyFiveToTwentyNine1));
+            maleThirtyToThirtyFour.setText(AppUtil.getLongValue(registerForm.maleThirtyToThirtyFour1));
+            femaleThirtyToThirtyFour.setText(AppUtil.getLongValue(registerForm.femaleThirtyToThirtyFour1));
+            maleThirtyFiveToThirtyNine.setText(AppUtil.getLongValue(registerForm.maleThirtyFiveToThirtyNine1));
+            femaleThirtyFiveToThirtyNine.setText(AppUtil.getLongValue(registerForm.femaleThirtyFiveToThirtyNine1));
+            maleFortyToFortyFour.setText(AppUtil.getLongValue(registerForm.maleFortyToFortyFour1));
+            femaleFortyToFortyFour.setText(AppUtil.getLongValue(registerForm.femaleFortyToFortyFour1));
+            maleFortyFiveToFortyNine.setText(AppUtil.getLongValue(registerForm.maleFortyFiveToFortyNine1));
+            femaleFortyFiveToFortyNine.setText(AppUtil.getLongValue(registerForm.femaleFortyFiveToFortyNine1));
             maleFiftyPlus.setText(AppUtil.getLongValue(registerForm.maleFiftyPlus1));
             femaleFiftyPlus.setText(AppUtil.getLongValue(registerForm.femaleFiftyPlus1));
         }
@@ -384,7 +398,11 @@ public class CommunityBasedDSDActivity extends MenuBar implements View.OnClickLi
         list.add(maleTenToFourteen);
         list.add(maleFifteenToNineteen);
         list.add(maleTwentyToTwentyFour);
-        list.add(maleTwentyFiveToFortyNine);
+        list.add(maleTwentyFiveToTwentyNine);
+        list.add(maleThirtyToThirtyFour);
+        list.add(maleThirtyFiveToThirtyNine);
+        list.add(maleFortyToFortyFour);
+        list.add(maleFortyFiveToFortyNine);
         list.add(maleFiftyPlus);
 
         for (EditText editText : list) {
@@ -399,7 +417,11 @@ public class CommunityBasedDSDActivity extends MenuBar implements View.OnClickLi
                         registerForm.maleTenToFourteen1 = AppUtil.getLongValue(maleTenToFourteen.getText().toString());
                         registerForm.maleFifteenToNineteen1 = AppUtil.getLongValue(maleFifteenToNineteen.getText().toString());
                         registerForm.maleTwentyToTwentyFour1 = AppUtil.getLongValue(maleTwentyToTwentyFour.getText().toString());
-                        registerForm.maleTwentyFiveToFortyNine1 = AppUtil.getLongValue(maleTwentyFiveToFortyNine.getText().toString());
+                        registerForm.maleTwentyFiveToTwentyNine1 = AppUtil.getLongValue(maleTwentyFiveToTwentyNine.getText().toString());
+                        registerForm.maleThirtyToThirtyFour1 = AppUtil.getLongValue(maleThirtyToThirtyFour.getText().toString());
+                        registerForm.maleThirtyFiveToThirtyNine1 = AppUtil.getLongValue(maleThirtyFiveToThirtyNine.getText().toString());
+                        registerForm.maleFortyToFortyFour1 = AppUtil.getLongValue(maleFortyToFortyFour.getText().toString());
+                        registerForm.maleFortyFiveToFortyNine1 = AppUtil.getLongValue(maleFortyFiveToFortyNine.getText().toString());
                         registerForm.maleFiftyPlus1 = AppUtil.getLongValue(maleFiftyPlus.getText().toString());
 
                         maleTotal.setText(AppUtil.getLongValue(registerForm.maleQuestion1()));
@@ -416,7 +438,11 @@ public class CommunityBasedDSDActivity extends MenuBar implements View.OnClickLi
         list.add(femaleTenToFourteen);
         list.add(femaleFifteenToNineteen);
         list.add(femaleTwentyToTwentyFour);
-        list.add(femaleTwentyFiveToFortyNine);
+        list.add(femaleTwentyFiveToTwentyNine);
+        list.add(femaleThirtyToThirtyFour);
+        list.add(femaleThirtyFiveToThirtyNine);
+        list.add(femaleFortyToFortyFour);
+        list.add(femaleFortyFiveToFortyNine);
         list.add(femaleFiftyPlus);
 
         for (EditText editText : list) {
@@ -431,7 +457,11 @@ public class CommunityBasedDSDActivity extends MenuBar implements View.OnClickLi
                         registerForm.femaleTenToFourteen1 = AppUtil.getLongValue(femaleTenToFourteen.getText().toString());
                         registerForm.femaleFifteenToNineteen1 = AppUtil.getLongValue(femaleFifteenToNineteen.getText().toString());
                         registerForm.femaleTwentyToTwentyFour1 = AppUtil.getLongValue(femaleTwentyToTwentyFour.getText().toString());
-                        registerForm.femaleTwentyFiveToFortyNine1 = AppUtil.getLongValue(femaleTwentyFiveToFortyNine.getText().toString());
+                        registerForm.femaleTwentyFiveToTwentyNine1 = AppUtil.getLongValue(femaleTwentyFiveToTwentyNine.getText().toString());
+                        registerForm.femaleThirtyToThirtyFour1 = AppUtil.getLongValue(femaleThirtyToThirtyFour.getText().toString());
+                        registerForm.femaleThirtyFiveToThirtyNine1 = AppUtil.getLongValue(femaleThirtyFiveToThirtyNine.getText().toString());
+                        registerForm.femaleFortyToFortyFour1 = AppUtil.getLongValue(femaleFortyToFortyFour.getText().toString());
+                        registerForm.femaleFortyFiveToFortyNine1 = AppUtil.getLongValue(femaleFortyFiveToFortyNine.getText().toString());
                         registerForm.femaleFiftyPlus1 = AppUtil.getLongValue(femaleFiftyPlus.getText().toString());
 
                         femaleTotal.setText(AppUtil.getLongValue(registerForm.femaleQuestion1()));
@@ -464,8 +494,20 @@ public class CommunityBasedDSDActivity extends MenuBar implements View.OnClickLi
                 registerForm.maleTwentyToTwentyFour1 = AppUtil.getLongValue(maleTwentyToTwentyFour.getText().toString());
                 registerForm.femaleTwentyToTwentyFour1 = AppUtil.getLongValue(femaleTwentyToTwentyFour.getText().toString());
 
-                registerForm.maleTwentyFiveToFortyNine1 = AppUtil.getLongValue(maleTwentyFiveToFortyNine.getText().toString());
-                registerForm.femaleTwentyFiveToFortyNine1 = AppUtil.getLongValue(femaleTwentyFiveToFortyNine.getText().toString());
+                registerForm.maleTwentyFiveToTwentyNine1 = AppUtil.getLongValue(maleTwentyFiveToTwentyNine.getText().toString());
+                registerForm.femaleTwentyFiveToTwentyNine1 = AppUtil.getLongValue(femaleTwentyFiveToTwentyNine.getText().toString());
+
+                registerForm.maleThirtyToThirtyFour1 = AppUtil.getLongValue(maleThirtyToThirtyFour.getText().toString());
+                registerForm.femaleThirtyToThirtyFour1 = AppUtil.getLongValue(femaleThirtyToThirtyFour.getText().toString());
+
+                registerForm.maleThirtyFiveToThirtyNine1 = AppUtil.getLongValue(maleThirtyFiveToThirtyNine.getText().toString());
+                registerForm.femaleThirtyFiveToThirtyNine1 = AppUtil.getLongValue(femaleThirtyFiveToThirtyNine.getText().toString());
+
+                registerForm.maleFortyToFortyFour1 = AppUtil.getLongValue(maleFortyToFortyFour.getText().toString());
+                registerForm.femaleFortyToFortyFour1 = AppUtil.getLongValue(femaleFortyToFortyFour.getText().toString());
+
+                registerForm.maleFortyFiveToFortyNine1 = AppUtil.getLongValue(maleFortyFiveToFortyNine.getText().toString());
+                registerForm.femaleFortyFiveToFortyNine1 = AppUtil.getLongValue(femaleFortyFiveToFortyNine.getText().toString());
 
                 registerForm.maleFiftyPlus1 = AppUtil.getLongValue(maleFiftyPlus.getText().toString());
                 registerForm.femaleFiftyPlus1 = AppUtil.getLongValue(femaleFiftyPlus.getText().toString());
@@ -506,8 +548,16 @@ public class CommunityBasedDSDActivity extends MenuBar implements View.OnClickLi
         final EditText femaleFifteenToNineteen = (EditText) dialog.findViewById(R.id.femaleFifteenToNineteen);
         final EditText maleTwentyToTwentyFour = (EditText) dialog.findViewById(R.id.maleTwentyToTwentyFour);
         final EditText femaleTwentyToTwentyFour = (EditText) dialog.findViewById(R.id.femaleTwentyToTwentyFour);
-        final EditText maleTwentyFiveToFortyNine = (EditText) dialog.findViewById(R.id.maleTwentyFiveToFortyNine);
-        final EditText femaleTwentyFiveToFortyNine = (EditText) dialog.findViewById(R.id.femaleTwentyFiveToFortyNine);
+        final EditText maleTwentyFiveToTwentyNine = (EditText) dialog.findViewById(R.id.maleTwentyFiveToTwentyNine);
+        final EditText femaleTwentyFiveToTwentyNine = (EditText) dialog.findViewById(R.id.femaleTwentyFiveToTwentyNine);
+        final EditText maleThirtyToThirtyFour = (EditText) dialog.findViewById(R.id.maleThirtyToThirtyFour);
+        final EditText femaleThirtyToThirtyFour = (EditText) dialog.findViewById(R.id.femaleThirtyToThirtyFour);
+        final EditText maleThirtyFiveToThirtyNine = (EditText) dialog.findViewById(R.id.maleThirtyFiveToThirtyNine);
+        final EditText femaleThirtyFiveToThirtyNine = (EditText) dialog.findViewById(R.id.femaleThirtyFiveToThirtyNine);
+        final EditText maleFortyToFortyFour = (EditText) dialog.findViewById(R.id.maleFortyToFortyFour);
+        final EditText femaleFortyToFortyFour = (EditText) dialog.findViewById(R.id.femaleFortyToFortyFour);
+        final EditText maleFortyFiveToFortyNine = (EditText) dialog.findViewById(R.id.maleFortyFiveToFortyNine);
+        final EditText femaleFortyFiveToFortyNine = (EditText) dialog.findViewById(R.id.femaleFortyFiveToFortyNine);
         final EditText maleFiftyPlus = (EditText) dialog.findViewById(R.id.maleFiftyPlus);
         final EditText femaleFiftyPlus = (EditText) dialog.findViewById(R.id.femaleFiftyPlus);
 
@@ -524,8 +574,16 @@ public class CommunityBasedDSDActivity extends MenuBar implements View.OnClickLi
             femaleFifteenToNineteen.setText(AppUtil.getLongValue(registerForm.femaleFifteenToNineteen2));
             maleTwentyToTwentyFour.setText(AppUtil.getLongValue(registerForm.maleTwentyToTwentyFour2));
             femaleTwentyToTwentyFour.setText(AppUtil.getLongValue(registerForm.femaleTwentyToTwentyFour2));
-            maleTwentyFiveToFortyNine.setText(AppUtil.getLongValue(registerForm.maleTwentyFiveToFortyNine2));
-            femaleTwentyFiveToFortyNine.setText(AppUtil.getLongValue(registerForm.femaleTwentyFiveToFortyNine2));
+            maleTwentyFiveToTwentyNine.setText(AppUtil.getLongValue(registerForm.maleTwentyFiveToTwentyNine2));
+            femaleTwentyFiveToTwentyNine.setText(AppUtil.getLongValue(registerForm.femaleTwentyFiveToTwentyNine2));
+            maleThirtyToThirtyFour.setText(AppUtil.getLongValue(registerForm.maleThirtyToThirtyFour2));
+            femaleThirtyToThirtyFour.setText(AppUtil.getLongValue(registerForm.femaleThirtyToThirtyFour2));
+            maleThirtyFiveToThirtyNine.setText(AppUtil.getLongValue(registerForm.maleThirtyFiveToThirtyNine2));
+            femaleThirtyFiveToThirtyNine.setText(AppUtil.getLongValue(registerForm.femaleThirtyFiveToThirtyNine2));
+            maleFortyToFortyFour.setText(AppUtil.getLongValue(registerForm.maleFortyToFortyFour2));
+            femaleFortyToFortyFour.setText(AppUtil.getLongValue(registerForm.femaleFortyToFortyFour2));
+            maleFortyFiveToFortyNine.setText(AppUtil.getLongValue(registerForm.maleFortyFiveToFortyNine2));
+            femaleFortyFiveToFortyNine.setText(AppUtil.getLongValue(registerForm.femaleFortyFiveToFortyNine2));
             maleFiftyPlus.setText(AppUtil.getLongValue(registerForm.maleFiftyPlus2));
             femaleFiftyPlus.setText(AppUtil.getLongValue(registerForm.femaleFiftyPlus2));
         }
@@ -537,7 +595,11 @@ public class CommunityBasedDSDActivity extends MenuBar implements View.OnClickLi
         list.add(maleTenToFourteen);
         list.add(maleFifteenToNineteen);
         list.add(maleTwentyToTwentyFour);
-        list.add(maleTwentyFiveToFortyNine);
+        list.add(maleTwentyFiveToTwentyNine);
+        list.add(maleThirtyToThirtyFour);
+        list.add(maleThirtyFiveToThirtyNine);
+        list.add(maleFortyToFortyFour);
+        list.add(maleFortyFiveToFortyNine);
         list.add(maleFiftyPlus);
 
         for (EditText editText : list) {
@@ -552,7 +614,11 @@ public class CommunityBasedDSDActivity extends MenuBar implements View.OnClickLi
                         registerForm.maleTenToFourteen2 = AppUtil.getLongValue(maleTenToFourteen.getText().toString());
                         registerForm.maleFifteenToNineteen2 = AppUtil.getLongValue(maleFifteenToNineteen.getText().toString());
                         registerForm.maleTwentyToTwentyFour2 = AppUtil.getLongValue(maleTwentyToTwentyFour.getText().toString());
-                        registerForm.maleTwentyFiveToFortyNine2 = AppUtil.getLongValue(maleTwentyFiveToFortyNine.getText().toString());
+                        registerForm.maleTwentyFiveToTwentyNine2 = AppUtil.getLongValue(maleTwentyFiveToTwentyNine.getText().toString());
+                        registerForm.maleThirtyToThirtyFour2 = AppUtil.getLongValue(maleThirtyToThirtyFour.getText().toString());
+                        registerForm.maleThirtyFiveToThirtyNine2 = AppUtil.getLongValue(maleThirtyFiveToThirtyNine.getText().toString());
+                        registerForm.maleFortyToFortyFour2 = AppUtil.getLongValue(maleFortyToFortyFour.getText().toString());
+                        registerForm.maleFortyFiveToFortyNine2 = AppUtil.getLongValue(maleFortyFiveToFortyNine.getText().toString());
                         registerForm.maleFiftyPlus2 = AppUtil.getLongValue(maleFiftyPlus.getText().toString());
 
                         maleTotal.setText(AppUtil.getLongValue(registerForm.maleQuestion2()));
@@ -569,7 +635,11 @@ public class CommunityBasedDSDActivity extends MenuBar implements View.OnClickLi
         list.add(femaleTenToFourteen);
         list.add(femaleFifteenToNineteen);
         list.add(femaleTwentyToTwentyFour);
-        list.add(femaleTwentyFiveToFortyNine);
+        list.add(femaleTwentyFiveToTwentyNine);
+        list.add(femaleThirtyToThirtyFour);
+        list.add(femaleThirtyFiveToThirtyNine);
+        list.add(femaleFortyToFortyFour);
+        list.add(femaleFortyFiveToFortyNine);
         list.add(femaleFiftyPlus);
 
         for (EditText editText : list) {
@@ -584,7 +654,11 @@ public class CommunityBasedDSDActivity extends MenuBar implements View.OnClickLi
                         registerForm.femaleTenToFourteen2 = AppUtil.getLongValue(femaleTenToFourteen.getText().toString());
                         registerForm.femaleFifteenToNineteen2 = AppUtil.getLongValue(femaleFifteenToNineteen.getText().toString());
                         registerForm.femaleTwentyToTwentyFour2 = AppUtil.getLongValue(femaleTwentyToTwentyFour.getText().toString());
-                        registerForm.femaleTwentyFiveToFortyNine2 = AppUtil.getLongValue(femaleTwentyFiveToFortyNine.getText().toString());
+                        registerForm.femaleTwentyFiveToTwentyNine2 = AppUtil.getLongValue(femaleTwentyFiveToTwentyNine.getText().toString());
+                        registerForm.femaleThirtyToThirtyFour2 = AppUtil.getLongValue(femaleThirtyToThirtyFour.getText().toString());
+                        registerForm.femaleThirtyFiveToThirtyNine2 = AppUtil.getLongValue(femaleThirtyFiveToThirtyNine.getText().toString());
+                        registerForm.femaleFortyToFortyFour2 = AppUtil.getLongValue(femaleFortyToFortyFour.getText().toString());
+                        registerForm.femaleFortyFiveToFortyNine2 = AppUtil.getLongValue(femaleFortyFiveToFortyNine.getText().toString());
                         registerForm.femaleFiftyPlus2 = AppUtil.getLongValue(femaleFiftyPlus.getText().toString());
 
                         femaleTotal.setText(AppUtil.getLongValue(registerForm.femaleQuestion2()));
@@ -617,8 +691,20 @@ public class CommunityBasedDSDActivity extends MenuBar implements View.OnClickLi
                 registerForm.maleTwentyToTwentyFour2 = AppUtil.getLongValue(maleTwentyToTwentyFour.getText().toString());
                 registerForm.femaleTwentyToTwentyFour2 = AppUtil.getLongValue(femaleTwentyToTwentyFour.getText().toString());
 
-                registerForm.maleTwentyFiveToFortyNine2 = AppUtil.getLongValue(maleTwentyFiveToFortyNine.getText().toString());
-                registerForm.femaleTwentyFiveToFortyNine2 = AppUtil.getLongValue(femaleTwentyFiveToFortyNine.getText().toString());
+                registerForm.maleTwentyFiveToTwentyNine2 = AppUtil.getLongValue(maleTwentyFiveToTwentyNine.getText().toString());
+                registerForm.femaleTwentyFiveToTwentyNine2 = AppUtil.getLongValue(femaleTwentyFiveToTwentyNine.getText().toString());
+
+                registerForm.maleThirtyToThirtyFour2 = AppUtil.getLongValue(maleThirtyToThirtyFour.getText().toString());
+                registerForm.femaleThirtyToThirtyFour2 = AppUtil.getLongValue(femaleThirtyToThirtyFour.getText().toString());
+
+                registerForm.maleThirtyFiveToThirtyNine2 = AppUtil.getLongValue(maleThirtyFiveToThirtyNine.getText().toString());
+                registerForm.femaleThirtyFiveToThirtyNine2 = AppUtil.getLongValue(femaleThirtyFiveToThirtyNine.getText().toString());
+
+                registerForm.maleFortyToFortyFour2 = AppUtil.getLongValue(maleFortyToFortyFour.getText().toString());
+                registerForm.femaleFortyToFortyFour2 = AppUtil.getLongValue(femaleFortyToFortyFour.getText().toString());
+
+                registerForm.maleFortyFiveToFortyNine2 = AppUtil.getLongValue(maleFortyFiveToFortyNine.getText().toString());
+                registerForm.femaleFortyFiveToFortyNine2 = AppUtil.getLongValue(femaleFortyFiveToFortyNine.getText().toString());
 
                 registerForm.maleFiftyPlus2 = AppUtil.getLongValue(maleFiftyPlus.getText().toString());
                 registerForm.femaleFiftyPlus2 = AppUtil.getLongValue(femaleFiftyPlus.getText().toString());
@@ -659,8 +745,16 @@ public class CommunityBasedDSDActivity extends MenuBar implements View.OnClickLi
         final EditText femaleFifteenToNineteen = (EditText) dialog.findViewById(R.id.femaleFifteenToNineteen);
         final EditText maleTwentyToTwentyFour = (EditText) dialog.findViewById(R.id.maleTwentyToTwentyFour);
         final EditText femaleTwentyToTwentyFour = (EditText) dialog.findViewById(R.id.femaleTwentyToTwentyFour);
-        final EditText maleTwentyFiveToFortyNine = (EditText) dialog.findViewById(R.id.maleTwentyFiveToFortyNine);
-        final EditText femaleTwentyFiveToFortyNine = (EditText) dialog.findViewById(R.id.femaleTwentyFiveToFortyNine);
+        final EditText maleTwentyFiveToTwentyNine = (EditText) dialog.findViewById(R.id.maleTwentyFiveToTwentyNine);
+        final EditText femaleTwentyFiveToTwentyNine = (EditText) dialog.findViewById(R.id.femaleTwentyFiveToTwentyNine);
+        final EditText maleThirtyToThirtyFour = (EditText) dialog.findViewById(R.id.maleThirtyToThirtyFour);
+        final EditText femaleThirtyToThirtyFour = (EditText) dialog.findViewById(R.id.femaleThirtyToThirtyFour);
+        final EditText maleThirtyFiveToThirtyNine = (EditText) dialog.findViewById(R.id.maleThirtyFiveToThirtyNine);
+        final EditText femaleThirtyFiveToThirtyNine = (EditText) dialog.findViewById(R.id.femaleThirtyFiveToThirtyNine);
+        final EditText maleFortyToFortyFour = (EditText) dialog.findViewById(R.id.maleFortyToFortyFour);
+        final EditText femaleFortyToFortyFour = (EditText) dialog.findViewById(R.id.femaleFortyToFortyFour);
+        final EditText maleFortyFiveToFortyNine = (EditText) dialog.findViewById(R.id.maleFortyFiveToFortyNine);
+        final EditText femaleFortyFiveToFortyNine = (EditText) dialog.findViewById(R.id.femaleFortyFiveToFortyNine);
         final EditText maleFiftyPlus = (EditText) dialog.findViewById(R.id.maleFiftyPlus);
         final EditText femaleFiftyPlus = (EditText) dialog.findViewById(R.id.femaleFiftyPlus);
 
@@ -677,8 +771,16 @@ public class CommunityBasedDSDActivity extends MenuBar implements View.OnClickLi
             femaleFifteenToNineteen.setText(AppUtil.getLongValue(registerForm.femaleFifteenToNineteen3));
             maleTwentyToTwentyFour.setText(AppUtil.getLongValue(registerForm.maleTwentyToTwentyFour3));
             femaleTwentyToTwentyFour.setText(AppUtil.getLongValue(registerForm.femaleTwentyToTwentyFour3));
-            maleTwentyFiveToFortyNine.setText(AppUtil.getLongValue(registerForm.maleTwentyFiveToFortyNine3));
-            femaleTwentyFiveToFortyNine.setText(AppUtil.getLongValue(registerForm.femaleTwentyFiveToFortyNine3));
+            maleTwentyFiveToTwentyNine.setText(AppUtil.getLongValue(registerForm.maleTwentyFiveToTwentyNine3));
+            femaleTwentyFiveToTwentyNine.setText(AppUtil.getLongValue(registerForm.femaleTwentyFiveToTwentyNine3));
+            maleThirtyToThirtyFour.setText(AppUtil.getLongValue(registerForm.maleThirtyToThirtyFour3));
+            femaleThirtyToThirtyFour.setText(AppUtil.getLongValue(registerForm.femaleThirtyToThirtyFour3));
+            maleThirtyFiveToThirtyNine.setText(AppUtil.getLongValue(registerForm.maleThirtyFiveToThirtyNine3));
+            femaleThirtyFiveToThirtyNine.setText(AppUtil.getLongValue(registerForm.femaleThirtyFiveToThirtyNine3));
+            maleFortyToFortyFour.setText(AppUtil.getLongValue(registerForm.maleFortyToFortyFour3));
+            femaleFortyToFortyFour.setText(AppUtil.getLongValue(registerForm.femaleFortyToFortyFour3));
+            maleFortyFiveToFortyNine.setText(AppUtil.getLongValue(registerForm.maleFortyFiveToFortyNine3));
+            femaleFortyFiveToFortyNine.setText(AppUtil.getLongValue(registerForm.femaleFortyFiveToFortyNine3));
             maleFiftyPlus.setText(AppUtil.getLongValue(registerForm.maleFiftyPlus3));
             femaleFiftyPlus.setText(AppUtil.getLongValue(registerForm.femaleFiftyPlus3));
         }
@@ -690,7 +792,11 @@ public class CommunityBasedDSDActivity extends MenuBar implements View.OnClickLi
         list.add(maleTenToFourteen);
         list.add(maleFifteenToNineteen);
         list.add(maleTwentyToTwentyFour);
-        list.add(maleTwentyFiveToFortyNine);
+        list.add(maleTwentyFiveToTwentyNine);
+        list.add(maleThirtyToThirtyFour);
+        list.add(maleThirtyFiveToThirtyNine);
+        list.add(maleFortyToFortyFour);
+        list.add(maleFortyFiveToFortyNine);
         list.add(maleFiftyPlus);
 
         for (EditText editText : list) {
@@ -705,7 +811,11 @@ public class CommunityBasedDSDActivity extends MenuBar implements View.OnClickLi
                         registerForm.maleTenToFourteen3 = AppUtil.getLongValue(maleTenToFourteen.getText().toString());
                         registerForm.maleFifteenToNineteen3 = AppUtil.getLongValue(maleFifteenToNineteen.getText().toString());
                         registerForm.maleTwentyToTwentyFour3 = AppUtil.getLongValue(maleTwentyToTwentyFour.getText().toString());
-                        registerForm.maleTwentyFiveToFortyNine3 = AppUtil.getLongValue(maleTwentyFiveToFortyNine.getText().toString());
+                        registerForm.maleTwentyFiveToTwentyNine3 = AppUtil.getLongValue(maleTwentyFiveToTwentyNine.getText().toString());
+                        registerForm.maleThirtyToThirtyFour3 = AppUtil.getLongValue(maleThirtyToThirtyFour.getText().toString());
+                        registerForm.maleThirtyFiveToThirtyNine3 = AppUtil.getLongValue(maleThirtyFiveToThirtyNine.getText().toString());
+                        registerForm.maleFortyToFortyFour3 = AppUtil.getLongValue(maleFortyToFortyFour.getText().toString());
+                        registerForm.maleFortyFiveToFortyNine3 = AppUtil.getLongValue(maleFortyFiveToFortyNine.getText().toString());
                         registerForm.maleFiftyPlus3 = AppUtil.getLongValue(maleFiftyPlus.getText().toString());
 
                         maleTotal.setText(AppUtil.getLongValue(registerForm.maleQuestion3()));
@@ -722,7 +832,11 @@ public class CommunityBasedDSDActivity extends MenuBar implements View.OnClickLi
         list.add(femaleTenToFourteen);
         list.add(femaleFifteenToNineteen);
         list.add(femaleTwentyToTwentyFour);
-        list.add(femaleTwentyFiveToFortyNine);
+        list.add(femaleTwentyFiveToTwentyNine);
+        list.add(femaleThirtyToThirtyFour);
+        list.add(femaleThirtyFiveToThirtyNine);
+        list.add(femaleFortyToFortyFour);
+        list.add(femaleFortyFiveToFortyNine);
         list.add(femaleFiftyPlus);
 
         for (EditText editText : list) {
@@ -737,7 +851,11 @@ public class CommunityBasedDSDActivity extends MenuBar implements View.OnClickLi
                         registerForm.femaleTenToFourteen3 = AppUtil.getLongValue(femaleTenToFourteen.getText().toString());
                         registerForm.femaleFifteenToNineteen3 = AppUtil.getLongValue(femaleFifteenToNineteen.getText().toString());
                         registerForm.femaleTwentyToTwentyFour3 = AppUtil.getLongValue(femaleTwentyToTwentyFour.getText().toString());
-                        registerForm.femaleTwentyFiveToFortyNine3 = AppUtil.getLongValue(femaleTwentyFiveToFortyNine.getText().toString());
+                        registerForm.femaleTwentyFiveToTwentyNine3 = AppUtil.getLongValue(femaleTwentyFiveToTwentyNine.getText().toString());
+                        registerForm.femaleThirtyToThirtyFour3 = AppUtil.getLongValue(femaleThirtyToThirtyFour.getText().toString());
+                        registerForm.femaleThirtyFiveToThirtyNine3 = AppUtil.getLongValue(femaleThirtyFiveToThirtyNine.getText().toString());
+                        registerForm.femaleFortyToFortyFour3 = AppUtil.getLongValue(femaleFortyToFortyFour.getText().toString());
+                        registerForm.femaleFortyFiveToFortyNine3 = AppUtil.getLongValue(femaleFortyFiveToFortyNine.getText().toString());
                         registerForm.femaleFiftyPlus3 = AppUtil.getLongValue(femaleFiftyPlus.getText().toString());
 
                         femaleTotal.setText(AppUtil.getLongValue(registerForm.femaleQuestion3()));
@@ -770,8 +888,20 @@ public class CommunityBasedDSDActivity extends MenuBar implements View.OnClickLi
                 registerForm.maleTwentyToTwentyFour3 = AppUtil.getLongValue(maleTwentyToTwentyFour.getText().toString());
                 registerForm.femaleTwentyToTwentyFour3 = AppUtil.getLongValue(femaleTwentyToTwentyFour.getText().toString());
 
-                registerForm.maleTwentyFiveToFortyNine3 = AppUtil.getLongValue(maleTwentyFiveToFortyNine.getText().toString());
-                registerForm.femaleTwentyFiveToFortyNine3 = AppUtil.getLongValue(femaleTwentyFiveToFortyNine.getText().toString());
+                registerForm.maleTwentyFiveToTwentyNine3 = AppUtil.getLongValue(maleTwentyFiveToTwentyNine.getText().toString());
+                registerForm.femaleTwentyFiveToTwentyNine3 = AppUtil.getLongValue(femaleTwentyFiveToTwentyNine.getText().toString());
+
+                registerForm.maleThirtyToThirtyFour3 = AppUtil.getLongValue(maleThirtyToThirtyFour.getText().toString());
+                registerForm.femaleThirtyToThirtyFour3 = AppUtil.getLongValue(femaleThirtyToThirtyFour.getText().toString());
+
+                registerForm.maleThirtyFiveToThirtyNine3 = AppUtil.getLongValue(maleThirtyFiveToThirtyNine.getText().toString());
+                registerForm.femaleThirtyFiveToThirtyNine3 = AppUtil.getLongValue(femaleThirtyFiveToThirtyNine.getText().toString());
+
+                registerForm.maleFortyToFortyFour3 = AppUtil.getLongValue(maleFortyToFortyFour.getText().toString());
+                registerForm.femaleFortyToFortyFour3 = AppUtil.getLongValue(femaleFortyToFortyFour.getText().toString());
+
+                registerForm.maleFortyFiveToFortyNine3 = AppUtil.getLongValue(maleFortyFiveToFortyNine.getText().toString());
+                registerForm.femaleFortyFiveToFortyNine3 = AppUtil.getLongValue(femaleFortyFiveToFortyNine.getText().toString());
 
                 registerForm.maleFiftyPlus3 = AppUtil.getLongValue(maleFiftyPlus.getText().toString());
                 registerForm.femaleFiftyPlus3 = AppUtil.getLongValue(femaleFiftyPlus.getText().toString());
@@ -812,8 +942,16 @@ public class CommunityBasedDSDActivity extends MenuBar implements View.OnClickLi
         final EditText femaleFifteenToNineteen = (EditText) dialog.findViewById(R.id.femaleFifteenToNineteen);
         final EditText maleTwentyToTwentyFour = (EditText) dialog.findViewById(R.id.maleTwentyToTwentyFour);
         final EditText femaleTwentyToTwentyFour = (EditText) dialog.findViewById(R.id.femaleTwentyToTwentyFour);
-        final EditText maleTwentyFiveToFortyNine = (EditText) dialog.findViewById(R.id.maleTwentyFiveToFortyNine);
-        final EditText femaleTwentyFiveToFortyNine = (EditText) dialog.findViewById(R.id.femaleTwentyFiveToFortyNine);
+        final EditText maleTwentyFiveToTwentyNine = (EditText) dialog.findViewById(R.id.maleTwentyFiveToTwentyNine);
+        final EditText femaleTwentyFiveToTwentyNine = (EditText) dialog.findViewById(R.id.femaleTwentyFiveToTwentyNine);
+        final EditText maleThirtyToThirtyFour = (EditText) dialog.findViewById(R.id.maleThirtyToThirtyFour);
+        final EditText femaleThirtyToThirtyFour = (EditText) dialog.findViewById(R.id.femaleThirtyToThirtyFour);
+        final EditText maleThirtyFiveToThirtyNine = (EditText) dialog.findViewById(R.id.maleThirtyFiveToThirtyNine);
+        final EditText femaleThirtyFiveToThirtyNine = (EditText) dialog.findViewById(R.id.femaleThirtyFiveToThirtyNine);
+        final EditText maleFortyToFortyFour = (EditText) dialog.findViewById(R.id.maleFortyToFortyFour);
+        final EditText femaleFortyToFortyFour = (EditText) dialog.findViewById(R.id.femaleFortyToFortyFour);
+        final EditText maleFortyFiveToFortyNine = (EditText) dialog.findViewById(R.id.maleFortyFiveToFortyNine);
+        final EditText femaleFortyFiveToFortyNine = (EditText) dialog.findViewById(R.id.femaleFortyFiveToFortyNine);
         final EditText maleFiftyPlus = (EditText) dialog.findViewById(R.id.maleFiftyPlus);
         final EditText femaleFiftyPlus = (EditText) dialog.findViewById(R.id.femaleFiftyPlus);
 
@@ -830,8 +968,16 @@ public class CommunityBasedDSDActivity extends MenuBar implements View.OnClickLi
             femaleFifteenToNineteen.setText(AppUtil.getLongValue(registerForm.femaleFifteenToNineteen4));
             maleTwentyToTwentyFour.setText(AppUtil.getLongValue(registerForm.maleTwentyToTwentyFour4));
             femaleTwentyToTwentyFour.setText(AppUtil.getLongValue(registerForm.femaleTwentyToTwentyFour4));
-            maleTwentyFiveToFortyNine.setText(AppUtil.getLongValue(registerForm.maleTwentyFiveToFortyNine4));
-            femaleTwentyFiveToFortyNine.setText(AppUtil.getLongValue(registerForm.femaleTwentyFiveToFortyNine4));
+            maleTwentyFiveToTwentyNine.setText(AppUtil.getLongValue(registerForm.maleTwentyFiveToTwentyNine4));
+            femaleTwentyFiveToTwentyNine.setText(AppUtil.getLongValue(registerForm.femaleTwentyFiveToTwentyNine4));
+            maleThirtyToThirtyFour.setText(AppUtil.getLongValue(registerForm.maleThirtyToThirtyFour4));
+            femaleThirtyToThirtyFour.setText(AppUtil.getLongValue(registerForm.femaleThirtyToThirtyFour4));
+            maleThirtyFiveToThirtyNine.setText(AppUtil.getLongValue(registerForm.maleThirtyFiveToThirtyNine4));
+            femaleThirtyFiveToThirtyNine.setText(AppUtil.getLongValue(registerForm.femaleThirtyFiveToThirtyNine4));
+            maleFortyToFortyFour.setText(AppUtil.getLongValue(registerForm.maleFortyToFortyFour4));
+            femaleFortyToFortyFour.setText(AppUtil.getLongValue(registerForm.femaleFortyToFortyFour4));
+            maleFortyFiveToFortyNine.setText(AppUtil.getLongValue(registerForm.maleFortyFiveToFortyNine4));
+            femaleFortyFiveToFortyNine.setText(AppUtil.getLongValue(registerForm.femaleFortyFiveToFortyNine4));
             maleFiftyPlus.setText(AppUtil.getLongValue(registerForm.maleFiftyPlus4));
             femaleFiftyPlus.setText(AppUtil.getLongValue(registerForm.femaleFiftyPlus4));
         }
@@ -843,7 +989,11 @@ public class CommunityBasedDSDActivity extends MenuBar implements View.OnClickLi
         list.add(maleTenToFourteen);
         list.add(maleFifteenToNineteen);
         list.add(maleTwentyToTwentyFour);
-        list.add(maleTwentyFiveToFortyNine);
+        list.add(maleTwentyFiveToTwentyNine);
+        list.add(maleThirtyToThirtyFour);
+        list.add(maleThirtyFiveToThirtyNine);
+        list.add(maleFortyToFortyFour);
+        list.add(maleFortyFiveToFortyNine);
         list.add(maleFiftyPlus);
 
         for (EditText editText : list) {
@@ -858,7 +1008,11 @@ public class CommunityBasedDSDActivity extends MenuBar implements View.OnClickLi
                         registerForm.maleTenToFourteen4 = AppUtil.getLongValue(maleTenToFourteen.getText().toString());
                         registerForm.maleFifteenToNineteen4 = AppUtil.getLongValue(maleFifteenToNineteen.getText().toString());
                         registerForm.maleTwentyToTwentyFour4 = AppUtil.getLongValue(maleTwentyToTwentyFour.getText().toString());
-                        registerForm.maleTwentyFiveToFortyNine4 = AppUtil.getLongValue(maleTwentyFiveToFortyNine.getText().toString());
+                        registerForm.maleTwentyFiveToTwentyNine4 = AppUtil.getLongValue(maleTwentyFiveToTwentyNine.getText().toString());
+                        registerForm.maleThirtyToThirtyFour4 = AppUtil.getLongValue(maleThirtyToThirtyFour.getText().toString());
+                        registerForm.maleThirtyFiveToThirtyNine4 = AppUtil.getLongValue(maleThirtyFiveToThirtyNine.getText().toString());
+                        registerForm.maleFortyToFortyFour4 = AppUtil.getLongValue(maleFortyToFortyFour.getText().toString());
+                        registerForm.maleFortyFiveToFortyNine4 = AppUtil.getLongValue(maleFortyFiveToFortyNine.getText().toString());
                         registerForm.maleFiftyPlus4 = AppUtil.getLongValue(maleFiftyPlus.getText().toString());
 
                         maleTotal.setText(AppUtil.getLongValue(registerForm.maleQuestion4()));
@@ -875,7 +1029,11 @@ public class CommunityBasedDSDActivity extends MenuBar implements View.OnClickLi
         list.add(femaleTenToFourteen);
         list.add(femaleFifteenToNineteen);
         list.add(femaleTwentyToTwentyFour);
-        list.add(femaleTwentyFiveToFortyNine);
+        list.add(femaleTwentyFiveToTwentyNine);
+        list.add(femaleThirtyToThirtyFour);
+        list.add(femaleThirtyFiveToThirtyNine);
+        list.add(femaleFortyToFortyFour);
+        list.add(femaleFortyFiveToFortyNine);
         list.add(femaleFiftyPlus);
 
         for (EditText editText : list) {
@@ -890,7 +1048,11 @@ public class CommunityBasedDSDActivity extends MenuBar implements View.OnClickLi
                         registerForm.femaleTenToFourteen4 = AppUtil.getLongValue(femaleTenToFourteen.getText().toString());
                         registerForm.femaleFifteenToNineteen4 = AppUtil.getLongValue(femaleFifteenToNineteen.getText().toString());
                         registerForm.femaleTwentyToTwentyFour4 = AppUtil.getLongValue(femaleTwentyToTwentyFour.getText().toString());
-                        registerForm.femaleTwentyFiveToFortyNine4 = AppUtil.getLongValue(femaleTwentyFiveToFortyNine.getText().toString());
+                        registerForm.femaleTwentyFiveToTwentyNine4 = AppUtil.getLongValue(femaleTwentyFiveToTwentyNine.getText().toString());
+                        registerForm.femaleThirtyToThirtyFour4 = AppUtil.getLongValue(femaleThirtyToThirtyFour.getText().toString());
+                        registerForm.femaleThirtyFiveToThirtyNine4 = AppUtil.getLongValue(femaleThirtyFiveToThirtyNine.getText().toString());
+                        registerForm.femaleFortyToFortyFour4 = AppUtil.getLongValue(femaleFortyToFortyFour.getText().toString());
+                        registerForm.femaleFortyFiveToFortyNine4 = AppUtil.getLongValue(femaleFortyFiveToFortyNine.getText().toString());
                         registerForm.femaleFiftyPlus4 = AppUtil.getLongValue(femaleFiftyPlus.getText().toString());
 
                         femaleTotal.setText(AppUtil.getLongValue(registerForm.femaleQuestion4()));
@@ -923,8 +1085,20 @@ public class CommunityBasedDSDActivity extends MenuBar implements View.OnClickLi
                 registerForm.maleTwentyToTwentyFour4 = AppUtil.getLongValue(maleTwentyToTwentyFour.getText().toString());
                 registerForm.femaleTwentyToTwentyFour4 = AppUtil.getLongValue(femaleTwentyToTwentyFour.getText().toString());
 
-                registerForm.maleTwentyFiveToFortyNine4 = AppUtil.getLongValue(maleTwentyFiveToFortyNine.getText().toString());
-                registerForm.femaleTwentyFiveToFortyNine4 = AppUtil.getLongValue(femaleTwentyFiveToFortyNine.getText().toString());
+                registerForm.maleTwentyFiveToTwentyNine4 = AppUtil.getLongValue(maleTwentyFiveToTwentyNine.getText().toString());
+                registerForm.femaleTwentyFiveToTwentyNine4 = AppUtil.getLongValue(femaleTwentyFiveToTwentyNine.getText().toString());
+
+                registerForm.maleThirtyToThirtyFour4 = AppUtil.getLongValue(maleThirtyToThirtyFour.getText().toString());
+                registerForm.femaleThirtyToThirtyFour4 = AppUtil.getLongValue(femaleThirtyToThirtyFour.getText().toString());
+
+                registerForm.maleThirtyFiveToThirtyNine4 = AppUtil.getLongValue(maleThirtyFiveToThirtyNine.getText().toString());
+                registerForm.femaleThirtyFiveToThirtyNine4 = AppUtil.getLongValue(femaleThirtyFiveToThirtyNine.getText().toString());
+
+                registerForm.maleFortyToFortyFour4 = AppUtil.getLongValue(maleFortyToFortyFour.getText().toString());
+                registerForm.femaleFortyToFortyFour4 = AppUtil.getLongValue(femaleFortyToFortyFour.getText().toString());
+
+                registerForm.maleFortyFiveToFortyNine4 = AppUtil.getLongValue(maleFortyFiveToFortyNine.getText().toString());
+                registerForm.femaleFortyFiveToFortyNine4 = AppUtil.getLongValue(femaleFortyFiveToFortyNine.getText().toString());
 
                 registerForm.maleFiftyPlus4 = AppUtil.getLongValue(maleFiftyPlus.getText().toString());
                 registerForm.femaleFiftyPlus4 = AppUtil.getLongValue(femaleFiftyPlus.getText().toString());
@@ -965,8 +1139,16 @@ public class CommunityBasedDSDActivity extends MenuBar implements View.OnClickLi
         final EditText femaleFifteenToNineteen = (EditText) dialog.findViewById(R.id.femaleFifteenToNineteen);
         final EditText maleTwentyToTwentyFour = (EditText) dialog.findViewById(R.id.maleTwentyToTwentyFour);
         final EditText femaleTwentyToTwentyFour = (EditText) dialog.findViewById(R.id.femaleTwentyToTwentyFour);
-        final EditText maleTwentyFiveToFortyNine = (EditText) dialog.findViewById(R.id.maleTwentyFiveToFortyNine);
-        final EditText femaleTwentyFiveToFortyNine = (EditText) dialog.findViewById(R.id.femaleTwentyFiveToFortyNine);
+        final EditText maleTwentyFiveToTwentyNine = (EditText) dialog.findViewById(R.id.maleTwentyFiveToTwentyNine);
+        final EditText femaleTwentyFiveToTwentyNine = (EditText) dialog.findViewById(R.id.femaleTwentyFiveToTwentyNine);
+        final EditText maleThirtyToThirtyFour = (EditText) dialog.findViewById(R.id.maleThirtyToThirtyFour);
+        final EditText femaleThirtyToThirtyFour = (EditText) dialog.findViewById(R.id.femaleThirtyToThirtyFour);
+        final EditText maleThirtyFiveToThirtyNine = (EditText) dialog.findViewById(R.id.maleThirtyFiveToThirtyNine);
+        final EditText femaleThirtyFiveToThirtyNine = (EditText) dialog.findViewById(R.id.femaleThirtyFiveToThirtyNine);
+        final EditText maleFortyToFortyFour = (EditText) dialog.findViewById(R.id.maleFortyToFortyFour);
+        final EditText femaleFortyToFortyFour = (EditText) dialog.findViewById(R.id.femaleFortyToFortyFour);
+        final EditText maleFortyFiveToFortyNine = (EditText) dialog.findViewById(R.id.maleFortyFiveToFortyNine);
+        final EditText femaleFortyFiveToFortyNine = (EditText) dialog.findViewById(R.id.femaleFortyFiveToFortyNine);
         final EditText maleFiftyPlus = (EditText) dialog.findViewById(R.id.maleFiftyPlus);
         final EditText femaleFiftyPlus = (EditText) dialog.findViewById(R.id.femaleFiftyPlus);
 
@@ -983,8 +1165,16 @@ public class CommunityBasedDSDActivity extends MenuBar implements View.OnClickLi
             femaleFifteenToNineteen.setText(AppUtil.getLongValue(registerForm.femaleFifteenToNineteen5));
             maleTwentyToTwentyFour.setText(AppUtil.getLongValue(registerForm.maleTwentyToTwentyFour5));
             femaleTwentyToTwentyFour.setText(AppUtil.getLongValue(registerForm.femaleTwentyToTwentyFour5));
-            maleTwentyFiveToFortyNine.setText(AppUtil.getLongValue(registerForm.maleTwentyFiveToFortyNine5));
-            femaleTwentyFiveToFortyNine.setText(AppUtil.getLongValue(registerForm.femaleTwentyFiveToFortyNine5));
+            maleTwentyFiveToTwentyNine.setText(AppUtil.getLongValue(registerForm.maleTwentyFiveToTwentyNine5));
+            femaleTwentyFiveToTwentyNine.setText(AppUtil.getLongValue(registerForm.femaleTwentyFiveToTwentyNine5));
+            maleThirtyToThirtyFour.setText(AppUtil.getLongValue(registerForm.maleThirtyToThirtyFour5));
+            femaleThirtyToThirtyFour.setText(AppUtil.getLongValue(registerForm.femaleThirtyToThirtyFour5));
+            maleThirtyFiveToThirtyNine.setText(AppUtil.getLongValue(registerForm.maleThirtyFiveToThirtyNine5));
+            femaleThirtyFiveToThirtyNine.setText(AppUtil.getLongValue(registerForm.femaleThirtyFiveToThirtyNine5));
+            maleFortyToFortyFour.setText(AppUtil.getLongValue(registerForm.maleFortyToFortyFour5));
+            femaleFortyToFortyFour.setText(AppUtil.getLongValue(registerForm.femaleFortyToFortyFour5));
+            maleFortyFiveToFortyNine.setText(AppUtil.getLongValue(registerForm.maleFortyFiveToFortyNine5));
+            femaleFortyFiveToFortyNine.setText(AppUtil.getLongValue(registerForm.femaleFortyFiveToFortyNine5));
             maleFiftyPlus.setText(AppUtil.getLongValue(registerForm.maleFiftyPlus5));
             femaleFiftyPlus.setText(AppUtil.getLongValue(registerForm.femaleFiftyPlus5));
         }
@@ -996,7 +1186,11 @@ public class CommunityBasedDSDActivity extends MenuBar implements View.OnClickLi
         list.add(maleTenToFourteen);
         list.add(maleFifteenToNineteen);
         list.add(maleTwentyToTwentyFour);
-        list.add(maleTwentyFiveToFortyNine);
+        list.add(maleTwentyFiveToTwentyNine);
+        list.add(maleThirtyToThirtyFour);
+        list.add(maleThirtyFiveToThirtyNine);
+        list.add(maleFortyToFortyFour);
+        list.add(maleFortyFiveToFortyNine);
         list.add(maleFiftyPlus);
 
         for (EditText editText : list) {
@@ -1011,7 +1205,11 @@ public class CommunityBasedDSDActivity extends MenuBar implements View.OnClickLi
                         registerForm.maleTenToFourteen5 = AppUtil.getLongValue(maleTenToFourteen.getText().toString());
                         registerForm.maleFifteenToNineteen5 = AppUtil.getLongValue(maleFifteenToNineteen.getText().toString());
                         registerForm.maleTwentyToTwentyFour5 = AppUtil.getLongValue(maleTwentyToTwentyFour.getText().toString());
-                        registerForm.maleTwentyFiveToFortyNine5 = AppUtil.getLongValue(maleTwentyFiveToFortyNine.getText().toString());
+                        registerForm.maleTwentyFiveToTwentyNine5 = AppUtil.getLongValue(maleTwentyFiveToTwentyNine.getText().toString());
+                        registerForm.maleThirtyToThirtyFour5 = AppUtil.getLongValue(maleThirtyToThirtyFour.getText().toString());
+                        registerForm.maleThirtyFiveToThirtyNine5 = AppUtil.getLongValue(maleThirtyFiveToThirtyNine.getText().toString());
+                        registerForm.maleFortyToFortyFour5 = AppUtil.getLongValue(maleFortyToFortyFour.getText().toString());
+                        registerForm.maleFortyFiveToFortyNine5 = AppUtil.getLongValue(maleFortyFiveToFortyNine.getText().toString());
                         registerForm.maleFiftyPlus5 = AppUtil.getLongValue(maleFiftyPlus.getText().toString());
 
                         maleTotal.setText(AppUtil.getLongValue(registerForm.maleQuestion5()));
@@ -1028,7 +1226,11 @@ public class CommunityBasedDSDActivity extends MenuBar implements View.OnClickLi
         list.add(femaleTenToFourteen);
         list.add(femaleFifteenToNineteen);
         list.add(femaleTwentyToTwentyFour);
-        list.add(femaleTwentyFiveToFortyNine);
+        list.add(femaleTwentyFiveToTwentyNine);
+        list.add(femaleThirtyToThirtyFour);
+        list.add(femaleThirtyFiveToThirtyNine);
+        list.add(femaleFortyToFortyFour);
+        list.add(femaleFortyFiveToFortyNine);
         list.add(femaleFiftyPlus);
 
         for (EditText editText : list) {
@@ -1043,7 +1245,11 @@ public class CommunityBasedDSDActivity extends MenuBar implements View.OnClickLi
                         registerForm.femaleTenToFourteen5 = AppUtil.getLongValue(femaleTenToFourteen.getText().toString());
                         registerForm.femaleFifteenToNineteen5 = AppUtil.getLongValue(femaleFifteenToNineteen.getText().toString());
                         registerForm.femaleTwentyToTwentyFour5 = AppUtil.getLongValue(femaleTwentyToTwentyFour.getText().toString());
-                        registerForm.femaleTwentyFiveToFortyNine5 = AppUtil.getLongValue(femaleTwentyFiveToFortyNine.getText().toString());
+                        registerForm.femaleTwentyFiveToTwentyNine5 = AppUtil.getLongValue(femaleTwentyFiveToTwentyNine.getText().toString());
+                        registerForm.femaleThirtyToThirtyFour5 = AppUtil.getLongValue(femaleThirtyToThirtyFour.getText().toString());
+                        registerForm.femaleThirtyFiveToThirtyNine5 = AppUtil.getLongValue(femaleThirtyFiveToThirtyNine.getText().toString());
+                        registerForm.femaleFortyToFortyFour5 = AppUtil.getLongValue(femaleFortyToFortyFour.getText().toString());
+                        registerForm.femaleFortyFiveToFortyNine5 = AppUtil.getLongValue(femaleFortyFiveToFortyNine.getText().toString());
                         registerForm.femaleFiftyPlus5 = AppUtil.getLongValue(femaleFiftyPlus.getText().toString());
 
                         femaleTotal.setText(AppUtil.getLongValue(registerForm.femaleQuestion5()));
@@ -1076,8 +1282,20 @@ public class CommunityBasedDSDActivity extends MenuBar implements View.OnClickLi
                 registerForm.maleTwentyToTwentyFour5 = AppUtil.getLongValue(maleTwentyToTwentyFour.getText().toString());
                 registerForm.femaleTwentyToTwentyFour5 = AppUtil.getLongValue(femaleTwentyToTwentyFour.getText().toString());
 
-                registerForm.maleTwentyFiveToFortyNine5 = AppUtil.getLongValue(maleTwentyFiveToFortyNine.getText().toString());
-                registerForm.femaleTwentyFiveToFortyNine5 = AppUtil.getLongValue(femaleTwentyFiveToFortyNine.getText().toString());
+                registerForm.maleTwentyFiveToTwentyNine5 = AppUtil.getLongValue(maleTwentyFiveToTwentyNine.getText().toString());
+                registerForm.femaleTwentyFiveToTwentyNine5 = AppUtil.getLongValue(femaleTwentyFiveToTwentyNine.getText().toString());
+
+                registerForm.maleThirtyToThirtyFour5 = AppUtil.getLongValue(maleThirtyToThirtyFour.getText().toString());
+                registerForm.femaleThirtyToThirtyFour5 = AppUtil.getLongValue(femaleThirtyToThirtyFour.getText().toString());
+
+                registerForm.maleThirtyFiveToThirtyNine5 = AppUtil.getLongValue(maleThirtyFiveToThirtyNine.getText().toString());
+                registerForm.femaleThirtyFiveToThirtyNine5 = AppUtil.getLongValue(femaleThirtyFiveToThirtyNine.getText().toString());
+
+                registerForm.maleFortyToFortyFour5 = AppUtil.getLongValue(maleFortyToFortyFour.getText().toString());
+                registerForm.femaleFortyToFortyFour5 = AppUtil.getLongValue(femaleFortyToFortyFour.getText().toString());
+
+                registerForm.maleFortyFiveToFortyNine5 = AppUtil.getLongValue(maleFortyFiveToFortyNine.getText().toString());
+                registerForm.femaleFortyFiveToFortyNine5 = AppUtil.getLongValue(femaleFortyFiveToFortyNine.getText().toString());
 
                 registerForm.maleFiftyPlus5 = AppUtil.getLongValue(maleFiftyPlus.getText().toString());
                 registerForm.femaleFiftyPlus5 = AppUtil.getLongValue(femaleFiftyPlus.getText().toString());
@@ -1118,8 +1336,16 @@ public class CommunityBasedDSDActivity extends MenuBar implements View.OnClickLi
         final EditText femaleFifteenToNineteen = (EditText) dialog.findViewById(R.id.femaleFifteenToNineteen);
         final EditText maleTwentyToTwentyFour = (EditText) dialog.findViewById(R.id.maleTwentyToTwentyFour);
         final EditText femaleTwentyToTwentyFour = (EditText) dialog.findViewById(R.id.femaleTwentyToTwentyFour);
-        final EditText maleTwentyFiveToFortyNine = (EditText) dialog.findViewById(R.id.maleTwentyFiveToFortyNine);
-        final EditText femaleTwentyFiveToFortyNine = (EditText) dialog.findViewById(R.id.femaleTwentyFiveToFortyNine);
+        final EditText maleTwentyFiveToTwentyNine = (EditText) dialog.findViewById(R.id.maleTwentyFiveToTwentyNine);
+        final EditText femaleTwentyFiveToTwentyNine = (EditText) dialog.findViewById(R.id.femaleTwentyFiveToTwentyNine);
+        final EditText maleThirtyToThirtyFour = (EditText) dialog.findViewById(R.id.maleThirtyToThirtyFour);
+        final EditText femaleThirtyToThirtyFour = (EditText) dialog.findViewById(R.id.femaleThirtyToThirtyFour);
+        final EditText maleThirtyFiveToThirtyNine = (EditText) dialog.findViewById(R.id.maleThirtyFiveToThirtyNine);
+        final EditText femaleThirtyFiveToThirtyNine = (EditText) dialog.findViewById(R.id.femaleThirtyFiveToThirtyNine);
+        final EditText maleFortyToFortyFour = (EditText) dialog.findViewById(R.id.maleFortyToFortyFour);
+        final EditText femaleFortyToFortyFour = (EditText) dialog.findViewById(R.id.femaleFortyToFortyFour);
+        final EditText maleFortyFiveToFortyNine = (EditText) dialog.findViewById(R.id.maleFortyFiveToFortyNine);
+        final EditText femaleFortyFiveToFortyNine = (EditText) dialog.findViewById(R.id.femaleFortyFiveToFortyNine);
         final EditText maleFiftyPlus = (EditText) dialog.findViewById(R.id.maleFiftyPlus);
         final EditText femaleFiftyPlus = (EditText) dialog.findViewById(R.id.femaleFiftyPlus);
 
@@ -1136,8 +1362,16 @@ public class CommunityBasedDSDActivity extends MenuBar implements View.OnClickLi
             femaleFifteenToNineteen.setText(AppUtil.getLongValue(registerForm.femaleFifteenToNineteen6));
             maleTwentyToTwentyFour.setText(AppUtil.getLongValue(registerForm.maleTwentyToTwentyFour6));
             femaleTwentyToTwentyFour.setText(AppUtil.getLongValue(registerForm.femaleTwentyToTwentyFour6));
-            maleTwentyFiveToFortyNine.setText(AppUtil.getLongValue(registerForm.maleTwentyFiveToFortyNine6));
-            femaleTwentyFiveToFortyNine.setText(AppUtil.getLongValue(registerForm.femaleTwentyFiveToFortyNine6));
+            maleTwentyFiveToTwentyNine.setText(AppUtil.getLongValue(registerForm.maleTwentyFiveToTwentyNine6));
+            femaleTwentyFiveToTwentyNine.setText(AppUtil.getLongValue(registerForm.femaleTwentyFiveToTwentyNine6));
+            maleThirtyToThirtyFour.setText(AppUtil.getLongValue(registerForm.maleThirtyToThirtyFour6));
+            femaleThirtyToThirtyFour.setText(AppUtil.getLongValue(registerForm.femaleThirtyToThirtyFour6));
+            maleThirtyFiveToThirtyNine.setText(AppUtil.getLongValue(registerForm.maleThirtyFiveToThirtyNine6));
+            femaleThirtyFiveToThirtyNine.setText(AppUtil.getLongValue(registerForm.femaleThirtyFiveToThirtyNine6));
+            maleFortyToFortyFour.setText(AppUtil.getLongValue(registerForm.maleFortyToFortyFour6));
+            femaleFortyToFortyFour.setText(AppUtil.getLongValue(registerForm.femaleFortyToFortyFour6));
+            maleFortyFiveToFortyNine.setText(AppUtil.getLongValue(registerForm.maleFortyFiveToFortyNine6));
+            femaleFortyFiveToFortyNine.setText(AppUtil.getLongValue(registerForm.femaleFortyFiveToFortyNine6));
             maleFiftyPlus.setText(AppUtil.getLongValue(registerForm.maleFiftyPlus6));
             femaleFiftyPlus.setText(AppUtil.getLongValue(registerForm.femaleFiftyPlus6));
         }
@@ -1149,7 +1383,11 @@ public class CommunityBasedDSDActivity extends MenuBar implements View.OnClickLi
         list.add(maleTenToFourteen);
         list.add(maleFifteenToNineteen);
         list.add(maleTwentyToTwentyFour);
-        list.add(maleTwentyFiveToFortyNine);
+        list.add(maleTwentyFiveToTwentyNine);
+        list.add(maleThirtyToThirtyFour);
+        list.add(maleThirtyFiveToThirtyNine);
+        list.add(maleFortyToFortyFour);
+        list.add(maleFortyFiveToFortyNine);
         list.add(maleFiftyPlus);
 
         for (EditText editText : list) {
@@ -1164,7 +1402,11 @@ public class CommunityBasedDSDActivity extends MenuBar implements View.OnClickLi
                         registerForm.maleTenToFourteen6 = AppUtil.getLongValue(maleTenToFourteen.getText().toString());
                         registerForm.maleFifteenToNineteen6 = AppUtil.getLongValue(maleFifteenToNineteen.getText().toString());
                         registerForm.maleTwentyToTwentyFour6 = AppUtil.getLongValue(maleTwentyToTwentyFour.getText().toString());
-                        registerForm.maleTwentyFiveToFortyNine6 = AppUtil.getLongValue(maleTwentyFiveToFortyNine.getText().toString());
+                        registerForm.maleTwentyFiveToTwentyNine6 = AppUtil.getLongValue(maleTwentyFiveToTwentyNine.getText().toString());
+                        registerForm.maleThirtyToThirtyFour6 = AppUtil.getLongValue(maleThirtyToThirtyFour.getText().toString());
+                        registerForm.maleThirtyFiveToThirtyNine6 = AppUtil.getLongValue(maleThirtyFiveToThirtyNine.getText().toString());
+                        registerForm.maleFortyToFortyFour6 = AppUtil.getLongValue(maleFortyToFortyFour.getText().toString());
+                        registerForm.maleFortyFiveToFortyNine6 = AppUtil.getLongValue(maleFortyFiveToFortyNine.getText().toString());
                         registerForm.maleFiftyPlus6 = AppUtil.getLongValue(maleFiftyPlus.getText().toString());
 
                         maleTotal.setText(AppUtil.getLongValue(registerForm.maleQuestion6()));
@@ -1181,7 +1423,11 @@ public class CommunityBasedDSDActivity extends MenuBar implements View.OnClickLi
         list.add(femaleTenToFourteen);
         list.add(femaleFifteenToNineteen);
         list.add(femaleTwentyToTwentyFour);
-        list.add(femaleTwentyFiveToFortyNine);
+        list.add(femaleTwentyFiveToTwentyNine);
+        list.add(femaleThirtyToThirtyFour);
+        list.add(femaleThirtyFiveToThirtyNine);
+        list.add(femaleFortyToFortyFour);
+        list.add(femaleFortyFiveToFortyNine);
         list.add(femaleFiftyPlus);
 
         for (EditText editText : list) {
@@ -1196,7 +1442,11 @@ public class CommunityBasedDSDActivity extends MenuBar implements View.OnClickLi
                         registerForm.femaleTenToFourteen6 = AppUtil.getLongValue(femaleTenToFourteen.getText().toString());
                         registerForm.femaleFifteenToNineteen6 = AppUtil.getLongValue(femaleFifteenToNineteen.getText().toString());
                         registerForm.femaleTwentyToTwentyFour6 = AppUtil.getLongValue(femaleTwentyToTwentyFour.getText().toString());
-                        registerForm.femaleTwentyFiveToFortyNine6 = AppUtil.getLongValue(femaleTwentyFiveToFortyNine.getText().toString());
+                        registerForm.femaleTwentyFiveToTwentyNine6 = AppUtil.getLongValue(femaleTwentyFiveToTwentyNine.getText().toString());
+                        registerForm.femaleThirtyToThirtyFour6 = AppUtil.getLongValue(femaleThirtyToThirtyFour.getText().toString());
+                        registerForm.femaleThirtyFiveToThirtyNine6 = AppUtil.getLongValue(femaleThirtyFiveToThirtyNine.getText().toString());
+                        registerForm.femaleFortyToFortyFour6 = AppUtil.getLongValue(femaleFortyToFortyFour.getText().toString());
+                        registerForm.femaleFortyFiveToFortyNine6 = AppUtil.getLongValue(femaleFortyFiveToFortyNine.getText().toString());
                         registerForm.femaleFiftyPlus6 = AppUtil.getLongValue(femaleFiftyPlus.getText().toString());
 
                         femaleTotal.setText(AppUtil.getLongValue(registerForm.femaleQuestion6()));
@@ -1229,8 +1479,20 @@ public class CommunityBasedDSDActivity extends MenuBar implements View.OnClickLi
                 registerForm.maleTwentyToTwentyFour6 = AppUtil.getLongValue(maleTwentyToTwentyFour.getText().toString());
                 registerForm.femaleTwentyToTwentyFour6 = AppUtil.getLongValue(femaleTwentyToTwentyFour.getText().toString());
 
-                registerForm.maleTwentyFiveToFortyNine6 = AppUtil.getLongValue(maleTwentyFiveToFortyNine.getText().toString());
-                registerForm.femaleTwentyFiveToFortyNine6 = AppUtil.getLongValue(femaleTwentyFiveToFortyNine.getText().toString());
+                registerForm.maleTwentyFiveToTwentyNine6 = AppUtil.getLongValue(maleTwentyFiveToTwentyNine.getText().toString());
+                registerForm.femaleTwentyFiveToTwentyNine6 = AppUtil.getLongValue(femaleTwentyFiveToTwentyNine.getText().toString());
+
+                registerForm.maleThirtyToThirtyFour6 = AppUtil.getLongValue(maleThirtyToThirtyFour.getText().toString());
+                registerForm.femaleThirtyToThirtyFour6 = AppUtil.getLongValue(femaleThirtyToThirtyFour.getText().toString());
+
+                registerForm.maleThirtyFiveToThirtyNine6 = AppUtil.getLongValue(maleThirtyFiveToThirtyNine.getText().toString());
+                registerForm.femaleThirtyFiveToThirtyNine6 = AppUtil.getLongValue(femaleThirtyFiveToThirtyNine.getText().toString());
+
+                registerForm.maleFortyToFortyFour6 = AppUtil.getLongValue(maleFortyToFortyFour.getText().toString());
+                registerForm.femaleFortyToFortyFour6 = AppUtil.getLongValue(femaleFortyToFortyFour.getText().toString());
+
+                registerForm.maleFortyFiveToFortyNine6 = AppUtil.getLongValue(maleFortyFiveToFortyNine.getText().toString());
+                registerForm.femaleFortyFiveToFortyNine6 = AppUtil.getLongValue(femaleFortyFiveToFortyNine.getText().toString());
 
                 registerForm.maleFiftyPlus6 = AppUtil.getLongValue(maleFiftyPlus.getText().toString());
                 registerForm.femaleFiftyPlus6 = AppUtil.getLongValue(femaleFiftyPlus.getText().toString());

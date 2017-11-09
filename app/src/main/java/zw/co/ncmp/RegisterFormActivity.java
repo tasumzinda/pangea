@@ -198,7 +198,7 @@ public class RegisterFormActivity extends MenuBar implements View.OnClickListene
     @Override
     public void onClick(View v) {
 
-        if (v.getId() == btn_question_one.getId()) {
+        /*if (v.getId() == btn_question_one.getId()) {
             questionOne();
         }
 
@@ -280,14 +280,14 @@ public class RegisterFormActivity extends MenuBar implements View.OnClickListene
         if (v.getId() == dateCreated.getId()) {
             datePickerDialog.show();
 
-        }
+        }*/
     }
 
     private void updateLabel(Date date) {
         dateCreated.setText(AppUtil.getStringDate(date));
     }
 
-    public boolean validate() {
+    /*public boolean validate() {
         boolean valid = true;
 
         String name = dateCreated.getText().toString().toString();
@@ -1753,7 +1753,7 @@ public class RegisterFormActivity extends MenuBar implements View.OnClickListene
         dialog.setCancelable(true);
         dialog.show();
 
-    }
+    }*/
 
     public void upDateForm() {
 

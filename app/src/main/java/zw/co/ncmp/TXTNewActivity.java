@@ -181,7 +181,7 @@ public class TXTNewActivity extends MenuBar implements View.OnClickListener {
     @Override
     public void onClick(View v) {
 
-        if (v.getId() == btn_question_one.getId()) {
+        /*if (v.getId() == btn_question_one.getId()) {
             questionOne();
         }
 
@@ -243,7 +243,7 @@ public class TXTNewActivity extends MenuBar implements View.OnClickListener {
         if (v.getId() == dateCreated.getId()) {
             datePickerDialog.show();
 
-        }
+        }*/
     }
 
     private void updateLabel(EditText editText, Date date) {
@@ -338,7 +338,7 @@ public class TXTNewActivity extends MenuBar implements View.OnClickListener {
                 .show();
     }
 
-    public void questionOne() {
+    /*public void questionOne() {
         final Dialog dialog = new Dialog(context);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.dsd_question_activity);
@@ -948,7 +948,7 @@ public class TXTNewActivity extends MenuBar implements View.OnClickListener {
         dialog.setCancelable(true);
         dialog.show();
 
-    }
+    }*/
 
 
     public void upDateForm() {
