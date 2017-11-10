@@ -347,7 +347,7 @@ public class COP17TXNewActivity extends MenuBar implements View.OnClickListener 
         dialog.setContentView(R.layout.dsd_question_activity);
 
         TextView txt_name = (TextView) dialog.findViewById(R.id.txt_name);
-        txt_name.setText("Community Self Testing Disaggregated By Age/Sex - Positive");
+        txt_name.setText(R.string.txt_new_question_one);
 
         final TextView maleTotal = (TextView) dialog.findViewById(R.id.maleTotal);
         maleTotal.setText(AppUtil.getLongValue(txtNew.maleQuestion1()));
@@ -544,7 +544,7 @@ public class COP17TXNewActivity extends MenuBar implements View.OnClickListener 
         dialog.setContentView(R.layout.dsd_question_activity);
 
         TextView txt_name = (TextView) dialog.findViewById(R.id.txt_name);
-        txt_name.setText("Community Self Testing Disaggregated By Age/Sex - Negative");
+        txt_name.setText(R.string.txt_new_question_two);
 
         final TextView maleTotal = (TextView) dialog.findViewById(R.id.maleTotal);
         maleTotal.setText(AppUtil.getLongValue(txtNew.maleQuestion2()));
@@ -741,7 +741,7 @@ public class COP17TXNewActivity extends MenuBar implements View.OnClickListener 
         dialog.setContentView(R.layout.dsd_question_activity);
 
         TextView txt_name = (TextView) dialog.findViewById(R.id.txt_name);
-        txt_name.setText("Community Index Testing Disaggregated By Age/Sex - Positive");
+        txt_name.setText(R.string.txt_new_question_three);
 
         final TextView maleTotal = (TextView) dialog.findViewById(R.id.maleTotal);
         maleTotal.setText(AppUtil.getLongValue(txtNew.maleQuestion3()));
@@ -938,7 +938,7 @@ public class COP17TXNewActivity extends MenuBar implements View.OnClickListener 
         dialog.setContentView(R.layout.dsd_question_activity);
 
         TextView txt_name = (TextView) dialog.findViewById(R.id.txt_name);
-        txt_name.setText("Community Index Testing Disaggregated By Age/Sex - Negative");
+        txt_name.setText(R.string.txt_new_question_four);
 
         final TextView maleTotal = (TextView) dialog.findViewById(R.id.maleTotal);
         maleTotal.setText(AppUtil.getLongValue(txtNew.maleQuestion4()));
