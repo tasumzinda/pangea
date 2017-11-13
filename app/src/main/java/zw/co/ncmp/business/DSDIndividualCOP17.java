@@ -107,12 +107,44 @@ public class DSDIndividualCOP17 extends Model{
     public Long femaleTwentyToTwentyFour;
 
     @Expose
-    @Column(name = "maleTwentyFiveToFortyNine")
-    public Long maleTwentyFiveToFortyNine;
+    @Column
+    public Long maleTwentyFiveToTwentyNine;
 
+    @Column
     @Expose
-    @Column(name = "femaleTwentyFiveToFortyNine")
-    public Long femaleTwentyFiveToFortyNine;
+    public Long femaleTwentyFiveToTwentyNine;
+
+    @Column
+    @Expose
+    public Long maleThirtyToThirtyFour;
+
+    @Column
+    @Expose
+    public Long femaleThirtyToThirtyFour;
+
+    @Column
+    @Expose
+    public Long maleThirtyFiveToThirtyNine;
+
+    @Column
+    @Expose
+    public Long femaleThirtyFiveToThirtyNine;
+
+    @Column
+    @Expose
+    public Long maleFortyToFortyFour;
+
+    @Column
+    @Expose
+    public Long femaleFortyToFortyFour;
+
+    @Column
+    @Expose
+    public Long maleFortyFiveToFortyNine;
+
+    @Column
+    @Expose
+    public Long femaleFortyFiveToFortyNine;
 
     @Expose
     @Column(name = "maleFiftyPlus")
@@ -172,12 +204,44 @@ public class DSDIndividualCOP17 extends Model{
     public Long femaleTwentyToTwentyFour1;
 
     @Expose
-    @Column(name = "maleTwentyFiveToFortyNine1")
-    public Long maleTwentyFiveToFortyNine1;
+    @Column
+    public Long maleTwentyFiveToTwentyNine1;
 
+    @Column
     @Expose
-    @Column(name = "femaleTwentyFiveToFortyNine1")
-    public Long femaleTwentyFiveToFortyNine1;
+    public Long femaleTwentyFiveToTwentyNine1;
+
+    @Column
+    @Expose
+    public Long maleThirtyToThirtyFour1;
+
+    @Column
+    @Expose
+    public Long femaleThirtyToThirtyFour1;
+
+    @Column
+    @Expose
+    public Long maleThirtyFiveToThirtyNine1;
+
+    @Column
+    @Expose
+    public Long femaleThirtyFiveToThirtyNine1;
+
+    @Column
+    @Expose
+    public Long maleFortyToFortyFour1;
+
+    @Column
+    @Expose
+    public Long femaleFortyToFortyFour1;
+
+    @Column
+    @Expose
+    public Long maleFortyFiveToFortyNine1;
+
+    @Column
+    @Expose
+    public Long femaleFortyFiveToFortyNine1;
 
     @Expose
     @Column(name = "maleFiftyPlus1")
@@ -237,12 +301,44 @@ public class DSDIndividualCOP17 extends Model{
     public Long femaleTwentyToTwentyFour2;
 
     @Expose
-    @Column(name = "maleTwentyFiveToFortyNine2")
-    public Long maleTwentyFiveToFortyNine2;
+    @Column
+    public Long maleTwentyFiveToTwentyNine2;
 
+    @Column
     @Expose
-    @Column(name = "femaleTwentyFiveToFortyNine2")
-    public Long femaleTwentyFiveToFortyNine2;
+    public Long femaleTwentyFiveToTwentyNine2;
+
+    @Column
+    @Expose
+    public Long maleThirtyToThirtyFour2;
+
+    @Column
+    @Expose
+    public Long femaleThirtyToThirtyFour2;
+
+    @Column
+    @Expose
+    public Long maleThirtyFiveToThirtyNine2;
+
+    @Column
+    @Expose
+    public Long femaleThirtyFiveToThirtyNine2;
+
+    @Column
+    @Expose
+    public Long maleFortyToFortyFour2;
+
+    @Column
+    @Expose
+    public Long femaleFortyToFortyFour2;
+
+    @Column
+    @Expose
+    public Long maleFortyFiveToFortyNine2;
+
+    @Column
+    @Expose
+    public Long femaleFortyFiveToFortyNine2;
 
     @Expose
     @Column(name = "maleFiftyPlus2")
@@ -302,12 +398,44 @@ public class DSDIndividualCOP17 extends Model{
     public Long femaleTwentyToTwentyFour3;
 
     @Expose
-    @Column(name = "maleTwentyFiveToFortyNine3")
-    public Long maleTwentyFiveToFortyNine3;
+    @Column
+    public Long maleTwentyFiveToTwentyNine3;
 
+    @Column
     @Expose
-    @Column(name = "femaleTwentyFiveToFortyNine3")
-    public Long femaleTwentyFiveToFortyNine3;
+    public Long femaleTwentyFiveToTwentyNine3;
+
+    @Column
+    @Expose
+    public Long maleThirtyToThirtyFour3;
+
+    @Column
+    @Expose
+    public Long femaleThirtyToThirtyFour3;
+
+    @Column
+    @Expose
+    public Long maleThirtyFiveToThirtyNine3;
+
+    @Column
+    @Expose
+    public Long femaleThirtyFiveToThirtyNine3;
+
+    @Column
+    @Expose
+    public Long maleFortyToFortyFour3;
+
+    @Column
+    @Expose
+    public Long femaleFortyToFortyFour3;
+
+    @Column
+    @Expose
+    public Long maleFortyFiveToFortyNine3;
+
+    @Column
+    @Expose
+    public Long femaleFortyFiveToFortyNine3;
 
     @Expose
     @Column(name = "maleFiftyPlus3")
@@ -366,12 +494,44 @@ public class DSDIndividualCOP17 extends Model{
     public Long femaleTwentyToTwentyFour4;
 
     @Expose
-    @Column(name = "maleTwentyFiveToFortyNine4")
-    public Long maleTwentyFiveToFortyNine4;
+    @Column
+    public Long maleTwentyFiveToTwentyNine4;
 
+    @Column
     @Expose
-    @Column(name = "femaleTwentyFiveToFortyNine4")
-    public Long femaleTwentyFiveToFortyNine4;
+    public Long femaleTwentyFiveToTwentyNine4;
+
+    @Column
+    @Expose
+    public Long maleThirtyToThirtyFour4;
+
+    @Column
+    @Expose
+    public Long femaleThirtyToThirtyFour4;
+
+    @Column
+    @Expose
+    public Long maleThirtyFiveToThirtyNine4;
+
+    @Column
+    @Expose
+    public Long femaleThirtyFiveToThirtyNine4;
+
+    @Column
+    @Expose
+    public Long maleFortyToFortyFour4;
+
+    @Column
+    @Expose
+    public Long femaleFortyToFortyFour4;
+
+    @Column
+    @Expose
+    public Long maleFortyFiveToFortyNine4;
+
+    @Column
+    @Expose
+    public Long femaleFortyFiveToFortyNine4;
 
     @Expose
     @Column(name = "maleFiftyPlus4")
@@ -430,12 +590,44 @@ public class DSDIndividualCOP17 extends Model{
     public Long femaleTwentyToTwentyFour6;
 
     @Expose
-    @Column(name = "maleTwentyFiveToFortyNine6")
-    public Long maleTwentyFiveToFortyNine6;
+    @Column
+    public Long maleTwentyFiveToTwentyNine6;
 
+    @Column
     @Expose
-    @Column(name = "femaleTwentyFiveToFortyNine6")
-    public Long femaleTwentyFiveToFortyNine6;
+    public Long femaleTwentyFiveToTwentyNine6;
+
+    @Column
+    @Expose
+    public Long maleThirtyToThirtyFour6;
+
+    @Column
+    @Expose
+    public Long femaleThirtyToThirtyFour6;
+
+    @Column
+    @Expose
+    public Long maleThirtyFiveToThirtyNine6;
+
+    @Column
+    @Expose
+    public Long femaleThirtyFiveToThirtyNine6;
+
+    @Column
+    @Expose
+    public Long maleFortyToFortyFour6;
+
+    @Column
+    @Expose
+    public Long femaleFortyToFortyFour6;
+
+    @Column
+    @Expose
+    public Long maleFortyFiveToFortyNine6;
+
+    @Column
+    @Expose
+    public Long femaleFortyFiveToFortyNine6;
 
     @Expose
     @Column(name = "maleFiftyPlus6")
@@ -494,12 +686,44 @@ public class DSDIndividualCOP17 extends Model{
     public Long femaleTwentyToTwentyFour7;
 
     @Expose
-    @Column(name = "maleTwentyFiveToFortyNine7")
-    public Long maleTwentyFiveToFortyNine7;
+    @Column
+    public Long maleTwentyFiveToTwentyNine7;
 
+    @Column
     @Expose
-    @Column(name = "femaleTwentyFiveToFortyNine7")
-    public Long femaleTwentyFiveToFortyNine7;
+    public Long femaleTwentyFiveToTwentyNine7;
+
+    @Column
+    @Expose
+    public Long maleThirtyToThirtyFour7;
+
+    @Column
+    @Expose
+    public Long femaleThirtyToThirtyFour7;
+
+    @Column
+    @Expose
+    public Long maleThirtyFiveToThirtyNine7;
+
+    @Column
+    @Expose
+    public Long femaleThirtyFiveToThirtyNine7;
+
+    @Column
+    @Expose
+    public Long maleFortyToFortyFour7;
+
+    @Column
+    @Expose
+    public Long femaleFortyToFortyFour7;
+
+    @Column
+    @Expose
+    public Long maleFortyFiveToFortyNine7;
+
+    @Column
+    @Expose
+    public Long femaleFortyFiveToFortyNine7;
 
     @Expose
     @Column(name = "maleFiftyPlus7")
@@ -558,12 +782,45 @@ public class DSDIndividualCOP17 extends Model{
     public Long femaleTwentyToTwentyFour8;
 
     @Expose
-    @Column(name = "maleTwentyFiveToFortyNine8")
-    public Long maleTwentyFiveToFortyNine8;
+    @Column
+    public Long maleTwentyFiveToTwentyNine8;
 
+    @Column
     @Expose
-    @Column(name = "femaleTwentyFiveToFortyNine8")
-    public Long femaleTwentyFiveToFortyNine8;
+    public Long femaleTwentyFiveToTwentyNine8;
+
+    @Column
+    @Expose
+    public Long maleThirtyToThirtyFour8;
+
+    @Column
+    @Expose
+    public Long femaleThirtyToThirtyFour8;
+
+    @Column
+    @Expose
+    public Long maleThirtyFiveToThirtyNine8;
+
+    @Column
+    @Expose
+    public Long femaleThirtyFiveToThirtyNine8;
+
+    @Column
+    @Expose
+    public Long maleFortyToFortyFour8;
+
+    @Column
+    @Expose
+    public Long femaleFortyToFortyFour8;
+
+    @Column
+    @Expose
+    public Long maleFortyFiveToFortyNine8;
+
+    @Column
+    @Expose
+    public Long femaleFortyFiveToFortyNine8;
+
 
     @Expose
     @Column(name = "maleFiftyPlus8")
@@ -622,12 +879,44 @@ public class DSDIndividualCOP17 extends Model{
     public Long femaleTwentyToTwentyFour5;
 
     @Expose
-    @Column(name = "maleTwentyFiveToFortyNine5")
-    public Long maleTwentyFiveToFortyNine5;
+    @Column
+    public Long maleTwentyFiveToTwentyNine5;
 
+    @Column
     @Expose
-    @Column(name = "femaleTwentyFiveToFortyNine5")
-    public Long femaleTwentyFiveToFortyNine5;
+    public Long femaleTwentyFiveToTwentyNine5;
+
+    @Column
+    @Expose
+    public Long maleThirtyToThirtyFour5;
+
+    @Column
+    @Expose
+    public Long femaleThirtyToThirtyFour5;
+
+    @Column
+    @Expose
+    public Long maleThirtyFiveToThirtyNine5;
+
+    @Column
+    @Expose
+    public Long femaleThirtyFiveToThirtyNine5;
+
+    @Column
+    @Expose
+    public Long maleFortyToFortyFour5;
+
+    @Column
+    @Expose
+    public Long femaleFortyToFortyFour5;
+
+    @Column
+    @Expose
+    public Long maleFortyFiveToFortyNine5;
+
+    @Column
+    @Expose
+    public Long femaleFortyFiveToFortyNine5;
 
     @Expose
     @Column(name = "maleFiftyPlus5")
@@ -686,12 +975,44 @@ public class DSDIndividualCOP17 extends Model{
     public Long femaleTwentyToTwentyFour9;
 
     @Expose
-    @Column(name = "maleTwentyFiveToFortyNine9")
-    public Long maleTwentyFiveToFortyNine9;
+    @Column
+    public Long maleTwentyFiveToTwentyNine9;
 
+    @Column
     @Expose
-    @Column(name = "femaleTwentyFiveToFortyNine9")
-    public Long femaleTwentyFiveToFortyNine9;
+    public Long femaleTwentyFiveToTwentyNine9;
+
+    @Column
+    @Expose
+    public Long maleThirtyToThirtyFour9;
+
+    @Column
+    @Expose
+    public Long femaleThirtyToThirtyFour9;
+
+    @Column
+    @Expose
+    public Long maleThirtyFiveToThirtyNine9;
+
+    @Column
+    @Expose
+    public Long femaleThirtyFiveToThirtyNine9;
+
+    @Column
+    @Expose
+    public Long maleFortyToFortyFour9;
+
+    @Column
+    @Expose
+    public Long femaleFortyToFortyFour9;
+
+    @Column
+    @Expose
+    public Long maleFortyFiveToFortyNine9;
+
+    @Column
+    @Expose
+    public Long femaleFortyFiveToFortyNine9;
 
     @Expose
     @Column(name = "maleFiftyPlus9")
@@ -776,139 +1097,179 @@ public class DSDIndividualCOP17 extends Model{
         return AppUtil.getLong(maleLessThanOne) + AppUtil.getLong(maleOneToFour) +
                 AppUtil.getLong(maleFiveToNine) + AppUtil.getLong(maleTenToFourteen) +
                 AppUtil.getLong(maleFifteenToNineteen) + AppUtil.getLong(maleTwentyToTwentyFour) +
-                AppUtil.getLong(maleTwentyFiveToFortyNine) + AppUtil.getLong(maleFiftyPlus);
+                AppUtil.getLong(maleTwentyFiveToTwentyNine) + AppUtil.getLong(maleThirtyToThirtyFour) +
+                AppUtil.getLong(maleThirtyFiveToThirtyNine) + AppUtil.getLong(maleFortyToFortyFour) +
+                AppUtil.getLong(maleFortyFiveToFortyNine) + AppUtil.getLong(maleFiftyPlus);
     }
 
     public Long femaleQuestion1() {
         return AppUtil.getLong(femaleLessThanOne) + AppUtil.getLong(femaleOneToFour) +
                 AppUtil.getLong(femaleFiveToNine) + AppUtil.getLong(femaleTenToFourteen) +
                 AppUtil.getLong(femaleFifteenToNineteen) + AppUtil.getLong(femaleTwentyToTwentyFour) +
-                AppUtil.getLong(femaleTwentyFiveToFortyNine) + AppUtil.getLong(femaleFiftyPlus);
+                AppUtil.getLong(femaleTwentyFiveToTwentyNine) + AppUtil.getLong(femaleThirtyToThirtyFour) +
+                AppUtil.getLong(femaleThirtyFiveToThirtyNine) + AppUtil.getLong(femaleFortyToFortyFour) +
+                AppUtil.getLong(femaleFortyFiveToFortyNine) + AppUtil.getLong(femaleFiftyPlus);
     }
 
     public Long maleQuestion2() {
         return AppUtil.getLong(maleLessThanOne1) + AppUtil.getLong(maleOneToFour1) +
                 AppUtil.getLong(maleFiveToNine1) + AppUtil.getLong(maleTenToFourteen1) +
                 AppUtil.getLong(maleFifteenToNineteen1) + AppUtil.getLong(maleTwentyToTwentyFour1) +
-                AppUtil.getLong(maleTwentyFiveToFortyNine1) + AppUtil.getLong(maleFiftyPlus1);
+                AppUtil.getLong(maleTwentyFiveToTwentyNine1) + AppUtil.getLong(maleThirtyToThirtyFour1) +
+                AppUtil.getLong(maleThirtyFiveToThirtyNine1) + AppUtil.getLong(maleFortyToFortyFour1) +
+                AppUtil.getLong(maleFortyFiveToFortyNine1) + AppUtil.getLong(maleFiftyPlus1);
     }
 
     public Long femaleQuestion2() {
         return AppUtil.getLong(femaleLessThanOne1) + AppUtil.getLong(femaleOneToFour1) +
                 AppUtil.getLong(femaleFiveToNine1) + AppUtil.getLong(femaleTenToFourteen1) +
                 AppUtil.getLong(femaleFifteenToNineteen1) + AppUtil.getLong(femaleTwentyToTwentyFour1) +
-                AppUtil.getLong(femaleTwentyFiveToFortyNine1) + AppUtil.getLong(femaleFiftyPlus1);
+                AppUtil.getLong(femaleTwentyFiveToTwentyNine1) + AppUtil.getLong(femaleThirtyToThirtyFour1) +
+                AppUtil.getLong(femaleThirtyFiveToThirtyNine1) + AppUtil.getLong(femaleFortyToFortyFour1) +
+                AppUtil.getLong(femaleFortyFiveToFortyNine1) + AppUtil.getLong(femaleFiftyPlus1);
     }
 
     public Long maleOtherPITCPositive() {
         return AppUtil.getLong(maleLessThanOne2) + AppUtil.getLong(maleOneToFour2) +
                 AppUtil.getLong(maleFiveToNine2) + AppUtil.getLong(maleTenToFourteen2) +
                 AppUtil.getLong(maleFifteenToNineteen2) + AppUtil.getLong(maleTwentyToTwentyFour2) +
-                AppUtil.getLong(maleTwentyFiveToFortyNine2) + AppUtil.getLong(maleFiftyPlus2);
+                AppUtil.getLong(maleTwentyFiveToTwentyNine2) + AppUtil.getLong(maleThirtyToThirtyFour2) +
+                AppUtil.getLong(maleThirtyFiveToThirtyNine2) + AppUtil.getLong(maleFortyToFortyFour2) +
+                AppUtil.getLong(maleFortyFiveToFortyNine2) + AppUtil.getLong(maleFiftyPlus2);
     }
 
     public Long femaleOtherPITCPositive() {
         return AppUtil.getLong(femaleLessThanOne2) + AppUtil.getLong(femaleOneToFour2) +
                 AppUtil.getLong(femaleFiveToNine2) + AppUtil.getLong(femaleTenToFourteen2) +
                 AppUtil.getLong(femaleFifteenToNineteen2) + AppUtil.getLong(femaleTwentyToTwentyFour2) +
-                AppUtil.getLong(femaleTwentyFiveToFortyNine2) + AppUtil.getLong(femaleFiftyPlus2);
+                AppUtil.getLong(femaleTwentyFiveToTwentyNine2) + AppUtil.getLong(femaleThirtyToThirtyFour2) +
+                AppUtil.getLong(femaleThirtyFiveToThirtyNine2) + AppUtil.getLong(femaleFortyToFortyFour2) +
+                AppUtil.getLong(femaleFortyFiveToFortyNine2) + AppUtil.getLong(femaleFiftyPlus2);
     }
 
     public Long maleOtherPITCNegative() {
         return AppUtil.getLong(maleLessThanOne3) + AppUtil.getLong(maleOneToFour3) +
                 AppUtil.getLong(maleFiveToNine3) + AppUtil.getLong(maleTenToFourteen3) +
                 AppUtil.getLong(maleFifteenToNineteen3) + AppUtil.getLong(maleTwentyToTwentyFour3) +
-                AppUtil.getLong(maleTwentyFiveToFortyNine3) + AppUtil.getLong(maleFiftyPlus3);
+                AppUtil.getLong(maleTwentyFiveToTwentyNine3) + AppUtil.getLong(maleThirtyToThirtyFour3) +
+                AppUtil.getLong(maleThirtyFiveToThirtyNine3) + AppUtil.getLong(maleFortyToFortyFour3) +
+                AppUtil.getLong(maleFortyFiveToFortyNine3) + AppUtil.getLong(maleFiftyPlus3);
     }
 
     public Long femaleOtherPITCNegative() {
         return AppUtil.getLong(femaleLessThanOne3) + AppUtil.getLong(femaleOneToFour3) +
                 AppUtil.getLong(femaleFiveToNine3) + AppUtil.getLong(femaleTenToFourteen3) +
                 AppUtil.getLong(femaleFifteenToNineteen3) + AppUtil.getLong(femaleTwentyToTwentyFour3) +
-                AppUtil.getLong(femaleTwentyFiveToFortyNine3) + AppUtil.getLong(femaleFiftyPlus3);
+                AppUtil.getLong(femaleTwentyFiveToTwentyNine3) + AppUtil.getLong(femaleThirtyToThirtyFour3) +
+                AppUtil.getLong(femaleThirtyFiveToThirtyNine3) + AppUtil.getLong(femaleFortyToFortyFour3) +
+                AppUtil.getLong(femaleFortyFiveToFortyNine3) + AppUtil.getLong(femaleFiftyPlus3);
     }
 
     public Long maleQuestion4() {
         return AppUtil.getLong(maleLessThanOne4) + AppUtil.getLong(maleOneToFour4) +
                 AppUtil.getLong(maleFiveToNine4) + AppUtil.getLong(maleTenToFourteen4) +
                 AppUtil.getLong(maleFifteenToNineteen4) + AppUtil.getLong(maleTwentyToTwentyFour4) +
-                AppUtil.getLong(maleTwentyFiveToFortyNine4) + AppUtil.getLong(maleFiftyPlus4);
+                AppUtil.getLong(maleTwentyFiveToTwentyNine4) + AppUtil.getLong(maleThirtyToThirtyFour4) +
+                AppUtil.getLong(maleThirtyFiveToThirtyNine4) + AppUtil.getLong(maleFortyToFortyFour4) +
+                AppUtil.getLong(maleFortyFiveToFortyNine4) + AppUtil.getLong(maleFiftyPlus4);
     }
 
     public Long femaleQuestion4() {
         return AppUtil.getLong(femaleLessThanOne4) + AppUtil.getLong(femaleOneToFour4) +
                 AppUtil.getLong(femaleFiveToNine4) + AppUtil.getLong(femaleTenToFourteen4) +
                 AppUtil.getLong(femaleFifteenToNineteen4) + AppUtil.getLong(femaleTwentyToTwentyFour4) +
-                AppUtil.getLong(femaleTwentyFiveToFortyNine4) + AppUtil.getLong(femaleFiftyPlus4);
+                AppUtil.getLong(femaleTwentyFiveToTwentyNine4) + AppUtil.getLong(femaleThirtyToThirtyFour4) +
+                AppUtil.getLong(femaleThirtyFiveToThirtyNine4) + AppUtil.getLong(femaleFortyToFortyFour4) +
+                AppUtil.getLong(femaleFortyFiveToFortyNine4) + AppUtil.getLong(femaleFiftyPlus4);
     }
 
     public Long maleQuestion6() {
         return AppUtil.getLong(maleLessThanOne6) + AppUtil.getLong(maleOneToFour6) +
                 AppUtil.getLong(maleFiveToNine6) + AppUtil.getLong(maleTenToFourteen6) +
                 AppUtil.getLong(maleFifteenToNineteen6) + AppUtil.getLong(maleTwentyToTwentyFour6) +
-                AppUtil.getLong(maleTwentyFiveToFortyNine6) + AppUtil.getLong(maleFiftyPlus6);
+                AppUtil.getLong(maleTwentyFiveToTwentyNine6) + AppUtil.getLong(maleThirtyToThirtyFour6) +
+                AppUtil.getLong(maleThirtyFiveToThirtyNine6) + AppUtil.getLong(maleFortyToFortyFour6) +
+                AppUtil.getLong(maleFortyFiveToFortyNine6) + AppUtil.getLong(maleFiftyPlus6);
     }
 
     public Long femaleQuestion6() {
         return AppUtil.getLong(femaleLessThanOne6) + AppUtil.getLong(femaleOneToFour6) +
                 AppUtil.getLong(femaleFiveToNine6) + AppUtil.getLong(femaleTenToFourteen6) +
                 AppUtil.getLong(femaleFifteenToNineteen6) + AppUtil.getLong(femaleTwentyToTwentyFour6) +
-                AppUtil.getLong(femaleTwentyFiveToFortyNine6) + AppUtil.getLong(femaleFiftyPlus6);
+                AppUtil.getLong(femaleTwentyFiveToTwentyNine6) + AppUtil.getLong(femaleThirtyToThirtyFour6) +
+                AppUtil.getLong(femaleThirtyFiveToThirtyNine6) + AppUtil.getLong(femaleFortyToFortyFour6) +
+                AppUtil.getLong(femaleFortyFiveToFortyNine6) + AppUtil.getLong(femaleFiftyPlus6);
     }
 
     public Long maleQuestion7() {
         return AppUtil.getLong(maleLessThanOne7) + AppUtil.getLong(maleOneToFour7) +
                 AppUtil.getLong(maleFiveToNine7) + AppUtil.getLong(maleTenToFourteen7) +
                 AppUtil.getLong(maleFifteenToNineteen7) + AppUtil.getLong(maleTwentyToTwentyFour7) +
-                AppUtil.getLong(maleTwentyFiveToFortyNine7) + AppUtil.getLong(maleFiftyPlus7);
+                AppUtil.getLong(maleTwentyFiveToTwentyNine7) + AppUtil.getLong(maleThirtyToThirtyFour7) +
+                AppUtil.getLong(maleThirtyFiveToThirtyNine7) + AppUtil.getLong(maleFortyToFortyFour7) +
+                AppUtil.getLong(maleFortyFiveToFortyNine7) + AppUtil.getLong(maleFiftyPlus7);
     }
 
     public Long femaleQuestion7() {
         return AppUtil.getLong(femaleLessThanOne7) + AppUtil.getLong(femaleOneToFour7) +
                 AppUtil.getLong(femaleFiveToNine7) + AppUtil.getLong(femaleTenToFourteen7) +
                 AppUtil.getLong(femaleFifteenToNineteen7) + AppUtil.getLong(femaleTwentyToTwentyFour7) +
-                AppUtil.getLong(femaleTwentyFiveToFortyNine7) + AppUtil.getLong(femaleFiftyPlus7);
+                AppUtil.getLong(femaleTwentyFiveToTwentyNine7) + AppUtil.getLong(femaleThirtyToThirtyFour7) +
+                AppUtil.getLong(femaleThirtyFiveToThirtyNine7) + AppUtil.getLong(femaleFortyToFortyFour7) +
+                AppUtil.getLong(femaleFortyFiveToFortyNine7) + AppUtil.getLong(femaleFiftyPlus7);
     }
 
     public Long maleQuestion8() {
         return AppUtil.getLong(maleLessThanOne8) + AppUtil.getLong(maleOneToFour8) +
                 AppUtil.getLong(maleFiveToNine8) + AppUtil.getLong(maleTenToFourteen8) +
                 AppUtil.getLong(maleFifteenToNineteen8) + AppUtil.getLong(maleTwentyToTwentyFour8) +
-                AppUtil.getLong(maleTwentyFiveToFortyNine8) + AppUtil.getLong(maleFiftyPlus8);
+                AppUtil.getLong(maleTwentyFiveToTwentyNine8) + AppUtil.getLong(maleThirtyToThirtyFour8) +
+                AppUtil.getLong(maleThirtyFiveToThirtyNine8) + AppUtil.getLong(maleFortyToFortyFour8) +
+                AppUtil.getLong(maleFortyFiveToFortyNine8) + AppUtil.getLong(maleFiftyPlus8);
     }
 
     public Long femaleQuestion8() {
         return AppUtil.getLong(femaleLessThanOne8) + AppUtil.getLong(femaleOneToFour8) +
                 AppUtil.getLong(femaleFiveToNine8) + AppUtil.getLong(femaleTenToFourteen8) +
                 AppUtil.getLong(femaleFifteenToNineteen8) + AppUtil.getLong(femaleTwentyToTwentyFour8) +
-                AppUtil.getLong(femaleTwentyFiveToFortyNine8) + AppUtil.getLong(femaleFiftyPlus8);
+                AppUtil.getLong(femaleTwentyFiveToTwentyNine8) + AppUtil.getLong(femaleThirtyToThirtyFour8) +
+                AppUtil.getLong(femaleThirtyFiveToThirtyNine8) + AppUtil.getLong(femaleFortyToFortyFour8) +
+                AppUtil.getLong(femaleFortyFiveToFortyNine8) + AppUtil.getLong(femaleFiftyPlus8);
     }
 
     public Long maleQuestion5() {
         return AppUtil.getLong(maleLessThanOne5) + AppUtil.getLong(maleOneToFour5) +
                 AppUtil.getLong(maleFiveToNine5) + AppUtil.getLong(maleTenToFourteen5) +
                 AppUtil.getLong(maleFifteenToNineteen5) + AppUtil.getLong(maleTwentyToTwentyFour5) +
-                AppUtil.getLong(maleTwentyFiveToFortyNine5) + AppUtil.getLong(maleFiftyPlus5);
+                AppUtil.getLong(maleTwentyFiveToTwentyNine5) + AppUtil.getLong(maleThirtyToThirtyFour5) +
+                AppUtil.getLong(maleThirtyFiveToThirtyNine5) + AppUtil.getLong(maleFortyToFortyFour5) +
+                AppUtil.getLong(maleFortyFiveToFortyNine5) + AppUtil.getLong(maleFiftyPlus5);
     }
 
     public Long femaleQuestion5() {
         return AppUtil.getLong(femaleLessThanOne5) + AppUtil.getLong(femaleOneToFour5) +
                 AppUtil.getLong(femaleFiveToNine5) + AppUtil.getLong(femaleTenToFourteen5) +
                 AppUtil.getLong(femaleFifteenToNineteen5) + AppUtil.getLong(femaleTwentyToTwentyFour5) +
-                AppUtil.getLong(femaleTwentyFiveToFortyNine5) + AppUtil.getLong(femaleFiftyPlus5);
+                AppUtil.getLong(femaleTwentyFiveToTwentyNine5) + AppUtil.getLong(femaleThirtyToThirtyFour5) +
+                AppUtil.getLong(femaleThirtyFiveToThirtyNine5) + AppUtil.getLong(femaleFortyToFortyFour5) +
+                AppUtil.getLong(femaleFortyFiveToFortyNine5) + AppUtil.getLong(femaleFiftyPlus5);
     }
 
     public Long maleQuestion9() {
         return AppUtil.getLong(maleLessThanOne9) + AppUtil.getLong(maleOneToFour9) +
                 AppUtil.getLong(maleFiveToNine9) + AppUtil.getLong(maleTenToFourteen9) +
                 AppUtil.getLong(maleFifteenToNineteen9) + AppUtil.getLong(maleTwentyToTwentyFour9) +
-                AppUtil.getLong(maleTwentyFiveToFortyNine9) + AppUtil.getLong(maleFiftyPlus9);
+                AppUtil.getLong(maleTwentyFiveToTwentyNine9) + AppUtil.getLong(maleThirtyToThirtyFour9) +
+                AppUtil.getLong(maleThirtyFiveToThirtyNine9) + AppUtil.getLong(maleFortyToFortyFour9) +
+                AppUtil.getLong(maleFortyFiveToFortyNine9) + AppUtil.getLong(maleFiftyPlus9);
     }
 
     public Long femaleQuestion9() {
         return AppUtil.getLong(femaleLessThanOne9) + AppUtil.getLong(femaleOneToFour9) +
                 AppUtil.getLong(femaleFiveToNine9) + AppUtil.getLong(femaleTenToFourteen9) +
                 AppUtil.getLong(femaleFifteenToNineteen9) + AppUtil.getLong(femaleTwentyToTwentyFour9) +
-                AppUtil.getLong(femaleTwentyFiveToFortyNine9) + AppUtil.getLong(femaleFiftyPlus9);
+                AppUtil.getLong(femaleTwentyFiveToTwentyNine9) + AppUtil.getLong(femaleThirtyToThirtyFour9) +
+                AppUtil.getLong(femaleThirtyFiveToThirtyNine9) + AppUtil.getLong(femaleFortyToFortyFour9) +
+                AppUtil.getLong(femaleFortyFiveToFortyNine9) + AppUtil.getLong(femaleFiftyPlus9);
     }
 }
