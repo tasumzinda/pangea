@@ -105,12 +105,44 @@ public class PMTCTStat extends Model{
     public Long femaleTwentyToTwentyFour;
 
     @Expose
-    @Column(name = "maleTwentyFiveToFortyNine")
-    public Long maleTwentyFiveToFortyNine;
+    @Column
+    public Long maleTwentyFiveToTwentyNine;
 
+    @Column
     @Expose
-    @Column(name = "femaleTwentyFiveToFortyNine")
-    public Long femaleTwentyFiveToFortyNine;
+    public Long femaleTwentyFiveToTwentyNine;
+
+    @Column
+    @Expose
+    public Long maleThirtyToThirtyFour;
+
+    @Column
+    @Expose
+    public Long femaleThirtyToThirtyFour;
+
+    @Column
+    @Expose
+    public Long maleThirtyFiveToThirtyNine;
+
+    @Column
+    @Expose
+    public Long femaleThirtyFiveToThirtyNine;
+
+    @Column
+    @Expose
+    public Long maleFortyToFortyFour;
+
+    @Column
+    @Expose
+    public Long femaleFortyToFortyFour;
+
+    @Column
+    @Expose
+    public Long maleFortyFiveToFortyNine;
+
+    @Column
+    @Expose
+    public Long femaleFortyFiveToFortyNine;
 
     @Expose
     @Column(name = "maleFiftyPlus")
@@ -170,12 +202,44 @@ public class PMTCTStat extends Model{
     public Long femaleTwentyToTwentyFour1;
 
     @Expose
-    @Column(name = "maleTwentyFiveToFortyNine1")
-    public Long maleTwentyFiveToFortyNine1;
+    @Column
+    public Long maleTwentyFiveToTwentyNine1;
 
+    @Column
     @Expose
-    @Column(name = "femaleTwentyFiveToFortyNine1")
-    public Long femaleTwentyFiveToFortyNine1;
+    public Long femaleTwentyFiveToTwentyNine1;
+
+    @Column
+    @Expose
+    public Long maleThirtyToThirtyFour1;
+
+    @Column
+    @Expose
+    public Long femaleThirtyToThirtyFour1;
+
+    @Column
+    @Expose
+    public Long maleThirtyFiveToThirtyNine1;
+
+    @Column
+    @Expose
+    public Long femaleThirtyFiveToThirtyNine1;
+
+    @Column
+    @Expose
+    public Long maleFortyToFortyFour1;
+
+    @Column
+    @Expose
+    public Long femaleFortyToFortyFour1;
+
+    @Column
+    @Expose
+    public Long maleFortyFiveToFortyNine1;
+
+    @Column
+    @Expose
+    public Long femaleFortyFiveToFortyNine1;
 
     @Expose
     @Column(name = "maleFiftyPlus1")
@@ -234,13 +298,45 @@ public class PMTCTStat extends Model{
     @Column(name = "femaleTwentyToTwentyFour2")
     public Long femaleTwentyToTwentyFour2;
 
+    @Column
     @Expose
-    @Column(name = "maleTwentyFiveToFortyNine2")
-    public Long maleTwentyFiveToFortyNine2;
+    public Long maleTwentyFiveToTwentyNine2;
 
+    @Column
     @Expose
-    @Column(name = "femaleTwentyFiveToFortyNine2")
-    public Long femaleTwentyFiveToFortyNine2;
+    public Long femaleTwentyFiveToTwentyNine2;
+
+    @Column
+    @Expose
+    public Long maleThirtyToThirtyFour2;
+
+    @Column
+    @Expose
+    public Long femaleThirtyToThirtyFour2;
+
+    @Column
+    @Expose
+    public Long maleThirtyFiveToThirtyNine2;
+
+    @Column
+    @Expose
+    public Long femaleThirtyFiveToThirtyNine2;
+
+    @Column
+    @Expose
+    public Long maleFortyToFortyFour2;
+
+    @Column
+    @Expose
+    public Long femaleFortyToFortyFour2;
+
+    @Column
+    @Expose
+    public Long maleFortyFiveToFortyNine2;
+
+    @Column
+    @Expose
+    public Long femaleFortyFiveToFortyNine2;
 
     @Expose
     @Column(name = "maleFiftyPlus2")
@@ -300,12 +396,44 @@ public class PMTCTStat extends Model{
     public Long femaleTwentyToTwentyFour3;
 
     @Expose
-    @Column(name = "maleTwentyFiveToFortyNine3")
-    public Long maleTwentyFiveToFortyNine3;
+    @Column
+    public Long maleTwentyFiveToTwentyNine3;
 
+    @Column
     @Expose
-    @Column(name = "femaleTwentyFiveToFortyNine3")
-    public Long femaleTwentyFiveToFortyNine3;
+    public Long femaleTwentyFiveToTwentyNine3;
+
+    @Column
+    @Expose
+    public Long maleThirtyToThirtyFour3;
+
+    @Column
+    @Expose
+    public Long femaleThirtyToThirtyFour3;
+
+    @Column
+    @Expose
+    public Long maleThirtyFiveToThirtyNine3;
+
+    @Column
+    @Expose
+    public Long femaleThirtyFiveToThirtyNine3;
+
+    @Column
+    @Expose
+    public Long maleFortyToFortyFour3;
+
+    @Column
+    @Expose
+    public Long femaleFortyToFortyFour3;
+
+    @Column
+    @Expose
+    public Long maleFortyFiveToFortyNine3;
+
+    @Column
+    @Expose
+    public Long femaleFortyFiveToFortyNine3;
 
     @Expose
     @Column(name = "maleFiftyPlus3")
@@ -364,12 +492,44 @@ public class PMTCTStat extends Model{
     public Long femaleTwentyToTwentyFour4;
 
     @Expose
-    @Column(name = "maleTwentyFiveToFortyNine4")
-    public Long maleTwentyFiveToFortyNine4;
+    @Column
+    public Long maleTwentyFiveToTwentyNine4;
 
+    @Column
     @Expose
-    @Column(name = "femaleTwentyFiveToFortyNine4")
-    public Long femaleTwentyFiveToFortyNine4;
+    public Long femaleTwentyFiveToTwentyNine4;
+
+    @Column
+    @Expose
+    public Long maleThirtyToThirtyFour4;
+
+    @Column
+    @Expose
+    public Long femaleThirtyToThirtyFour4;
+
+    @Column
+    @Expose
+    public Long maleThirtyFiveToThirtyNine4;
+
+    @Column
+    @Expose
+    public Long femaleThirtyFiveToThirtyNine4;
+
+    @Column
+    @Expose
+    public Long maleFortyToFortyFour4;
+
+    @Column
+    @Expose
+    public Long femaleFortyToFortyFour4;
+
+    @Column
+    @Expose
+    public Long maleFortyFiveToFortyNine4;
+
+    @Column
+    @Expose
+    public Long femaleFortyFiveToFortyNine4;
 
     @Expose
     @Column(name = "maleFiftyPlus4")
@@ -478,69 +638,89 @@ public class PMTCTStat extends Model{
         return AppUtil.getLong(maleLessThanOne) + AppUtil.getLong(maleOneToFour) +
                 AppUtil.getLong(maleFiveToNine) + AppUtil.getLong(maleTenToFourteen) +
                 AppUtil.getLong(maleFifteenToNineteen) + AppUtil.getLong(maleTwentyToTwentyFour) +
-                AppUtil.getLong(maleTwentyFiveToFortyNine) + AppUtil.getLong(maleFiftyPlus);
+                AppUtil.getLong(maleTwentyFiveToTwentyNine) + AppUtil.getLong(maleThirtyToThirtyFour) +
+                AppUtil.getLong(maleThirtyFiveToThirtyNine) + AppUtil.getLong(maleFortyToFortyFour) +
+                AppUtil.getLong(maleFortyFiveToFortyNine) + AppUtil.getLong(maleFiftyPlus);
     }
 
     public Long femaleKnownPositive() {
         return AppUtil.getLong(femaleLessThanOne) + AppUtil.getLong(femaleOneToFour) +
                 AppUtil.getLong(femaleFiveToNine) + AppUtil.getLong(femaleTenToFourteen) +
                 AppUtil.getLong(femaleFifteenToNineteen) + AppUtil.getLong(femaleTwentyToTwentyFour) +
-                AppUtil.getLong(femaleTwentyFiveToFortyNine) + AppUtil.getLong(femaleFiftyPlus);
+                AppUtil.getLong(femaleTwentyFiveToTwentyNine) + AppUtil.getLong(femaleThirtyToThirtyFour) +
+                AppUtil.getLong(femaleThirtyFiveToThirtyNine) + AppUtil.getLong(femaleFortyToFortyFour) +
+                AppUtil.getLong(femaleFortyFiveToFortyNine) + AppUtil.getLong(femaleFiftyPlus);
     }
 
     public Long maleTestedPositive() {
         return AppUtil.getLong(maleLessThanOne1) + AppUtil.getLong(maleOneToFour1) +
                 AppUtil.getLong(maleFiveToNine1) + AppUtil.getLong(maleTenToFourteen1) +
                 AppUtil.getLong(maleFifteenToNineteen1) + AppUtil.getLong(maleTwentyToTwentyFour1) +
-                AppUtil.getLong(maleTwentyFiveToFortyNine1) + AppUtil.getLong(maleFiftyPlus1);
+                AppUtil.getLong(maleTwentyFiveToTwentyNine1) + AppUtil.getLong(maleThirtyToThirtyFour1) +
+                AppUtil.getLong(maleThirtyFiveToThirtyNine1) + AppUtil.getLong(maleFortyToFortyFour1) +
+                AppUtil.getLong(maleFortyFiveToFortyNine1) + AppUtil.getLong(maleFiftyPlus1);
     }
 
     public Long femaleTestedPositive() {
         return AppUtil.getLong(femaleLessThanOne1) + AppUtil.getLong(femaleOneToFour1) +
                 AppUtil.getLong(femaleFiveToNine1) + AppUtil.getLong(femaleTenToFourteen1) +
                 AppUtil.getLong(femaleFifteenToNineteen1) + AppUtil.getLong(femaleTwentyToTwentyFour1) +
-                AppUtil.getLong(femaleTwentyFiveToFortyNine1) + AppUtil.getLong(femaleFiftyPlus1);
+                AppUtil.getLong(femaleTwentyFiveToTwentyNine1) + AppUtil.getLong(femaleThirtyToThirtyFour1) +
+                AppUtil.getLong(femaleThirtyFiveToThirtyNine1) + AppUtil.getLong(femaleFortyToFortyFour1) +
+                AppUtil.getLong(femaleFortyFiveToFortyNine1) + AppUtil.getLong(femaleFiftyPlus1);
     }
 
     public Long maleTestedNegative() {
         return AppUtil.getLong(maleLessThanOne2) + AppUtil.getLong(maleOneToFour2) +
                 AppUtil.getLong(maleFiveToNine2) + AppUtil.getLong(maleTenToFourteen2) +
                 AppUtil.getLong(maleFifteenToNineteen2) + AppUtil.getLong(maleTwentyToTwentyFour2) +
-                AppUtil.getLong(maleTwentyFiveToFortyNine2) + AppUtil.getLong(maleFiftyPlus2);
+                AppUtil.getLong(maleTwentyFiveToTwentyNine2) + AppUtil.getLong(maleThirtyToThirtyFour2) +
+                AppUtil.getLong(maleThirtyFiveToThirtyNine2) + AppUtil.getLong(maleFortyToFortyFour2) +
+                AppUtil.getLong(maleFortyFiveToFortyNine2) + AppUtil.getLong(maleFiftyPlus2);
     }
 
     public Long femaleTestedNegative() {
         return AppUtil.getLong(femaleLessThanOne2) + AppUtil.getLong(femaleOneToFour2) +
                 AppUtil.getLong(femaleFiveToNine2) + AppUtil.getLong(femaleTenToFourteen2) +
                 AppUtil.getLong(femaleFifteenToNineteen2) + AppUtil.getLong(femaleTwentyToTwentyFour2) +
-                AppUtil.getLong(femaleTwentyFiveToFortyNine2) + AppUtil.getLong(femaleFiftyPlus2);
+                AppUtil.getLong(femaleTwentyFiveToTwentyNine2) + AppUtil.getLong(femaleThirtyToThirtyFour2) +
+                AppUtil.getLong(femaleThirtyFiveToThirtyNine2) + AppUtil.getLong(femaleFortyToFortyFour2) +
+                AppUtil.getLong(femaleFortyFiveToFortyNine2) + AppUtil.getLong(femaleFiftyPlus2);
     }
 
     public Long maleDenominator() {
         return AppUtil.getLong(maleLessThanOne3) + AppUtil.getLong(maleOneToFour3) +
                 AppUtil.getLong(maleFiveToNine3) + AppUtil.getLong(maleTenToFourteen3) +
                 AppUtil.getLong(maleFifteenToNineteen3) + AppUtil.getLong(maleTwentyToTwentyFour3) +
-                AppUtil.getLong(maleTwentyFiveToFortyNine3) + AppUtil.getLong(maleFiftyPlus3);
+                AppUtil.getLong(maleTwentyFiveToTwentyNine3) + AppUtil.getLong(maleThirtyToThirtyFour3) +
+                AppUtil.getLong(maleThirtyFiveToThirtyNine3) + AppUtil.getLong(maleFortyToFortyFour3) +
+                AppUtil.getLong(maleFortyFiveToFortyNine3) + AppUtil.getLong(maleFiftyPlus3);
     }
 
     public Long femaleDenominator() {
         return AppUtil.getLong(femaleLessThanOne3) + AppUtil.getLong(femaleOneToFour3) +
                 AppUtil.getLong(femaleFiveToNine3) + AppUtil.getLong(femaleTenToFourteen3) +
                 AppUtil.getLong(femaleFifteenToNineteen3) + AppUtil.getLong(femaleTwentyToTwentyFour3) +
-                AppUtil.getLong(femaleTwentyFiveToFortyNine3) + AppUtil.getLong(femaleFiftyPlus3);
+                AppUtil.getLong(femaleTwentyFiveToTwentyNine3) + AppUtil.getLong(femaleThirtyToThirtyFour3) +
+                AppUtil.getLong(femaleThirtyFiveToThirtyNine3) + AppUtil.getLong(femaleFortyToFortyFour3) +
+                AppUtil.getLong(femaleFortyFiveToFortyNine3) + AppUtil.getLong(femaleFiftyPlus3);
     }
 
     public Long maleNumerator() {
         return AppUtil.getLong(maleLessThanOne4) + AppUtil.getLong(maleOneToFour4) +
                 AppUtil.getLong(maleFiveToNine4) + AppUtil.getLong(maleTenToFourteen4) +
                 AppUtil.getLong(maleFifteenToNineteen4) + AppUtil.getLong(maleTwentyToTwentyFour4) +
-                AppUtil.getLong(maleTwentyFiveToFortyNine4) + AppUtil.getLong(maleFiftyPlus4);
+                AppUtil.getLong(maleTwentyFiveToTwentyNine4) + AppUtil.getLong(maleThirtyToThirtyFour4) +
+                AppUtil.getLong(maleThirtyFiveToThirtyNine4) + AppUtil.getLong(maleFortyToFortyFour4) +
+                AppUtil.getLong(maleFortyFiveToFortyNine4) + AppUtil.getLong(maleFiftyPlus4);
     }
 
     public Long femaleNumerator() {
         return AppUtil.getLong(femaleLessThanOne4) + AppUtil.getLong(femaleOneToFour4) +
                 AppUtil.getLong(femaleFiveToNine4) + AppUtil.getLong(femaleTenToFourteen4) +
                 AppUtil.getLong(femaleFifteenToNineteen4) + AppUtil.getLong(femaleTwentyToTwentyFour4) +
-                AppUtil.getLong(femaleTwentyFiveToFortyNine4) + AppUtil.getLong(femaleFiftyPlus4);
+                AppUtil.getLong(femaleTwentyFiveToTwentyNine4) + AppUtil.getLong(femaleThirtyToThirtyFour4) +
+                AppUtil.getLong(femaleThirtyFiveToThirtyNine4) + AppUtil.getLong(femaleFortyToFortyFour4) +
+                AppUtil.getLong(femaleFortyFiveToFortyNine4) + AppUtil.getLong(femaleFiftyPlus4);
     }
 }

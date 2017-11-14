@@ -175,7 +175,7 @@ public class PMTCTStatActivity extends MenuBar implements View.OnClickListener{
     @Override
     public void onClick(View v) {
 
-        /*if (v.getId() == knownHIVPositive.getId()) {
+        if (v.getId() == knownHIVPositive.getId()) {
             questionOne();
         }
         if(v.getId() == newHIVPositive.getId()){
@@ -231,7 +231,7 @@ public class PMTCTStatActivity extends MenuBar implements View.OnClickListener{
 
         if (v.getId() == dateCreated.getId()) {
             datePickerDialog.show();
-        }*/
+        }
 
     }
 
@@ -240,7 +240,7 @@ public class PMTCTStatActivity extends MenuBar implements View.OnClickListener{
     }
 
 
-    /*public void questionOne() {
+    public void questionOne() {
         final Dialog dialog = new Dialog(context);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.dsd_question_activity);
@@ -1003,7 +1003,7 @@ public class PMTCTStatActivity extends MenuBar implements View.OnClickListener{
         dialog.setCancelable(true);
         dialog.show();
 
-    }*/
+    }
 
     public boolean validate() {
         boolean valid = true;
