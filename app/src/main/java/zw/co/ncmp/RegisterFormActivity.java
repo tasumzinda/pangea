@@ -548,6 +548,7 @@ public class RegisterFormActivity extends MenuBar implements View.OnClickListene
 
         final TextView femaleTotal = (TextView) dialog.findViewById(R.id.femaleTotal);
         femaleTotal.setText(AppUtil.getLongValue(registerForm.femaleQuestion2()));
+
         final EditText maleLessThanOne = (EditText) dialog.findViewById(R.id.maleLessThanOne);
         final EditText femaleLessThanOne = (EditText) dialog.findViewById(R.id.femaleLessThanOne);
         final EditText maleOneToFour = (EditText) dialog.findViewById(R.id.maleOneToFour);

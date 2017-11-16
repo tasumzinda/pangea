@@ -113,6 +113,7 @@ public class TXRETForm extends Model {
     @Column(name = "femaleFifteenToNineteen1")
     public Long femaleFifteenToNineteen1;
 
+
     @Expose
     @Column(name = "maleTwentyToTwentyFour1")
     public Long maleTwentyToTwentyFour1;
@@ -122,12 +123,44 @@ public class TXRETForm extends Model {
     public Long femaleTwentyToTwentyFour1;
 
     @Expose
-    @Column(name = "maleTwentyFiveToFortyNine1")
-    public Long maleTwentyFiveToFortyNine1;
+    @Column
+    public Long maleTwentyFiveToTwentyNine1;
 
+    @Column
     @Expose
-    @Column(name = "femaleTwentyFiveToFortyNine1")
-    public Long femaleTwentyFiveToFortyNine1;
+    public Long femaleTwentyFiveToTwentyNine1;
+
+    @Column
+    @Expose
+    public Long maleThirtyToThirtyFour1;
+
+    @Column
+    @Expose
+    public Long femaleThirtyToThirtyFour1;
+
+    @Column
+    @Expose
+    public Long maleThirtyFiveToThirtyNine1;
+
+    @Column
+    @Expose
+    public Long femaleThirtyFiveToThirtyNine1;
+
+    @Column
+    @Expose
+    public Long maleFortyToFortyFour1;
+
+    @Column
+    @Expose
+    public Long femaleFortyToFortyFour1;
+
+    @Column
+    @Expose
+    public Long maleFortyFiveToFortyNine1;
+
+    @Column
+    @Expose
+    public Long femaleFortyFiveToFortyNine1;
 
     @Expose
     @Column(name = "maleFiftyPlus1")
@@ -177,6 +210,7 @@ public class TXRETForm extends Model {
     @Column(name = "femaleFifteenToNineteen2")
     public Long femaleFifteenToNineteen2;
 
+
     @Expose
     @Column(name = "maleTwentyToTwentyFour2")
     public Long maleTwentyToTwentyFour2;
@@ -185,13 +219,45 @@ public class TXRETForm extends Model {
     @Column(name = "femaleTwentyToTwentyFour2")
     public Long femaleTwentyToTwentyFour2;
 
+    @Column
     @Expose
-    @Column(name = "maleTwentyFiveToFortyNine2")
-    public Long maleTwentyFiveToFortyNine2;
+    public Long maleTwentyFiveToTwentyNine2;
 
+    @Column
     @Expose
-    @Column(name = "femaleTwentyFiveToFortyNine2")
-    public Long femaleTwentyFiveToFortyNine2;
+    public Long femaleTwentyFiveToTwentyNine2;
+
+    @Column
+    @Expose
+    public Long maleThirtyToThirtyFour2;
+
+    @Column
+    @Expose
+    public Long femaleThirtyToThirtyFour2;
+
+    @Column
+    @Expose
+    public Long maleThirtyFiveToThirtyNine2;
+
+    @Column
+    @Expose
+    public Long femaleThirtyFiveToThirtyNine2;
+
+    @Column
+    @Expose
+    public Long maleFortyToFortyFour2;
+
+    @Column
+    @Expose
+    public Long femaleFortyToFortyFour2;
+
+    @Column
+    @Expose
+    public Long maleFortyFiveToFortyNine2;
+
+    @Column
+    @Expose
+    public Long femaleFortyFiveToFortyNine2;
 
     @Expose
     @Column(name = "maleFiftyPlus2")
@@ -287,27 +353,35 @@ public class TXRETForm extends Model {
         return AppUtil.getLong(maleLessThanOne1) + AppUtil.getLong(maleOneToFour1) +
                 AppUtil.getLong(maleFiveToNine1) + AppUtil.getLong(maleTenToFourteen1) +
                 AppUtil.getLong(maleFifteenToNineteen1) + AppUtil.getLong(maleTwentyToTwentyFour1) +
-                AppUtil.getLong(maleTwentyFiveToFortyNine1) + AppUtil.getLong(maleFiftyPlus1);
+                AppUtil.getLong(maleTwentyFiveToTwentyNine1) + AppUtil.getLong(maleThirtyToThirtyFour1) +
+                AppUtil.getLong(maleThirtyFiveToThirtyNine1) + AppUtil.getLong(maleFortyToFortyFour1) +
+                AppUtil.getLong(maleFortyFiveToFortyNine1) + AppUtil.getLong(maleFiftyPlus1);
     }
 
     public Long femaleQuestion1() {
         return AppUtil.getLong(femaleLessThanOne1) + AppUtil.getLong(femaleOneToFour1) +
                 AppUtil.getLong(femaleFiveToNine1) + AppUtil.getLong(femaleTenToFourteen1) +
                 AppUtil.getLong(femaleFifteenToNineteen1) + AppUtil.getLong(femaleTwentyToTwentyFour1) +
-                AppUtil.getLong(femaleTwentyFiveToFortyNine1) + AppUtil.getLong(femaleFiftyPlus1);
+                AppUtil.getLong(femaleTwentyFiveToTwentyNine1) + AppUtil.getLong(femaleThirtyToThirtyFour1) +
+                AppUtil.getLong(femaleThirtyFiveToThirtyNine1) + AppUtil.getLong(femaleFortyToFortyFour1) +
+                AppUtil.getLong(femaleFortyFiveToFortyNine1) + AppUtil.getLong(femaleFiftyPlus1);
     }
 
     public Long maleQuestion2() {
         return AppUtil.getLong(maleLessThanOne2) + AppUtil.getLong(maleOneToFour2) +
                 AppUtil.getLong(maleFiveToNine2) + AppUtil.getLong(maleTenToFourteen2) +
                 AppUtil.getLong(maleFifteenToNineteen2) + AppUtil.getLong(maleTwentyToTwentyFour2) +
-                AppUtil.getLong(maleTwentyFiveToFortyNine2) + AppUtil.getLong(maleFiftyPlus2);
+                AppUtil.getLong(maleTwentyFiveToTwentyNine2) + AppUtil.getLong(maleThirtyToThirtyFour2) +
+                AppUtil.getLong(maleThirtyFiveToThirtyNine2) + AppUtil.getLong(maleFortyToFortyFour2) +
+                AppUtil.getLong(maleFortyFiveToFortyNine2) + AppUtil.getLong(maleFiftyPlus2);
     }
 
     public Long femaleQuestion2() {
         return AppUtil.getLong(femaleLessThanOne2) + AppUtil.getLong(femaleOneToFour2) +
                 AppUtil.getLong(femaleFiveToNine2) + AppUtil.getLong(femaleTenToFourteen2) +
                 AppUtil.getLong(femaleFifteenToNineteen2) + AppUtil.getLong(femaleTwentyToTwentyFour2) +
-                AppUtil.getLong(femaleTwentyFiveToFortyNine2) + AppUtil.getLong(femaleFiftyPlus2);
+                AppUtil.getLong(femaleTwentyFiveToTwentyNine2) + AppUtil.getLong(femaleThirtyToThirtyFour2) +
+                AppUtil.getLong(femaleThirtyFiveToThirtyNine2) + AppUtil.getLong(femaleFortyToFortyFour2) +
+                AppUtil.getLong(femaleFortyFiveToFortyNine2) + AppUtil.getLong(femaleFiftyPlus2);
     }
 }
