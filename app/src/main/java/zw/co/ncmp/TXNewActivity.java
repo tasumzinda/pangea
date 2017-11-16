@@ -182,7 +182,7 @@ public class TXNewActivity extends MenuBar implements View.OnClickListener{
 
     @Override
     public void onClick(View v) {
-        /*if(v.getId() == numDisaggregation.getId()){
+        if(v.getId() == numDisaggregation.getId()){
             questionOne();
         }
 
@@ -194,13 +194,13 @@ public class TXNewActivity extends MenuBar implements View.OnClickListener{
                 form.numerator = AppUtil.getLongValue(numerator.getText().toString());
                 form.breastFeeding = AppUtil.getLongValue(breastFeeding.getText().toString());
                 form.confirmedTB = AppUtil.getLongValue(confirmedTB.getText().toString());
-                //Add comment here
+                /*
                 form.prisonAndEnclosedSettings = AppUtil.getLongValue(prison.getText().toString());
                 form.transGender = AppUtil.getLongValue(transGender.getText().toString());
                 form.fsw = AppUtil.getLongValue(fsw.getText().toString());
                 form.msim = AppUtil.getLongValue(msim.getText().toString());
                 form.pwid = AppUtil.getLongValue(pwid.getText().toString());
-                //to here
+                */
                 form.pregnant = AppUtil.getLongValue(pregnant.getText().toString());
                 form.dateCreated = AppUtil.getDate(dateCreated.getText().toString());
                 form.save();
@@ -234,7 +234,7 @@ public class TXNewActivity extends MenuBar implements View.OnClickListener{
 
         if (v.getId() == dateCreated.getId()) {
             datePickerDialog.show();
-        }*/
+        }
 
     }
 
@@ -312,7 +312,7 @@ public class TXNewActivity extends MenuBar implements View.OnClickListener{
 
     }
 
-    /*public void questionOne() {
+    public void questionOne() {
         final Dialog dialog = new Dialog(context);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.dsd_question_activity);
@@ -338,8 +338,16 @@ public class TXNewActivity extends MenuBar implements View.OnClickListener{
         final EditText femaleFifteenToNineteen = (EditText) dialog.findViewById(R.id.femaleFifteenToNineteen);
         final EditText maleTwentyToTwentyFour = (EditText) dialog.findViewById(R.id.maleTwentyToTwentyFour);
         final EditText femaleTwentyToTwentyFour = (EditText) dialog.findViewById(R.id.femaleTwentyToTwentyFour);
-        final EditText maleTwentyFiveToFortyNine = (EditText) dialog.findViewById(R.id.maleTwentyFiveToFortyNine);
-        final EditText femaleTwentyFiveToFortyNine = (EditText) dialog.findViewById(R.id.femaleTwentyFiveToFortyNine);
+        final EditText maleTwentyFiveToTwentyNine = (EditText) dialog.findViewById(R.id.maleTwentyFiveToTwentyNine);
+        final EditText femaleTwentyFiveToTwentyNine = (EditText) dialog.findViewById(R.id.femaleTwentyFiveToTwentyNine);
+        final EditText maleThirtyToThirtyFour = (EditText) dialog.findViewById(R.id.maleThirtyToThirtyFour);
+        final EditText femaleThirtyToThirtyFour = (EditText) dialog.findViewById(R.id.femaleThirtyToThirtyFour);
+        final EditText maleThirtyFiveToThirtyNine = (EditText) dialog.findViewById(R.id.maleThirtyFiveToThirtyNine);
+        final EditText femaleThirtyFiveToThirtyNine = (EditText) dialog.findViewById(R.id.femaleThirtyFiveToThirtyNine);
+        final EditText maleFortyToFortyFour = (EditText) dialog.findViewById(R.id.maleFortyToFortyFour);
+        final EditText femaleFortyToFortyFour = (EditText) dialog.findViewById(R.id.femaleFortyToFortyFour);
+        final EditText maleFortyFiveToFortyNine = (EditText) dialog.findViewById(R.id.maleFortyFiveToFortyNine);
+        final EditText femaleFortyFiveToFortyNine = (EditText) dialog.findViewById(R.id.femaleFortyFiveToFortyNine);
         final EditText maleFiftyPlus = (EditText) dialog.findViewById(R.id.maleFiftyPlus);
         final EditText femaleFiftyPlus = (EditText) dialog.findViewById(R.id.femaleFiftyPlus);
 
@@ -356,8 +364,16 @@ public class TXNewActivity extends MenuBar implements View.OnClickListener{
             femaleFifteenToNineteen.setText(AppUtil.getLongValue(form.femaleFifteenToNineteen));
             maleTwentyToTwentyFour.setText(AppUtil.getLongValue(form.maleTwentyToTwentyFour));
             femaleTwentyToTwentyFour.setText(AppUtil.getLongValue(form.femaleTwentyToTwentyFour));
-            maleTwentyFiveToFortyNine.setText(AppUtil.getLongValue(form.maleTwentyFiveToFortyNine));
-            femaleTwentyFiveToFortyNine.setText(AppUtil.getLongValue(form.femaleTwentyFiveToFortyNine));
+            maleTwentyFiveToTwentyNine.setText(AppUtil.getLongValue(form.maleTwentyFiveToTwentyNine));
+            femaleTwentyFiveToTwentyNine.setText(AppUtil.getLongValue(form.femaleTwentyFiveToTwentyNine));
+            maleThirtyToThirtyFour.setText(AppUtil.getLongValue(form.maleThirtyToThirtyFour));
+            femaleThirtyToThirtyFour.setText(AppUtil.getLongValue(form.femaleThirtyToThirtyFour));
+            maleThirtyFiveToThirtyNine.setText(AppUtil.getLongValue(form.maleThirtyFiveToThirtyNine));
+            femaleThirtyFiveToThirtyNine.setText(AppUtil.getLongValue(form.femaleThirtyFiveToThirtyNine));
+            maleFortyToFortyFour.setText(AppUtil.getLongValue(form.maleFortyToFortyFour));
+            femaleFortyToFortyFour.setText(AppUtil.getLongValue(form.femaleFortyToFortyFour));
+            maleFortyFiveToFortyNine.setText(AppUtil.getLongValue(form.maleFortyFiveToFortyNine));
+            femaleFortyFiveToFortyNine.setText(AppUtil.getLongValue(form.femaleFortyFiveToFortyNine));
             maleFiftyPlus.setText(AppUtil.getLongValue(form.maleFiftyPlus));
             femaleFiftyPlus.setText(AppUtil.getLongValue(form.femaleFiftyPlus));
         }
@@ -369,7 +385,11 @@ public class TXNewActivity extends MenuBar implements View.OnClickListener{
         list.add(maleTenToFourteen);
         list.add(maleFifteenToNineteen);
         list.add(maleTwentyToTwentyFour);
-        list.add(maleTwentyFiveToFortyNine);
+        list.add(maleTwentyFiveToTwentyNine);
+        list.add(maleThirtyToThirtyFour);
+        list.add(maleThirtyFiveToThirtyNine);
+        list.add(maleFortyToFortyFour);
+        list.add(maleFortyFiveToFortyNine);
         list.add(maleFiftyPlus);
 
         for (EditText editText : list) {
@@ -384,7 +404,11 @@ public class TXNewActivity extends MenuBar implements View.OnClickListener{
                         form.maleTenToFourteen = AppUtil.getLongValue(maleTenToFourteen.getText().toString());
                         form.maleFifteenToNineteen = AppUtil.getLongValue(maleFifteenToNineteen.getText().toString());
                         form.maleTwentyToTwentyFour = AppUtil.getLongValue(maleTwentyToTwentyFour.getText().toString());
-                        form.maleTwentyFiveToFortyNine = AppUtil.getLongValue(maleTwentyFiveToFortyNine.getText().toString());
+                        form.maleTwentyFiveToTwentyNine = AppUtil.getLongValue(maleTwentyFiveToTwentyNine.getText().toString());
+                        form.maleThirtyToThirtyFour = AppUtil.getLongValue(maleThirtyToThirtyFour.getText().toString());
+                        form.maleThirtyFiveToThirtyNine = AppUtil.getLongValue(maleThirtyFiveToThirtyNine.getText().toString());
+                        form.maleFortyToFortyFour = AppUtil.getLongValue(maleFortyToFortyFour.getText().toString());
+                        form.maleFortyFiveToFortyNine = AppUtil.getLongValue(maleFortyFiveToFortyNine.getText().toString());
                         form.maleFiftyPlus = AppUtil.getLongValue(maleFiftyPlus.getText().toString());
 
                         maleTotal.setText(AppUtil.getLongValue(form.male()));
@@ -401,7 +425,11 @@ public class TXNewActivity extends MenuBar implements View.OnClickListener{
         list.add(femaleTenToFourteen);
         list.add(femaleFifteenToNineteen);
         list.add(femaleTwentyToTwentyFour);
-        list.add(femaleTwentyFiveToFortyNine);
+        list.add(femaleTwentyFiveToTwentyNine);
+        list.add(femaleThirtyToThirtyFour);
+        list.add(femaleThirtyFiveToThirtyNine);
+        list.add(femaleFortyToFortyFour);
+        list.add(femaleFortyFiveToFortyNine);
         list.add(femaleFiftyPlus);
 
         for (EditText editText : list) {
@@ -416,7 +444,11 @@ public class TXNewActivity extends MenuBar implements View.OnClickListener{
                         form.femaleTenToFourteen = AppUtil.getLongValue(femaleTenToFourteen.getText().toString());
                         form.femaleFifteenToNineteen = AppUtil.getLongValue(femaleFifteenToNineteen.getText().toString());
                         form.femaleTwentyToTwentyFour = AppUtil.getLongValue(femaleTwentyToTwentyFour.getText().toString());
-                        form.femaleTwentyFiveToFortyNine = AppUtil.getLongValue(femaleTwentyFiveToFortyNine.getText().toString());
+                        form.femaleTwentyFiveToTwentyNine = AppUtil.getLongValue(femaleTwentyFiveToTwentyNine.getText().toString());
+                        form.femaleThirtyToThirtyFour = AppUtil.getLongValue(femaleThirtyToThirtyFour.getText().toString());
+                        form.femaleThirtyFiveToThirtyNine = AppUtil.getLongValue(femaleThirtyFiveToThirtyNine.getText().toString());
+                        form.femaleFortyToFortyFour = AppUtil.getLongValue(femaleFortyToFortyFour.getText().toString());
+                        form.femaleFortyFiveToFortyNine = AppUtil.getLongValue(femaleFortyFiveToFortyNine.getText().toString());
                         form.femaleFiftyPlus = AppUtil.getLongValue(femaleFiftyPlus.getText().toString());
 
                         femaleTotal.setText(AppUtil.getLongValue(form.female()));
@@ -449,8 +481,20 @@ public class TXNewActivity extends MenuBar implements View.OnClickListener{
                 form.maleTwentyToTwentyFour = AppUtil.getLongValue(maleTwentyToTwentyFour.getText().toString());
                 form.femaleTwentyToTwentyFour = AppUtil.getLongValue(femaleTwentyToTwentyFour.getText().toString());
 
-                form.maleTwentyFiveToFortyNine = AppUtil.getLongValue(maleTwentyFiveToFortyNine.getText().toString());
-                form.femaleTwentyFiveToFortyNine = AppUtil.getLongValue(femaleTwentyFiveToFortyNine.getText().toString());
+                form.maleTwentyFiveToTwentyNine = AppUtil.getLongValue(maleTwentyFiveToTwentyNine.getText().toString());
+                form.femaleTwentyFiveToTwentyNine = AppUtil.getLongValue(femaleTwentyFiveToTwentyNine.getText().toString());
+
+                form.maleThirtyToThirtyFour = AppUtil.getLongValue(maleThirtyToThirtyFour.getText().toString());
+                form.femaleThirtyToThirtyFour = AppUtil.getLongValue(femaleThirtyToThirtyFour.getText().toString());
+
+                form.maleThirtyFiveToThirtyNine = AppUtil.getLongValue(maleThirtyFiveToThirtyNine.getText().toString());
+                form.femaleThirtyFiveToThirtyNine = AppUtil.getLongValue(femaleThirtyFiveToThirtyNine.getText().toString());
+
+                form.maleFortyToFortyFour = AppUtil.getLongValue(maleFortyToFortyFour.getText().toString());
+                form.femaleFortyToFortyFour = AppUtil.getLongValue(femaleFortyToFortyFour.getText().toString());
+
+                form.maleFortyFiveToFortyNine = AppUtil.getLongValue(maleFortyFiveToFortyNine.getText().toString());
+                form.femaleFortyFiveToFortyNine = AppUtil.getLongValue(femaleFortyFiveToFortyNine.getText().toString());
 
                 form.maleFiftyPlus = AppUtil.getLongValue(maleFiftyPlus.getText().toString());
                 form.femaleFiftyPlus = AppUtil.getLongValue(femaleFiftyPlus.getText().toString());
@@ -463,5 +507,5 @@ public class TXNewActivity extends MenuBar implements View.OnClickListener{
         dialog.setCancelable(true);
         dialog.show();
 
-    }*/
+    }
 }
