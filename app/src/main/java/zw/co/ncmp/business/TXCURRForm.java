@@ -102,12 +102,44 @@ public class TXCURRForm extends Model {
     public Long femaleTwentyToTwentyFour1;
 
     @Expose
-    @Column(name = "maleTwentyFiveToFortyNine1")
-    public Long maleTwentyFiveToFortyNine1;
+    @Column
+    public Long maleTwentyFiveToTwentyNine1;
 
+    @Column
     @Expose
-    @Column(name = "femaleTwentyFiveToFortyNine1")
-    public Long femaleTwentyFiveToFortyNine1;
+    public Long femaleTwentyFiveToTwentyNine1;
+
+    @Column
+    @Expose
+    public Long maleThirtyToThirtyFour1;
+
+    @Column
+    @Expose
+    public Long femaleThirtyToThirtyFour1;
+
+    @Column
+    @Expose
+    public Long maleThirtyFiveToThirtyNine1;
+
+    @Column
+    @Expose
+    public Long femaleThirtyFiveToThirtyNine1;
+
+    @Column
+    @Expose
+    public Long maleFortyToFortyFour1;
+
+    @Column
+    @Expose
+    public Long femaleFortyToFortyFour1;
+
+    @Column
+    @Expose
+    public Long maleFortyFiveToFortyNine1;
+
+    @Column
+    @Expose
+    public Long femaleFortyFiveToFortyNine1;
 
     @Expose
     @Column(name = "maleFiftyPlus1")
@@ -203,14 +235,18 @@ public class TXCURRForm extends Model {
         return AppUtil.getLong(maleLessThanOne1) + AppUtil.getLong(maleOneToFour1) +
                 AppUtil.getLong(maleFiveToNine1) + AppUtil.getLong(maleTenToFourteen1) +
                 AppUtil.getLong(maleFifteenToNineteen1) + AppUtil.getLong(maleTwentyToTwentyFour1) +
-                AppUtil.getLong(maleTwentyFiveToFortyNine1) + AppUtil.getLong(maleFiftyPlus1);
+                AppUtil.getLong(maleTwentyFiveToTwentyNine1) + AppUtil.getLong(maleThirtyToThirtyFour1) +
+                AppUtil.getLong(maleThirtyFiveToThirtyNine1) + AppUtil.getLong(maleFortyToFortyFour1) +
+                AppUtil.getLong(maleFortyFiveToFortyNine1) + AppUtil.getLong(maleFiftyPlus1);
     }
 
     public Long femaleQuestion1() {
         return AppUtil.getLong(femaleLessThanOne1) + AppUtil.getLong(femaleOneToFour1) +
                 AppUtil.getLong(femaleFiveToNine1) + AppUtil.getLong(femaleTenToFourteen1) +
                 AppUtil.getLong(femaleFifteenToNineteen1) + AppUtil.getLong(femaleTwentyToTwentyFour1) +
-                AppUtil.getLong(femaleTwentyFiveToFortyNine1) + AppUtil.getLong(femaleFiftyPlus1);
+                AppUtil.getLong(femaleTwentyFiveToTwentyNine1) + AppUtil.getLong(femaleThirtyToThirtyFour1) +
+                AppUtil.getLong(femaleThirtyFiveToThirtyNine1) + AppUtil.getLong(femaleFortyToFortyFour1) +
+                AppUtil.getLong(femaleFortyFiveToFortyNine1) + AppUtil.getLong(femaleFiftyPlus1);
     }
 
 }
