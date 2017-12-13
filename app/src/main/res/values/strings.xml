@@ -87,8 +87,10 @@
     <string name="pitc_negative">2. PITC Inpatient Services Disaggregated by Age/Sex/Result - Negative</string>
     <string name="tb_clinics_positive">3. PITC TB Clinics Disaggregated by Age/Sex/Result - Positive</string>
     <string name="tb_clinics_negative">4. PITC TB Clinics Disaggregated by Age/Sex/Result - Negative</string>
-    <string name="anc_clinics_negative">6. PITC PMTCT (ANC Only) Clinics Disaggregated by Age/Sex/Result - Negative</string>
-    <string name="anc_clinics_positive">5. PITC PMTCT (ANC Only) Clinics Disaggregated by Age/Sex/Result - Positive</string>
+    <string name="anc_clinics_negative">6. PITC PMTCT (ANC Only) Clinics Disaggregated by Age/Sex/Result - Negative
+    </string>
+    <string name="anc_clinics_positive">5. PITC PMTCT (ANC Only) Clinics Disaggregated by Age/Sex/Result - Positive
+    </string>
     <string name="pitc_positive_label">Positive &lt; 5</string>
     <string name="pitc_negative_label">Negative &lt; 5</string>
 
@@ -106,5 +108,7 @@
     <string name="known_positives">Known Positives</string>
     <string name="new_positives">Newly Tested Positives</string>
     <string name="new_negatives">New Negatives</string>
+
+    <string name="btn_save_label">Save</string>
 
 </resources>

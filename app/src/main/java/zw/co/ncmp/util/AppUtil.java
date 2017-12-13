@@ -18,6 +18,8 @@ import com.activeandroid.ActiveAndroid;
 import com.activeandroid.Model;
 import com.activeandroid.TableInfo;
 import com.activeandroid.annotation.Column;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.squareup.okhttp.Authenticator;
 import com.squareup.okhttp.Credentials;
 import com.squareup.okhttp.HttpUrl;
@@ -92,8 +94,8 @@ public class AppUtil {
     public static String OLD_SQL_DATE_FORMAT = "yyyy-MM-dd";
     //public static String APP_URL = "http://tracker.pzat.org:8080/tracker-mobile/rest/mobile/"; //PRO
 
-    public static String APP_URL = "http://192.168.1.172:8084/tracker-mobile/rest/mobile/"; //UAT
-    //public static String APP_URL = "http://tracker.pzat.org:8080/itech-mobile/rest/mobile/"; //UAT
+    //public static String APP_URL = "http://192.168.1.172:8084/tracker-mobile/rest/mobile/"; //UAT
+    public static String APP_URL = "http://tracker.pzat.org:8080/itech-mobile/rest/mobile/"; //UAT
     public static String LOGGED_IN = "LOGGED_IN";
     public static String USERNAME = "USERNAME";
     public static String PASSWORD = "PASSWORD";
@@ -102,6 +104,7 @@ public class AppUtil {
     public static String PENDING = "Pending";
     public static String RESOLVED = "Resolved";
     public static String MENTOR_ROLE = "NATIONAL";
+    private static Gson gson;
 
     public static SimpleDateFormat getFormatter() {
         return new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
@@ -735,4 +738,10 @@ public class AppUtil {
     }
 
     public static List<String> getYesNoCombo = Arrays.asList("Yes", "No");
+
+    public static Gson createGson() {
+        GsonBuilder gsonBuilder = new GsonBuilder();
+        gson = gsonBuilder.excludeFieldsWithoutExposeAnnotation().setDateFormat("dd/MM/yyyy").create();
+        return gson;
+    }
 }

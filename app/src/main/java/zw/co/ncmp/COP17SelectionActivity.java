@@ -14,6 +14,7 @@ public class COP17SelectionActivity extends MenuBar implements View.OnClickListe
     Button btn_option_one;
     Button btn_option_three;
     Button btn_option_two;
+    Button btn_option_four;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +37,11 @@ public class COP17SelectionActivity extends MenuBar implements View.OnClickListe
         btn_option_three.setBackgroundResource(R.drawable.finish_background);
         btn_option_three.setText("TX New");
 
+        btn_option_four = (Button) findViewById(R.id.btn_option_four);
+        btn_option_four.setOnClickListener(this);
+        btn_option_four.setBackgroundResource(R.drawable.finish_background);
+        btn_option_four.setText("HTS Eligibility Screening");
+
         setSupportActionBar(createToolBar("COP17 Selection"));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
@@ -54,6 +60,10 @@ public class COP17SelectionActivity extends MenuBar implements View.OnClickListe
 
         if (v.getId() == btn_option_three.getId()) {
             intent = new Intent(this, COP17TXNewListActivity.class);
+        }
+
+        if(v.getId() == btn_option_four.getId()){
+            intent = new Intent(this, HTSEligibilityScreeningFormActivity.class);
         }
 
         if (intent != null) {
