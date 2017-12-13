@@ -12,11 +12,12 @@ public class Esta3SelectionActivity extends MenuBar implements View.OnClickListe
 
     Button btn_option_one;
     Button btn_option_two;
+    Button btn_option_three;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.cop16_selection);
+        setContentView(R.layout.esta3_selection);
 
         btn_option_one = (Button) findViewById(R.id.btn_option_one);
         btn_option_one.setOnClickListener(this);
@@ -26,7 +27,12 @@ public class Esta3SelectionActivity extends MenuBar implements View.OnClickListe
         btn_option_two = (Button) findViewById(R.id.btn_option_two);
         btn_option_two.setOnClickListener(this);
         btn_option_two.setBackgroundResource(R.drawable.finish_background);
-        btn_option_two.setText("TX_New");
+        btn_option_two.setText("PreART Form");
+
+        btn_option_three = (Button) findViewById(R.id.btn_option_three);
+        btn_option_three.setOnClickListener(this);
+        btn_option_three.setBackgroundResource(R.drawable.finish_background);
+        btn_option_three.setText("Tx New");
 
         setSupportActionBar(createToolBar("ESTA3 Selection"));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -41,7 +47,11 @@ public class Esta3SelectionActivity extends MenuBar implements View.OnClickListe
         }
 
         if (v.getId() == btn_option_two.getId()) {
-            intent = new Intent(this, TXTNewListActivity.class);
+            intent = new Intent(this, PreARTFormActivity.class);
+        }
+
+        if(v.getId() == btn_option_three.getId()){
+            intent = new Intent(this, Esta3TxNewActivity.class);
         }
 
         if (intent != null) {

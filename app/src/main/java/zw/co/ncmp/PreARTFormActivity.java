@@ -2,6 +2,7 @@ package zw.co.ncmp;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -11,6 +12,7 @@ import butterknife.ButterKnife;
 import it.sephiroth.android.library.widget.HListView;
 import zw.co.ncmp.business.Facility;
 import zw.co.ncmp.business.HTSRegisterForm;
+import zw.co.ncmp.business.PreARTForm;
 import zw.co.ncmp.business.util.*;
 import zw.co.ncmp.util.AppUtil;
 import zw.co.ncmp.util.DateUtil;
@@ -18,10 +20,7 @@ import zw.co.ncmp.util.DateUtil;
 import java.util.Calendar;
 import java.util.Date;
 
-/**
- * Created by tasu
- */
-public class HTSREgisterFormActivity extends MenuBar implements View.OnClickListener{
+public class PreARTFormActivity extends MenuBar implements View.OnClickListener {
 
     @BindView(R.id.first_name)
     EditText firstName;
@@ -73,7 +72,7 @@ public class HTSREgisterFormActivity extends MenuBar implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_esta3);
         ButterKnife.bind(this);
-        setSupportActionBar(createToolBar("HTS Register Form"));
+        setSupportActionBar(createToolBar("ESTA3 Pre-ART"));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         gender = (HListView) findViewById(R.id.gender);
         reasonForHIVTesting = (ListView) findViewById(R.id.reasonForHIVTest);
@@ -214,7 +213,7 @@ public class HTSREgisterFormActivity extends MenuBar implements View.OnClickList
 
     public void save(){
         if(validate()){
-            HTSRegisterForm item = new HTSRegisterForm();
+            PreARTForm item = new PreARTForm();
             item.firstName = firstName.getText().toString();
             item.lastName = lastName.getText().toString();
             item.cardNumber = Integer.parseInt(cardNumber.getText().toString());

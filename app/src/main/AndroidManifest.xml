@@ -264,6 +264,10 @@
         </activity>
         <activity android:name=".HTSREgisterFormActivity"/>
         <activity android:name=".Esta3SelectionActivity"/>
+        <activity android:name=".PreARTFormActivity">
+        </activity>
+        <activity android:name=".Esta3TxNewActivity">
+        </activity>
     </application>
 
 </manifest>
