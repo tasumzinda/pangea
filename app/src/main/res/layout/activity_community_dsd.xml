@@ -91,7 +91,16 @@
                     android:layout_height="wrap_content" />
 
             <Button
+                    android:id="@+id/btn_question_seven"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            <Button
                     android:id="@+id/btn_question_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            <Button
+                    android:id="@+id/btn_question_eight"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
