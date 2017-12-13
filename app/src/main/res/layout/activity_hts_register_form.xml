@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        <include layout="@layout/toolbar"/>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="First Name"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:textSize="@dimen/text_size"
+            />
+            <EditText
+                    android:id="@+id/first_name"
+                    android:inputType="text"
+                    android:hint="First Name"
+                    style="@style/TextBoxStyle"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Last Name"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:textSize="@dimen/text_size"
+            />
+            <EditText
+                    android:id="@+id/last_name"
+                    android:inputType="text"
+                    android:hint="Last Name"
+                    style="@style/TextBoxStyle"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Card Number"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:textSize="@dimen/text_size"
+            />
+            <EditText
+                    android:id="@+id/cardNumber"
+                    android:inputType="number"
+                    android:hint="Card Number"
+                    style="@style/TextBoxStyle"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Date"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:textSize="@dimen/text_size"
+            />
+            <EditText
+                    android:id="@+id/date"
+                    android:inputType="text"
+                    android:hint="Date"
+                    style="@style/TextBoxStyle"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Time"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:textSize="@dimen/text_size"
+            />
+            <TimePicker
+                    android:id="@+id/time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin" />
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Age"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:textSize="@dimen/text_size"
+            />
+            <EditText
+                    android:id="@+id/age"
+                    android:inputType="number"
+                    android:hint="Age"
+                    style="@style/TextBoxStyle"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Facility"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:textSize="@dimen/text_size"
+            />
+            <Spinner
+                    android:id="@+id/facility"
+                    style="@style/SpinnerStyle2" />
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimary"/>
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+            >
+                <TextView
+                        style="@style/ListViewLabel"
+                        android:text="Gender"
+                />
+                <it.sephiroth.android.library.widget.HListView
+                        android:id="@+id/gender"
+                        style="@style/ListViewStyle"
+                />
+            </LinearLayout>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimary"/>
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Reason For HIV Testing"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_size"
+            />
+            <ListView
+                    android:id="@+id/reasonForHIVTest"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:divider="@android:color/transparent"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:textSize="@dimen/text_size"
+                    android:dividerHeight="10.0sp" />
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimary"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Test(F- first test/ R-retest)"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:textSize="@dimen/text_size"
+            />
+            <RadioGroup
+                    android:id="@+id/test"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                <RadioButton
+                        android:id="@+id/first"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_size"
+                        android:text="F"
+                        android:checked="true" />
+
+                <RadioButton
+                        android:id="@+id/retest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_size"
+                        android:text="No" />
+
+            </RadioGroup>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimary"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Final Result"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_size"
+            />
+            <ListView
+                    android:id="@+id/final_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:divider="@android:color/transparent"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:textSize="@dimen/text_size"
+                    android:dividerHeight="10.0sp" />
+            <EditText
+                    android:id="@+id/other"
+                    android:inputType="text"
+                    android:hint="Other(Please specifty)"
+                    android:visibility="gone"
+                    style="@style/TextBoxStyle2"/>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimary"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Entry Stream"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_size"
+            />
+            <ListView
+                    android:id="@+id/entry_stream"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:divider="@android:color/transparent"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:textSize="@dimen/text_size"
+                    android:dividerHeight="10.0sp" />
+            <EditText
+                    android:id="@+id/other1"
+                    android:inputType="text"
+                    android:hint="Other(Please specifty)"
+                    android:visibility="gone"
+                    style="@style/TextBoxStyle2"/>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimary"/>
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+            >
+                <TextView
+                        style="@style/ListViewLabel"
+                        android:text="In Pre-ART?"
+                />
+                <it.sephiroth.android.library.widget.HListView
+                        android:id="@+id/in_pre_art"
+                        style="@style/ListViewStyle"
+                />
+            </LinearLayout>
+            />
+            <EditText
+                    android:id="@+id/date_registered_in_pre_art"
+                    android:inputType="text"
+                    android:hint="Date registered in Pre-ART"
+                    android:visibility="gone"
+                    style="@style/TextBoxStyle"/>
+
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimary"/>
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+            >
+                <TextView
+                        style="@style/ListViewLabel"
+                        android:text="Initiated on ART?"
+                />
+                <it.sephiroth.android.library.widget.HListView
+                        android:id="@+id/initiated_on_art"
+                        style="@style/ListViewStyle"
+                />
+            </LinearLayout>
+            />
+            <EditText
+                    android:id="@+id/date_of_initiation"
+                    android:inputType="text"
+                    android:hint="Date of Initiation"
+                    android:visibility="gone"
+                    style="@style/TextBoxStyle"/>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimary"/>
+
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="OI/ART Number"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:textSize="@dimen/text_size"
+            />
+            <EditText
+                    android:id="@+id/oi_art_number"
+                    android:inputType="number"
+                    android:hint="OI/ART Number"
+                    style="@style/TextBoxStyle"/>
+            <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btn_save"
+                    style="@style/ButtonStyle"
+                    android:text="@string/btn_save_label"
+            />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

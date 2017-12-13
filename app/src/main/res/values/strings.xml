@@ -17,6 +17,7 @@
     <string name="fortyFiveToFortyNine">45-49</string>
     <string name="fiftyPlus">50&#43;</string>
     <string name="date_format_error">Please enter a valid date in this format: 12/02/2016</string>
+    <string name="required_field_error">Field is required</string>
 
     <string name="lessFifteen">&lt;15</string>
     <string name="fifteenPlus">15&#43;</string>

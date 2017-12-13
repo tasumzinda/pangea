@@ -262,6 +262,8 @@
         <activity android:name=".COP17TXNewListActivity"/>
         <activity android:name=".HTSEligibilityScreeningFormActivity">
         </activity>
+        <activity android:name=".HTSREgisterFormActivity"/>
+        <activity android:name=".Esta3SelectionActivity"/>
     </application>
 
 </manifest>

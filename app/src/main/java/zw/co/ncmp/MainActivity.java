@@ -33,6 +33,7 @@ public class MainActivity extends MenuBar implements View.OnClickListener, Adapt
     Button btn_option_one;
     Button btn_option_two;
     Button btn_option_three;
+    Button btn_option_four;
     LinearLayout tbl_national;
 
     @Override
@@ -72,6 +73,10 @@ public class MainActivity extends MenuBar implements View.OnClickListener, Adapt
         btn_option_three = (Button) findViewById(R.id.btn_option_three);
         btn_option_three.setOnClickListener(this);
         btn_option_three.setBackgroundResource(R.drawable.finish_background);
+
+        btn_option_four = (Button) findViewById(R.id.btn_option_four);
+        btn_option_four.setOnClickListener(this);
+        btn_option_four.setBackgroundResource(R.drawable.finish_background);
 
         facility_list_view = (ListView) findViewById(R.id.facility_list_view);
         facility_list_view.setEmptyView(findViewById(R.id.empty));
@@ -118,6 +123,10 @@ public class MainActivity extends MenuBar implements View.OnClickListener, Adapt
 
         if (v.getId() == btn_option_three.getId()) {
             intent = new Intent(this, ODSVSelectionActivity.class);
+        }
+
+        if(v.getId() == btn_option_four.getId()){
+            intent = new Intent(this, Esta3SelectionActivity.class);
         }
 
         if (intent != null) {
