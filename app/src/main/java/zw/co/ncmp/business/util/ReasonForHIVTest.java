@@ -24,4 +24,9 @@ public enum ReasonForHIVTest {
     public String getName(){
         return StringUtils.toCamelCase3(super.name());
     }
+
+    @Override
+    public String toString() {
+        return getName();
+    }
 }

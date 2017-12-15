@@ -2,23 +2,23 @@ package zw.co.ncmp.business.util;
 
 import zw.co.ncmp.util.StringUtils;
 
-public enum ClientServices {
+public enum Relationship {
 
-    OPD(1), IN_PATIENT(2), OI_ART(3), TB(4), STI(5), PMTCT(6), FHS(7), OTHER(8);
+    SEXUAL_PARTNERS(1), BIOLOGICAL_CHILDREN(2), OTHER(3);
 
     private final Integer code;
 
-    ClientServices(Integer code){
+    Relationship(Integer code){
         this.code = code;
     }
 
-    public static ClientServices get(Integer code){
-        for(ClientServices item : values()){
+    public static Relationship get(Integer code){
+        for(Relationship item : values()){
             if(item.code.equals(code)){
                 return item;
             }
         }
-        throw new IllegalArgumentException("Unknown argument passed to method");
+        throw new IllegalArgumentException("Unknown parameter");
     }
 
     public String getName(){
