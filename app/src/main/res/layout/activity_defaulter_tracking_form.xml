@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        <include layout="@layout/toolbar"/>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="First Name Of Index"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:textSize="@dimen/text_size"
+            />
+            <EditText
+                    android:id="@+id/first_name"
+                    android:inputType="text"
+                    android:hint="First Name Of Index"
+                    style="@style/TextBoxStyle"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Last Name Of Index"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:textSize="@dimen/text_size"
+            />
+            <EditText
+                    android:id="@+id/last_name"
+                    android:inputType="text"
+                    android:hint="Last Name Of Index"
+                    style="@style/TextBoxStyle"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Physical Address"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:textSize="@dimen/text_size"
+            />
+            <EditText
+                    android:id="@+id/physicalAddress"
+                    android:inputType="textMultiLine"
+                    android:hint="Physical Address"
+                    style="@style/TextBoxStyle"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Contact Details"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:textSize="@dimen/text_size"
+            />
+            <EditText
+                    android:id="@+id/contactDetails"
+                    android:inputType="text"
+                    android:hint="Contact Details"
+                    style="@style/TextBoxStyle"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Index O/I ART number"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:textSize="@dimen/text_size"
+            />
+            <EditText
+                    android:id="@+id/index_oi_art_number"
+                    android:inputType="number"
+                    android:hint="Index O/I ART number"
+                    style="@style/TextBoxStyle"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Date Of OI/ART Initiation"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:textSize="@dimen/text_size"
+            />
+            <EditText
+                    android:id="@+id/dateOIARTInitiation"
+                    android:inputType="text"
+                    android:hint="Date Of OI/ART Initiation"
+                    style="@style/TextBoxStyle"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Review Date"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:textSize="@dimen/text_size"
+            />
+            <EditText
+                    android:id="@+id/reviewDate"
+                    android:inputType="text"
+                    android:hint="Review Date"
+                    style="@style/TextBoxStyle"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Date Appointment Deemed Defaulter"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:textSize="@dimen/text_size"
+            />
+            <EditText
+                    android:id="@+id/dateAppointmentDeemedDefaulter"
+                    android:inputType="text"
+                    android:hint="Date Appointment Deemed Defaulter"
+                    style="@style/TextBoxStyle"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Reason For Tracking"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:textSize="@dimen/text_size"
+            />
+            <EditText
+                    android:id="@+id/reasonForTracking"
+                    android:inputType="text"
+                    android:hint="Reason For Tracking"
+                    style="@style/TextBoxStyle"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Date Of Call1"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:textSize="@dimen/text_size"
+            />
+            <EditText
+                    android:id="@+id/dateOfCall1"
+                    android:inputType="text"
+                    android:hint="Date Of Call1"
+                    style="@style/TextBoxStyle"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Call Outcome"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:textSize="@dimen/text_size"
+            />
+            <EditText
+                    android:id="@+id/callOutcome"
+                    android:inputType="text"
+                    android:hint="Call Outcome"
+                    style="@style/TextBoxStyle"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Appointment Date If Linked To Care"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:textSize="@dimen/text_size"
+            />
+            <EditText
+                    android:id="@+id/appointmentDateIfLinkedToCare"
+                    android:inputType="text"
+                    android:hint="Appointment Date If Linked To Care"
+                    style="@style/TextBoxStyle"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Date Of Call2"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:textSize="@dimen/text_size"
+            />
+            <EditText
+                    android:id="@+id/dateOfCall2"
+                    android:inputType="text"
+                    android:hint="Date Of Call2"
+                    style="@style/TextBoxStyle"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Call2 Outcome"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:textSize="@dimen/text_size"
+            />
+            <EditText
+                    android:id="@+id/call2Outcome"
+                    android:inputType="text"
+                    android:hint="Call2 Outcome"
+                    style="@style/TextBoxStyle"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Date Of Call3"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:textSize="@dimen/text_size"
+            />
+            <EditText
+                    android:id="@+id/dateOfCall3"
+                    android:inputType="text"
+                    android:hint="Date Of Call3"
+                    style="@style/TextBoxStyle"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Call3 Outcome"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:textSize="@dimen/text_size"
+            />
+            <EditText
+                    android:id="@+id/call3Outcome"
+                    android:inputType="text"
+                    android:hint="Call3 Outcome"
+                    style="@style/TextBoxStyle"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Date Of Visit"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:textSize="@dimen/text_size"
+            />
+            <EditText
+                    android:id="@+id/dateOfVisit"
+                    android:inputType="text"
+                    android:hint="Date Of Visit"
+                    style="@style/TextBoxStyle"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Visit Outcome"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:textSize="@dimen/text_size"
+            />
+            <EditText
+                    android:id="@+id/visitOutcome"
+                    android:inputType="text"
+                    android:hint="Visit Outcome"
+                    style="@style/TextBoxStyle"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Appointment Date If Linked To Care"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:textSize="@dimen/text_size"
+            />
+            <EditText
+                    android:id="@+id/appointmentDateIfLinkedToCare1"
+                    android:inputType="text"
+                    android:hint="Appointment Date If Linked To Care"
+                    style="@style/TextBoxStyle"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Date Visit Done"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:textSize="@dimen/text_size"
+            />
+            <EditText
+                    android:id="@+id/dateVisitDone"
+                    android:inputType="text"
+                    android:hint="Date Visit Done"
+                    style="@style/TextBoxStyle"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Visit Outcome"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:textSize="@dimen/text_size"
+            />
+            <EditText
+                    android:id="@+id/visitDoneOutcome"
+                    android:inputType="text"
+                    android:hint="Visit Outcome"
+                    style="@style/TextBoxStyle"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Appointment Date If Linked Back To Care"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:textSize="@dimen/text_size"
+            />
+            <EditText
+                    android:id="@+id/appointmentDateIfLinkedBackToCare"
+                    android:inputType="text"
+                    android:hint="Appointment Date If Linked Back To Care"
+                    style="@style/TextBoxStyle"/><TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Date Client Visited Facility If Linked To Care"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:textSize="@dimen/text_size"
+        />
+            <EditText
+                    android:id="@+id/dateClientVisitedFacilityIfLinkedToCare"
+                    android:inputType="text"
+                    android:hint="Date Client Visited Facility If Linked To Care"
+                    style="@style/TextBoxStyle"/>
+
+            <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btn_save"
+                    style="@style/ButtonStyle"
+                    android:text="@string/btn_save_label"
+            />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

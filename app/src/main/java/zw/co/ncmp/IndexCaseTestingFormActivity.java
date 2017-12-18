@@ -25,7 +25,7 @@ import java.util.Date;
 public class IndexCaseTestingFormActivity extends MenuBar implements View.OnClickListener {
 
     @BindView(R.id.first_name)
-    EditText firstNameofIndex;
+    EditText firstNameOfIndex;
     @BindView(R.id.last_name)
     EditText lastNameOfIndex;
     @BindView(R.id.index_oi_art_number)
@@ -209,7 +209,7 @@ public class IndexCaseTestingFormActivity extends MenuBar implements View.OnClic
     public void save(){
         if(validate()){
             IndexCaseTestingForm item = new IndexCaseTestingForm();
-            item.firstNameOfIndex = firstNameofIndex.getText().toString();
+            item.firstNameOfIndex = firstNameOfIndex.getText().toString();
             item.lastNameOfIndex = lastNameOfIndex.getText().toString();
             item.indexOIARTNumber = Integer.parseInt(indexOIARTNumber.getText().toString());
             item.initiatedOnART = getInitiatedOnART();
@@ -249,11 +249,11 @@ public class IndexCaseTestingFormActivity extends MenuBar implements View.OnClic
 
     public boolean validate(){
         boolean isValid = true;
-        if(firstNameofIndex.getText().toString().isEmpty()){
-            firstNameofIndex.setError(getResources().getString(R.string.required_field_error));
+        if(firstNameOfIndex.getText().toString().isEmpty()){
+            firstNameOfIndex.setError(getResources().getString(R.string.required_field_error));
             isValid = false;
         }else{
-            firstNameofIndex.setError(null);
+            firstNameOfIndex.setError(null);
         }
 
         if(lastNameOfIndex.getText().toString().isEmpty()){

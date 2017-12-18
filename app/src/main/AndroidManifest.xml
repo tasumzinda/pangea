@@ -270,6 +270,8 @@
         </activity>
         <activity android:name=".IndexCaseTestingFormActivity">
         </activity>
+        <activity android:name=".DefaulterTrackingFormActivity">
+        </activity>
     </application>
 
 </manifest>

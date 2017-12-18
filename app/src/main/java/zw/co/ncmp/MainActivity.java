@@ -35,6 +35,7 @@ public class MainActivity extends MenuBar implements View.OnClickListener, Adapt
     Button btn_option_three;
     Button btn_option_four;
     Button btn_option_five;
+    Button btn_option_six;
     LinearLayout tbl_national;
 
     @Override
@@ -82,6 +83,10 @@ public class MainActivity extends MenuBar implements View.OnClickListener, Adapt
         btn_option_five = (Button) findViewById(R.id.btn_option_five);
         btn_option_five.setOnClickListener(this);
         btn_option_five.setBackgroundResource(R.drawable.finish_background);
+
+        btn_option_six = (Button) findViewById(R.id.btn_option_six);
+        btn_option_six.setOnClickListener(this);
+        btn_option_six.setBackgroundResource(R.drawable.finish_background);
 
         facility_list_view = (ListView) findViewById(R.id.facility_list_view);
         facility_list_view.setEmptyView(findViewById(R.id.empty));
@@ -136,6 +141,10 @@ public class MainActivity extends MenuBar implements View.OnClickListener, Adapt
 
         if(v.getId() == btn_option_five.getId()){
             intent = new Intent(this, IndexCaseTestingFormActivity.class);
+        }
+
+        if(v.getId() == btn_option_six.getId()){
+            intent = new Intent(this, DefaulterTrackingFormActivity.class);
         }
 
         if (intent != null) {
