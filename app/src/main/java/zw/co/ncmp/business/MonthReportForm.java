@@ -31,6 +31,10 @@ public class MonthReportForm extends Model {
     @Column(name = "serverId", unique = true)
     public Long serverId;
 
+    public Province province;
+
+    public District district;
+
     @Expose
     @Column(name = "facility_id")
     public Facility facility;

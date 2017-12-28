@@ -272,6 +272,15 @@
         </activity>
         <activity android:name=".DefaulterTrackingFormActivity">
         </activity>
+        <activity
+                android:name=".HTSTSTB6Activity"
+                android:label="@string/title_activity_htststb6"
+                android:theme="@style/AppTheme">
+        </activity>
+        <activity android:name=".HTSTSTB7Activity"/>
+        <activity android:name=".HTSTSTSelectionActivity"/>
+        <activity android:name=".HTSTSTB6ListActivity"/>
+        <activity android:name=".HTSTSTB7ListActivity"/>
     </application>
 
 </manifest>

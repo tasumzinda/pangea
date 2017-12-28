@@ -24,6 +24,7 @@ import java.util.List;
 import zw.co.ncmp.business.Facility;
 import zw.co.ncmp.business.MonthReportForm;
 import zw.co.ncmp.business.Period;
+import zw.co.ncmp.business.Province;
 import zw.co.ncmp.util.AppUtil;
 
 public class MonthReportFormActivity extends MenuBar implements View.OnClickListener {
@@ -52,6 +53,8 @@ public class MonthReportFormActivity extends MenuBar implements View.OnClickList
     Button btn_question_eight;
     ArrayAdapter<Facility> facilityArrayAdapter;
     EditText facility_label;
+    Spinner province;
+    ArrayAdapter<Province> provinceArrayAdapter;
 
     private DatePickerDialog datePickerDialog;
 

@@ -46,6 +46,10 @@ public class Facility extends Model {
     @Column(name = "serverId", notNull = false, unique = true)
     public Long serverId;
 
+    @Expose
+    @Column
+    public District district;
+
     public Facility() {
         super();
     }
@@ -78,6 +82,13 @@ public class Facility extends Model {
                 .execute();
     }
 
+    public static List<Facility> findByDistrict(District district){
+        return new Select()
+                .from(Facility.class)
+                .where("district = ?", district.getId())
+                .execute();
+    }
+
     public static int getCount() {
         return new Select()
                 .distinct()
@@ -98,6 +109,10 @@ public class Facility extends Model {
             i.contactName = jsonObject.getString("contactName");
             i.contactMobileNumber =jsonObject.getString("contactMobileNumber");
             i.contactEmail = jsonObject.getString("contactEmail");
+            if( ! jsonObject.isNull("district")){
+                JSONObject district = jsonObject.getJSONObject("district");
+                i.district = District.findById(district.getLong("id"));
+            }
         } catch (JSONException e) {
             e.printStackTrace();
             return null;

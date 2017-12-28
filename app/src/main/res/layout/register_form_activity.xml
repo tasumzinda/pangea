@@ -29,6 +29,21 @@
             android:background="@drawable/selectable_item_background"
             android:text="Submit"
             android:textColor="@color/white" />
+        <TextView
+                style="@style/TextViewInputStyle"
+                android:text="Select Province"></TextView>
+
+        <Spinner
+                android:id="@+id/province"
+                style="@style/SpinnerStyle" />
+
+        <TextView
+                style="@style/TextViewInputStyle"
+                android:text="Select District"></TextView>
+
+        <Spinner
+                android:id="@+id/district"
+                style="@style/SpinnerStyle" />
 
         <TextView
             style="@style/TextViewInputStyle"

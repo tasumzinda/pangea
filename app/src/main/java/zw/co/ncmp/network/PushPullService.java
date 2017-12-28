@@ -66,7 +66,13 @@ public class PushPullService extends IntentService {
                 if (httpUrl.equals(AppUtil.getPeriodUrl(context))) {
                     loadPeriods(AppUtil.run(httpUrl, context));
                 }
-                if (httpUrl.equals(AppUtil.getMentorFacilitiesUrl(context))) {
+                if (httpUrl.equals(AppUtil.getProvinceUrl(context))) {
+                    loadProvince(AppUtil.run(httpUrl, context));
+                }
+                if (httpUrl.equals(AppUtil.getDistrictUrl(context))) {
+                    loadDistricts(AppUtil.run(httpUrl, context));
+                }
+                if (httpUrl.equals(AppUtil.getFacilityUrl(context))) {
                     loadFactilities(AppUtil.run(httpUrl, context));
                 }
             } catch (IOException e) {
@@ -351,7 +357,7 @@ public class PushPullService extends IntentService {
 
     public List<HttpUrl> getHttpUrls() {
         List<HttpUrl> static_lists = new ArrayList<>();
-        static_lists.add(AppUtil.getMentorFacilitiesUrl(context));
+        static_lists.add(AppUtil.getFacilityUrl(context));
         static_lists.add(AppUtil.getChallengeStatusUrl(context));
         static_lists.add(AppUtil.getChallengeUrl(context));
         static_lists.add(AppUtil.getDesignationUrl(context));
@@ -359,6 +365,8 @@ public class PushPullService extends IntentService {
         static_lists.add(AppUtil.getQualificationsUrl(context));
         static_lists.add(AppUtil.getPeriodUrl(context));
         static_lists.add(AppUtil.getActionTakenCategoryUrl(context));
+        static_lists.add(AppUtil.getDistrictUrl(context));
+        static_lists.add(AppUtil.getProvinceUrl(context));
         return static_lists;
     }
 
@@ -385,6 +393,33 @@ public class PushPullService extends IntentService {
 
         } catch (Exception e) {
             msg = "Qualification Sync Failed";
+        }
+        return msg;
+    }
+
+    private String loadProvince(String data) {
+        int i = 0;
+        String msg = "Province Synced";
+        try {
+            JSONArray jsonArray = new JSONArray(data);
+            List<StaticData> list = StaticData.fromJson(jsonArray);
+            for (StaticData staticData : list) {
+                Province checkDuplicate = Province.findById(staticData.serverId);
+                if (checkDuplicate == null) {
+                    Province item = new Province();
+                    item.serverId = staticData.serverId;
+                    item.name = staticData.name;
+                    item.save();
+                } else {
+                    checkDuplicate.name = staticData.name;
+                    checkDuplicate.save();
+                }
+                i++;
+            }
+            msg = msg.concat(" - " + i);
+
+        } catch (Exception e) {
+            msg = "Province Sync Failed";
         }
         return msg;
     }
@@ -568,6 +603,27 @@ public class PushPullService extends IntentService {
                     checkDuplicate.contactEmail = facility.contactEmail;
                     checkDuplicate.contactMobileNumber = facility.contactMobileNumber;
                     checkDuplicate.save();
+                }
+                i++;
+            }
+            msg = msg.concat(" - " + i);
+
+        } catch (Exception e) {
+            msg = "Sync Failed";
+        }
+        return msg;
+    }
+
+    public String loadDistricts(String data) {
+        int i = 0;
+        String msg = "Districts Synced";
+        try {
+            JSONArray jsonArray = new JSONArray(data);
+            List<District> districtList = District.fromJson(jsonArray);
+            for (District facility : districtList) {
+                District checkDuplicate = District.findById(facility.serverId);
+                if (checkDuplicate == null) {
+                    facility.save();
                 }
                 i++;
             }
