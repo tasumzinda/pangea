@@ -62,36 +62,7 @@
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:text="ESTA3" />
-
-            <Button
-                    android:id="@+id/btn_option_five"
-                    style="?android:attr/buttonBarButtonStyle"
-                    android:textColor="@color/white"
-                    android:background="@drawable/selectable_item_background"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:text="ESTA4" />
-
-            <Button
-                    android:id="@+id/btn_option_six"
-                    style="?android:attr/buttonBarButtonStyle"
-                    android:textColor="@color/white"
-                    android:background="@drawable/selectable_item_background"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:text="ESTA5" />
-            <Button
-                    android:id="@+id/btn_option_seven"
-                    style="?android:attr/buttonBarButtonStyle"
-                    android:textColor="@color/white"
-                    android:background="@drawable/selectable_item_background"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:text="HTS_TST" />
+                    android:text="ESTA" />
 
         </LinearLayout>
 

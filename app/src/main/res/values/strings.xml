@@ -22,6 +22,8 @@
     <string name="twentyFiveToFiftyNine">25 &#8211; 59 months</string>
     <string name="thirtyToFortyNine">30 &#8211; 49</string>
     <string name="lessThanFifteen">&lt;15</string>
+    <string name="lessThanOrEqualToTwoMonths">&lt;&#61;2 months</string>
+    <string name="threeToTwelveMonths">3&#8211;12 months</string>
     <string name="date_format_error">Please enter a valid date in this format: 12/02/2016</string>
     <string name="required_field_error">Field is required</string>
 

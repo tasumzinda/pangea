@@ -34,9 +34,6 @@ public class MainActivity extends MenuBar implements View.OnClickListener, Adapt
     Button btn_option_two;
     Button btn_option_three;
     Button btn_option_four;
-    Button btn_option_five;
-    Button btn_option_six;
-    Button btn_option_seven;
     LinearLayout tbl_national;
 
     @Override
@@ -80,18 +77,6 @@ public class MainActivity extends MenuBar implements View.OnClickListener, Adapt
         btn_option_four = (Button) findViewById(R.id.btn_option_four);
         btn_option_four.setOnClickListener(this);
         btn_option_four.setBackgroundResource(R.drawable.finish_background);
-
-        btn_option_five = (Button) findViewById(R.id.btn_option_five);
-        btn_option_five.setOnClickListener(this);
-        btn_option_five.setBackgroundResource(R.drawable.finish_background);
-
-        btn_option_six = (Button) findViewById(R.id.btn_option_six);
-        btn_option_six.setOnClickListener(this);
-        btn_option_six.setBackgroundResource(R.drawable.finish_background);
-
-        btn_option_seven = (Button) findViewById(R.id.btn_option_seven);
-        btn_option_seven.setOnClickListener(this);
-        btn_option_seven.setBackgroundResource(R.drawable.finish_background);
 
         facility_list_view = (ListView) findViewById(R.id.facility_list_view);
         facility_list_view.setEmptyView(findViewById(R.id.empty));
@@ -141,19 +126,7 @@ public class MainActivity extends MenuBar implements View.OnClickListener, Adapt
         }
 
         if(v.getId() == btn_option_four.getId()){
-            intent = new Intent(this, Esta3SelectionActivity.class);
-        }
-
-        if(v.getId() == btn_option_five.getId()){
-            intent = new Intent(this, IndexCaseTestingFormActivity.class);
-        }
-
-        if(v.getId() == btn_option_six.getId()){
-            intent = new Intent(this, DefaulterTrackingFormActivity.class);
-        }
-
-        if(v.getId() == btn_option_seven.getId()){
-            intent = new Intent(this, HTSTSTSelectionActivity.class);
+            intent = new Intent(this, EstaSelectionActivity.class);
         }
 
         if (intent != null) {

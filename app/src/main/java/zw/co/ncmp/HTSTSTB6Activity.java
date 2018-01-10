@@ -133,7 +133,7 @@ public class HTSTSTB6Activity extends MenuBar implements View.OnClickListener {
             setSupportActionBar(createToolBar("HTS_TST B6"));
         }
 
-        title.setText("Community Based DSD");
+        title.setText("HTS_TST B6");
 
         btn_question_one = (Button) findViewById(R.id.btn_question_one);
         btn_question_one.setOnClickListener(this);
