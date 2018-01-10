@@ -59,6 +59,18 @@ public class PMTCTEIDP36 extends Model{
     @Column
     public Long thirteenToTwentyFour;
 
+    @Column
+    @Expose
+    public Long lessThanTwo1;
+
+    @Column
+    @Expose
+    public Long threeToTwelve1;
+
+    @Expose
+    @Column
+    public Long thirteenToTwentyFour1;
+
     @Column(name = "date_submitted", notNull = false)
     public Date dateSubmitted;
 
@@ -132,7 +144,11 @@ public class PMTCTEIDP36 extends Model{
         return name;
     }
 
-    public Long getTotal(){
+    public Long getP36Total(){
         return AppUtil.getLong(lessThanTwo) + AppUtil.getLong(threeToTwelve) + AppUtil.getLong(thirteenToTwentyFour);
+    }
+
+    public Long getP37Total(){
+        return AppUtil.getLong(lessThanTwo1) + AppUtil.getLong(threeToTwelve1) + AppUtil.getLong(thirteenToTwentyFour1);
     }
 }
