@@ -282,6 +282,8 @@
         <activity android:name=".HTSTSTB6ListActivity"/>
         <activity android:name=".HTSTSTB7ListActivity"/>
         <activity android:name=".EstaSelectionActivity"/>
+        <activity android:name=".PMTCTEIDP36Activity"/>
+        <activity android:name=".PMTCTEIDP36ListActivity"/>
     </application>
 
 </manifest>

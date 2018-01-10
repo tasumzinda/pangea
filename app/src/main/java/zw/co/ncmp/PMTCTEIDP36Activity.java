@@ -30,11 +30,12 @@ public class PMTCTEIDP36Activity extends MenuBar implements View.OnClickListener
     EditText dateCreated;
     Spinner period;
     EditText name;
-    TextView numerator;
 
     Button btn_completed;
     Button btn_submit;
     Button btn_question_one;
+    Button btn_question_two;
+    Button btn_question_three;
 
     Button btn_save;
     private PMTCTEIDP36 form;
@@ -44,7 +45,7 @@ public class PMTCTEIDP36Activity extends MenuBar implements View.OnClickListener
 
     public void onCreate(Bundle savedInstance){
         super.onCreate(savedInstance);
-        setContentView(R.layout.activity_pmtct_eid);
+        setContentView(R.layout.pmtct_eid_p36);
 
         Intent intent = getIntent();
         Long form_id = intent.getLongExtra(AppUtil.ID, 0);
@@ -52,14 +53,20 @@ public class PMTCTEIDP36Activity extends MenuBar implements View.OnClickListener
         facility = (Spinner) findViewById(R.id.facility);
         name = (EditText) findViewById(R.id.name);
         period = (Spinner) findViewById(R.id.period);
-        numerator = (TextView) findViewById(R.id.numerator);
-        numerator = (TextView) findViewById(R.id.numerator);
         dateCreated = (EditText) findViewById(R.id.dateCreated);
         facility_label = (EditText) findViewById(R.id.facility_label);
         facility_label.setVisibility(View.GONE);
         btn_question_one = (Button) findViewById(R.id.btn_question_one);
-        btn_question_one.setText("Disaggregated By Infant Test Results");
+        btn_question_one.setText("P36 – HIV Exposed Infants with DNA PCR sample collected");
         btn_question_one.setOnClickListener(this);
+
+        btn_question_two = (Button) findViewById(R.id.btn_question_two);
+        btn_question_two.setText("P37 – HIV Exposed Infants DNA-PCR positive");
+        btn_question_two.setOnClickListener(this);
+
+        btn_question_three = (Button) findViewById(R.id.btn_question_three);
+        btn_question_three.setText("P38 – Infants initiated on ART");
+        btn_question_three.setOnClickListener(this);
 
         datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
 
@@ -118,10 +125,10 @@ public class PMTCTEIDP36Activity extends MenuBar implements View.OnClickListener
                 i++;
             }
 
-            setSupportActionBar(createToolBar("PMTCT_EID_P36 Update"));
+            setSupportActionBar(createToolBar("PMTCT_EID Update"));
         } else {
             form = new PMTCTEIDP36();
-            setSupportActionBar(createToolBar("PMTCT_EID_P36"));
+            setSupportActionBar(createToolBar("PMTCT_EID"));
         }
 
         btn_save = (Button) findViewById(R.id.btn_save);
@@ -158,6 +165,15 @@ public class PMTCTEIDP36Activity extends MenuBar implements View.OnClickListener
         if(v.getId() == btn_question_one.getId()){
             questionOne();
         }
+
+        if(v.getId() == btn_question_two.getId()){
+            questionTwo();
+        }
+
+        if(v.getId() == btn_question_three.getId()){
+            questionThree();
+        }
+
         if (v.getId() == btn_save.getId()) {
             if (validate()) {
                 form.facility = (Facility) facility.getSelectedItem();
@@ -182,7 +198,7 @@ public class PMTCTEIDP36Activity extends MenuBar implements View.OnClickListener
                                 form.dateSubmitted = new Date();
                                 form.save();
                                 AppUtil.createLongNotification(PMTCTEIDP36Activity.this, "Submitted for Upload to Server");
-                                Intent intent = new Intent(PMTCTEIDP36Activity.this, PMTCTEIDFormListActivity.class);
+                                Intent intent = new Intent(PMTCTEIDP36Activity.this, PMTCTEIDP36ListActivity.class);
                                 startActivity(intent);
                                 finish();
                             }
@@ -235,13 +251,13 @@ public class PMTCTEIDP36Activity extends MenuBar implements View.OnClickListener
     public void questionOne() {
         final Dialog dialog = new Dialog(context);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        dialog.setContentView(R.layout.pmtct_eid_dialogue);
+        dialog.setContentView(R.layout.pmtct_eid_p36_dialogue);
 
         TextView txt_name = (TextView) dialog.findViewById(R.id.txt_name);
-        txt_name.setText("HIV Exposed Infants with DNA PCR sample collected");
+        txt_name.setText("P36 - HIV Exposed Infants with DNA PCR sample collected");
 
         final TextView total = (TextView) dialog.findViewById(R.id.total);
-        total.setText(AppUtil.getLongValue(form.getTotal()));
+        total.setText(AppUtil.getLongValue(form.getP36Total()));
 
         final EditText lessThanOrEqualToTwoMonths = (EditText) dialog.findViewById(R.id.lessThanOrEqualToTwoMonths);
         final EditText threeToTwelveMonths = (EditText) dialog.findViewById(R.id.threeToTwelveMonths);
@@ -267,7 +283,7 @@ public class PMTCTEIDP36Activity extends MenuBar implements View.OnClickListener
                         form.lessThanTwo = AppUtil.getLongValue(lessThanOrEqualToTwoMonths.getText().toString());
                         form.threeToTwelve = AppUtil.getLongValue(threeToTwelveMonths.getText().toString());
                         form.thirteenToTwentyFour = AppUtil.getLongValue(thirteenToTwentyFour.getText().toString());
-                        total.setText(AppUtil.getLongValue(form.getTotal()));
+                        total.setText(AppUtil.getLongValue(form.getP36Total()));
                     }
 
                 }
@@ -293,9 +309,133 @@ public class PMTCTEIDP36Activity extends MenuBar implements View.OnClickListener
 
     }
 
+    public void questionTwo() {
+        final Dialog dialog = new Dialog(context);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.pmtct_eid_p36_dialogue);
+
+        TextView txt_name = (TextView) dialog.findViewById(R.id.txt_name);
+        txt_name.setText("P37 – HIV Exposed Infants DNA-PCR positive");
+
+        final TextView total = (TextView) dialog.findViewById(R.id.total);
+        total.setText(AppUtil.getLongValue(form.getP37Total()));
+
+        final EditText lessThanOrEqualToTwoMonths = (EditText) dialog.findViewById(R.id.lessThanOrEqualToTwoMonths);
+        final EditText threeToTwelveMonths = (EditText) dialog.findViewById(R.id.threeToTwelveMonths);
+        final EditText thirteenToTwentyFour = (EditText) dialog.findViewById(R.id.thirteenToTwentyFour);
+
+        if (form != null) {
+            lessThanOrEqualToTwoMonths.setText(AppUtil.getLongValue(form.lessThanTwo1));
+            threeToTwelveMonths.setText(AppUtil.getLongValue(form.threeToTwelve1));
+            thirteenToTwentyFour.setText(AppUtil.getLongValue(form.thirteenToTwentyFour1));
+        }
+
+        List<EditText> list = new ArrayList<>();
+        list.add(lessThanOrEqualToTwoMonths);
+        list.add(threeToTwelveMonths);
+        list.add(thirteenToTwentyFour);
+
+        for (EditText editText : list) {
+            editText.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+
+                public void onFocusChange(View v, boolean hasFocus) {
+                    if (!hasFocus) {
+
+                        form.lessThanTwo1 = AppUtil.getLongValue(lessThanOrEqualToTwoMonths.getText().toString());
+                        form.threeToTwelve1 = AppUtil.getLongValue(threeToTwelveMonths.getText().toString());
+                        form.thirteenToTwentyFour1 = AppUtil.getLongValue(thirteenToTwentyFour.getText().toString());
+                        total.setText(AppUtil.getLongValue(form.getP37Total()));
+                    }
+
+                }
+            });
+        }
+
+        Button saveButton = (Button) dialog.findViewById(R.id.btn_save);
+        saveButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+
+                form.lessThanTwo1 = AppUtil.getLongValue(lessThanOrEqualToTwoMonths.getText().toString());
+                form.threeToTwelve1 = AppUtil.getLongValue(threeToTwelveMonths.getText().toString());
+                form.thirteenToTwentyFour1 = AppUtil.getLongValue(thirteenToTwentyFour.getText().toString());
+
+                upDateForm();
+                dialog.dismiss();
+            }
+        });
+
+        dialog.setCancelable(true);
+        dialog.show();
+
+    }
+
+    public void questionThree() {
+        final Dialog dialog = new Dialog(context);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.pmtct_eid_p36_dialogue);
+
+        TextView txt_name = (TextView) dialog.findViewById(R.id.txt_name);
+        txt_name.setText("P38 – Infants initiated on ART");
+
+        final TextView total = (TextView) dialog.findViewById(R.id.total);
+        total.setText(AppUtil.getLongValue(form.getP38Total()));
+
+        final EditText lessThanOrEqualToTwoMonths = (EditText) dialog.findViewById(R.id.lessThanOrEqualToTwoMonths);
+        final EditText threeToTwelveMonths = (EditText) dialog.findViewById(R.id.threeToTwelveMonths);
+        final EditText thirteenToTwentyFour = (EditText) dialog.findViewById(R.id.thirteenToTwentyFour);
+
+        if (form != null) {
+            lessThanOrEqualToTwoMonths.setText(AppUtil.getLongValue(form.lessThanTwo2));
+            threeToTwelveMonths.setText(AppUtil.getLongValue(form.threeToTwelve2));
+            thirteenToTwentyFour.setText(AppUtil.getLongValue(form.thirteenToTwentyFour2));
+        }
+
+        List<EditText> list = new ArrayList<>();
+        list.add(lessThanOrEqualToTwoMonths);
+        list.add(threeToTwelveMonths);
+        list.add(thirteenToTwentyFour);
+
+        for (EditText editText : list) {
+            editText.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+
+                public void onFocusChange(View v, boolean hasFocus) {
+                    if (!hasFocus) {
+
+                        form.lessThanTwo2 = AppUtil.getLongValue(lessThanOrEqualToTwoMonths.getText().toString());
+                        form.threeToTwelve2 = AppUtil.getLongValue(threeToTwelveMonths.getText().toString());
+                        form.thirteenToTwentyFour2 = AppUtil.getLongValue(thirteenToTwentyFour.getText().toString());
+                        total.setText(AppUtil.getLongValue(form.getP38Total()));
+                    }
+
+                }
+            });
+        }
+
+        Button saveButton = (Button) dialog.findViewById(R.id.btn_save);
+        saveButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+
+                form.lessThanTwo2 = AppUtil.getLongValue(lessThanOrEqualToTwoMonths.getText().toString());
+                form.threeToTwelve2 = AppUtil.getLongValue(threeToTwelveMonths.getText().toString());
+                form.thirteenToTwentyFour2 = AppUtil.getLongValue(thirteenToTwentyFour.getText().toString());
+
+                upDateForm();
+                dialog.dismiss();
+            }
+        });
+
+        dialog.setCancelable(true);
+        dialog.show();
+
+    }
+
     public void upDateForm() {
 
-        btn_question_one.setText("HIV Exposed Infants with DNA PCR sample collected [ " + form.getTotal()+ " ]");
+        btn_question_one.setText("P36 - HIV Exposed Infants with DNA PCR sample collected [ " + form.getP36Total()+ " ]");
+        btn_question_two.setText("P37 – HIV Exposed Infants DNA-PCR positive [ " + form.getP37Total()+ " ]");
+        btn_question_three.setText("P38 – Infants initiated on ART [ " + form.getP38Total()+ " ]");
     }
 
     @Override
@@ -306,7 +446,7 @@ public class PMTCTEIDP36Activity extends MenuBar implements View.OnClickListener
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
 
-                        Intent intent = new Intent(PMTCTEIDP36Activity.this, PMTCTEIDFormListActivity.class);
+                        Intent intent = new Intent(PMTCTEIDP36Activity.this, PMTCTEIDP36ListActivity.class);
                         startActivity(intent);
                         finish();
 

@@ -14,6 +14,7 @@ public class EstaSelectionActivity extends MenuBar implements View.OnClickListen
     Button btn_option_three;
     Button btn_option_two;
     Button btn_option_four;
+    Button btn_option_five;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +43,11 @@ public class EstaSelectionActivity extends MenuBar implements View.OnClickListen
         btn_option_four.setBackgroundResource(R.drawable.finish_background);
         btn_option_four.setText("HTS_TST");
 
+        btn_option_five = (Button) findViewById(R.id.btn_option_five);
+        btn_option_five.setOnClickListener(this);
+        btn_option_five.setBackgroundResource(R.drawable.finish_background);
+        btn_option_five.setText("PMTCT_EID");
+
         setSupportActionBar(createToolBar("ESTA Selection"));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
@@ -63,6 +69,10 @@ public class EstaSelectionActivity extends MenuBar implements View.OnClickListen
         }
         if(v.getId() == btn_option_four.getId()){
             intent = new Intent(this, HTSTSTSelectionActivity.class);
+        }
+
+        if(v.getId() == btn_option_five.getId()){
+            intent = new Intent(this, PMTCTEIDP36Activity.class);
         }
 
         if (intent != null) {

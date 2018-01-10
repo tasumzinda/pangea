@@ -73,34 +73,19 @@
             <TableLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="60dp"
-                        android:layout_alignParentTop="true"
-                        android:layout_span="2"
-                        android:textStyle="bold"
-                        android:textSize="17dp"
-                        android:text="Number of infants who had a virologic HIV test within 12 months of birth during the reporting period. Numerator will auto-calculate from the Infant Test Results." />
-
-                <TableRow
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="5dip">
-
-                    <TextView
-                            style="@style/TextViewStyle1"
-                            android:text="Numerator"/>
-
-                    <TextView
-                            android:layout_width="250dp"
-                            android:id="@id/numerator"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentTop="true"
-                            android:paddingBottom="@dimen/fab_margin" />
-                </TableRow>
 
                 <Button
                         android:id="@+id/btn_question_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                <Button
+                        android:id="@+id/btn_question_two"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                <Button
+                        android:id="@+id/btn_question_three"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
 
