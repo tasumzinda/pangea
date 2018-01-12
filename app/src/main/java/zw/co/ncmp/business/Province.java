@@ -28,10 +28,17 @@ public class Province extends Model{
         super();
     }
 
-    public static Province findById(Long id){
+    public static Province findByServerId(Long id){
         return new Select()
                 .from(Province.class)
                 .where("serverId = ?", id)
+                .executeSingle();
+    }
+
+    public static Province findById(Long id){
+        return new Select()
+                .from(Province.class)
+                .where("Id = ?", id)
                 .executeSingle();
     }
 
@@ -39,5 +46,10 @@ public class Province extends Model{
         return new Select()
                 .from(Province.class)
                 .execute();
+    }
+
+    @Override
+    public String toString() {
+        return name;
     }
 }

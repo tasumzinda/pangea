@@ -357,6 +357,8 @@ public class PushPullService extends IntentService {
 
     public List<HttpUrl> getHttpUrls() {
         List<HttpUrl> static_lists = new ArrayList<>();
+        static_lists.add(AppUtil.getProvinceUrl(context));
+        static_lists.add(AppUtil.getDistrictUrl(context));
         static_lists.add(AppUtil.getFacilityUrl(context));
         static_lists.add(AppUtil.getChallengeStatusUrl(context));
         static_lists.add(AppUtil.getChallengeUrl(context));
@@ -365,8 +367,6 @@ public class PushPullService extends IntentService {
         static_lists.add(AppUtil.getQualificationsUrl(context));
         static_lists.add(AppUtil.getPeriodUrl(context));
         static_lists.add(AppUtil.getActionTakenCategoryUrl(context));
-        static_lists.add(AppUtil.getDistrictUrl(context));
-        static_lists.add(AppUtil.getProvinceUrl(context));
         return static_lists;
     }
 

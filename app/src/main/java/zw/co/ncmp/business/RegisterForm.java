@@ -20,6 +20,8 @@ import java.util.List;
 import zw.co.ncmp.R;
 import zw.co.ncmp.util.AppUtil;
 
+import static zw.co.ncmp.util.AppUtil.getLong;
+
 /**
  * Created by tdhlakama on 2/6/2016.
  */
@@ -30,6 +32,10 @@ public class RegisterForm extends Model {
     @Expose
     @Column(name = "serverId", unique = true)
     public Long serverId;
+
+    public Province province;
+
+    public District district;
 
     @Expose
     @Column(name = "facility_id")
@@ -51,20 +57,36 @@ public class RegisterForm extends Model {
     public String name;
 
     @Expose
-    @Column(name = "maleLessThanOne1")
-    public Long maleLessThanOne1;
+    @Column(name = "maleLessThanTwoMonths")
+    public Long maleLessThanTwoMonths;
 
     @Expose
-    @Column(name = "femaleLessThanOne1")
-    public Long femaleLessThanOne1;
+    @Column(name = "femaleLessThanTwoMonths")
+    public Long femaleLessThanTwoMonths;
 
     @Expose
-    @Column(name = "maleOneToFour1")
-    public Long maleOneToFour1;
+    @Column(name = "maleTwoToTwelveMonths")
+    public Long maleTwoToTwelveMonths;
 
     @Expose
-    @Column(name = "femaleOneToFour1")
-    public Long femaleOneToFour1;
+    @Column(name = "femaleTwoToTwelveMonths")
+    public Long femaleTwoToTwelveMonths;
+
+    @Expose
+    @Column(name = "maleThirteenToTwentyFourMonths")
+    public Long maleThirteenToTwentyFourMonths;
+
+    @Expose
+    @Column(name = "femaleThirteenToTwentyFourMonths")
+    public Long femaleThirteenToTwentyFourMonths;
+
+    @Expose
+    @Column(name = "maleTwentyFiveToFiftyNineMonths")
+    public Long maleTwentyFiveToFiftyNineMonths;
+
+    @Expose
+    @Column(name = "femaleTwentyFiveToFiftyNineMonths")
+    public Long femaleTwentyFiveToFiftyNineMonths;
 
     @Expose
     @Column(name = "maleFiveToNine1")
@@ -108,35 +130,11 @@ public class RegisterForm extends Model {
 
     @Column
     @Expose
-    public Long maleThirtyToThirtyFour1;
+    public Long maleThirtyToFortyNine1;
 
     @Column
     @Expose
-    public Long femaleThirtyToThirtyFour1;
-
-    @Column
-    @Expose
-    public Long maleThirtyFiveToThirtyNine1;
-
-    @Column
-    @Expose
-    public Long femaleThirtyFiveToThirtyNine1;
-
-    @Column
-    @Expose
-    public Long maleFortyToFortyFour1;
-
-    @Column
-    @Expose
-    public Long femaleFortyToFortyFour1;
-
-    @Column
-    @Expose
-    public Long maleFortyFiveToFortyNine1;
-
-    @Column
-    @Expose
-    public Long femaleFortyFiveToFortyNine1;
+    public Long femaleThirtyToFortyNine1;
 
     @Expose
     @Column(name = "maleFiftyPlus1")
@@ -147,20 +145,36 @@ public class RegisterForm extends Model {
     public Long femaleFiftyPlus1;
 
     @Expose
-    @Column(name = "maleLessThanOne2")
-    public Long maleLessThanOne2;
+    @Column(name = "maleLessThanTwoMonths2")
+    public Long maleLessThanTwoMonths2;
 
     @Expose
-    @Column(name = "femaleLessThanOne2")
-    public Long femaleLessThanOne2;
+    @Column(name = "femaleLessThanTwoMonths2")
+    public Long femaleLessThanTwoMonths2;
 
     @Expose
-    @Column(name = "maleOneToFour2")
-    public Long maleOneToFour2;
+    @Column(name = "maleTwoToTwelveMonths2")
+    public Long maleTwoToTwelveMonths2;
 
     @Expose
-    @Column(name = "femaleOneToFour2")
-    public Long femaleOneToFour2;
+    @Column(name = "femaleTwoToTwelveMonths2")
+    public Long femaleTwoToTwelveMonths2;
+
+    @Expose
+    @Column(name = "maleThirteenToTwentyFourMonths2")
+    public Long maleThirteenToTwentyFourMonths2;
+
+    @Expose
+    @Column(name = "femaleThirteenToTwentyFourMonths2")
+    public Long femaleThirteenToTwentyFourMonths2;
+
+    @Expose
+    @Column(name = "maleTwentyFiveToFiftyNineMonths2")
+    public Long maleTwentyFiveToFiftyNineMonths2;
+
+    @Expose
+    @Column(name = "femaleTwentyFiveToFiftyNineMonths2")
+    public Long femaleTwentyFiveToFiftyNineMonths2;
 
     @Expose
     @Column(name = "maleFiveToNine2")
@@ -204,35 +218,11 @@ public class RegisterForm extends Model {
 
     @Column
     @Expose
-    public Long maleThirtyToThirtyFour2;
+    public Long maleThirtyToFortyNine2;
 
     @Column
     @Expose
-    public Long femaleThirtyToThirtyFour2;
-
-    @Column
-    @Expose
-    public Long maleThirtyFiveToThirtyNine2;
-
-    @Column
-    @Expose
-    public Long femaleThirtyFiveToThirtyNine2;
-
-    @Column
-    @Expose
-    public Long maleFortyToFortyFour2;
-
-    @Column
-    @Expose
-    public Long femaleFortyToFortyFour2;
-
-    @Column
-    @Expose
-    public Long maleFortyFiveToFortyNine2;
-
-    @Column
-    @Expose
-    public Long femaleFortyFiveToFortyNine2;
+    public Long femaleThirtyToFortyNine2;
 
     @Expose
     @Column(name = "maleFiftyPlus2")
@@ -243,36 +233,12 @@ public class RegisterForm extends Model {
     public Long femaleFiftyPlus2;
 
     @Expose
-    @Column(name = "maleLessThanOne3")
-    public Long maleLessThanOne3;
+    @Column(name = "maleLessThanFifteen")
+    public Long maleLessThanFifteen;
 
     @Expose
-    @Column(name = "femaleLessThanOne3")
-    public Long femaleLessThanOne3;
-
-    @Expose
-    @Column(name = "maleOneToFour3")
-    public Long maleOneToFour3;
-
-    @Expose
-    @Column(name = "femaleOneToFour3")
-    public Long femaleOneToFour3;
-
-    @Expose
-    @Column(name = "maleFiveToNine3")
-    public Long maleFiveToNine3;
-
-    @Expose
-    @Column(name = "femaleFiveToNine3")
-    public Long femaleFiveToNine3;
-
-    @Expose
-    @Column(name = "maleTenToFourteen3")
-    public Long maleTenToFourteen3;
-
-    @Expose
-    @Column(name = "femaleTenToFourteen3")
-    public Long femaleTenToFourteen3;
+    @Column(name = "femaleLessThanFifteen")
+    public Long femaleLessThanFifteen;
 
     @Expose
     @Column(name = "maleFifteenToNineteen3")
@@ -300,35 +266,11 @@ public class RegisterForm extends Model {
 
     @Column
     @Expose
-    public Long maleThirtyToThirtyFour3;
+    public Long maleThirtyToFortyNine3;
 
     @Column
     @Expose
-    public Long femaleThirtyToThirtyFour3;
-
-    @Column
-    @Expose
-    public Long maleThirtyFiveToThirtyNine3;
-
-    @Column
-    @Expose
-    public Long femaleThirtyFiveToThirtyNine3;
-
-    @Column
-    @Expose
-    public Long maleFortyToFortyFour3;
-
-    @Column
-    @Expose
-    public Long femaleFortyToFortyFour3;
-
-    @Column
-    @Expose
-    public Long maleFortyFiveToFortyNine3;
-
-    @Column
-    @Expose
-    public Long femaleFortyFiveToFortyNine3;
+    public Long femaleThirtyToFortyNine3;
 
     @Expose
     @Column(name = "maleFiftyPlus3")
@@ -339,36 +281,12 @@ public class RegisterForm extends Model {
     public Long femaleFiftyPlus3;
 
     @Expose
-    @Column(name = "maleLessThanOne4")
-    public Long maleLessThanOne4;
+    @Column(name = "maleLessThanFifteen1")
+    public Long maleLessThanFifteen1;
 
     @Expose
-    @Column(name = "femaleLessThanOne4")
-    public Long femaleLessThanOne4;
-
-    @Expose
-    @Column(name = "maleOneToFour4")
-    public Long maleOneToFour4;
-
-    @Expose
-    @Column(name = "femaleOneToFour4")
-    public Long femaleOneToFour4;
-
-    @Expose
-    @Column(name = "maleFiveToNine4")
-    public Long maleFiveToNine4;
-
-    @Expose
-    @Column(name = "femaleFiveToNine4")
-    public Long femaleFiveToNine4;
-
-    @Expose
-    @Column(name = "maleTenToFourteen4")
-    public Long maleTenToFourteen4;
-
-    @Expose
-    @Column(name = "femaleTenToFourteen4")
-    public Long femaleTenToFourteen4;
+    @Column(name = "femaleLessThanFifteen1")
+    public Long femaleLessThanFifteen1;
 
     @Expose
     @Column(name = "maleFifteenToNineteen4")
@@ -396,35 +314,11 @@ public class RegisterForm extends Model {
 
     @Column
     @Expose
-    public Long maleThirtyToThirtyFour4;
+    public Long maleThirtyToFortyNine4;
 
     @Column
     @Expose
-    public Long femaleThirtyToThirtyFour4;
-
-    @Column
-    @Expose
-    public Long maleThirtyFiveToThirtyNine4;
-
-    @Column
-    @Expose
-    public Long femaleThirtyFiveToThirtyNine4;
-
-    @Column
-    @Expose
-    public Long maleFortyToFortyFour4;
-
-    @Column
-    @Expose
-    public Long femaleFortyToFortyFour4;
-
-    @Column
-    @Expose
-    public Long maleFortyFiveToFortyNine4;
-
-    @Column
-    @Expose
-    public Long femaleFortyFiveToFortyNine4;
+    public Long femaleThirtyToFortyNine4;
 
     @Expose
     @Column(name = "maleFiftyPlus4")
@@ -972,6 +866,42 @@ public class RegisterForm extends Model {
     @Column(name = "date_submitted", notNull = false)
     public Date dateSubmitted;
 
+    @Column
+    @Expose
+    public Long lessThanTwo;
+
+    @Column
+    @Expose
+    public Long threeToTwelve;
+
+    @Expose
+    @Column
+    public Long thirteenToTwentyFour;
+
+    @Column
+    @Expose
+    public Long lessThanTwo1;
+
+    @Column
+    @Expose
+    public Long threeToTwelve1;
+
+    @Expose
+    @Column
+    public Long thirteenToTwentyFour1;
+
+    @Column
+    @Expose
+    public Long lessThanTwo2;
+
+    @Column
+    @Expose
+    public Long threeToTwelve2;
+
+    @Expose
+    @Column
+    public Long thirteenToTwentyFour2;
+
     public static RegisterForm get(Long id) {
         return new Select().from(RegisterForm.class).where("Id = ?", id).executeSingle();
     }
@@ -1040,75 +970,59 @@ public class RegisterForm extends Model {
             };
 
     public Long maleQuestion1() {
-        return AppUtil.getLong(maleLessThanOne1) + AppUtil.getLong(maleOneToFour1) +
-                AppUtil.getLong(maleFiveToNine1) + AppUtil.getLong(maleTenToFourteen1) +
-                AppUtil.getLong(maleFifteenToNineteen1) + AppUtil.getLong(maleTwentyToTwentyFour1) +
-                AppUtil.getLong(maleTwentyFiveToTwentyNine1) + AppUtil.getLong(maleThirtyToThirtyFour1) +
-                AppUtil.getLong(maleThirtyFiveToThirtyNine1) + AppUtil.getLong(maleFortyToFortyFour1) +
-                AppUtil.getLong(maleFortyFiveToFortyNine1) + AppUtil.getLong(maleFiftyPlus1);
-    }
+        return getLong(maleLessThanTwoMonths) + getLong(maleTwoToTwelveMonths) +
+                getLong(maleThirteenToTwentyFourMonths) + getLong(maleTwentyFiveToFiftyNineMonths) +
+                getLong(maleFiveToNine1) + getLong(maleTenToFourteen1) +
+                getLong(maleFifteenToNineteen1) +
+                getLong(maleTwentyToTwentyFour1) + getLong(maleTwentyFiveToTwentyNine1) +
+                getLong(maleThirtyToFortyNine1) + getLong(maleFiftyPlus1);}
 
     public Long femaleQuestion1() {
-        return AppUtil.getLong(femaleLessThanOne1) + AppUtil.getLong(femaleOneToFour1) +
-                AppUtil.getLong(femaleFiveToNine1) + AppUtil.getLong(femaleTenToFourteen1) +
-                AppUtil.getLong(femaleFifteenToNineteen1) + AppUtil.getLong(femaleTwentyToTwentyFour1) +
-                AppUtil.getLong(femaleTwentyFiveToTwentyNine1) + AppUtil.getLong(femaleThirtyToThirtyFour1) +
-                AppUtil.getLong(femaleThirtyFiveToThirtyNine1) + AppUtil.getLong(femaleFortyToFortyFour1) +
-                AppUtil.getLong(femaleFortyFiveToFortyNine1) + AppUtil.getLong(femaleFiftyPlus1);
+        return getLong(femaleLessThanTwoMonths) + getLong(femaleTwoToTwelveMonths) +
+                getLong(femaleThirteenToTwentyFourMonths) + getLong(femaleTwentyFiveToFiftyNineMonths) +
+                getLong(femaleFiveToNine1) + getLong(femaleTenToFourteen1) +
+                getLong(femaleFifteenToNineteen1) +
+                getLong(femaleTwentyToTwentyFour1) + getLong(femaleTwentyFiveToTwentyNine1) +
+                getLong(femaleThirtyToFortyNine1) + getLong(femaleFiftyPlus1);
     }
 
     public Long maleQuestion2() {
-        return AppUtil.getLong(maleLessThanOne2) + AppUtil.getLong(maleOneToFour2) +
-                AppUtil.getLong(maleFiveToNine2) + AppUtil.getLong(maleTenToFourteen2) +
-                AppUtil.getLong(maleFifteenToNineteen2) + AppUtil.getLong(maleTwentyToTwentyFour2) +
-                AppUtil.getLong(maleTwentyFiveToTwentyNine2) + AppUtil.getLong(maleThirtyToThirtyFour2) +
-                AppUtil.getLong(maleThirtyFiveToThirtyNine2) + AppUtil.getLong(maleFortyToFortyFour2) +
-                AppUtil.getLong(maleFortyFiveToFortyNine2) + AppUtil.getLong(maleFiftyPlus2);
-    }
+        return getLong(maleLessThanTwoMonths2) + getLong(maleTwoToTwelveMonths2) +
+                getLong(maleThirteenToTwentyFourMonths2) + getLong(maleTwentyFiveToFiftyNineMonths2) +
+                getLong(maleFiveToNine2) + getLong(maleTenToFourteen2) +
+                getLong(maleFifteenToNineteen2) +
+                getLong(maleTwentyToTwentyFour2) + getLong(maleTwentyFiveToTwentyNine2) +
+                getLong(maleThirtyToFortyNine2) + getLong(maleFiftyPlus2);}
 
     public Long femaleQuestion2() {
-        return AppUtil.getLong(femaleLessThanOne2) + AppUtil.getLong(femaleOneToFour2) +
-                AppUtil.getLong(femaleFiveToNine2) + AppUtil.getLong(femaleTenToFourteen2) +
-                AppUtil.getLong(femaleFifteenToNineteen2) + AppUtil.getLong(femaleTwentyToTwentyFour2) +
-                AppUtil.getLong(femaleTwentyFiveToTwentyNine2) + AppUtil.getLong(femaleThirtyToThirtyFour2) +
-                AppUtil.getLong(femaleThirtyFiveToThirtyNine2) + AppUtil.getLong(femaleFortyToFortyFour2) +
-                AppUtil.getLong(femaleFortyFiveToFortyNine2) + AppUtil.getLong(femaleFiftyPlus2);
+        return getLong(femaleLessThanTwoMonths2) + getLong(femaleTwoToTwelveMonths2) +
+                getLong(femaleThirteenToTwentyFourMonths2) + getLong(femaleTwentyFiveToFiftyNineMonths2) +
+                getLong(femaleFiveToNine2) + getLong(femaleTenToFourteen2) +
+                getLong(femaleFifteenToNineteen2) +
+                getLong(femaleTwentyToTwentyFour2) + getLong(femaleTwentyFiveToTwentyNine2) +
+                getLong(femaleThirtyToFortyNine2) + getLong(femaleFiftyPlus2);
     }
 
     public Long maleQuestion3() {
-        return AppUtil.getLong(maleLessThanOne3) + AppUtil.getLong(maleOneToFour3) +
-                AppUtil.getLong(maleFiveToNine3) + AppUtil.getLong(maleTenToFourteen3) +
-                AppUtil.getLong(maleFifteenToNineteen3) + AppUtil.getLong(maleTwentyToTwentyFour3) +
-                AppUtil.getLong(maleTwentyFiveToTwentyNine3) + AppUtil.getLong(maleThirtyToThirtyFour3) +
-                AppUtil.getLong(maleThirtyFiveToThirtyNine3) + AppUtil.getLong(maleFortyToFortyFour3) +
-                AppUtil.getLong(maleFortyFiveToFortyNine3) + AppUtil.getLong(maleFiftyPlus3);
-    }
+        return getLong(maleLessThanFifteen) + getLong(maleFifteenToNineteen3) +
+                getLong(maleTwentyToTwentyFour3) + getLong(maleTwentyFiveToTwentyNine3) +
+                getLong(maleThirtyToFortyNine3) + getLong(maleFiftyPlus3);}
 
     public Long femaleQuestion3() {
-        return AppUtil.getLong(femaleLessThanOne3) + AppUtil.getLong(femaleOneToFour3) +
-                AppUtil.getLong(femaleFiveToNine3) + AppUtil.getLong(femaleTenToFourteen3) +
-                AppUtil.getLong(femaleFifteenToNineteen3) + AppUtil.getLong(femaleTwentyToTwentyFour3) +
-                AppUtil.getLong(femaleTwentyFiveToTwentyNine3) + AppUtil.getLong(femaleThirtyToThirtyFour3) +
-                AppUtil.getLong(femaleThirtyFiveToThirtyNine3) + AppUtil.getLong(femaleFortyToFortyFour3) +
-                AppUtil.getLong(femaleFortyFiveToFortyNine3) + AppUtil.getLong(femaleFiftyPlus3);
+        return getLong(femaleLessThanFifteen) + getLong(femaleFifteenToNineteen3) +
+                getLong(femaleTwentyToTwentyFour3) + getLong(femaleTwentyFiveToTwentyNine3) +
+                getLong(femaleThirtyToFortyNine3) + getLong(femaleFiftyPlus3);
     }
 
     public Long maleQuestion4() {
-        return AppUtil.getLong(maleLessThanOne4) + AppUtil.getLong(maleOneToFour4) +
-                AppUtil.getLong(maleFiveToNine4) + AppUtil.getLong(maleTenToFourteen4) +
-                AppUtil.getLong(maleFifteenToNineteen4) + AppUtil.getLong(maleTwentyToTwentyFour4) +
-                AppUtil.getLong(maleTwentyFiveToTwentyNine4) + AppUtil.getLong(maleThirtyToThirtyFour4) +
-                AppUtil.getLong(maleThirtyFiveToThirtyNine4) + AppUtil.getLong(maleFortyToFortyFour4) +
-                AppUtil.getLong(maleFortyFiveToFortyNine4) + AppUtil.getLong(maleFiftyPlus4);
-    }
+        return getLong(maleLessThanFifteen1) + getLong(maleFifteenToNineteen4) +
+                getLong(maleTwentyToTwentyFour4) + getLong(maleTwentyFiveToTwentyNine4) +
+                getLong(maleThirtyToFortyNine4) + getLong(maleFiftyPlus4);}
 
     public Long femaleQuestion4() {
-        return AppUtil.getLong(femaleLessThanOne4) + AppUtil.getLong(femaleOneToFour4) +
-                AppUtil.getLong(femaleFiveToNine4) + AppUtil.getLong(femaleTenToFourteen4) +
-                AppUtil.getLong(femaleFifteenToNineteen4) + AppUtil.getLong(femaleTwentyToTwentyFour4) +
-                AppUtil.getLong(femaleTwentyFiveToTwentyNine4) + AppUtil.getLong(femaleThirtyToThirtyFour4) +
-                AppUtil.getLong(femaleThirtyFiveToThirtyNine4) + AppUtil.getLong(femaleFortyToFortyFour4) +
-                AppUtil.getLong(femaleFortyFiveToFortyNine4) + AppUtil.getLong(femaleFiftyPlus4);
+        return getLong(femaleLessThanFifteen1) + getLong(femaleFifteenToNineteen3) +
+                getLong(femaleTwentyToTwentyFour4) + getLong(femaleTwentyFiveToTwentyNine4) +
+                getLong(femaleThirtyToFortyNine4) + getLong(femaleFiftyPlus4);
     }
 
     public Long maleQuestion5() {
@@ -1181,5 +1095,17 @@ public class RegisterForm extends Model {
                 AppUtil.getLong(femaleTwentyFiveToTwentyNine8) + AppUtil.getLong(femaleThirtyToThirtyFour8) +
                 AppUtil.getLong(femaleThirtyFiveToThirtyNine8) + AppUtil.getLong(femaleFortyToFortyFour8) +
                 AppUtil.getLong(femaleFortyFiveToFortyNine8) + AppUtil.getLong(femaleFiftyPlus8);
+    }
+
+    public Long getP36Total(){
+        return AppUtil.getLong(lessThanTwo) + AppUtil.getLong(threeToTwelve) + AppUtil.getLong(thirteenToTwentyFour);
+    }
+
+    public Long getP37Total(){
+        return AppUtil.getLong(lessThanTwo1) + AppUtil.getLong(threeToTwelve1) + AppUtil.getLong(thirteenToTwentyFour1);
+    }
+
+    public Long getP38Total(){
+        return AppUtil.getLong(lessThanTwo2) + AppUtil.getLong(threeToTwelve2) + AppUtil.getLong(thirteenToTwentyFour2);
     }
 }

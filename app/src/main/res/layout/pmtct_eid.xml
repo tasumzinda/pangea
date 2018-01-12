@@ -128,6 +128,177 @@
                         android:inputType="number" />
 
                 </TableRow>
+
+                <TextView
+                        android:text="P36 – HIV Exposed Infants with DNA PCR sample collected"
+                        style="@style/TextViewStyle"></TextView>
+                <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dip">
+
+                    <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lessThanOrEqualToTwoMonths" />
+
+                    <EditText
+                            android:id="@+id/p36lessThanOrEqualToTwoMonths"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number" />
+
+                </TableRow>
+
+                <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dip">
+
+                    <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/threeToTwelveMonths" />
+
+                    <EditText
+                            android:id="@+id/p36threeToTwelveMonths"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number" />
+
+                </TableRow>
+
+                <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dip">
+
+                    <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/thirteenToTwentyFour" />
+
+                    <EditText
+                            android:id="@+id/p36thirteenToTwentyFour"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number" />
+
+                </TableRow>
+
+                <TextView
+                        android:text="P37 – HIV Exposed Infants DNA-PCR positive"
+                        style="@style/TextViewStyle"></TextView>
+                <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dip">
+
+                    <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lessThanOrEqualToTwoMonths" />
+
+                    <EditText
+                            android:id="@+id/p37lessThanOrEqualToTwoMonths"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number" />
+
+                </TableRow>
+
+                <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dip">
+
+                    <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/threeToTwelveMonths" />
+
+                    <EditText
+                            android:id="@+id/p37threeToTwelveMonths"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number" />
+
+                </TableRow>
+
+                <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dip">
+
+                    <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/thirteenToTwentyFour" />
+
+                    <EditText
+                            android:id="@+id/p37thirteenToTwentyFour"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number" />
+
+                </TableRow>
+
+                <TextView
+                        android:text="P38 – Infants initiated on ART"
+                        style="@style/TextViewStyle"></TextView>
+                <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dip">
+
+                    <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lessThanOrEqualToTwoMonths" />
+
+                    <EditText
+                            android:id="@+id/p38lessThanOrEqualToTwoMonths"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number" />
+
+                </TableRow>
+
+                <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dip">
+
+                    <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/threeToTwelveMonths" />
+
+                    <EditText
+                            android:id="@+id/p38threeToTwelveMonths"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number" />
+
+                </TableRow>
+
+                <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dip">
+
+                    <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/thirteenToTwentyFour" />
+
+                    <EditText
+                            android:id="@+id/p38thirteenToTwentyFour"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number" />
+
+                </TableRow>
                 <Button
                     android:id="@+id/btn_save"
                     android:layout_width="match_parent"

@@ -111,7 +111,7 @@ public class Facility extends Model {
             i.contactEmail = jsonObject.getString("contactEmail");
             if( ! jsonObject.isNull("district")){
                 JSONObject district = jsonObject.getJSONObject("district");
-                i.district = District.findById(district.getLong("id"));
+                i.district = District.findByServerId(district.getLong("id"));
             }
         } catch (JSONException e) {
             e.printStackTrace();

@@ -36,6 +36,10 @@
         <Spinner
                 android:id="@+id/province"
                 style="@style/SpinnerStyle" />
+        <EditText
+                android:id="@+id/province_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
 
         <TextView
                 style="@style/TextViewInputStyle"
@@ -52,10 +56,6 @@
         <Spinner
             android:id="@+id/facility"
             style="@style/SpinnerStyle" />
-        <EditText
-                android:id="@+id/facility_label"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
 
         <TextView
             style="@style/TextViewInputStyle"

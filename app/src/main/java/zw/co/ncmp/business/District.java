@@ -10,6 +10,7 @@ import com.google.gson.annotations.SerializedName;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import zw.co.ncmp.util.AppUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,10 +38,17 @@ public class District extends Model {
         super();
     }
 
-    public static District findById(Long id){
+    public static District findByServerId(Long id){
         return new Select()
                 .from(District.class)
                 .where("serverId = ?", id)
+                .executeSingle();
+    }
+
+    public static District findById(Long id){
+        return new Select()
+                .from(District.class)
+                .where("Id = ?", id)
                 .executeSingle();
     }
 
@@ -64,7 +72,7 @@ public class District extends Model {
             i.name =  jsonObject.getString("name");
             if( ! jsonObject.isNull("province")){
                 JSONObject province = jsonObject.getJSONObject("province");
-                i.province = Province.findById(province.getLong("id"));
+                i.province = Province.findByServerId(province.getLong("id"));
             }
         } catch (JSONException e) {
             e.printStackTrace();
@@ -81,7 +89,6 @@ public class District extends Model {
                 item = jsonArray.getJSONObject(i);
             } catch (Exception e) {
                 e.printStackTrace();
-                Log.d("Error", "Errror");
                 continue;
             }
 
@@ -92,5 +99,10 @@ public class District extends Model {
         }
 
         return list;
+    }
+
+    @Override
+    public String toString() {
+        return name;
     }
 }
