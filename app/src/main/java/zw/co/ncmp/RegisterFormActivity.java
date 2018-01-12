@@ -1853,24 +1853,36 @@ public class RegisterFormActivity extends MenuBar implements View.OnClickListene
 
         final EditText pmtctSTATP1 = (EditText) dialog.findViewById(R.id.pmtctSTATP1);
         final EditText pmtctSTATP2 = (EditText) dialog.findViewById(R.id.pmtctSTATP2);
-        final EditText pmtctSTATP5 = (EditText) dialog.findViewById(R.id.pmtctSTATP5);
+        final EditText pmtctSTATP3 = (EditText) dialog.findViewById(R.id.pmtctSTATP3);
+        final EditText pmtctSTATP4 = (EditText) dialog.findViewById(R.id.pmtctSTATP4);
+        final EditText pmtctSTATP6 = (EditText) dialog.findViewById(R.id.pmtctSTATP6);
+        final EditText pmtctSTATP10 = (EditText) dialog.findViewById(R.id.pmtctSTATP10);
+        final EditText pmtctSTATP11 = (EditText) dialog.findViewById(R.id.pmtctSTATP11);
         final EditText pmtctSTATP12 = (EditText) dialog.findViewById(R.id.pmtctSTATP12);
-        final EditText pmtctSTATP13 = (EditText) dialog.findViewById(R.id.pmtctSTATP13);
-        final EditText pmtctSTATP12DisaggregationP4 = (EditText) dialog.findViewById(R.id.pmtctSTATP12DisaggregationP4);
-        final EditText pmtctSTATP12DisaggregationP5 = (EditText) dialog.findViewById(R.id.pmtctSTATP12DisaggregationP5);
-        final EditText pmtctSTATP12DisaggregationP14 = (EditText) dialog.findViewById(R.id.pmtctSTATP12DisaggregationP14);
-        final EditText pmtctSTATP12DisaggregationP17 = (EditText) dialog.findViewById(R.id.pmtctSTATP12DisaggregationP17);
+        final EditText pmtctSTATP17 = (EditText) dialog.findViewById(R.id.pmtctSTATP17);
+        final EditText pmtctSTATP18 = (EditText) dialog.findViewById(R.id.pmtctSTATP18);
+        final EditText pmtctSTATP19 = (EditText) dialog.findViewById(R.id.pmtctSTATP19);
+        final EditText pmtctSTATP20 = (EditText) dialog.findViewById(R.id.pmtctSTATP20);
+        final EditText pmtctSTATP21 = (EditText) dialog.findViewById(R.id.pmtctSTATP21);
+        final EditText pmtctSTATP22 = (EditText) dialog.findViewById(R.id.pmtctSTATP22);
+        final EditText pmtctSTATP23 = (EditText) dialog.findViewById(R.id.pmtctSTATP23);
 
         if (registerForm != null) {
             pmtctSTATP1.setText(AppUtil.getLongValue(registerForm.pmtctSTATP1));
             pmtctSTATP2.setText(AppUtil.getLongValue(registerForm.pmtctSTATP2));
-            pmtctSTATP5.setText(AppUtil.getLongValue(registerForm.pmtctSTATP5));
+            pmtctSTATP3.setText(AppUtil.getLongValue(registerForm.pmtctSTATP3));
+            pmtctSTATP4.setText(AppUtil.getLongValue(registerForm.pmtctSTATP4));
+            pmtctSTATP6.setText(AppUtil.getLongValue(registerForm.pmtctSTATP6));
+            pmtctSTATP10.setText(AppUtil.getLongValue(registerForm.pmtctSTATP10));
+            pmtctSTATP11.setText(AppUtil.getLongValue(registerForm.pmtctSTATP11));
             pmtctSTATP12.setText(AppUtil.getLongValue(registerForm.pmtctSTATP12));
-            pmtctSTATP13.setText(AppUtil.getLongValue(registerForm.pmtctSTATP13));
-            pmtctSTATP12DisaggregationP4.setText(AppUtil.getLongValue(registerForm.pmtctSTATP12DisaggregationP4));
-            pmtctSTATP12DisaggregationP5.setText(AppUtil.getLongValue(registerForm.pmtctSTATP12DisaggregationP5));
-            pmtctSTATP12DisaggregationP14.setText(AppUtil.getLongValue(registerForm.pmtctSTATP12DisaggregationP14));
-            pmtctSTATP12DisaggregationP17.setText(AppUtil.getLongValue(registerForm.pmtctSTATP12DisaggregationP17));
+            pmtctSTATP17.setText(AppUtil.getLongValue(registerForm.pmtctSTATP17));
+            pmtctSTATP18.setText(AppUtil.getLongValue(registerForm.pmtctSTATP18));
+            pmtctSTATP19.setText(AppUtil.getLongValue(registerForm.pmtctSTATP19));
+            pmtctSTATP20.setText(AppUtil.getLongValue(registerForm.pmtctSTATP20));
+            pmtctSTATP21.setText(AppUtil.getLongValue(registerForm.pmtctSTATP21));
+            pmtctSTATP22.setText(AppUtil.getLongValue(registerForm.pmtctSTATP22));
+            pmtctSTATP23.setText(AppUtil.getLongValue(registerForm.pmtctSTATP23));
         }
 
         Button saveButton = (Button) dialog.findViewById(R.id.btn_save);
@@ -1880,13 +1892,19 @@ public class RegisterFormActivity extends MenuBar implements View.OnClickListene
 
                 registerForm.pmtctSTATP1 = AppUtil.getLongValue(pmtctSTATP1.getText().toString());
                 registerForm.pmtctSTATP2 = AppUtil.getLongValue(pmtctSTATP2.getText().toString());
-                registerForm.pmtctSTATP5 = AppUtil.getLongValue(pmtctSTATP5.getText().toString());
+                registerForm.pmtctSTATP3 = AppUtil.getLongValue(pmtctSTATP3.getText().toString());
+                registerForm.pmtctSTATP4 = AppUtil.getLongValue(pmtctSTATP4.getText().toString());
+                registerForm.pmtctSTATP6 = AppUtil.getLongValue(pmtctSTATP6.getText().toString());
+                registerForm.pmtctSTATP10 = AppUtil.getLongValue(pmtctSTATP10.getText().toString());
+                registerForm.pmtctSTATP11 = AppUtil.getLongValue(pmtctSTATP11.getText().toString());
                 registerForm.pmtctSTATP12 = AppUtil.getLongValue(pmtctSTATP12.getText().toString());
-                registerForm.pmtctSTATP13 = AppUtil.getLongValue(pmtctSTATP13.getText().toString());
-                registerForm.pmtctSTATP12DisaggregationP4 = AppUtil.getLongValue(pmtctSTATP12DisaggregationP4.getText().toString());
-                registerForm.pmtctSTATP12DisaggregationP5 = AppUtil.getLongValue(pmtctSTATP12DisaggregationP5.getText().toString());
-                registerForm.pmtctSTATP12DisaggregationP14 = AppUtil.getLongValue(pmtctSTATP12DisaggregationP14.getText().toString());
-                registerForm.pmtctSTATP12DisaggregationP17 = AppUtil.getLongValue(pmtctSTATP12DisaggregationP17.getText().toString());
+                registerForm.pmtctSTATP17 = AppUtil.getLongValue(pmtctSTATP17.getText().toString());
+                registerForm.pmtctSTATP18 = AppUtil.getLongValue(pmtctSTATP18.getText().toString());
+                registerForm.pmtctSTATP19 = AppUtil.getLongValue(pmtctSTATP19.getText().toString());
+                registerForm.pmtctSTATP20 = AppUtil.getLongValue(pmtctSTATP20.getText().toString());
+                registerForm.pmtctSTATP21 = AppUtil.getLongValue(pmtctSTATP21.getText().toString());
+                registerForm.pmtctSTATP22 = AppUtil.getLongValue(pmtctSTATP22.getText().toString());
+                registerForm.pmtctSTATP23 = AppUtil.getLongValue(pmtctSTATP23.getText().toString());
 
                 dialog.dismiss();
 

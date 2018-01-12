@@ -835,33 +835,74 @@ public class MonthReportForm extends Model {
     @Column(name = "pmtctSTATP5")
     public Long pmtctSTATP5;
 
-    @Expose
+    /*@Expose
     @Column(name = "pmtctSTATP13")
-    public Long pmtctSTATP13;
+    public Long pmtctSTATP13;*/
 
     @Expose
-    @Column(name = "pmtctSTATP1")
-    public Long pmtctSTATP1;
+    @Column(name = "pmtctSTATP6")
+    public Long pmtctSTATP6;
 
     @Expose
     @Column(name = "pmtctSTATP12")
     public Long pmtctSTATP12;
 
     @Expose
-    @Column(name = "pmtctSTATP12DisaggregationP4")
-    public Long pmtctSTATP12DisaggregationP4;
+    @Column(name = "pmtctSTATP4")
+    public Long pmtctSTATP4;
 
-    @Expose
+    /*@Expose
     @Column(name = "pmtctSTATP12DisaggregationP5")
-    public Long pmtctSTATP12DisaggregationP5;
+    public Long pmtctSTATP12DisaggregationP5;*/
 
-    @Expose
+    /*@Expose
     @Column(name = "pmtctSTATP12DisaggregationP14")
-    public Long pmtctSTATP12DisaggregationP14;
+    public Long pmtctSTATP12DisaggregationP14;*/
 
     @Expose
-    @Column(name = "pmtctSTATP12DisaggregationP17")
-    public Long pmtctSTATP12DisaggregationP17;
+    @Column(name = "pmtctSTATP17")
+    public Long pmtctSTATP17;
+
+
+    @Expose
+    @Column
+    public Long pmtctSTATP1;
+
+    @Expose
+    @Column
+    public Long pmtctSTATP3;
+
+    @Expose
+    @Column
+    public Long pmtctSTATP10;
+
+    @Expose
+    @Column
+    public Long pmtctSTATP11;
+
+    @Expose
+    @Column
+    public Long pmtctSTATP18;
+
+    @Expose
+    @Column
+    public Long pmtctSTATP19;
+
+    @Expose
+    @Column
+    public Long pmtctSTATP20;
+
+    @Expose
+    @Column
+    public Long pmtctSTATP21;
+
+    @Expose
+    @Column
+    public Long pmtctSTATP22;
+
+    @Expose
+    @Column
+    public Long pmtctSTATP23;
 
     @Column(name = "date_submitted", notNull = false)
     public Date dateSubmitted;

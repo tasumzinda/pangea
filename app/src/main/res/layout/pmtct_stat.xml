@@ -21,6 +21,25 @@
                 android:layout_height="wrap_content">
 
                 <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dip">
+
+                    <TextView
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:text="P1: Pregnant Women booking for first ANC Visit"
+                            android:paddingBottom="@dimen/fab_margin" />
+
+                    <EditText
+                            android:id="@+id/pmtctSTATP1"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number" />
+                </TableRow>
+
+                <TableRow
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dip">
@@ -29,7 +48,7 @@
                         android:layout_width="250dp"
                         android:layout_height="wrap_content"
                         android:layout_alignParentTop="true"
-                        android:text="P2: Pregnant Women HIV tested for the first time in ANC and received results"
+                        android:text="P2: Pregnant women booking for first ANC visit with known HIV positive result"
                         android:paddingBottom="@dimen/fab_margin" />
 
                     <EditText
@@ -37,6 +56,25 @@
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
                         android:inputType="number" />
+                </TableRow>
+
+                <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dip">
+
+                    <TextView
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:text="P3: Pregnant Women HIV tested first time in ANC and received results"
+                            android:paddingBottom="@dimen/fab_margin" />
+
+                    <EditText
+                            android:id="@+id/pmtctSTATP3"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number" />
                 </TableRow>
                 <TableRow
                         android:layout_width="wrap_content"
@@ -47,34 +85,16 @@
                             android:layout_width="200dp"
                             android:layout_height="wrap_content"
                             android:layout_alignParentTop="true"
-                            android:text="P4: Pregnant Women testing HIV positive in ANC"
+                            android:text="P4: Pregnant Women newly testing HIV positive in ANC"
                             android:paddingBottom="@dimen/fab_margin" />
 
                     <EditText
-                            android:id="@+id/pmtctSTATP12DisaggregationP4"
+                            android:id="@+id/pmtctSTATP4"
                             android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:inputType="number" />
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="5dip">
-
-                    <TextView
-                        android:layout_width="200dp"
-                        android:layout_height="wrap_content"
-                        android:text="P5: Pregnant women booking for first ANC visit with known HIV positive result"
-                        android:paddingBottom="@dimen/fab_margin" />
-
-                    <EditText
-                        android:id="@+id/pmtctSTATP5"
-                        android:layout_width="100dp"
-                        android:layout_height="wrap_content"
-                        android:inputType="number" />
-
-                </TableRow>
                 <TableRow
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -83,11 +103,11 @@
                     <TextView
                             android:layout_width="200dp"
                             android:layout_height="wrap_content"
-                            android:text="P6: Pregnant women booking for first ANC"
+                            android:text="P6: Pregnant Women testing HIV positive at retest in ANC"
                             android:paddingBottom="@dimen/fab_margin" />
 
                     <EditText
-                            android:id="@+id/pmtctSTATP1"
+                            android:id="@+id/pmtctSTATP6"
                             android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:inputType="number" />
@@ -102,7 +122,45 @@
                     <TextView
                             android:layout_width="200dp"
                             android:layout_height="wrap_content"
-                            android:text="P12: Women arriving in L&amp;D with unknown HIV status"
+                            android:text="P10: Pregnant Women booking for first ANC visit already on ART"
+                            android:paddingBottom="@dimen/fab_margin" />
+
+                    <EditText
+                            android:id="@+id/pmtctSTATP10"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number" />
+
+                </TableRow>
+
+                <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dip">
+
+                    <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="P11: HIV positive Pregnant Women initiated on ART in ANC &lt;32 weeks"
+                            android:paddingBottom="@dimen/fab_margin" />
+
+                    <EditText
+                            android:id="@+id/pmtctSTATP11"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number" />
+
+                </TableRow>
+
+                <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dip">
+
+                    <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="P12:HIV positive Pregnant Women initiated on ART in ANC &lt;&#61;32 weeks"
                             android:paddingBottom="@dimen/fab_margin" />
 
                     <EditText
@@ -121,52 +179,11 @@
                     <TextView
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
-                        android:text="P13: Women tested in L&amp;D for the first time and received results"
+                        android:text="P17: Pregnant Women arriving in LD with unknown HIV Status"
                         android:paddingBottom="@dimen/fab_margin" />
 
                     <EditText
-                        android:id="@+id/pmtctSTATP13"
-                        android:layout_width="100dp"
-                        android:layout_height="wrap_content"
-                        android:inputType="number" />
-                </TableRow>
-
-
-
-
-
-                <TableRow
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="5dip">
-
-                    <TextView
-                        android:layout_width="200dp"
-                        android:layout_height="wrap_content"
-                        android:text="P14: Women testing HIV positive at first Test in L&amp;D"
-                        android:paddingBottom="@dimen/fab_margin" />
-
-                    <EditText
-                        android:id="@+id/pmtctSTATP12DisaggregationP14"
-                        android:layout_width="100dp"
-                        android:layout_height="wrap_content"
-                        android:inputType="number" />
-
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="5dip">
-
-                    <TextView
-                        android:layout_width="200dp"
-                        android:layout_height="wrap_content"
-                        android:text="P17: Woman testing HIV positive at retesting in L&amp;D"
-                        android:paddingBottom="@dimen/fab_margin" />
-
-                    <EditText
-                        android:id="@+id/pmtctSTATP12DisaggregationP17"
+                        android:id="@+id/pmtctSTATP17"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:inputType="number" />
@@ -180,14 +197,109 @@
                     <TextView
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
-                        android:text="Pregnant women booking for first ANC visit with known HIV positive resutlt"
+                        android:text="P18:Pregnant Women tested in LD for the first time and received results"
                         android:paddingBottom="@dimen/fab_margin" />
 
                     <EditText
-                        android:id="@+id/pmtctSTATP12DisaggregationP5"
+                        android:id="@+id/pmtctSTATP18"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:inputType="number" />
+
+                </TableRow>
+
+                <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dip">
+
+                    <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="P19:Pregnant Women testing HIV Positive at first test in LD"
+                            android:paddingBottom="@dimen/fab_margin" />
+
+                    <EditText
+                            android:id="@+id/pmtctSTATP19"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number" />
+
+                </TableRow>
+
+                <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dip">
+
+                    <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="P20:Pregnant Women arriving in LD with Negative HIV test results (due for retest)"
+                            android:paddingBottom="@dimen/fab_margin" />
+
+                    <EditText
+                            android:id="@+id/pmtctSTATP20"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number" />
+
+                </TableRow>
+
+                <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dip">
+
+                    <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="P21: Pregnant Women retested in LD and received results"
+                            android:paddingBottom="@dimen/fab_margin" />
+
+                    <EditText
+                            android:id="@+id/pmtctSTATP21"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number" />
+
+                </TableRow>
+
+                <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dip">
+
+                    <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="P22:Pregnant Women testing HIV Positive at retesting in LD"
+                            android:paddingBottom="@dimen/fab_margin" />
+
+                    <EditText
+                            android:id="@+id/pmtctSTATP22"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number" />
+
+                </TableRow>
+
+                <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dip">
+
+                    <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="P23:HIV positive pregnant women initiated on ART in LD"
+                            android:paddingBottom="@dimen/fab_margin" />
+
+                    <EditText
+                            android:id="@+id/pmtctSTATP23"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number" />
 
                 </TableRow>
 
