@@ -1866,6 +1866,12 @@ public class RegisterFormActivity extends MenuBar implements View.OnClickListene
         final EditText pmtctSTATP21 = (EditText) dialog.findViewById(R.id.pmtctSTATP21);
         final EditText pmtctSTATP22 = (EditText) dialog.findViewById(R.id.pmtctSTATP22);
         final EditText pmtctSTATP23 = (EditText) dialog.findViewById(R.id.pmtctSTATP23);
+        final EditText pmtctSTATTenToFourteen = (EditText) dialog.findViewById(R.id.pmtctSTATTenToFourteen);
+        final EditText pmtctSTATFifteenToNineteen = (EditText) dialog.findViewById(R.id.pmtctSTATFifteenToNineteen);
+        final EditText pmtctSTATTwentyToTwentyFour = (EditText) dialog.findViewById(R.id.pmtctSTATTwentyToTwentyFour);
+        final EditText pmtctSTATTwentyFiveToTwentyNine = (EditText) dialog.findViewById(R.id.pmtctSTATTwentyFiveToTwentyNine);
+        final EditText pmtctSTATThirtyToFortyNine = (EditText) dialog.findViewById(R.id.pmtctSTATThirtyToFortyNine);
+        final EditText pmtctSTATFiftyPlus = (EditText) dialog.findViewById(R.id.pmtctSTATFiftyPlus);
 
         if (registerForm != null) {
             pmtctSTATP1.setText(AppUtil.getLongValue(registerForm.pmtctSTATP1));
@@ -1883,6 +1889,12 @@ public class RegisterFormActivity extends MenuBar implements View.OnClickListene
             pmtctSTATP21.setText(AppUtil.getLongValue(registerForm.pmtctSTATP21));
             pmtctSTATP22.setText(AppUtil.getLongValue(registerForm.pmtctSTATP22));
             pmtctSTATP23.setText(AppUtil.getLongValue(registerForm.pmtctSTATP23));
+            pmtctSTATTenToFourteen.setText(AppUtil.getLongValue(registerForm.pmtctSTATTenToFourteen));
+            pmtctSTATFifteenToNineteen.setText(AppUtil.getLongValue(registerForm.pmtctSTATFifteenToNineteen));
+            pmtctSTATTwentyToTwentyFour.setText(AppUtil.getLongValue(registerForm.pmtctSTATTwentyToTwentyFour));
+            pmtctSTATTwentyFiveToTwentyNine.setText(AppUtil.getLongValue(registerForm.pmtctSTATTwentyFiveToTwentyNine));
+            pmtctSTATThirtyToFortyNine.setText(AppUtil.getLongValue(registerForm.pmtctSTATThirtyToFortyNine));
+            pmtctSTATFiftyPlus.setText(AppUtil.getLongValue(registerForm.pmtctSTATFiftyPlus));
         }
 
         Button saveButton = (Button) dialog.findViewById(R.id.btn_save);
@@ -1905,6 +1917,12 @@ public class RegisterFormActivity extends MenuBar implements View.OnClickListene
                 registerForm.pmtctSTATP21 = AppUtil.getLongValue(pmtctSTATP21.getText().toString());
                 registerForm.pmtctSTATP22 = AppUtil.getLongValue(pmtctSTATP22.getText().toString());
                 registerForm.pmtctSTATP23 = AppUtil.getLongValue(pmtctSTATP23.getText().toString());
+                registerForm.pmtctSTATTenToFourteen = AppUtil.getLongValue(pmtctSTATTenToFourteen.getText().toString());
+                registerForm.pmtctSTATFifteenToNineteen = AppUtil.getLongValue(pmtctSTATFifteenToNineteen.getText().toString());
+                registerForm.pmtctSTATTwentyToTwentyFour = AppUtil.getLongValue(pmtctSTATTwentyToTwentyFour.getText().toString());
+                registerForm.pmtctSTATTwentyFiveToTwentyNine = AppUtil.getLongValue(pmtctSTATTwentyFiveToTwentyNine.getText().toString());
+                registerForm.pmtctSTATThirtyToFortyNine = AppUtil.getLongValue(pmtctSTATThirtyToFortyNine.getText().toString());
+                registerForm.pmtctSTATFiftyPlus = AppUtil.getLongValue(pmtctSTATFiftyPlus.getText().toString());
 
                 dialog.dismiss();
 

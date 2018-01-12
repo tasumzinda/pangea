@@ -904,6 +904,30 @@ public class RegisterForm extends Model {
     @Column
     public Long pmtctSTATP23;
 
+    @Expose
+    @Column
+    public Long pmtctSTATTenToFourteen;
+
+    @Expose
+    @Column
+    public Long pmtctSTATFifteenToNineteen;
+
+    @Expose
+    @Column
+    public Long pmtctSTATTwentyToTwentyFour;
+
+    @Expose
+    @Column
+    public Long pmtctSTATTwentyFiveToTwentyNine;
+
+    @Expose
+    @Column
+    public Long pmtctSTATThirtyToFortyNine;
+
+    @Expose
+    @Column
+    public Long pmtctSTATFiftyPlus;
+
     @Column(name = "date_submitted", notNull = false)
     public Date dateSubmitted;
 

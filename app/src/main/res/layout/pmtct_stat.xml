@@ -302,6 +302,122 @@
                             android:inputType="number" />
 
                 </TableRow>
+                <TextView
+                        android:text="Females"
+                        style="@style/TextViewStyle"></TextView>
+                <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dip">
+
+                    <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tenToFourteen"
+                            android:paddingBottom="@dimen/fab_margin" />
+
+                    <EditText
+                            android:id="@+id/pmtctSTATTenToFourteen"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number" />
+
+                </TableRow>
+
+                <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dip">
+
+                    <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/fifteenToNineteen"
+                            android:paddingBottom="@dimen/fab_margin" />
+
+                    <EditText
+                            android:id="@+id/pmtctSTATFifteenToNineteen"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number" />
+
+                </TableRow>
+
+                <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dip">
+
+                    <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/twentyToTwentyFour"
+                            android:paddingBottom="@dimen/fab_margin" />
+
+                    <EditText
+                            android:id="@+id/pmtctSTATTwentyToTwentyFour"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number" />
+
+                </TableRow>
+
+                <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dip">
+
+                    <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/twentyFiveToTwentyNine"
+                            android:paddingBottom="@dimen/fab_margin" />
+
+                    <EditText
+                            android:id="@+id/pmtctSTATTwentyFiveToTwentyNine"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number" />
+
+                </TableRow>
+
+                <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dip">
+
+                    <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/thirtyToFortyNine"
+                            android:paddingBottom="@dimen/fab_margin" />
+
+                    <EditText
+                            android:id="@+id/pmtctSTATThirtyToFortyNine"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number" />
+
+                </TableRow>
+
+                <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dip">
+
+                    <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/fiftyPlus"
+                            android:paddingBottom="@dimen/fab_margin" />
+
+                    <EditText
+                            android:id="@+id/pmtctSTATFiftyPlus"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number" />
+
+                </TableRow>
 
                 <Button
                     android:id="@+id/btn_save"
