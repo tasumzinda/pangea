@@ -12,6 +12,7 @@ import com.google.gson.reflect.TypeToken;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import zw.co.ncmp.business.util.YesNo;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -47,75 +48,193 @@ public class SupplementaryIndicatorForm extends Model {
     @Column(name = "period_id")
     public Period period;
 
-    @SerializedName("estFacCatchmentPopulation")
     @Expose
-    @Column(name = "estimatedFacilityCatchmentPopulation")
-    public Long estimatedFacilityCatchmentPopulation;
+    @Column
+    public Long estimatedCatchmentPopulation;
 
-    @SerializedName("numOfActivePreARTPatients")
     @Expose
-    @Column(name = "numberOfActivePreARTPatients")
-    public Long numberOfActivePreARTPatients;
+    @Column
+    public Long numberOfPreARTPatients;
 
-    @SerializedName("opdNumOfPatientsInPastMonth")
     @Expose
-    @Column(name = "opdNumberOfPatientsInPastMonth")
-    public Long opdNumberOfPatientsInPastMonth;
+    @Column
+    public Long numberOfCLFsDeployed;
 
-    @SerializedName("opdNumOfPatWithKnownHIVPosStatusOnEntry")
     @Expose
-    @Column(name = "opdNumberOfPatientsWithKnownHIVPositiveStatusOnEntry")
-    public Long opdNumberOfPatientsWithKnownHIVPositiveStatusOnEntry;
+    @Column
+    public Date dateCLFsDeployed;
 
-    @SerializedName("opdNumOfPatTestedForHIVInPastMonth")
     @Expose
-    @Column(name = "opdNumberOfPatientsTestedForHIVInPastMonth")
-    public Long opdNumberOfPatientsTestedForHIVInPastMonth;
+    @Column
+    public Long numberOfActiveCARGs;
 
-    @SerializedName("opdNumOfPatTestedPositiveInPastMonth")
     @Expose
-    @Column(name = "opdNumberOfPatientsTestedPositiveInPastMonth")
-    public Long opdNumberOfPatientsTestedPositiveInPastMonth;
+    @Column
+    public Long numberOfActiveCARGMembers;
 
-    @SerializedName("stiNumberOfPatientsInPastMonth")
     @Expose
-    @Column(name = "stiNumberOfPatientsInPastMonth")
-    public Long stiNumberOfPatientsInPastMonth;
+    @Column
+    public Long numberOfCARGsFormedThisMonth;
 
-    @SerializedName("stiNumOfPatWithKnownHIVPosStatusOnEntry")
     @Expose
-    @Column(name = "stiNumberOfPatientsWithKnownHIVPositiveStatusOnEntry")
-    public Long stiNumberOfPatientsWithKnownHIVPositiveStatusOnEntry;
+    @Column
+    public Long numberOfCARGsFormedToDate;
 
-    @SerializedName("stiNumOfPatTestedForHIVInPastMonth")
     @Expose
-    @Column(name = "stiNumberOfPatientsTestedForHIVInPastMonth")
-    public Long stiNumberOfPatientsTestedForHIVInPastMonth;
+    @Column
+    public Long numberOfCATSSupportersDeployed;
 
-    @SerializedName("stiNumOfPatTestedPosInPastMonth")
     @Expose
-    @Column(name = "stiNumberOfPatientsTestedPositiveInPastMonth")
-    public Long stiNumberOfPatientsTestedPositiveInPastMonth;
+    @Column
+    public Date dateCATSDeployed;
 
-    @SerializedName("inPatNumOfPatientsInPastMonth")
     @Expose
-    @Column(name = "inPatientNumberOfPatientsInPastMonth")
-    public Long inPatientNumberOfPatientsInPastMonth;
+    @Column
+    public Long numberOfActiveAdolescentSupportGroups;
 
-    @SerializedName("inPatNumOfPatientsWithKnownHIVPosStatusOnEntry")
     @Expose
-    @Column(name = "inPatientNumberOfPatientsWithKnownHIVPositiveStatusOnEntry")
-    public Long inPatientNumberOfPatientsWithKnownHIVPositiveStatusOnEntry;
+    @Column
+    public Long numberOfActiveAdolescentSupportGroupMembers;
 
-    @SerializedName("inPatNumOfPatTestedForHIVInPastMonth")
     @Expose
-    @Column(name = "inPatientNumberOfPatientsTestedForHIVInPastMonth")
-    public Long inPatientNumberOfPatientsTestedForHIVInPastMonth;
+    @Column
+    public YesNo areYouImplementingDefaulterTracking;
 
-    @SerializedName("inPatNumOfPatientsTestedPositiveInPastMonth")
     @Expose
-    @Column(name = "inPatientNumberOfPatientsTestedPositiveInPastMonth")
-    public Long inPatientNumberOfPatientsTestedPositiveInPastMonth;
+    @Column
+    public Date dateDefaulterTrackingImplemented;
+
+    @Expose
+    @Column
+    public YesNo areYouImplementingIndexTesting;
+
+    @Expose
+    @Column
+    public Date dateIndexTestingImplemented;
+
+    @Expose
+    @Column
+    public YesNo areYouImplementingRetestPriorToARTInitiation;
+
+    @Expose
+    @Column
+    public Date dateRetestPriorToARTInitiationImplemented;
+
+    @Expose
+    @Column
+    public YesNo doesFacilityHaveStaticHTSHRH;
+
+    @Expose
+    @Column
+    public Date dateStaticHTSHRSDeployed;
+
+    @Expose
+    @Column
+    public YesNo doesFacilityHaveStaticTXNEWHRH;
+
+    @Expose
+    @Column
+    public Date dateStaticTXNEWHRHDeployed;
+
+    @Expose
+    @Column
+    public YesNo doesFacilityProvideMultiMonthDrugDispensing;
+
+    @Expose
+    @Column
+    public Date dateMultiMonthDrugDispensingStarted;
+
+    @Expose
+    @Column
+    public YesNo doesFacilityHaveFunctionalHealthCentreCommittee;
+
+    @Expose
+    @Column
+    public YesNo doesFacilityHaveFunctionalQualityImprovementCommittee;
+
+    @Expose
+    @Column
+    public YesNo doesFacilityHaveQualityImprovementProject;
+
+    @Expose
+    @Column
+    public Long numberOfOPDPatientsSeenInLastMonth;
+
+    @Expose
+    @Column
+    public Long numberOfOPDPatientsWithKnownHIVStatusOnEntry;
+
+    @Expose
+    @Column
+    public Long numberOfOPDPatientsTestedForHIVInLastMonth;
+
+    @Expose
+    @Column
+    public Long numberOfOPDPatientsTestedHIVPositiveInLastMonth;
+
+    @Expose
+    @Column
+    public Long numberOfSTIPatientsSeenInLastMonth;
+
+    @Expose
+    @Column
+    public Long numberOfSTIPatientsWithKnownHIVStatusOnEntry;
+
+    @Expose
+    @Column
+    public Long numberOfSTIPatientsTestedForHIVInLastMonth;
+
+    @Expose
+    @Column
+    public Long numberOfSTIPatientsTestedHIVPositiveInLastMonth;
+
+    @Expose
+    @Column
+    public Long numberOfInpatientPatientsSeenInLastMonth;
+
+    @Expose
+    @Column
+    public Long numberOfInpatientPatientsWithKnownHIVStatusOnEntry;
+
+    @Expose
+    @Column
+    public Long numberOfInpatientPatientsTestedForHIVInLastMonth;
+
+    @Expose
+    @Column
+    public Long numberOfInpatientPatientsTestedHIVPositiveInLastMonth;
+
+    @Expose
+    @Column
+    public Long numberOfClientsWithDocumentedCompletedReferralCycle;
+
+    @Expose
+    @Column
+    public Long numberOfClientsWithDocumentedCompletedReferralCycleFromFacilityToCommunity;
+
+    @Expose
+    @Column
+    public Long numberOfClientsWithDocumentedCompletedReferralCycleFromCommunityToFacility;
+
+    @Expose
+    @Column
+    public Long numberOfClientsWhoDefaultedART;
+
+    @Expose
+    @Column
+    public Long numberOfClientsWhoWereFollowedAndHaveADocumentedOutcome;
+
+    @Expose
+    @Column
+    public Long numberOfEIDResultsReceivedAndSuccessfullyIssuedToCaregivers;
+
+    @Expose
+    @Column
+    public Long numberOfHIVInfectedInfantsTrackedAndLinkedBackToCare;
+
+    @Expose
+    @Column
+    public Long numberOfVillageHealthWorkersWorkingWithITECH;
 
     @Column(name = "date_submitted", notNull = false)
     public Date dateSubmitted;
