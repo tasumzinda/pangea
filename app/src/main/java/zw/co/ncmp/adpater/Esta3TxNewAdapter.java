@@ -8,8 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import zw.co.ncmp.R;
-import zw.co.ncmp.business.PMTCTEIDForm;
-import zw.co.ncmp.business.PMTCTEIDP36;
+import zw.co.ncmp.business.Esta3TxNew;
 import zw.co.ncmp.util.ViewHolder;
 
 import java.util.ArrayList;
@@ -17,12 +16,12 @@ import java.util.ArrayList;
 /**
  * @uthor Tasu Muzinda
  */
-public class PMTCTEIDP36Adapter extends ArrayAdapter<PMTCTEIDP36>{
+public class Esta3TxNewAdapter extends ArrayAdapter<Esta3TxNew>{
 
     private Context context;
-    private ArrayList<PMTCTEIDP36> list;
+    private ArrayList<Esta3TxNew> list;
 
-    public PMTCTEIDP36Adapter(Context context, ArrayList<PMTCTEIDP36> list) {
+    public Esta3TxNewAdapter(Context context, ArrayList<Esta3TxNew> list) {
         super(context, R.layout.item, list);
         this.context = context;
         this.list = list;
@@ -44,12 +43,12 @@ public class PMTCTEIDP36Adapter extends ArrayAdapter<PMTCTEIDP36>{
         }
 
         ViewHolder holder = (ViewHolder) rowView.getTag();
-        PMTCTEIDP36 item = list.get(position);
-        holder.name.setText((position + 1) + ". " + item.period + " " + item.facility);
+        Esta3TxNew item = list.get(position);
+        holder.name.setText((position + 1) + ". " + item.firstName + " " + item.lastName + " " + item.facility);
         return rowView;
     }
 
-    public void changeDataSet(ArrayList<PMTCTEIDP36> arrayList) {
+    public void changeDataSet(ArrayList<Esta3TxNew> arrayList) {
         list.clear();
         list.addAll(arrayList);
         notifyDataSetChanged();

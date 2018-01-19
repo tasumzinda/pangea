@@ -50,17 +50,16 @@ public class SupplementaryIndicatorForm extends Model {
 
     @Expose
     @Column
-    public Long estimatedCatchmentPopulation;
+    public Long estFacCatchmentPopulation;
 
     @Expose
     @Column
-    public Long numberOfPreARTPatients;
+    public Long numOfActivePreARTPatients;
 
     @Expose
     @Column
     public Long numberOfCLFsDeployed;
 
-    @Expose
     @Column
     public Date dateCLFsDeployed;
 
@@ -84,7 +83,6 @@ public class SupplementaryIndicatorForm extends Model {
     @Column
     public Long numberOfCATSSupportersDeployed;
 
-    @Expose
     @Column
     public Date dateCATSDeployed;
 
@@ -100,7 +98,6 @@ public class SupplementaryIndicatorForm extends Model {
     @Column
     public YesNo areYouImplementingDefaulterTracking;
 
-    @Expose
     @Column
     public Date dateDefaulterTrackingImplemented;
 
@@ -108,7 +105,6 @@ public class SupplementaryIndicatorForm extends Model {
     @Column
     public YesNo areYouImplementingIndexTesting;
 
-    @Expose
     @Column
     public Date dateIndexTestingImplemented;
 
@@ -116,7 +112,6 @@ public class SupplementaryIndicatorForm extends Model {
     @Column
     public YesNo areYouImplementingRetestPriorToARTInitiation;
 
-    @Expose
     @Column
     public Date dateRetestPriorToARTInitiationImplemented;
 
@@ -124,7 +119,6 @@ public class SupplementaryIndicatorForm extends Model {
     @Column
     public YesNo doesFacilityHaveStaticHTSHRH;
 
-    @Expose
     @Column
     public Date dateStaticHTSHRSDeployed;
 
@@ -132,7 +126,6 @@ public class SupplementaryIndicatorForm extends Model {
     @Column
     public YesNo doesFacilityHaveStaticTXNEWHRH;
 
-    @Expose
     @Column
     public Date dateStaticTXNEWHRHDeployed;
 
@@ -140,7 +133,6 @@ public class SupplementaryIndicatorForm extends Model {
     @Column
     public YesNo doesFacilityProvideMultiMonthDrugDispensing;
 
-    @Expose
     @Column
     public Date dateMultiMonthDrugDispensingStarted;
 
@@ -158,63 +150,63 @@ public class SupplementaryIndicatorForm extends Model {
 
     @Expose
     @Column
-    public Long numberOfOPDPatientsSeenInLastMonth;
+    public Long opdNumOfPatientsInPastMonth;
 
     @Expose
     @Column
-    public Long numberOfOPDPatientsWithKnownHIVStatusOnEntry;
+    public Long opdNumOfPatWithKnownHIVPosStatusOnEntry;
 
     @Expose
     @Column
-    public Long numberOfOPDPatientsTestedForHIVInLastMonth;
+    public Long opdNumOfPatTestedForHIVInPastMonth;
 
     @Expose
     @Column
-    public Long numberOfOPDPatientsTestedHIVPositiveInLastMonth;
+    public Long opdNumOfPatTestedPositiveInPastMonth;
 
     @Expose
     @Column
-    public Long numberOfSTIPatientsSeenInLastMonth;
+    public Long stiNumberOfPatientsInPastMonth;
 
     @Expose
     @Column
-    public Long numberOfSTIPatientsWithKnownHIVStatusOnEntry;
+    public Long stiNumOfPatWithKnownHIVPosStatusOnEntry;
 
     @Expose
     @Column
-    public Long numberOfSTIPatientsTestedForHIVInLastMonth;
+    public Long stiNumOfPatTestedForHIVInPastMonth;
 
     @Expose
     @Column
-    public Long numberOfSTIPatientsTestedHIVPositiveInLastMonth;
+    public Long stiNumOfPatTestedPosInPastMonth;
 
     @Expose
     @Column
-    public Long numberOfInpatientPatientsSeenInLastMonth;
+    public Long inPatNumOfPatientsInPastMonth;
 
     @Expose
     @Column
-    public Long numberOfInpatientPatientsWithKnownHIVStatusOnEntry;
+    public Long inPatNumOfPatientsWithKnownHIVPosStatusOnEntry;
 
     @Expose
     @Column
-    public Long numberOfInpatientPatientsTestedForHIVInLastMonth;
+    public Long inPatNumOfPatTestedForHIVInPastMonth;
 
     @Expose
     @Column
-    public Long numberOfInpatientPatientsTestedHIVPositiveInLastMonth;
+    public Long inPatNumOfPatientsTestedPositiveInPastMonth;
 
     @Expose
     @Column
-    public Long numberOfClientsWithDocumentedCompletedReferralCycle;
+    public Long numClientsWithDocumentedCompletedReferralCycle;
 
     @Expose
     @Column
-    public Long numberOfClientsWithDocumentedCompletedReferralCycleFromFacilityToCommunity;
+    public Long numberOfClientsFromFacilityToCommunity;
 
     @Expose
     @Column
-    public Long numberOfClientsWithDocumentedCompletedReferralCycleFromCommunityToFacility;
+    public Long numberOfClientsFromCommunityToFacility;
 
     @Expose
     @Column
@@ -222,19 +214,35 @@ public class SupplementaryIndicatorForm extends Model {
 
     @Expose
     @Column
-    public Long numberOfClientsWhoWereFollowedAndHaveADocumentedOutcome;
+    public Long numberOfClientsWhoWereFollowed;
 
     @Expose
     @Column
-    public Long numberOfEIDResultsReceivedAndSuccessfullyIssuedToCaregivers;
+    public Long numberOfEIDResultsReceived;
 
     @Expose
     @Column
-    public Long numberOfHIVInfectedInfantsTrackedAndLinkedBackToCare;
+    public Long numberOfHIVInfectedInfantsTracked;
 
     @Expose
     @Column
-    public Long numberOfVillageHealthWorkersWorkingWithITECH;
+    public Long numberOfVillageHealthWorkers;
+    @Expose
+    public String dateCLFS;
+    @Expose
+    public String dateCATS;
+    @Expose
+    public String dateDefaulter;
+    @Expose
+    public String dateIndex;
+    @Expose
+    public String dateRetest;
+    @Expose
+    public String dateHTS;
+    @Expose
+    public String dateTXNEW;
+    @Expose
+    public String dateMulti;
 
     @Column(name = "date_submitted", notNull = false)
     public Date dateSubmitted;

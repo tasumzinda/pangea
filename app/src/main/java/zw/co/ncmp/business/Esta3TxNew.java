@@ -37,9 +37,10 @@ public class Esta3TxNew extends Model{
     @Column
     public Integer cardNumber;
 
-    @Expose
     @Column
-    public Date date;
+    public Date mDate;
+    @Expose
+    public String datec;
 
     @Expose
     @Column
@@ -47,7 +48,7 @@ public class Esta3TxNew extends Model{
 
     @Expose
     @Column
-    public String time;
+    public String mTime;
 
     @Expose
     @Column
@@ -73,27 +74,30 @@ public class Esta3TxNew extends Model{
     @Column
     public String entryStream;
 
-    public ClientServices clientServices;
-
     @Column
     @Expose
     public YesNo inPreArt;
 
     @Column
-    @Expose
     public Date registeredInPreArt;
+    @Expose
+    public String dateReg;
 
     @Column
     @Expose
     public YesNo initiatedOnArt;
 
-    @Column
     @Expose
     public Date dateOfInitiation;
+    @Expose
+    public String dateInit;
 
     @Column
     @Expose
     public Integer oiArtNumber;
+
+    @Column(name = "date_submitted", notNull = false)
+    public Date dateSubmitted;
 
     public Esta3TxNew(){
         super();
@@ -106,9 +110,24 @@ public class Esta3TxNew extends Model{
                 .executeSingle();
     }
 
+    public static Esta3TxNew findById(Long Id){
+        return new Select()
+                .from(Esta3TxNew.class)
+                .where("Id = ?", Id)
+                .executeSingle();
+    }
+
     public static List<Esta3TxNew> getAll(){
         return new Select()
                 .from(Esta3TxNew.class)
+                .execute();
+    }
+
+    public static List<Esta3TxNew> getFilesToUpload() {
+        return new Select()
+                .from(Esta3TxNew.class)
+                .where("serverId is null")
+                .where("date_submitted is not null")
                 .execute();
     }
 }

@@ -751,16 +751,16 @@ public class MonthReportFormActivity extends MenuBar implements View.OnClickList
         if (registerForm != null) {
             maleLessThanFifteen.setText(AppUtil.getLongValue(registerForm.maleLessThanFifteen));
             femaleLessThanFifteen.setText(AppUtil.getLongValue(registerForm.femaleLessThanFifteen));
-            maleFifteenToNineteen.setText(AppUtil.getLongValue(registerForm.maleFifteenToNineteen2));
-            femaleFifteenToNineteen.setText(AppUtil.getLongValue(registerForm.femaleFifteenToNineteen2));
-            maleTwentyToTwentyFour.setText(AppUtil.getLongValue(registerForm.maleTwentyToTwentyFour2));
-            femaleTwentyToTwentyFour.setText(AppUtil.getLongValue(registerForm.femaleTwentyToTwentyFour2));
-            maleTwentyFiveToTwentyNine.setText(AppUtil.getLongValue(registerForm.maleTwentyFiveToTwentyNine2));
-            femaleTwentyFiveToTwentyNine.setText(AppUtil.getLongValue(registerForm.femaleTwentyFiveToTwentyNine2));
-            maleThirtyToFortyNine.setText(AppUtil.getLongValue(registerForm.maleThirtyToFortyNine2));
-            femaleThirtyToFortyNine.setText(AppUtil.getLongValue(registerForm.femaleThirtyToFortyNine2));
-            maleFiftyPlus.setText(AppUtil.getLongValue(registerForm.maleFiftyPlus2));
-            femaleFiftyPlus.setText(AppUtil.getLongValue(registerForm.femaleFiftyPlus2));
+            maleFifteenToNineteen.setText(AppUtil.getLongValue(registerForm.maleFifteenToNineteen3));
+            femaleFifteenToNineteen.setText(AppUtil.getLongValue(registerForm.femaleFifteenToNineteen3));
+            maleTwentyToTwentyFour.setText(AppUtil.getLongValue(registerForm.maleTwentyToTwentyFour3));
+            femaleTwentyToTwentyFour.setText(AppUtil.getLongValue(registerForm.femaleTwentyToTwentyFour3));
+            maleTwentyFiveToTwentyNine.setText(AppUtil.getLongValue(registerForm.maleTwentyFiveToTwentyNine3));
+            femaleTwentyFiveToTwentyNine.setText(AppUtil.getLongValue(registerForm.femaleTwentyFiveToTwentyNine3));
+            maleThirtyToFortyNine.setText(AppUtil.getLongValue(registerForm.maleThirtyToFortyNine3));
+            femaleThirtyToFortyNine.setText(AppUtil.getLongValue(registerForm.femaleThirtyToFortyNine3));
+            maleFiftyPlus.setText(AppUtil.getLongValue(registerForm.maleFiftyPlus3));
+            femaleFiftyPlus.setText(AppUtil.getLongValue(registerForm.femaleFiftyPlus3));
         }
 
         List<EditText> list = new ArrayList<>();
@@ -778,11 +778,11 @@ public class MonthReportFormActivity extends MenuBar implements View.OnClickList
                     if (!hasFocus) {
 
                         registerForm.maleLessThanFifteen = AppUtil.getLongValue(maleLessThanFifteen.getText().toString());
-                        registerForm.maleFifteenToNineteen2 = AppUtil.getLongValue(maleFifteenToNineteen.getText().toString());
-                        registerForm.maleTwentyToTwentyFour2 = AppUtil.getLongValue(maleTwentyToTwentyFour.getText().toString());
-                        registerForm.maleTwentyFiveToTwentyNine2 = AppUtil.getLongValue(maleTwentyFiveToTwentyNine.getText().toString());
-                        registerForm.maleThirtyToFortyNine2 = AppUtil.getLongValue(maleThirtyToFortyNine.getText().toString());
-                        registerForm.maleFiftyPlus2 = AppUtil.getLongValue(maleFiftyPlus.getText().toString());
+                        registerForm.maleFifteenToNineteen3 = AppUtil.getLongValue(maleFifteenToNineteen.getText().toString());
+                        registerForm.maleTwentyToTwentyFour3 = AppUtil.getLongValue(maleTwentyToTwentyFour.getText().toString());
+                        registerForm.maleTwentyFiveToTwentyNine3 = AppUtil.getLongValue(maleTwentyFiveToTwentyNine.getText().toString());
+                        registerForm.maleThirtyToFortyNine3 = AppUtil.getLongValue(maleThirtyToFortyNine.getText().toString());
+                        registerForm.maleFiftyPlus3 = AppUtil.getLongValue(maleFiftyPlus.getText().toString());
 
                         maleTotal.setText(AppUtil.getLongValue(registerForm.maleQuestion3()));
                     }
@@ -806,11 +806,11 @@ public class MonthReportFormActivity extends MenuBar implements View.OnClickList
                     if (!hasFocus) {
 
                         registerForm.femaleLessThanFifteen = AppUtil.getLongValue(femaleLessThanFifteen.getText().toString());
-                        registerForm.femaleFifteenToNineteen2 = AppUtil.getLongValue(femaleFifteenToNineteen.getText().toString());
-                        registerForm.femaleTwentyToTwentyFour2 = AppUtil.getLongValue(femaleTwentyToTwentyFour.getText().toString());
-                        registerForm.femaleTwentyFiveToTwentyNine2 = AppUtil.getLongValue(femaleTwentyFiveToTwentyNine.getText().toString());
-                        registerForm.femaleThirtyToFortyNine2 = AppUtil.getLongValue(femaleThirtyToFortyNine.getText().toString());
-                        registerForm.femaleFiftyPlus2 = AppUtil.getLongValue(femaleFiftyPlus.getText().toString());
+                        registerForm.femaleFifteenToNineteen3 = AppUtil.getLongValue(femaleFifteenToNineteen.getText().toString());
+                        registerForm.femaleTwentyToTwentyFour3 = AppUtil.getLongValue(femaleTwentyToTwentyFour.getText().toString());
+                        registerForm.femaleTwentyFiveToTwentyNine3 = AppUtil.getLongValue(femaleTwentyFiveToTwentyNine.getText().toString());
+                        registerForm.femaleThirtyToFortyNine3 = AppUtil.getLongValue(femaleThirtyToFortyNine.getText().toString());
+                        registerForm.femaleFiftyPlus3 = AppUtil.getLongValue(femaleFiftyPlus.getText().toString());
 
                         femaleTotal.setText(AppUtil.getLongValue(registerForm.femaleQuestion3()));
                     }
@@ -825,17 +825,17 @@ public class MonthReportFormActivity extends MenuBar implements View.OnClickList
             public void onClick(View arg0) {
 
                 registerForm.maleLessThanFifteen = AppUtil.getLongValue(maleLessThanFifteen.getText().toString());
-                registerForm.maleFifteenToNineteen2 = AppUtil.getLongValue(maleFifteenToNineteen.getText().toString());
-                registerForm.maleTwentyToTwentyFour2 = AppUtil.getLongValue(maleTwentyToTwentyFour.getText().toString());
-                registerForm.maleTwentyFiveToTwentyNine2 = AppUtil.getLongValue(maleTwentyFiveToTwentyNine.getText().toString());
+                registerForm.maleFifteenToNineteen3 = AppUtil.getLongValue(maleFifteenToNineteen.getText().toString());
+                registerForm.maleTwentyToTwentyFour3 = AppUtil.getLongValue(maleTwentyToTwentyFour.getText().toString());
+                registerForm.maleTwentyFiveToTwentyNine3 = AppUtil.getLongValue(maleTwentyFiveToTwentyNine.getText().toString());
                 registerForm.maleThirtyToFortyNine2 = AppUtil.getLongValue(maleThirtyToFortyNine.getText().toString());
                 registerForm.maleFiftyPlus2 = AppUtil.getLongValue(maleFiftyPlus.getText().toString());
                 registerForm.femaleLessThanFifteen = AppUtil.getLongValue(femaleLessThanFifteen.getText().toString());
-                registerForm.femaleFifteenToNineteen2 = AppUtil.getLongValue(femaleFifteenToNineteen.getText().toString());
-                registerForm.femaleTwentyToTwentyFour2 = AppUtil.getLongValue(femaleTwentyToTwentyFour.getText().toString());
-                registerForm.femaleTwentyFiveToTwentyNine2 = AppUtil.getLongValue(femaleTwentyFiveToTwentyNine.getText().toString());
-                registerForm.femaleThirtyToFortyNine2 = AppUtil.getLongValue(femaleThirtyToFortyNine.getText().toString());
-                registerForm.femaleFiftyPlus2 = AppUtil.getLongValue(femaleFiftyPlus.getText().toString());
+                registerForm.femaleFifteenToNineteen3 = AppUtil.getLongValue(femaleFifteenToNineteen.getText().toString());
+                registerForm.femaleTwentyToTwentyFour3 = AppUtil.getLongValue(femaleTwentyToTwentyFour.getText().toString());
+                registerForm.femaleTwentyFiveToTwentyNine3 = AppUtil.getLongValue(femaleTwentyFiveToTwentyNine.getText().toString());
+                registerForm.femaleThirtyToFortyNine3 = AppUtil.getLongValue(femaleThirtyToFortyNine.getText().toString());
+                registerForm.femaleFiftyPlus3 = AppUtil.getLongValue(femaleFiftyPlus.getText().toString());
 
                 upDateForm();
                 dialog.dismiss();
@@ -875,18 +875,18 @@ public class MonthReportFormActivity extends MenuBar implements View.OnClickList
         final EditText femaleFiftyPlus = (EditText) dialog.findViewById(R.id.femaleFiftyPlus);
 
         if (registerForm != null) {
-            maleLessThanFifteen.setText(AppUtil.getLongValue(registerForm.maleLessThanFifteen));
-            femaleLessThanFifteen.setText(AppUtil.getLongValue(registerForm.femaleLessThanFifteen));
-            maleFifteenToNineteen.setText(AppUtil.getLongValue(registerForm.maleFifteenToNineteen2));
-            femaleFifteenToNineteen.setText(AppUtil.getLongValue(registerForm.femaleFifteenToNineteen2));
-            maleTwentyToTwentyFour.setText(AppUtil.getLongValue(registerForm.maleTwentyToTwentyFour2));
-            femaleTwentyToTwentyFour.setText(AppUtil.getLongValue(registerForm.femaleTwentyToTwentyFour2));
-            maleTwentyFiveToTwentyNine.setText(AppUtil.getLongValue(registerForm.maleTwentyFiveToTwentyNine2));
-            femaleTwentyFiveToTwentyNine.setText(AppUtil.getLongValue(registerForm.femaleTwentyFiveToTwentyNine2));
-            maleThirtyToFortyNine.setText(AppUtil.getLongValue(registerForm.maleThirtyToFortyNine2));
-            femaleThirtyToFortyNine.setText(AppUtil.getLongValue(registerForm.femaleThirtyToFortyNine2));
-            maleFiftyPlus.setText(AppUtil.getLongValue(registerForm.maleFiftyPlus2));
-            femaleFiftyPlus.setText(AppUtil.getLongValue(registerForm.femaleFiftyPlus2));
+            maleLessThanFifteen.setText(AppUtil.getLongValue(registerForm.maleLessThanFifteen1));
+            femaleLessThanFifteen.setText(AppUtil.getLongValue(registerForm.femaleLessThanFifteen1));
+            maleFifteenToNineteen.setText(AppUtil.getLongValue(registerForm.maleFifteenToNineteen4));
+            femaleFifteenToNineteen.setText(AppUtil.getLongValue(registerForm.femaleFifteenToNineteen4));
+            maleTwentyToTwentyFour.setText(AppUtil.getLongValue(registerForm.maleTwentyToTwentyFour4));
+            femaleTwentyToTwentyFour.setText(AppUtil.getLongValue(registerForm.femaleTwentyToTwentyFour4));
+            maleTwentyFiveToTwentyNine.setText(AppUtil.getLongValue(registerForm.maleTwentyFiveToTwentyNine4));
+            femaleTwentyFiveToTwentyNine.setText(AppUtil.getLongValue(registerForm.femaleTwentyFiveToTwentyNine4));
+            maleThirtyToFortyNine.setText(AppUtil.getLongValue(registerForm.maleThirtyToFortyNine4));
+            femaleThirtyToFortyNine.setText(AppUtil.getLongValue(registerForm.femaleThirtyToFortyNine4));
+            maleFiftyPlus.setText(AppUtil.getLongValue(registerForm.maleFiftyPlus4));
+            femaleFiftyPlus.setText(AppUtil.getLongValue(registerForm.femaleFiftyPlus4));
         }
 
         List<EditText> list = new ArrayList<>();
@@ -903,12 +903,12 @@ public class MonthReportFormActivity extends MenuBar implements View.OnClickList
                 public void onFocusChange(View v, boolean hasFocus) {
                     if (!hasFocus) {
 
-                        registerForm.maleLessThanFifteen = AppUtil.getLongValue(maleLessThanFifteen.getText().toString());
-                        registerForm.maleFifteenToNineteen2 = AppUtil.getLongValue(maleFifteenToNineteen.getText().toString());
-                        registerForm.maleTwentyToTwentyFour2 = AppUtil.getLongValue(maleTwentyToTwentyFour.getText().toString());
-                        registerForm.maleTwentyFiveToTwentyNine2 = AppUtil.getLongValue(maleTwentyFiveToTwentyNine.getText().toString());
-                        registerForm.maleThirtyToFortyNine2 = AppUtil.getLongValue(maleThirtyToFortyNine.getText().toString());
-                        registerForm.maleFiftyPlus2 = AppUtil.getLongValue(maleFiftyPlus.getText().toString());
+                        registerForm.maleLessThanFifteen1 = AppUtil.getLongValue(maleLessThanFifteen.getText().toString());
+                        registerForm.maleFifteenToNineteen4 = AppUtil.getLongValue(maleFifteenToNineteen.getText().toString());
+                        registerForm.maleTwentyToTwentyFour4 = AppUtil.getLongValue(maleTwentyToTwentyFour.getText().toString());
+                        registerForm.maleTwentyFiveToTwentyNine4 = AppUtil.getLongValue(maleTwentyFiveToTwentyNine.getText().toString());
+                        registerForm.maleThirtyToFortyNine4 = AppUtil.getLongValue(maleThirtyToFortyNine.getText().toString());
+                        registerForm.maleFiftyPlus4 = AppUtil.getLongValue(maleFiftyPlus.getText().toString());
 
                         maleTotal.setText(AppUtil.getLongValue(registerForm.maleQuestion4()));
                     }
@@ -931,12 +931,12 @@ public class MonthReportFormActivity extends MenuBar implements View.OnClickList
                 public void onFocusChange(View v, boolean hasFocus) {
                     if (!hasFocus) {
 
-                        registerForm.femaleLessThanFifteen = AppUtil.getLongValue(femaleLessThanFifteen.getText().toString());
-                        registerForm.femaleFifteenToNineteen2 = AppUtil.getLongValue(femaleFifteenToNineteen.getText().toString());
-                        registerForm.femaleTwentyToTwentyFour2 = AppUtil.getLongValue(femaleTwentyToTwentyFour.getText().toString());
-                        registerForm.femaleTwentyFiveToTwentyNine2 = AppUtil.getLongValue(femaleTwentyFiveToTwentyNine.getText().toString());
-                        registerForm.femaleThirtyToFortyNine2 = AppUtil.getLongValue(femaleThirtyToFortyNine.getText().toString());
-                        registerForm.femaleFiftyPlus2 = AppUtil.getLongValue(femaleFiftyPlus.getText().toString());
+                        registerForm.femaleLessThanFifteen1 = AppUtil.getLongValue(femaleLessThanFifteen.getText().toString());
+                        registerForm.femaleFifteenToNineteen4 = AppUtil.getLongValue(femaleFifteenToNineteen.getText().toString());
+                        registerForm.femaleTwentyToTwentyFour4 = AppUtil.getLongValue(femaleTwentyToTwentyFour.getText().toString());
+                        registerForm.femaleTwentyFiveToTwentyNine4 = AppUtil.getLongValue(femaleTwentyFiveToTwentyNine.getText().toString());
+                        registerForm.femaleThirtyToFortyNine4 = AppUtil.getLongValue(femaleThirtyToFortyNine.getText().toString());
+                        registerForm.femaleFiftyPlus4 = AppUtil.getLongValue(femaleFiftyPlus.getText().toString());
 
                         femaleTotal.setText(AppUtil.getLongValue(registerForm.femaleQuestion4()));
                     }
@@ -950,18 +950,18 @@ public class MonthReportFormActivity extends MenuBar implements View.OnClickList
             @Override
             public void onClick(View arg0) {
 
-                registerForm.maleLessThanFifteen = AppUtil.getLongValue(maleLessThanFifteen.getText().toString());
-                registerForm.maleFifteenToNineteen2 = AppUtil.getLongValue(maleFifteenToNineteen.getText().toString());
-                registerForm.maleTwentyToTwentyFour2 = AppUtil.getLongValue(maleTwentyToTwentyFour.getText().toString());
-                registerForm.maleTwentyFiveToTwentyNine2 = AppUtil.getLongValue(maleTwentyFiveToTwentyNine.getText().toString());
-                registerForm.maleThirtyToFortyNine2 = AppUtil.getLongValue(maleThirtyToFortyNine.getText().toString());
-                registerForm.maleFiftyPlus2 = AppUtil.getLongValue(maleFiftyPlus.getText().toString());
-                registerForm.femaleLessThanFifteen = AppUtil.getLongValue(femaleLessThanFifteen.getText().toString());
-                registerForm.femaleFifteenToNineteen2 = AppUtil.getLongValue(femaleFifteenToNineteen.getText().toString());
-                registerForm.femaleTwentyToTwentyFour2 = AppUtil.getLongValue(femaleTwentyToTwentyFour.getText().toString());
-                registerForm.femaleTwentyFiveToTwentyNine2 = AppUtil.getLongValue(femaleTwentyFiveToTwentyNine.getText().toString());
-                registerForm.femaleThirtyToFortyNine2 = AppUtil.getLongValue(femaleThirtyToFortyNine.getText().toString());
-                registerForm.femaleFiftyPlus2 = AppUtil.getLongValue(femaleFiftyPlus.getText().toString());
+                registerForm.maleLessThanFifteen1 = AppUtil.getLongValue(maleLessThanFifteen.getText().toString());
+                registerForm.maleFifteenToNineteen4 = AppUtil.getLongValue(maleFifteenToNineteen.getText().toString());
+                registerForm.maleTwentyToTwentyFour4 = AppUtil.getLongValue(maleTwentyToTwentyFour.getText().toString());
+                registerForm.maleTwentyFiveToTwentyNine4 = AppUtil.getLongValue(maleTwentyFiveToTwentyNine.getText().toString());
+                registerForm.maleThirtyToFortyNine4 = AppUtil.getLongValue(maleThirtyToFortyNine.getText().toString());
+                registerForm.maleFiftyPlus4 = AppUtil.getLongValue(maleFiftyPlus.getText().toString());
+                registerForm.femaleLessThanFifteen1 = AppUtil.getLongValue(femaleLessThanFifteen.getText().toString());
+                registerForm.femaleFifteenToNineteen4 = AppUtil.getLongValue(femaleFifteenToNineteen.getText().toString());
+                registerForm.femaleTwentyToTwentyFour4 = AppUtil.getLongValue(femaleTwentyToTwentyFour.getText().toString());
+                registerForm.femaleTwentyFiveToTwentyNine4 = AppUtil.getLongValue(femaleTwentyFiveToTwentyNine.getText().toString());
+                registerForm.femaleThirtyToFortyNine4 = AppUtil.getLongValue(femaleThirtyToFortyNine.getText().toString());
+                registerForm.femaleFiftyPlus4 = AppUtil.getLongValue(femaleFiftyPlus.getText().toString());
 
                 upDateForm();
                 dialog.dismiss();

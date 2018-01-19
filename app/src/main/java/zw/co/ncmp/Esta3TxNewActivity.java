@@ -1,7 +1,9 @@
 package zw.co.ncmp;
 
 import android.app.DatePickerDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -65,8 +67,13 @@ public class Esta3TxNewActivity extends MenuBar implements View.OnClickListener 
     DatePickerDialog datePickerDialog2;
     @BindView(R.id.oi_art_number)
     EditText oiArtNumber;
+    @BindView(R.id.btn_completed)
+    Button btn_completed;
+    @BindView(R.id.btn_submit)
+    Button btn_submit;
     private RadioGroup test;
     private RadioButton selected;
+    Esta3TxNew item;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,6 +82,8 @@ public class Esta3TxNewActivity extends MenuBar implements View.OnClickListener 
         ButterKnife.bind(this);
         setSupportActionBar(createToolBar("ESTA3 Tx-New"));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        Intent intent = getIntent();
+        Long id = intent.getLongExtra(AppUtil.ID, 0L);
         gender = (HListView) findViewById(R.id.gender);
         reasonForHIVTesting = (ListView) findViewById(R.id.reasonForHIVTest);
         inPreArt = (HListView) findViewById(R.id.in_pre_art);
@@ -187,6 +196,106 @@ public class Esta3TxNewActivity extends MenuBar implements View.OnClickListener 
             }
         });
         dateOfInitiation.setOnClickListener(this);
+        btn_completed.setVisibility(View.GONE);
+        btn_submit.setVisibility(View.GONE);
+        btn_submit.setBackgroundResource(R.drawable.finish_background);
+        btn_submit.setOnClickListener(this);
+        if(id != 0){
+            item = Esta3TxNew.findById(id);
+            firstName.setText(item.firstName);
+            lastName.setText(item.lastName);
+            cardNumber.setText(String.valueOf(item.cardNumber));
+            age.setText(String.valueOf(item.age));
+            updateLabel(date, item.mDate);
+            int i = 0;
+            for (Facility s : Facility.getAll()) {
+                if (item.facility.equals(facility.getItemAtPosition(i))) {
+                    facility.setSelection(i);
+                    break;
+                }
+                i++;
+            }
+            Gender m =  item.gender;
+            int count = genderArrayAdapter.getCount();
+            for(i = 0; i < count; i++){
+                Gender current = genderArrayAdapter.getItem(i);
+                if(current.equals(m)){
+                    gender.setItemChecked(i, true);
+                }
+            }
+            ReasonForHIVTest r = item.reasonForHIVTest;
+            count = reasonForHIVTestArrayAdapter.getCount();
+            for(i = 0; i < count; i++){
+                ReasonForHIVTest current = reasonForHIVTestArrayAdapter.getItem(i);
+                if(current.equals(r)){
+                    reasonForHIVTesting.setItemChecked(i, true);
+                }
+            }
+            String result = item.finalResult;
+            count = reasonForIneligibilityForTestingArrayAdapter.getCount();
+            for(i = 0; i < count; i++){
+                ReasonForIneligibilityForTesting current = reasonForIneligibilityForTestingArrayAdapter.getItem(i);
+                if(current.getName().equals(result)){
+                    finalResult.setItemChecked(i, true);
+                }
+            }
+            if(getFinalResult() == null){
+                other.setVisibility(View.VISIBLE);
+                other.setText(result);
+                int k = reasonForIneligibilityForTestingArrayAdapter.getPosition(ReasonForIneligibilityForTesting.OTHER);
+                finalResult.setItemChecked(k, true);
+            }
+            result = item.entryStream;
+            count = clientServicesArrayAdapter.getCount();
+            for(i = 0; i < count; i++){
+                ClientServices current = clientServicesArrayAdapter.getItem(i);
+                if(current.getName().equals(result)){
+                    entryStream.setItemChecked(i, true);
+                }
+            }
+            if(getEntryStream() == null){
+                int k = clientServicesArrayAdapter.getPosition(ClientServices.OTHER);
+                other1.setVisibility(View.VISIBLE);
+                other1.setText(result);
+                entryStream.setItemChecked(k, true);
+            }
+            YesNo preArt =  item.inPreArt;
+            count = yesNoArrayAdapter.getCount();
+            for(i = 0; i < count; i++){
+                YesNo current = yesNoArrayAdapter.getItem(i);
+                if(current.equals(preArt)){
+                    inPreArt.setItemChecked(i, true);
+                }
+            }
+            if(item.registeredInPreArt != null){
+                updateLabel(dateRegisteredInPreArt, item.registeredInPreArt);
+            }
+
+            YesNo init =  item.initiatedOnArt;
+            count = yesNoArrayAdapter.getCount();
+            for(i = 0; i < count; i++){
+                YesNo current = yesNoArrayAdapter.getItem(i);
+                if(current.equals(init)){
+                    initiatedOnArt.setItemChecked(i, true);
+                }
+            }
+            if(item.initiatedOnArt != null){
+                updateLabel(dateOfInitiation, item.dateOfInitiation);
+            }
+            oiArtNumber.setText(String.valueOf(item.oiArtNumber));
+        }else{
+            item = new Esta3TxNew();
+        }
+
+        if (item.mDate != null) {
+            btn_submit.setVisibility(View.VISIBLE);
+        }
+
+        if (item.dateSubmitted != null) {
+            btn_submit.setVisibility(View.GONE);
+            save.setVisibility(View.GONE);
+            btn_completed.setVisibility(View.VISIBLE);
+        }
     }
 
     @Override
@@ -197,6 +306,27 @@ public class Esta3TxNewActivity extends MenuBar implements View.OnClickListener 
 
         if(view.getId() == save.getId()){
             save();
+        }
+
+        if(view.getId() == btn_submit.getId()){
+
+            new AlertDialog.Builder(context)
+                    .setMessage("Are you sure you want to submit?")
+                    .setCancelable(false)
+                    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            if (validate()) {
+                                item.dateSubmitted = new Date();
+                                item.save();
+                                AppUtil.createLongNotification(Esta3TxNewActivity.this, "Submitted for Upload to Server");
+                                Intent intent = new Intent(Esta3TxNewActivity.this, Esta3TxNewListActivity.class);
+                                startActivity(intent);
+                                finish();
+                            }
+                        }
+                    })
+                    .setNegativeButton("No", null)
+                    .show();
         }
 
         if(view.getId() == dateRegisteredInPreArt.getId()){
@@ -214,13 +344,12 @@ public class Esta3TxNewActivity extends MenuBar implements View.OnClickListener 
 
     public void save(){
         if(validate()){
-            Esta3TxNew item = new Esta3TxNew();
             item.firstName = firstName.getText().toString();
             item.lastName = lastName.getText().toString();
             item.cardNumber = Integer.parseInt(cardNumber.getText().toString());
-            item.date = DateUtil.getDateFromString(date.getText().toString());
+            item.mDate = DateUtil.getDateFromString(date.getText().toString());
             item.facility = (Facility) facility.getSelectedItem();
-            item.time = time.getCurrentHour() + ":" + time.getCurrentMinute();
+            item.mTime = time.getCurrentHour() + ":" + time.getCurrentMinute();
             item.gender = getGender();
             item.age = Integer.parseInt(age.getText().toString());
             item.reasonForHIVTest = getReasonForHIVTest();
@@ -256,12 +385,8 @@ public class Esta3TxNewActivity extends MenuBar implements View.OnClickListener 
                 }
             }
             item.save();
-            for(HTSRegisterForm m : HTSRegisterForm.getAll()){
-                Log.d("HTS", AppUtil.createGson().toJson(m));
-            }
-            Intent intent = new Intent(this, Esta3SelectionActivity.class);
-            startActivity(intent);
-            finish();
+            btn_submit.setVisibility(View.VISIBLE);
+            AppUtil.createShortNotification(this, "Saved");
         }
     }
 

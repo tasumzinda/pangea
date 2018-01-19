@@ -86,7 +86,7 @@
 
                 <EditText
                     android:id="@+id/estimatedCatchmentPopulation"
-                    android:layout_width="100dp"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:inputType="number" />
 
@@ -106,7 +106,7 @@
 
                 <EditText
                     android:id="@+id/numberOfPreARTPatients"
-                    android:layout_width="100dp"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:inputType="number" />
 
@@ -126,7 +126,7 @@
 
                 <EditText
                     android:id="@+id/numberOfCLFsDeployed"
-                    android:layout_width="100dp"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:inputType="number" />
 
@@ -146,7 +146,7 @@
 
                 <EditText
                     android:id="@+id/dateCLFsDeployed"
-                    android:layout_width="100dp"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:inputType="number" />
 
@@ -166,7 +166,7 @@
 
                 <EditText
                     android:id="@+id/numberOfActiveCARGs"
-                    android:layout_width="100dp"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:inputType="number" />
 
@@ -186,7 +186,7 @@
 
                 <EditText
                     android:id="@+id/numberOfActiveCARGMembers"
-                    android:layout_width="100dp"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:inputType="number" />
 
@@ -206,7 +206,7 @@
 
                 <EditText
                     android:id="@+id/numberOfCARGsFormedThisMonth"
-                    android:layout_width="100dp"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:inputType="number" />
             </TableRow>
@@ -226,7 +226,7 @@
 
                 <EditText
                     android:id="@+id/numberOfCARGsFormedToDate"
-                    android:layout_width="100dp"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:inputType="number" />
 
@@ -246,7 +246,7 @@
 
                 <EditText
                     android:id="@+id/numberOfCATSSupportersDeployed"
-                    android:layout_width="100dp"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:inputType="number" />
             </TableRow>
@@ -265,7 +265,7 @@
 
                 <EditText
                     android:id="@+id/dateCATSDeployed"
-                    android:layout_width="100dp"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:inputType="number" />
             </TableRow>
@@ -284,7 +284,7 @@
 
                 <EditText
                     android:id="@+id/numberOfActiveAdolescentSupportGroups"
-                    android:layout_width="100dp"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:inputType="number" />
             </TableRow>
@@ -303,7 +303,7 @@
 
                 <EditText
                     android:id="@+id/numberOfActiveAdolescentSupportGroupMembers"
-                    android:layout_width="100dp"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:inputType="number" />
 
@@ -341,8 +341,9 @@
 
                 <EditText
                     android:id="@+id/dateDefaulterTrackingImplemented"
-                    android:layout_width="100dp"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
+                    android:enabled="false"
                     android:inputType="number" />
             </TableRow>
 
@@ -378,8 +379,9 @@
 
                 <EditText
                         android:id="@+id/dateIndexTestingImplemented"
-                        android:layout_width="100dp"
+                        android:layout_width="120dp"
                         android:layout_height="wrap_content"
+                        android:enabled="false"
                         android:inputType="number" />
             </TableRow>
 
@@ -415,8 +417,9 @@
 
                 <EditText
                         android:id="@+id/dateRetestPriorToARTInitiationImplemented"
-                        android:layout_width="100dp"
+                        android:layout_width="120dp"
                         android:layout_height="wrap_content"
+                        android:enabled="false"
                         android:inputType="number" />
             </TableRow>
 
@@ -452,8 +455,9 @@
 
                 <EditText
                     android:id="@+id/dateStaticHTSHRSDeployed"
-                    android:layout_width="100dp"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
+                    android:enabled="false"
                     android:inputType="number" />
             </TableRow>
 
@@ -489,8 +493,9 @@
 
                 <EditText
                         android:id="@+id/dateStaticTXNEWHRHDeployed"
-                        android:layout_width="100dp"
+                        android:layout_width="120dp"
                         android:layout_height="wrap_content"
+                        android:enabled="false"
                         android:inputType="number" />
             </TableRow>
 
@@ -526,8 +531,9 @@
 
                 <EditText
                         android:id="@+id/dateMultiMonthDrugDispensingStarted"
-                        android:layout_width="100dp"
+                        android:layout_width="120dp"
                         android:layout_height="wrap_content"
+                        android:enabled="false"
                         android:inputType="number" />
             </TableRow>
 
@@ -599,7 +605,7 @@
 
                 <EditText
                         android:id="@+id/numberOfOPDPatientsSeenInLastMonth"
-                        android:layout_width="100dp"
+                        android:layout_width="120dp"
                         android:layout_height="wrap_content"
                         android:inputType="number" />
             </TableRow>
@@ -618,7 +624,7 @@
 
                 <EditText
                         android:id="@+id/numberOfOPDPatientsWithKnownHIVStatusOnEntry"
-                        android:layout_width="100dp"
+                        android:layout_width="120dp"
                         android:layout_height="wrap_content"
                         android:inputType="number" />
             </TableRow>
@@ -637,7 +643,7 @@
 
                 <EditText
                         android:id="@+id/numberOfOPDPatientsTestedForHIVInLastMonth"
-                        android:layout_width="100dp"
+                        android:layout_width="120dp"
                         android:layout_height="wrap_content"
                         android:inputType="number" />
             </TableRow>
@@ -656,7 +662,7 @@
 
                 <EditText
                         android:id="@+id/numberOfOPDPatientsTestedHIVPositiveInLastMonth"
-                        android:layout_width="100dp"
+                        android:layout_width="120dp"
                         android:layout_height="wrap_content"
                         android:inputType="number" />
             </TableRow>
@@ -675,7 +681,7 @@
 
                 <EditText
                         android:id="@+id/numberOfSTIPatientsSeenInLastMonth"
-                        android:layout_width="100dp"
+                        android:layout_width="120dp"
                         android:layout_height="wrap_content"
                         android:inputType="number" />
             </TableRow>
@@ -694,7 +700,7 @@
 
                 <EditText
                         android:id="@+id/numberOfSTIPatientsWithKnownHIVStatusOnEntry"
-                        android:layout_width="100dp"
+                        android:layout_width="120dp"
                         android:layout_height="wrap_content"
                         android:inputType="number" />
             </TableRow>
@@ -713,7 +719,7 @@
 
                 <EditText
                         android:id="@+id/numberOfSTIPatientsTestedForHIVInLastMonth"
-                        android:layout_width="100dp"
+                        android:layout_width="120dp"
                         android:layout_height="wrap_content"
                         android:inputType="number" />
             </TableRow>
@@ -732,7 +738,7 @@
 
                 <EditText
                         android:id="@+id/numberOfSTIPatientsTestedHIVPositiveInLastMonth"
-                        android:layout_width="100dp"
+                        android:layout_width="120dp"
                         android:layout_height="wrap_content"
                         android:inputType="number" />
             </TableRow>
@@ -751,7 +757,7 @@
 
                 <EditText
                         android:id="@+id/numberOfInpatientPatientsSeenInLastMonth"
-                        android:layout_width="100dp"
+                        android:layout_width="120dp"
                         android:layout_height="wrap_content"
                         android:inputType="number" />
             </TableRow>
@@ -770,7 +776,7 @@
 
                 <EditText
                         android:id="@+id/numberOfInpatientPatientsWithKnownHIVStatusOnEntry"
-                        android:layout_width="100dp"
+                        android:layout_width="120dp"
                         android:layout_height="wrap_content"
                         android:inputType="number" />
             </TableRow>
@@ -789,7 +795,7 @@
 
                 <EditText
                         android:id="@+id/numberOfInpatientPatientsTestedForHIVInLastMonth"
-                        android:layout_width="100dp"
+                        android:layout_width="120dp"
                         android:layout_height="wrap_content"
                         android:inputType="number" />
             </TableRow>
@@ -808,7 +814,7 @@
 
                 <EditText
                         android:id="@+id/numberOfInpatientPatientsTestedHIVPositiveInLastMonth"
-                        android:layout_width="100dp"
+                        android:layout_width="120dp"
                         android:layout_height="wrap_content"
                         android:inputType="number" />
             </TableRow>
@@ -827,7 +833,7 @@
 
                 <EditText
                         android:id="@+id/numberOfClientsWithDocumentedCompletedReferralCycle"
-                        android:layout_width="100dp"
+                        android:layout_width="120dp"
                         android:layout_height="wrap_content"
                         android:inputType="number" />
             </TableRow>
@@ -846,7 +852,7 @@
 
                 <EditText
                         android:id="@+id/numberOfClientsWithDocumentedCompletedReferralCycleFromFacilityToCommunity"
-                        android:layout_width="100dp"
+                        android:layout_width="120dp"
                         android:layout_height="wrap_content"
                         android:inputType="number" />
             </TableRow>
@@ -865,7 +871,7 @@
 
                 <EditText
                         android:id="@+id/numberOfClientsWithDocumentedCompletedReferralCycleFromCommunityToFacility"
-                        android:layout_width="100dp"
+                        android:layout_width="120dp"
                         android:layout_height="wrap_content"
                         android:inputType="number" />
             </TableRow>
@@ -884,7 +890,7 @@
 
                 <EditText
                         android:id="@+id/numberOfClientsWhoDefaultedART"
-                        android:layout_width="100dp"
+                        android:layout_width="120dp"
                         android:layout_height="wrap_content"
                         android:inputType="number" />
             </TableRow>
@@ -903,7 +909,7 @@
 
                 <EditText
                         android:id="@+id/numberOfClientsWhoWereFollowedAndHaveADocumentedOutcome"
-                        android:layout_width="100dp"
+                        android:layout_width="120dp"
                         android:layout_height="wrap_content"
                         android:inputType="number" />
             </TableRow>
@@ -922,7 +928,7 @@
 
                 <EditText
                         android:id="@+id/numberOfEIDResultsReceivedAndSuccessfullyIssuedToCaregivers"
-                        android:layout_width="100dp"
+                        android:layout_width="120dp"
                         android:layout_height="wrap_content"
                         android:inputType="number" />
             </TableRow>
@@ -941,7 +947,7 @@
 
                 <EditText
                         android:id="@+id/numberOfHIVInfectedInfantsTrackedAndLinkedBackToCare"
-                        android:layout_width="100dp"
+                        android:layout_width="120dp"
                         android:layout_height="wrap_content"
                         android:inputType="number" />
             </TableRow>
@@ -960,7 +966,7 @@
 
                 <EditText
                         android:id="@+id/numberOfVillageHealthWorkersWorkingWithITECH"
-                        android:layout_width="100dp"
+                        android:layout_width="120dp"
                         android:layout_height="wrap_content"
                         android:inputType="number" />
             </TableRow>

@@ -909,6 +909,14 @@ public class PushPullService extends IntentService {
         client = AppUtil.getUnsafeOkHttpClient(client);
         client = AppUtil.createAuthenticationData(client, context);
         form.serverCreatedDate = AppUtil.getStringDate(form.dateCreated);
+        form.dateCATS = AppUtil.getStringDate(form.dateCATSDeployed);
+        form.dateCLFS = AppUtil.getStringDate(form.dateCLFsDeployed);
+        form.dateDefaulter = AppUtil.getStringDate(form.dateDefaulterTrackingImplemented);
+        form.dateHTS = AppUtil.getStringDate(form.dateStaticHTSHRSDeployed);
+        form.dateIndex = AppUtil.getStringDate(form.dateIndexTestingImplemented);
+        form.dateMulti = AppUtil.getStringDate(form.dateMultiMonthDrugDispensingStarted);
+        form.dateRetest = AppUtil.getStringDate(form.dateRetestPriorToARTInitiationImplemented);
+        form.dateTXNEW = AppUtil.getStringDate(form.dateStaticTXNEWHRHDeployed);
         String json = gson.toJson(form);
         return AppUtil.getResponeBody(client, httpUrl, json);
 
@@ -1007,6 +1015,20 @@ public class PushPullService extends IntentService {
         form.serverCreatedDate = AppUtil.getStringDate(form.dateCreated);
         form.startDateC = AppUtil.getStringDate(form.startDate);
         form.endDateC = AppUtil.getStringDate(form.endDate);
+        String json = gson.toJson(form);
+        return AppUtil.getResponeBody(client, httpUrl, json);
+
+    }
+
+    private String run(HttpUrl httpUrl, Esta3TxNew form) {
+
+        OkHttpClient client = new OkHttpClient();
+        client = AppUtil.connectionSettings(client);
+        client = AppUtil.getUnsafeOkHttpClient(client);
+        client = AppUtil.createAuthenticationData(client, context);
+        form.datec = AppUtil.getStringDate(form.mDate);
+        form.dateReg = AppUtil.getStringDate(form.registeredInPreArt);
+        form.dateInit = AppUtil.getStringDate(form.dateOfInitiation);
         String json = gson.toJson(form);
         return AppUtil.getResponeBody(client, httpUrl, json);
 

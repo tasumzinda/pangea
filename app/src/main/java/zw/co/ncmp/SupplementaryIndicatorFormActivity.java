@@ -12,13 +12,14 @@ import android.widget.*;
 import java.util.Calendar;
 import java.util.Date;
 
+import it.sephiroth.android.library.widget.AdapterView;
 import it.sephiroth.android.library.widget.HListView;
-import zw.co.ncmp.business.ARTForm;
 import zw.co.ncmp.business.Facility;
 import zw.co.ncmp.business.Period;
 import zw.co.ncmp.business.SupplementaryIndicatorForm;
 import zw.co.ncmp.business.util.YesNo;
 import zw.co.ncmp.util.AppUtil;
+import zw.co.ncmp.util.DateUtil;
 
 public class SupplementaryIndicatorFormActivity extends MenuBar implements View.OnClickListener {
 
@@ -159,26 +160,98 @@ public class SupplementaryIndicatorFormActivity extends MenuBar implements View.
         areYouImplementingDefaulterTracking.setAdapter(adapter);
         areYouImplementingDefaulterTracking.setItemsCanFocus(false);
         areYouImplementingDefaulterTracking.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+        areYouImplementingDefaulterTracking.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                YesNo item = adapter.getItem(position);
+                if(item.equals(YesNo.YES)){
+                    dateDefaulterTrackingImplemented.setEnabled(true);
+                }else{
+                    dateDefaulterTrackingImplemented.setEnabled(false);
+                }
+
+            }
+        });
 
         areYouImplementingIndexTesting.setAdapter(adapter);
         areYouImplementingIndexTesting.setItemsCanFocus(false);
         areYouImplementingIndexTesting.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+        areYouImplementingIndexTesting.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                YesNo item = adapter.getItem(position);
+                if(item.equals(YesNo.YES)){
+                    dateIndexTestingImplemented.setEnabled(true);
+                }else{
+                    dateIndexTestingImplemented.setEnabled(false);
+                }
+
+            }
+        });
 
         areYouImplementingRetestPriorToARTInitiation.setAdapter(adapter);
         areYouImplementingRetestPriorToARTInitiation.setItemsCanFocus(false);
         areYouImplementingRetestPriorToARTInitiation.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+        areYouImplementingRetestPriorToARTInitiation.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                YesNo item = adapter.getItem(position);
+                if(item.equals(YesNo.YES)){
+                    dateRetestPriorToARTInitiationImplemented.setEnabled(true);
+                }else{
+                    dateRetestPriorToARTInitiationImplemented.setEnabled(false);
+                }
+
+            }
+        });
 
         doesFacilityHaveStaticHTSHRH.setAdapter(adapter);
         doesFacilityHaveStaticHTSHRH.setItemsCanFocus(false);
         doesFacilityHaveStaticHTSHRH.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+        doesFacilityHaveStaticHTSHRH.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                YesNo item = adapter.getItem(position);
+                if(item.equals(YesNo.YES)){
+                    dateStaticHTSHRSDeployed.setEnabled(true);
+                }else{
+                    dateStaticHTSHRSDeployed.setEnabled(false);
+                }
+
+            }
+        });
 
         doesFacilityHaveStaticTXNEWHRH.setAdapter(adapter);
         doesFacilityHaveStaticTXNEWHRH.setItemsCanFocus(false);
         doesFacilityHaveStaticTXNEWHRH.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+        doesFacilityHaveStaticTXNEWHRH.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                YesNo item = adapter.getItem(position);
+                if(item.equals(YesNo.YES)){
+                    dateStaticTXNEWHRHDeployed.setEnabled(true);
+                }else{
+                    dateStaticTXNEWHRHDeployed.setEnabled(false);
+                }
+
+            }
+        });
 
         doesFacilityProvideMultiMonthDrugDispensing.setAdapter(adapter);
         doesFacilityProvideMultiMonthDrugDispensing.setItemsCanFocus(false);
         doesFacilityProvideMultiMonthDrugDispensing.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+        doesFacilityProvideMultiMonthDrugDispensing.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                YesNo item = adapter.getItem(position);
+                if(item.equals(YesNo.YES)){
+                    dateMultiMonthDrugDispensingStarted.setEnabled(true);
+                }else{
+                    dateMultiMonthDrugDispensingStarted.setEnabled(false);
+                }
+
+            }
+        });
 
         doesFacilityHaveFunctionalHealthCentreCommittee.setAdapter(adapter);
         doesFacilityHaveFunctionalHealthCentreCommittee.setItemsCanFocus(false);
@@ -325,8 +398,8 @@ public class SupplementaryIndicatorFormActivity extends MenuBar implements View.
         if (form_id != 0) {
             form = SupplementaryIndicatorForm.get(form_id);
             name.setText(form.name);
-            estimatedCatchmentPopulation.setText(AppUtil.getLongValue(form.estimatedCatchmentPopulation));
-            numberOfPreARTPatients.setText(AppUtil.getLongValue(form.numberOfPreARTPatients));
+            estimatedCatchmentPopulation.setText(AppUtil.getLongValue(form.estFacCatchmentPopulation));
+            numberOfPreARTPatients.setText(AppUtil.getLongValue(form.numOfActivePreARTPatients));
 
             numberOfCLFsDeployed.setText(AppUtil.getLongValue(form.numberOfCLFsDeployed));
             numberOfActiveCARGs.setText(AppUtil.getLongValue(form.numberOfActiveCARGs));
@@ -338,32 +411,57 @@ public class SupplementaryIndicatorFormActivity extends MenuBar implements View.
             numberOfActiveAdolescentSupportGroups.setText(AppUtil.getLongValue(form.numberOfActiveAdolescentSupportGroups));
             numberOfActiveAdolescentSupportGroupMembers.setText(AppUtil.getLongValue(form.numberOfActiveAdolescentSupportGroupMembers));
 
-            numberOfOPDPatientsSeenInLastMonth.setText(AppUtil.getLongValue(form.numberOfOPDPatientsSeenInLastMonth));
-            numberOfOPDPatientsWithKnownHIVStatusOnEntry.setText(AppUtil.getLongValue(form.numberOfOPDPatientsWithKnownHIVStatusOnEntry));
-            numberOfOPDPatientsTestedForHIVInLastMonth.setText(AppUtil.getLongValue(form.numberOfOPDPatientsTestedForHIVInLastMonth));
-            numberOfOPDPatientsTestedHIVPositiveInLastMonth.setText(AppUtil.getLongValue(form.numberOfOPDPatientsTestedHIVPositiveInLastMonth));
+            numberOfOPDPatientsSeenInLastMonth.setText(AppUtil.getLongValue(form.opdNumOfPatientsInPastMonth));
+            numberOfOPDPatientsWithKnownHIVStatusOnEntry.setText(AppUtil.getLongValue(form.opdNumOfPatWithKnownHIVPosStatusOnEntry));
+            numberOfOPDPatientsTestedForHIVInLastMonth.setText(AppUtil.getLongValue(form.opdNumOfPatTestedForHIVInPastMonth));
+            numberOfOPDPatientsTestedHIVPositiveInLastMonth.setText(AppUtil.getLongValue(form.opdNumOfPatTestedPositiveInPastMonth));
 
-            numberOfSTIPatientsSeenInLastMonth.setText(AppUtil.getLongValue(form.numberOfSTIPatientsSeenInLastMonth));
-            numberOfSTIPatientsWithKnownHIVStatusOnEntry.setText(AppUtil.getLongValue(form.numberOfSTIPatientsWithKnownHIVStatusOnEntry));
-            numberOfSTIPatientsTestedForHIVInLastMonth.setText(AppUtil.getLongValue(form.numberOfSTIPatientsTestedForHIVInLastMonth));
-            numberOfSTIPatientsTestedHIVPositiveInLastMonth.setText(AppUtil.getLongValue(form.numberOfSTIPatientsTestedHIVPositiveInLastMonth));
-            numberOfInpatientPatientsSeenInLastMonth.setText(AppUtil.getLongValue(form.numberOfInpatientPatientsSeenInLastMonth));
-            numberOfInpatientPatientsWithKnownHIVStatusOnEntry.setText(AppUtil.getLongValue(form.numberOfInpatientPatientsWithKnownHIVStatusOnEntry));
-            numberOfInpatientPatientsTestedForHIVInLastMonth.setText(AppUtil.getLongValue(form.numberOfInpatientPatientsTestedForHIVInLastMonth));
-            numberOfInpatientPatientsTestedHIVPositiveInLastMonth.setText(AppUtil.getLongValue(form.numberOfInpatientPatientsTestedHIVPositiveInLastMonth));
+            numberOfSTIPatientsSeenInLastMonth.setText(AppUtil.getLongValue(form.stiNumberOfPatientsInPastMonth));
+            numberOfSTIPatientsWithKnownHIVStatusOnEntry.setText(AppUtil.getLongValue(form.stiNumOfPatWithKnownHIVPosStatusOnEntry));
+            numberOfSTIPatientsTestedForHIVInLastMonth.setText(AppUtil.getLongValue(form.stiNumOfPatTestedForHIVInPastMonth));
+            numberOfSTIPatientsTestedHIVPositiveInLastMonth.setText(AppUtil.getLongValue(form.stiNumOfPatTestedPosInPastMonth));
+            numberOfInpatientPatientsSeenInLastMonth.setText(AppUtil.getLongValue(form.inPatNumOfPatientsInPastMonth));
+            numberOfInpatientPatientsWithKnownHIVStatusOnEntry.setText(AppUtil.getLongValue(form.inPatNumOfPatientsWithKnownHIVPosStatusOnEntry));
+            numberOfInpatientPatientsTestedForHIVInLastMonth.setText(AppUtil.getLongValue(form.inPatNumOfPatTestedForHIVInPastMonth));
+            numberOfInpatientPatientsTestedHIVPositiveInLastMonth.setText(AppUtil.getLongValue(form.inPatNumOfPatientsTestedPositiveInPastMonth));
 
 
-            numberOfClientsWithDocumentedCompletedReferralCycle.setText(AppUtil.getLongValue(form.numberOfClientsWithDocumentedCompletedReferralCycle));
-            numberOfClientsWithDocumentedCompletedReferralCycleFromFacilityToCommunity.setText(AppUtil.getLongValue(form.numberOfClientsWithDocumentedCompletedReferralCycleFromFacilityToCommunity));
-            numberOfClientsWithDocumentedCompletedReferralCycleFromCommunityToFacility.setText(AppUtil.getLongValue(form.numberOfClientsWithDocumentedCompletedReferralCycleFromCommunityToFacility));
+            numberOfClientsWithDocumentedCompletedReferralCycle.setText(AppUtil.getLongValue(form.numClientsWithDocumentedCompletedReferralCycle));
+            numberOfClientsWithDocumentedCompletedReferralCycleFromFacilityToCommunity.setText(AppUtil.getLongValue(form.numberOfClientsFromFacilityToCommunity));
+            numberOfClientsWithDocumentedCompletedReferralCycleFromCommunityToFacility.setText(AppUtil.getLongValue(form.numberOfClientsFromCommunityToFacility));
             numberOfClientsWhoDefaultedART.setText(AppUtil.getLongValue(form.numberOfClientsWhoDefaultedART));
-            numberOfClientsWhoWereFollowedAndHaveADocumentedOutcome.setText(AppUtil.getLongValue(form.numberOfClientsWhoWereFollowedAndHaveADocumentedOutcome));
-            numberOfEIDResultsReceivedAndSuccessfullyIssuedToCaregivers.setText(AppUtil.getLongValue(form.numberOfEIDResultsReceivedAndSuccessfullyIssuedToCaregivers));
-            numberOfHIVInfectedInfantsTrackedAndLinkedBackToCare.setText(AppUtil.getLongValue(form.numberOfHIVInfectedInfantsTrackedAndLinkedBackToCare));
-            numberOfVillageHealthWorkersWorkingWithITECH.setText(AppUtil.getLongValue(form.numberOfVillageHealthWorkersWorkingWithITECH));
+            numberOfClientsWhoWereFollowedAndHaveADocumentedOutcome.setText(AppUtil.getLongValue(form.numberOfClientsWhoWereFollowed));
+            numberOfEIDResultsReceivedAndSuccessfullyIssuedToCaregivers.setText(AppUtil.getLongValue(form.numberOfEIDResultsReceived));
+            numberOfHIVInfectedInfantsTrackedAndLinkedBackToCare.setText(AppUtil.getLongValue(form.numberOfHIVInfectedInfantsTracked));
+            numberOfVillageHealthWorkersWorkingWithITECH.setText(AppUtil.getLongValue(form.numberOfVillageHealthWorkers));
 
 
             updateLabel(form.dateCreated, dateCreated);
+            if(form.dateCATSDeployed != null){
+                updateLabel(form.dateCATSDeployed, dateCATSDeployed);
+            }
+            if(form.dateCLFsDeployed != null){
+                updateLabel(form.dateCLFsDeployed, dateCLFsDeployed);
+            }
+            if(form.dateDefaulterTrackingImplemented != null){
+                updateLabel(form.dateDefaulterTrackingImplemented, dateDefaulterTrackingImplemented);
+            }
+            if(form.dateIndexTestingImplemented != null){
+                updateLabel(form.dateIndexTestingImplemented, dateIndexTestingImplemented);
+            }
+            if(form.dateRetestPriorToARTInitiationImplemented != null){
+                updateLabel(form.dateRetestPriorToARTInitiationImplemented, dateRetestPriorToARTInitiationImplemented);
+            }
+            if(form.dateStaticHTSHRSDeployed != null){
+                updateLabel(form.dateStaticHTSHRSDeployed, dateStaticHTSHRSDeployed);
+            }
+            if(form.dateStaticTXNEWHRHDeployed != null){
+                updateLabel(form.dateStaticTXNEWHRHDeployed, dateStaticTXNEWHRHDeployed);
+            }
+            if(form.dateMultiMonthDrugDispensingStarted != null){
+                updateLabel(form.dateMultiMonthDrugDispensingStarted, dateMultiMonthDrugDispensingStarted);
+            }
+
 
             int i = 0;
             for (Facility s : Facility.getAll()) {
@@ -428,8 +526,8 @@ public class SupplementaryIndicatorFormActivity extends MenuBar implements View.
                 form.name = name.getText().toString();
                 form.period = (Period) period.getSelectedItem();
 
-                form.estimatedCatchmentPopulation = AppUtil.getLongValue(estimatedCatchmentPopulation.getText().toString());
-                form.numberOfPreARTPatients = AppUtil.getLongValue(numberOfPreARTPatients.getText().toString());
+                form.estFacCatchmentPopulation = AppUtil.getLongValue(estimatedCatchmentPopulation.getText().toString());
+                form.numOfActivePreARTPatients = AppUtil.getLongValue(numberOfPreARTPatients.getText().toString());
                 form.numberOfCLFsDeployed = AppUtil.getLongValue(numberOfCLFsDeployed.getText().toString());
                 form.numberOfActiveCARGs = AppUtil.getLongValue(numberOfActiveCARGs.getText().toString());
                 form.numberOfActiveCARGMembers = AppUtil.getLongValue(numberOfActiveCARGMembers.getText().toString());
@@ -438,28 +536,28 @@ public class SupplementaryIndicatorFormActivity extends MenuBar implements View.
                 form.numberOfCATSSupportersDeployed = AppUtil.getLongValue(numberOfCATSSupportersDeployed.getText().toString());
                 form.numberOfActiveAdolescentSupportGroups = AppUtil.getLongValue(numberOfActiveAdolescentSupportGroups.getText().toString());
                 form.numberOfActiveAdolescentSupportGroupMembers = AppUtil.getLongValue(numberOfActiveAdolescentSupportGroupMembers.getText().toString());
-                form.numberOfOPDPatientsSeenInLastMonth = AppUtil.getLongValue(numberOfOPDPatientsSeenInLastMonth.getText().toString());
-                form.numberOfOPDPatientsWithKnownHIVStatusOnEntry = AppUtil.getLongValue(numberOfOPDPatientsWithKnownHIVStatusOnEntry.getText().toString());
-                form.numberOfOPDPatientsTestedForHIVInLastMonth = AppUtil.getLongValue(numberOfOPDPatientsTestedForHIVInLastMonth.getText().toString());
-                form.numberOfOPDPatientsTestedHIVPositiveInLastMonth = AppUtil.getLongValue(numberOfOPDPatientsTestedHIVPositiveInLastMonth.getText().toString());
+                form.opdNumOfPatientsInPastMonth = AppUtil.getLongValue(numberOfOPDPatientsSeenInLastMonth.getText().toString());
+                form.opdNumOfPatWithKnownHIVPosStatusOnEntry = AppUtil.getLongValue(numberOfOPDPatientsWithKnownHIVStatusOnEntry.getText().toString());
+                form.opdNumOfPatTestedForHIVInPastMonth = AppUtil.getLongValue(numberOfOPDPatientsTestedForHIVInLastMonth.getText().toString());
+                form.opdNumOfPatTestedPositiveInPastMonth = AppUtil.getLongValue(numberOfOPDPatientsTestedHIVPositiveInLastMonth.getText().toString());
 
 
-                form.numberOfSTIPatientsSeenInLastMonth = AppUtil.getLongValue(numberOfSTIPatientsSeenInLastMonth.getText().toString());
-                form.numberOfSTIPatientsWithKnownHIVStatusOnEntry = AppUtil.getLongValue(numberOfSTIPatientsWithKnownHIVStatusOnEntry.getText().toString());
-                form.numberOfSTIPatientsTestedForHIVInLastMonth = AppUtil.getLongValue(numberOfSTIPatientsTestedForHIVInLastMonth.getText().toString());
-                form.numberOfSTIPatientsTestedHIVPositiveInLastMonth = AppUtil.getLongValue(numberOfSTIPatientsTestedHIVPositiveInLastMonth.getText().toString());
-                form.numberOfInpatientPatientsSeenInLastMonth = AppUtil.getLongValue(numberOfInpatientPatientsSeenInLastMonth.getText().toString());
-                form.numberOfInpatientPatientsWithKnownHIVStatusOnEntry = AppUtil.getLongValue(numberOfInpatientPatientsWithKnownHIVStatusOnEntry.getText().toString());
-                form.numberOfInpatientPatientsTestedForHIVInLastMonth = AppUtil.getLongValue(numberOfInpatientPatientsTestedForHIVInLastMonth.getText().toString());
-                form.numberOfInpatientPatientsTestedHIVPositiveInLastMonth = AppUtil.getLongValue(numberOfInpatientPatientsTestedHIVPositiveInLastMonth.getText().toString());
-                form.numberOfClientsWithDocumentedCompletedReferralCycle = AppUtil.getLongValue(numberOfClientsWithDocumentedCompletedReferralCycle.getText().toString());
-                form.numberOfClientsWithDocumentedCompletedReferralCycleFromFacilityToCommunity = AppUtil.getLongValue(numberOfClientsWithDocumentedCompletedReferralCycleFromFacilityToCommunity.getText().toString());
-                form.numberOfClientsWithDocumentedCompletedReferralCycleFromCommunityToFacility = AppUtil.getLongValue(numberOfClientsWithDocumentedCompletedReferralCycleFromCommunityToFacility.getText().toString());
+                form.stiNumberOfPatientsInPastMonth = AppUtil.getLongValue(numberOfSTIPatientsSeenInLastMonth.getText().toString());
+                form.stiNumOfPatWithKnownHIVPosStatusOnEntry = AppUtil.getLongValue(numberOfSTIPatientsWithKnownHIVStatusOnEntry.getText().toString());
+                form.stiNumOfPatTestedForHIVInPastMonth = AppUtil.getLongValue(numberOfSTIPatientsTestedForHIVInLastMonth.getText().toString());
+                form.stiNumOfPatTestedPosInPastMonth = AppUtil.getLongValue(numberOfSTIPatientsTestedHIVPositiveInLastMonth.getText().toString());
+                form.inPatNumOfPatientsInPastMonth = AppUtil.getLongValue(numberOfInpatientPatientsSeenInLastMonth.getText().toString());
+                form.inPatNumOfPatientsWithKnownHIVPosStatusOnEntry = AppUtil.getLongValue(numberOfInpatientPatientsWithKnownHIVStatusOnEntry.getText().toString());
+                form.inPatNumOfPatTestedForHIVInPastMonth = AppUtil.getLongValue(numberOfInpatientPatientsTestedForHIVInLastMonth.getText().toString());
+                form.inPatNumOfPatientsTestedPositiveInPastMonth = AppUtil.getLongValue(numberOfInpatientPatientsTestedHIVPositiveInLastMonth.getText().toString());
+                form.numClientsWithDocumentedCompletedReferralCycle = AppUtil.getLongValue(numberOfClientsWithDocumentedCompletedReferralCycle.getText().toString());
+                form.numberOfClientsFromFacilityToCommunity = AppUtil.getLongValue(numberOfClientsWithDocumentedCompletedReferralCycleFromFacilityToCommunity.getText().toString());
+                form.numberOfClientsFromCommunityToFacility = AppUtil.getLongValue(numberOfClientsWithDocumentedCompletedReferralCycleFromCommunityToFacility.getText().toString());
                 form.numberOfClientsWhoDefaultedART = AppUtil.getLongValue(numberOfClientsWhoDefaultedART.getText().toString());
-                form.numberOfClientsWhoWereFollowedAndHaveADocumentedOutcome = AppUtil.getLongValue(numberOfClientsWhoWereFollowedAndHaveADocumentedOutcome.getText().toString());
-                form.numberOfEIDResultsReceivedAndSuccessfullyIssuedToCaregivers = AppUtil.getLongValue(numberOfEIDResultsReceivedAndSuccessfullyIssuedToCaregivers.getText().toString());
-                form.numberOfHIVInfectedInfantsTrackedAndLinkedBackToCare = AppUtil.getLongValue(numberOfHIVInfectedInfantsTrackedAndLinkedBackToCare.getText().toString());
-                form.numberOfVillageHealthWorkersWorkingWithITECH = AppUtil.getLongValue(numberOfVillageHealthWorkersWorkingWithITECH.getText().toString());
+                form.numberOfClientsWhoWereFollowed = AppUtil.getLongValue(numberOfClientsWhoWereFollowedAndHaveADocumentedOutcome.getText().toString());
+                form.numberOfEIDResultsReceived = AppUtil.getLongValue(numberOfEIDResultsReceivedAndSuccessfullyIssuedToCaregivers.getText().toString());
+                form.numberOfHIVInfectedInfantsTracked = AppUtil.getLongValue(numberOfHIVInfectedInfantsTrackedAndLinkedBackToCare.getText().toString());
+                form.numberOfVillageHealthWorkers = AppUtil.getLongValue(numberOfVillageHealthWorkersWorkingWithITECH.getText().toString());
                 form.areYouImplementingDefaulterTracking = get(areYouImplementingDefaulterTracking);
                 form.areYouImplementingIndexTesting = get(areYouImplementingIndexTesting);
                 form.areYouImplementingRetestPriorToARTInitiation = get(areYouImplementingRetestPriorToARTInitiation);
@@ -469,8 +567,28 @@ public class SupplementaryIndicatorFormActivity extends MenuBar implements View.
                 form.doesFacilityHaveFunctionalHealthCentreCommittee = get(doesFacilityHaveFunctionalHealthCentreCommittee);
                 form.doesFacilityHaveFunctionalQualityImprovementCommittee = get(doesFacilityHaveFunctionalQualityImprovementCommittee);
                 form.doesFacilityHaveQualityImprovementProject = get(doesFacilityHaveQualityImprovementProject);
-
-
+                if(dateCATSDeployed.isEnabled()){
+                    form.dateCATSDeployed = DateUtil.getDateFromString(dateCATSDeployed.getText().toString());
+                }
+                form.dateCLFsDeployed = DateUtil.getDateFromString(dateCLFsDeployed.getText().toString());
+                if(dateDefaulterTrackingImplemented.isEnabled()){
+                    form.dateDefaulterTrackingImplemented = DateUtil.getDateFromString(dateDefaulterTrackingImplemented.getText().toString());
+                }
+                if(dateIndexTestingImplemented.isEnabled()){
+                    form.dateIndexTestingImplemented = DateUtil.getDateFromString(dateIndexTestingImplemented.getText().toString());
+                }
+                if(dateRetestPriorToARTInitiationImplemented.isEnabled()){
+                    form.dateRetestPriorToARTInitiationImplemented = DateUtil.getDateFromString(dateRetestPriorToARTInitiationImplemented.getText().toString());
+                }
+                if(dateStaticHTSHRSDeployed.isEnabled()){
+                    form.dateStaticHTSHRSDeployed = DateUtil.getDateFromString(dateStaticHTSHRSDeployed.getText().toString());
+                }
+                if(dateStaticTXNEWHRHDeployed.isEnabled()){
+                    form.dateStaticTXNEWHRHDeployed = DateUtil.getDateFromString(dateStaticTXNEWHRHDeployed.getText().toString());
+                }
+                if(dateMultiMonthDrugDispensingStarted.isEnabled()){
+                    form.dateMultiMonthDrugDispensingStarted = DateUtil.getDateFromString(dateMultiMonthDrugDispensingStarted.getText().toString());
+                }
                 form.dateCreated = AppUtil.getDate(dateCreated.getText().toString());
                 form.save();
                 btn_submit.setVisibility(View.VISIBLE);
@@ -555,7 +673,7 @@ public class SupplementaryIndicatorFormActivity extends MenuBar implements View.
         String name = dateCreated.getText().toString().toString();
 
         if (name.isEmpty()) {
-            dateCreated.setError("Required");
+            dateCreated.setError(getResources().getString(R.string.required_field_error));
             valid = false;
         } else {
             dateCreated.setError(null);
@@ -577,6 +695,142 @@ public class SupplementaryIndicatorFormActivity extends MenuBar implements View.
         }
         else {
             facility_label.setError(null);
+        }
+
+        name = dateCATSDeployed.getText().toString();
+        if(dateCATSDeployed.isEnabled() && name.isEmpty()){
+            dateCATSDeployed.setError(getResources().getString(R.string.required_field_error));
+            valid = false;
+        }else{
+            dateCATSDeployed.setError(null);
+        }
+
+        if( ! name.isEmpty()){
+            if( ! checkDateFormat(name)){
+                dateCATSDeployed.setError(getResources().getString(R.string.date_format_error));
+                valid = false;
+            }else{
+                dateCATSDeployed.setError(null);
+            }
+        }
+
+        name = dateCLFsDeployed.getText().toString();
+        if(name.isEmpty()){
+            dateCLFsDeployed.setError(getResources().getString(R.string.required_field_error));
+            valid = false;
+        }else{
+            dateCLFsDeployed.setError(null);
+        }
+
+        if( ! name.isEmpty()){
+            if( ! checkDateFormat(name)){
+                dateCLFsDeployed.setError(getResources().getString(R.string.date_format_error));
+                valid = false;
+            }else{
+                dateCLFsDeployed.setError(null);
+            }
+        }
+
+        name = dateDefaulterTrackingImplemented.getText().toString();
+        if(dateDefaulterTrackingImplemented.isEnabled() && name.isEmpty()){
+            dateDefaulterTrackingImplemented.setError(getResources().getString(R.string.required_field_error));
+            valid = false;
+        }else{
+            dateDefaulterTrackingImplemented.setError(null);
+        }
+
+        if( ! name.isEmpty()){
+            if( ! checkDateFormat(name)){
+                dateDefaulterTrackingImplemented.setError(getResources().getString(R.string.date_format_error));
+                valid = false;
+            }else{
+                dateDefaulterTrackingImplemented.setError(null);
+            }
+        }
+
+        name = dateIndexTestingImplemented.getText().toString();
+        if(dateIndexTestingImplemented.isEnabled() && name.isEmpty()){
+            dateIndexTestingImplemented.setError(getResources().getString(R.string.required_field_error));
+            valid = false;
+        }else{
+            dateIndexTestingImplemented.setError(null);
+        }
+
+        if( ! name.isEmpty()){
+            if( ! checkDateFormat(name)){
+                dateIndexTestingImplemented.setError(getResources().getString(R.string.date_format_error));
+                valid = false;
+            }else{
+                dateIndexTestingImplemented.setError(null);
+            }
+        }
+
+        name = dateRetestPriorToARTInitiationImplemented.getText().toString();
+        if(dateRetestPriorToARTInitiationImplemented.isEnabled() && name.isEmpty()){
+            dateRetestPriorToARTInitiationImplemented.setError(getResources().getString(R.string.required_field_error));
+            valid = false;
+        }else{
+            dateRetestPriorToARTInitiationImplemented.setError(null);
+        }
+
+        if( ! name.isEmpty()){
+            if( ! checkDateFormat(name)){
+                dateRetestPriorToARTInitiationImplemented.setError(getResources().getString(R.string.date_format_error));
+                valid = false;
+            }else{
+                dateRetestPriorToARTInitiationImplemented.setError(null);
+            }
+        }
+
+        name = dateStaticHTSHRSDeployed.getText().toString();
+        if(dateStaticHTSHRSDeployed.isEnabled() && name.isEmpty()){
+            dateStaticHTSHRSDeployed.setError(getResources().getString(R.string.required_field_error));
+            valid = false;
+        }else{
+            dateStaticHTSHRSDeployed.setError(null);
+        }
+
+        if( ! name.isEmpty()){
+            if( ! checkDateFormat(name)){
+                dateStaticHTSHRSDeployed.setError(getResources().getString(R.string.date_format_error));
+                valid = false;
+            }else{
+                dateStaticHTSHRSDeployed.setError(null);
+            }
+        }
+
+        name = dateStaticTXNEWHRHDeployed.getText().toString();
+        if(dateStaticTXNEWHRHDeployed.isEnabled() && name.isEmpty()){
+            dateStaticTXNEWHRHDeployed.setError(getResources().getString(R.string.required_field_error));
+            valid = false;
+        }else{
+            dateStaticTXNEWHRHDeployed.setError(null);
+        }
+
+        if( ! name.isEmpty()){
+            if( ! checkDateFormat(name)){
+                dateStaticTXNEWHRHDeployed.setError(getResources().getString(R.string.date_format_error));
+                valid = false;
+            }else{
+                dateStaticTXNEWHRHDeployed.setError(null);
+            }
+        }
+
+        name = dateMultiMonthDrugDispensingStarted.getText().toString();
+        if(dateMultiMonthDrugDispensingStarted.isEnabled() && name.isEmpty()){
+            dateMultiMonthDrugDispensingStarted.setError(getResources().getString(R.string.required_field_error));
+            valid = false;
+        }else{
+            dateMultiMonthDrugDispensingStarted.setError(null);
+        }
+
+        if( ! name.isEmpty()){
+            if( ! checkDateFormat(name)){
+                dateMultiMonthDrugDispensingStarted.setError(getResources().getString(R.string.date_format_error));
+                valid = false;
+            }else{
+                dateMultiMonthDrugDispensingStarted.setError(null);
+            }
         }
 
         return valid;

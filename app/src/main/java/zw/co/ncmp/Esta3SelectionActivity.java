@@ -51,7 +51,7 @@ public class Esta3SelectionActivity extends MenuBar implements View.OnClickListe
         }
 
         if(v.getId() == btn_option_three.getId()){
-            intent = new Intent(this, Esta3TxNewActivity.class);
+            intent = new Intent(this, Esta3TxNewListActivity.class);
         }
 
         if (intent != null) {
