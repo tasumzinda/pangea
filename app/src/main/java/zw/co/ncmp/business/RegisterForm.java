@@ -967,6 +967,140 @@ public class RegisterForm extends Model {
     @Column
     public Long thirteenToTwentyFour2;
 
+    @Expose
+    @Column
+    public Long maleLessThanTwoMonths9;
+    @Expose
+    @Column
+    public Long femaleLessThanTwoMonths9;
+    @Expose
+    @Column
+    public Long maleTwoToTwelveMonths9;
+    @Expose
+    @Column
+    public Long femaleTwoToTwelveMonths9;
+    @Expose
+    @Column
+    public Long maleThirteenToTwentyFourMonths9;
+    @Expose
+    @Column
+    public Long femaleThirteenToTwentyFourMonths9;
+    @Expose
+    @Column
+    public Long maleTwentyFiveToFiftyNineMonths9;
+    @Expose
+    @Column
+    public Long femaleTwentyFiveToFiftyNineMonths9;
+    @Expose
+    @Column
+    public Long maleFiveToNine9;
+    @Expose
+    @Column
+    public Long femaleFiveToNine9;
+    @Expose
+    @Column
+    public Long maleTenToFourteen9;
+    @Expose
+    @Column
+    public Long femaleTenToFourteen9;
+    @Expose
+    @Column
+    public Long maleFifteenToNineteen9;
+    @Expose
+    @Column
+    public Long femaleFifteenToNineteen9;
+    @Expose
+    @Column
+    public Long maleTwentyToTwentyFour9;
+    @Expose
+    @Column
+    public Long femaleTwentyToTwentyFour9;
+    @Expose
+    @Column
+    public Long maleTwentyFiveToTwentyNine9;
+    @Expose
+    @Column
+    public Long femaleTwentyFiveToTwentyNine9;
+    @Expose
+    @Column
+    public Long maleThirtyToFortyNine9;
+    @Expose
+    @Column
+    public Long femaleThirtyToFortyNine9;
+    @Expose
+    @Column
+    public Long maleFiftyPlus9;
+    @Expose
+    @Column
+    public Long femaleFiftyPlus9;
+
+    @Expose
+    @Column
+    public Long maleLessThanTwoMonths10;
+    @Expose
+    @Column
+    public Long femaleLessThanTwoMonths10;
+    @Expose
+    @Column
+    public Long maleTwoToTwelveMonths10;
+    @Expose
+    @Column
+    public Long femaleTwoToTwelveMonths10;
+    @Expose
+    @Column
+    public Long maleThirteenToTwentyFourMonths10;
+    @Expose
+    @Column
+    public Long femaleThirteenToTwentyFourMonths10;
+    @Expose
+    @Column
+    public Long maleTwentyFiveToFiftyNineMonths10;
+    @Expose
+    @Column
+    public Long femaleTwentyFiveToFiftyNineMonths10;
+    @Expose
+    @Column
+    public Long maleFiveToNine10;
+    @Expose
+    @Column
+    public Long femaleFiveToNine10;
+    @Expose
+    @Column
+    public Long maleTenToFourteen10;
+    @Expose
+    @Column
+    public Long femaleTenToFourteen10;
+    @Expose
+    @Column
+    public Long maleFifteenToNineteen10;
+    @Expose
+    @Column
+    public Long femaleFifteenToNineteen10;
+    @Expose
+    @Column
+    public Long maleTwentyToTwentyFour10;
+    @Expose
+    @Column
+    public Long femaleTwentyToTwentyFour10;
+    @Expose
+    @Column
+    public Long maleTwentyFiveToTwentyNine10;
+    @Expose
+    @Column
+    public Long femaleTwentyFiveToTwentyNine10;
+    @Expose
+    @Column
+    public Long maleThirtyToFortyNine10;
+    @Expose
+    @Column
+    public Long femaleThirtyToFortyNine10;
+    @Expose
+    @Column
+    public Long maleFiftyPlus10;
+    @Expose
+    @Column
+    public Long femaleFiftyPlus10;
+
     public static RegisterForm get(Long id) {
         return new Select().from(RegisterForm.class).where("Id = ?", id).executeSingle();
     }
@@ -1172,5 +1306,39 @@ public class RegisterForm extends Model {
 
     public Long getP38Total(){
         return AppUtil.getLong(lessThanTwo2) + AppUtil.getLong(threeToTwelve2) + AppUtil.getLong(thirteenToTwentyFour2);
+    }
+
+    public Long maleQuestion9() {
+        return getLong(maleLessThanTwoMonths9) + getLong(maleTwoToTwelveMonths9) +
+                getLong(maleThirteenToTwentyFourMonths9) + getLong(maleTwentyFiveToFiftyNineMonths9) +
+                getLong(maleFiveToNine9) + getLong(maleTenToFourteen9) +
+                getLong(maleFifteenToNineteen9) +
+                getLong(maleTwentyToTwentyFour9) + getLong(maleTwentyFiveToTwentyNine9) +
+                getLong(maleThirtyToFortyNine9) + getLong(maleFiftyPlus9);}
+
+    public Long femaleQuestion9() {
+        return getLong(femaleLessThanTwoMonths9) + getLong(femaleTwoToTwelveMonths10) +
+                getLong(femaleThirteenToTwentyFourMonths9) + getLong(femaleTwentyFiveToFiftyNineMonths9) +
+                getLong(femaleFiveToNine9) + getLong(femaleTenToFourteen9) +
+                getLong(femaleFifteenToNineteen9) +
+                getLong(femaleTwentyToTwentyFour9) + getLong(femaleTwentyFiveToTwentyNine9) +
+                getLong(femaleThirtyToFortyNine9) + getLong(femaleFiftyPlus9);
+    }
+
+    public Long maleQuestion10() {
+        return getLong(maleLessThanTwoMonths10) + getLong(maleTwoToTwelveMonths10) +
+                getLong(maleThirteenToTwentyFourMonths10) + getLong(maleTwentyFiveToFiftyNineMonths10) +
+                getLong(maleFiveToNine10) + getLong(maleTenToFourteen10) +
+                getLong(maleFifteenToNineteen10) +
+                getLong(maleTwentyToTwentyFour10) + getLong(maleTwentyFiveToTwentyNine10) +
+                getLong(maleThirtyToFortyNine10) + getLong(maleFiftyPlus10);}
+
+    public Long femaleQuestion10() {
+        return getLong(femaleLessThanTwoMonths10) + getLong(femaleTwoToTwelveMonths10) +
+                getLong(femaleThirteenToTwentyFourMonths10) + getLong(femaleTwentyFiveToFiftyNineMonths10) +
+                getLong(femaleFiveToNine10) + getLong(femaleTenToFourteen10) +
+                getLong(femaleFifteenToNineteen10) +
+                getLong(femaleTwentyToTwentyFour10) + getLong(femaleTwentyFiveToTwentyNine10) +
+                getLong(femaleThirtyToFortyNine10) + getLong(femaleFiftyPlus10);
     }
 }

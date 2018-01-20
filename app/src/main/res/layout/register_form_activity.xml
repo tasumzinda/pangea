@@ -146,6 +146,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/entry_point" />
+            <Button
+                    android:id="@+id/btn_question_twelve"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TX New" />
+            <Button
+                    android:id="@+id/btn_question_thirteen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TX Curr" />
 
             <Button
                 android:id="@+id/btn_save"

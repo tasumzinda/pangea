@@ -45,6 +45,8 @@ public class MonthReportFormActivity extends MenuBar implements View.OnClickList
     Button btn_question_nine;
     Button btn_question_ten;
     Button btn_question_eleven;
+    Button btn_question_twelve;
+    Button btn_question_thirteen;
     ArrayAdapter<Facility> facilityArrayAdapter;
     ArrayAdapter<Province> provinceArrayAdapter;
     ArrayAdapter<District> districtArrayAdapter;
@@ -197,6 +199,12 @@ public class MonthReportFormActivity extends MenuBar implements View.OnClickList
         btn_question_eleven = (Button) findViewById(R.id.btn_question_eleven);
         btn_question_eleven.setOnClickListener(this);
 
+        btn_question_twelve = (Button) findViewById(R.id.btn_question_twelve);
+        btn_question_twelve.setOnClickListener(this);
+
+        btn_question_thirteen = (Button) findViewById(R.id.btn_question_thirteen);
+        btn_question_thirteen.setOnClickListener(this);
+
         btn_save = (Button) findViewById(R.id.btn_save);
         btn_save.setOnClickListener(this);
         btn_save.setBackgroundResource(R.drawable.finish_background);
@@ -269,6 +277,14 @@ public class MonthReportFormActivity extends MenuBar implements View.OnClickList
 
         if (v.getId() == btn_question_eleven.getId()) {
             questionEleven();
+        }
+
+        if (v.getId() == btn_question_twelve.getId()) {
+            questionTwelve();
+        }
+
+        if (v.getId() == btn_question_thirteen.getId()) {
+            questionThirteen();
         }
 
         if (v.getId() == btn_save.getId()) {
@@ -2021,6 +2037,359 @@ public class MonthReportFormActivity extends MenuBar implements View.OnClickList
 
     }
 
+    public void questionTwelve() {
+        final Dialog dialog = new Dialog(context);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.htstst_individuals_dialog);
+
+        TextView txt_name = (TextView) dialog.findViewById(R.id.txt_name);
+        txt_name.setText("Tx New D25 - Disaggregated By Age/Sex");
+
+        final TextView maleTotal = (TextView) dialog.findViewById(R.id.maleTotal);
+        maleTotal.setText(AppUtil.getLongValue(registerForm.maleQuestion10()));
+
+        final TextView femaleTotal = (TextView) dialog.findViewById(R.id.femaleTotal);
+        femaleTotal.setText(AppUtil.getLongValue(registerForm.femaleQuestion10()));
+
+        final EditText maleLessThanTwoMonths = (EditText) dialog.findViewById(R.id.maleLessThanTwoMonths);
+        final EditText femaleLessThanTwoMonths = (EditText) dialog.findViewById(R.id.femaleLessThanTwoMonths);
+        final EditText maleTwoToTwelveMonths = (EditText) dialog.findViewById(R.id.maleTwoToTwelveMonths);
+        final EditText femaleTwoToTwelveMonths = (EditText) dialog.findViewById(R.id.femaleTwoToTwelveMonths);
+        final EditText maleThirteenToTwentyFourMonths = (EditText) dialog.findViewById(R.id.maleThirteenToTwentyFourMonths);
+        final EditText femaleThirteenToTwentyFourMonths = (EditText) dialog.findViewById(R.id.femaleThirteenToTwentyFourMonths);
+        final EditText maleTwentyFiveToFiftyNineMonths = (EditText) dialog.findViewById(R.id.maleTwentyFiveToFiftyNineMonths);
+        final EditText femaleTwentyFiveToFiftyNineMonths = (EditText) dialog.findViewById(R.id.femaleTwentyFiveToFiftyNineMonths);
+        final EditText maleFiveToNine = (EditText) dialog.findViewById(R.id.maleFiveToNine);
+        final EditText femaleFiveToNine = (EditText) dialog.findViewById(R.id.femaleFiveToNine);
+        final EditText maleTenToFourteen = (EditText) dialog.findViewById(R.id.maleTenToFourteen);
+        final EditText femaleTenToFourteen = (EditText) dialog.findViewById(R.id.femaleTenToFourteen);
+        final EditText maleFifteenToNineteen = (EditText) dialog.findViewById(R.id.maleFifteenToNineteen);
+        final EditText femaleFifteenToNineteen = (EditText) dialog.findViewById(R.id.femaleFifteenToNineteen);
+        final EditText maleTwentyToTwentyFour = (EditText) dialog.findViewById(R.id.maleTwentyToTwentyFour);
+        final EditText femaleTwentyToTwentyFour = (EditText) dialog.findViewById(R.id.femaleTwentyToTwentyFour);
+        final EditText maleTwentyFiveToTwentyNine = (EditText) dialog.findViewById(R.id.maleTwentyFiveToTwentyNine);
+        final EditText femaleTwentyFiveToTwentyNine = (EditText) dialog.findViewById(R.id.femaleTwentyFiveToTwentyNine);
+        final EditText maleThirtyToFortyNine = (EditText) dialog.findViewById(R.id.maleThirtyToFortyNine);
+        final EditText femaleThirtyToFortyNine = (EditText) dialog.findViewById(R.id.femaleThirtyToFortyNine);
+        final EditText maleFiftyPlus = (EditText) dialog.findViewById(R.id.maleFiftyPlus);
+        final EditText femaleFiftyPlus = (EditText) dialog.findViewById(R.id.femaleFiftyPlus);
+
+        if (registerForm != null) {
+            maleLessThanTwoMonths.setText(AppUtil.getLongValue(registerForm.maleLessThanTwoMonths10));
+            femaleLessThanTwoMonths.setText(AppUtil.getLongValue(registerForm.femaleLessThanTwoMonths10));
+            maleTwoToTwelveMonths.setText(AppUtil.getLongValue(registerForm.maleTwoToTwelveMonths10));
+            femaleTwoToTwelveMonths.setText(AppUtil.getLongValue(registerForm.femaleTwoToTwelveMonths10));
+            maleThirteenToTwentyFourMonths.setText(AppUtil.getLongValue(registerForm.maleThirteenToTwentyFourMonths10));
+            femaleThirteenToTwentyFourMonths.setText(AppUtil.getLongValue(registerForm.femaleThirteenToTwentyFourMonths10));
+            maleTwentyFiveToFiftyNineMonths.setText(AppUtil.getLongValue(registerForm.maleTwentyFiveToFiftyNineMonths10));
+            femaleTwentyFiveToFiftyNineMonths.setText(AppUtil.getLongValue(registerForm.femaleTwentyFiveToFiftyNineMonths10));
+            maleFiveToNine.setText(AppUtil.getLongValue(registerForm.maleFiveToNine10));
+            femaleFiveToNine.setText(AppUtil.getLongValue(registerForm.femaleFiveToNine10));
+            maleTenToFourteen.setText(AppUtil.getLongValue(registerForm.maleTenToFourteen10));
+            femaleTenToFourteen.setText(AppUtil.getLongValue(registerForm.femaleTenToFourteen10));
+            maleFifteenToNineteen.setText(AppUtil.getLongValue(registerForm.maleFifteenToNineteen10));
+            femaleFifteenToNineteen.setText(AppUtil.getLongValue(registerForm.femaleFifteenToNineteen10));
+            maleTwentyToTwentyFour.setText(AppUtil.getLongValue(registerForm.maleTwentyToTwentyFour10));
+            femaleTwentyToTwentyFour.setText(AppUtil.getLongValue(registerForm.femaleTwentyToTwentyFour10));
+            maleTwentyFiveToTwentyNine.setText(AppUtil.getLongValue(registerForm.maleTwentyFiveToTwentyNine10));
+            femaleTwentyFiveToTwentyNine.setText(AppUtil.getLongValue(registerForm.femaleTwentyFiveToTwentyNine10));
+            maleThirtyToFortyNine.setText(AppUtil.getLongValue(registerForm.maleThirtyToFortyNine10));
+            femaleThirtyToFortyNine.setText(AppUtil.getLongValue(registerForm.femaleThirtyToFortyNine10));
+            maleFiftyPlus.setText(AppUtil.getLongValue(registerForm.maleFiftyPlus10));
+            femaleFiftyPlus.setText(AppUtil.getLongValue(registerForm.femaleFiftyPlus10));
+        }
+
+        List<EditText> list = new ArrayList<>();
+        list.add(maleLessThanTwoMonths);
+        list.add(maleTwoToTwelveMonths);
+        list.add(maleThirteenToTwentyFourMonths);
+        list.add(maleTwentyFiveToFiftyNineMonths);
+        list.add(maleFiveToNine);
+        list.add(maleTenToFourteen);
+        list.add(maleFifteenToNineteen);
+        list.add(maleTwentyToTwentyFour);
+        list.add(maleTwentyFiveToTwentyNine);
+        list.add(maleThirtyToFortyNine);
+        list.add(maleFiftyPlus);
+
+        for (EditText editText : list) {
+            editText.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+
+                public void onFocusChange(View v, boolean hasFocus) {
+                    if (!hasFocus) {
+
+                        registerForm.maleLessThanTwoMonths10 = AppUtil.getLongValue(maleLessThanTwoMonths.getText().toString());
+                        registerForm.maleTwoToTwelveMonths10 = AppUtil.getLongValue(maleTwoToTwelveMonths.getText().toString());
+                        registerForm.maleThirteenToTwentyFourMonths10 = AppUtil.getLongValue(maleThirteenToTwentyFourMonths.getText().toString());
+                        registerForm.maleTwentyFiveToFiftyNineMonths10 = AppUtil.getLongValue(maleTwentyFiveToFiftyNineMonths.getText().toString());
+                        registerForm.maleFiveToNine10 = AppUtil.getLongValue(maleFiveToNine.getText().toString());
+                        registerForm.maleTenToFourteen10 = AppUtil.getLongValue(maleTenToFourteen.getText().toString());
+                        registerForm.maleFifteenToNineteen10 = AppUtil.getLongValue(maleFifteenToNineteen.getText().toString());
+                        registerForm.maleTwentyToTwentyFour10 = AppUtil.getLongValue(maleTwentyToTwentyFour.getText().toString());
+                        registerForm.maleTwentyFiveToTwentyNine10 = AppUtil.getLongValue(maleTwentyFiveToTwentyNine.getText().toString());
+                        registerForm.maleThirtyToFortyNine10 = AppUtil.getLongValue(maleThirtyToFortyNine.getText().toString());
+                        registerForm.maleFiftyPlus10 = AppUtil.getLongValue(maleFiftyPlus.getText().toString());
+
+                        maleTotal.setText(AppUtil.getLongValue(registerForm.maleQuestion10()));
+                    }
+
+                }
+            });
+        }
+
+        list = new ArrayList<>();
+        list.add(femaleLessThanTwoMonths);
+        list.add(femaleTwoToTwelveMonths);
+        list.add(femaleThirteenToTwentyFourMonths);
+        list.add(femaleTwentyFiveToFiftyNineMonths);
+        list.add(femaleFiveToNine);
+        list.add(femaleTenToFourteen);
+        list.add(femaleFifteenToNineteen);
+        list.add(femaleTwentyToTwentyFour);
+        list.add(femaleTwentyFiveToTwentyNine);
+        list.add(femaleThirtyToFortyNine);
+        list.add(femaleFiftyPlus);
+
+        for (EditText editText : list) {
+            editText.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+
+                public void onFocusChange(View v, boolean hasFocus) {
+                    if (!hasFocus) {
+
+                        registerForm.femaleLessThanTwoMonths10 = AppUtil.getLongValue(femaleLessThanTwoMonths.getText().toString());
+                        registerForm.femaleTwoToTwelveMonths10 = AppUtil.getLongValue(femaleTwoToTwelveMonths.getText().toString());
+                        registerForm.femaleThirteenToTwentyFourMonths10 = AppUtil.getLongValue(femaleThirteenToTwentyFourMonths.getText().toString());
+                        registerForm.femaleTwentyFiveToFiftyNineMonths10 = AppUtil.getLongValue(femaleTwentyFiveToFiftyNineMonths.getText().toString());
+                        registerForm.femaleFiveToNine10 = AppUtil.getLongValue(femaleFiveToNine.getText().toString());
+                        registerForm.femaleTenToFourteen10 = AppUtil.getLongValue(femaleTenToFourteen.getText().toString());
+                        registerForm.femaleFifteenToNineteen10 = AppUtil.getLongValue(femaleFifteenToNineteen.getText().toString());
+                        registerForm.femaleTwentyToTwentyFour10 = AppUtil.getLongValue(femaleTwentyToTwentyFour.getText().toString());
+                        registerForm.femaleTwentyFiveToTwentyNine10 = AppUtil.getLongValue(femaleTwentyFiveToTwentyNine.getText().toString());
+                        registerForm.femaleThirtyToFortyNine10 = AppUtil.getLongValue(femaleThirtyToFortyNine.getText().toString());
+                        registerForm.femaleFiftyPlus10 = AppUtil.getLongValue(femaleFiftyPlus.getText().toString());
+
+                        femaleTotal.setText(AppUtil.getLongValue(registerForm.femaleQuestion10()));
+                    }
+
+                }
+            });
+        }
+
+        Button saveButton = (Button) dialog.findViewById(R.id.btn_save);
+        saveButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+
+                registerForm.maleLessThanTwoMonths10 = AppUtil.getLongValue(maleLessThanTwoMonths.getText().toString());
+                registerForm.maleTwoToTwelveMonths10 = AppUtil.getLongValue(maleTwoToTwelveMonths.getText().toString());
+                registerForm.maleThirteenToTwentyFourMonths10 = AppUtil.getLongValue(maleThirteenToTwentyFourMonths.getText().toString());
+                registerForm.maleTwentyFiveToFiftyNineMonths10 = AppUtil.getLongValue(maleTwentyFiveToFiftyNineMonths.getText().toString());
+                registerForm.maleFiveToNine10 = AppUtil.getLongValue(maleFiveToNine.getText().toString());
+                registerForm.maleTenToFourteen10 = AppUtil.getLongValue(maleTenToFourteen.getText().toString());
+                registerForm.maleFifteenToNineteen10 = AppUtil.getLongValue(maleFifteenToNineteen.getText().toString());
+                registerForm.maleTwentyToTwentyFour10 = AppUtil.getLongValue(maleTwentyToTwentyFour.getText().toString());
+                registerForm.maleTwentyFiveToTwentyNine10 = AppUtil.getLongValue(maleTwentyFiveToTwentyNine.getText().toString());
+                registerForm.maleThirtyToFortyNine10 = AppUtil.getLongValue(maleThirtyToFortyNine.getText().toString());
+                registerForm.maleFiftyPlus10 = AppUtil.getLongValue(maleFiftyPlus.getText().toString());
+                registerForm.femaleLessThanTwoMonths10 = AppUtil.getLongValue(femaleLessThanTwoMonths.getText().toString());
+                registerForm.femaleTwoToTwelveMonths10 = AppUtil.getLongValue(femaleTwoToTwelveMonths.getText().toString());
+                registerForm.femaleThirteenToTwentyFourMonths10 = AppUtil.getLongValue(femaleThirteenToTwentyFourMonths.getText().toString());
+                registerForm.femaleTwentyFiveToFiftyNineMonths10 = AppUtil.getLongValue(femaleTwentyFiveToFiftyNineMonths.getText().toString());
+                registerForm.femaleFiveToNine10 = AppUtil.getLongValue(femaleFiveToNine.getText().toString());
+                registerForm.femaleTenToFourteen10 = AppUtil.getLongValue(femaleTenToFourteen.getText().toString());
+                registerForm.femaleFifteenToNineteen10 = AppUtil.getLongValue(femaleFifteenToNineteen.getText().toString());
+                registerForm.femaleTwentyToTwentyFour10 = AppUtil.getLongValue(femaleTwentyToTwentyFour.getText().toString());
+                registerForm.femaleTwentyFiveToTwentyNine10 = AppUtil.getLongValue(femaleTwentyFiveToTwentyNine.getText().toString());
+                registerForm.femaleThirtyToFortyNine10 = AppUtil.getLongValue(femaleThirtyToFortyNine.getText().toString());
+                registerForm.femaleFiftyPlus10 = AppUtil.getLongValue(femaleFiftyPlus.getText().toString());
+
+
+                upDateForm();
+                dialog.dismiss();
+            }
+        });
+
+        dialog.setCancelable(true);
+        dialog.show();
+
+    }
+
+    public void questionThirteen() {
+        final Dialog dialog = new Dialog(context);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.htstst_individuals_dialog);
+
+        TextView txt_name = (TextView) dialog.findViewById(R.id.txt_name);
+        txt_name.setText("Tx Curr D53 - Disaggregated By Age/Sex");
+
+        final TextView maleTotal = (TextView) dialog.findViewById(R.id.maleTotal);
+        maleTotal.setText(AppUtil.getLongValue(registerForm.maleQuestion9()));
+
+        final TextView femaleTotal = (TextView) dialog.findViewById(R.id.femaleTotal);
+        femaleTotal.setText(AppUtil.getLongValue(registerForm.femaleQuestion9()));
+
+        final EditText maleLessThanTwoMonths = (EditText) dialog.findViewById(R.id.maleLessThanTwoMonths);
+        final EditText femaleLessThanTwoMonths = (EditText) dialog.findViewById(R.id.femaleLessThanTwoMonths);
+        final EditText maleTwoToTwelveMonths = (EditText) dialog.findViewById(R.id.maleTwoToTwelveMonths);
+        final EditText femaleTwoToTwelveMonths = (EditText) dialog.findViewById(R.id.femaleTwoToTwelveMonths);
+        final EditText maleThirteenToTwentyFourMonths = (EditText) dialog.findViewById(R.id.maleThirteenToTwentyFourMonths);
+        final EditText femaleThirteenToTwentyFourMonths = (EditText) dialog.findViewById(R.id.femaleThirteenToTwentyFourMonths);
+        final EditText maleTwentyFiveToFiftyNineMonths = (EditText) dialog.findViewById(R.id.maleTwentyFiveToFiftyNineMonths);
+        final EditText femaleTwentyFiveToFiftyNineMonths = (EditText) dialog.findViewById(R.id.femaleTwentyFiveToFiftyNineMonths);
+        final EditText maleFiveToNine = (EditText) dialog.findViewById(R.id.maleFiveToNine);
+        final EditText femaleFiveToNine = (EditText) dialog.findViewById(R.id.femaleFiveToNine);
+        final EditText maleTenToFourteen = (EditText) dialog.findViewById(R.id.maleTenToFourteen);
+        final EditText femaleTenToFourteen = (EditText) dialog.findViewById(R.id.femaleTenToFourteen);
+        final EditText maleFifteenToNineteen = (EditText) dialog.findViewById(R.id.maleFifteenToNineteen);
+        final EditText femaleFifteenToNineteen = (EditText) dialog.findViewById(R.id.femaleFifteenToNineteen);
+        final EditText maleTwentyToTwentyFour = (EditText) dialog.findViewById(R.id.maleTwentyToTwentyFour);
+        final EditText femaleTwentyToTwentyFour = (EditText) dialog.findViewById(R.id.femaleTwentyToTwentyFour);
+        final EditText maleTwentyFiveToTwentyNine = (EditText) dialog.findViewById(R.id.maleTwentyFiveToTwentyNine);
+        final EditText femaleTwentyFiveToTwentyNine = (EditText) dialog.findViewById(R.id.femaleTwentyFiveToTwentyNine);
+        final EditText maleThirtyToFortyNine = (EditText) dialog.findViewById(R.id.maleThirtyToFortyNine);
+        final EditText femaleThirtyToFortyNine = (EditText) dialog.findViewById(R.id.femaleThirtyToFortyNine);
+        final EditText maleFiftyPlus = (EditText) dialog.findViewById(R.id.maleFiftyPlus);
+        final EditText femaleFiftyPlus = (EditText) dialog.findViewById(R.id.femaleFiftyPlus);
+
+        if (registerForm != null) {
+            maleLessThanTwoMonths.setText(AppUtil.getLongValue(registerForm.maleLessThanTwoMonths9));
+            femaleLessThanTwoMonths.setText(AppUtil.getLongValue(registerForm.femaleLessThanTwoMonths9));
+            maleTwoToTwelveMonths.setText(AppUtil.getLongValue(registerForm.maleTwoToTwelveMonths9));
+            femaleTwoToTwelveMonths.setText(AppUtil.getLongValue(registerForm.femaleTwoToTwelveMonths9));
+            maleThirteenToTwentyFourMonths.setText(AppUtil.getLongValue(registerForm.maleThirteenToTwentyFourMonths9));
+            femaleThirteenToTwentyFourMonths.setText(AppUtil.getLongValue(registerForm.femaleThirteenToTwentyFourMonths9));
+            maleTwentyFiveToFiftyNineMonths.setText(AppUtil.getLongValue(registerForm.maleTwentyFiveToFiftyNineMonths9));
+            femaleTwentyFiveToFiftyNineMonths.setText(AppUtil.getLongValue(registerForm.femaleTwentyFiveToFiftyNineMonths9));
+            maleFiveToNine.setText(AppUtil.getLongValue(registerForm.maleFiveToNine9));
+            femaleFiveToNine.setText(AppUtil.getLongValue(registerForm.femaleFiveToNine9));
+            maleTenToFourteen.setText(AppUtil.getLongValue(registerForm.maleTenToFourteen9));
+            femaleTenToFourteen.setText(AppUtil.getLongValue(registerForm.femaleTenToFourteen9));
+            maleFifteenToNineteen.setText(AppUtil.getLongValue(registerForm.maleFifteenToNineteen9));
+            femaleFifteenToNineteen.setText(AppUtil.getLongValue(registerForm.femaleFifteenToNineteen9));
+            maleTwentyToTwentyFour.setText(AppUtil.getLongValue(registerForm.maleTwentyToTwentyFour9));
+            femaleTwentyToTwentyFour.setText(AppUtil.getLongValue(registerForm.femaleTwentyToTwentyFour9));
+            maleTwentyFiveToTwentyNine.setText(AppUtil.getLongValue(registerForm.maleTwentyFiveToTwentyNine9));
+            femaleTwentyFiveToTwentyNine.setText(AppUtil.getLongValue(registerForm.femaleTwentyFiveToTwentyNine9));
+            maleThirtyToFortyNine.setText(AppUtil.getLongValue(registerForm.maleThirtyToFortyNine9));
+            femaleThirtyToFortyNine.setText(AppUtil.getLongValue(registerForm.femaleThirtyToFortyNine9));
+            maleFiftyPlus.setText(AppUtil.getLongValue(registerForm.maleFiftyPlus9));
+            femaleFiftyPlus.setText(AppUtil.getLongValue(registerForm.femaleFiftyPlus9));
+        }
+
+        List<EditText> list = new ArrayList<>();
+        list.add(maleLessThanTwoMonths);
+        list.add(maleTwoToTwelveMonths);
+        list.add(maleThirteenToTwentyFourMonths);
+        list.add(maleTwentyFiveToFiftyNineMonths);
+        list.add(maleFiveToNine);
+        list.add(maleTenToFourteen);
+        list.add(maleFifteenToNineteen);
+        list.add(maleTwentyToTwentyFour);
+        list.add(maleTwentyFiveToTwentyNine);
+        list.add(maleThirtyToFortyNine);
+        list.add(maleFiftyPlus);
+
+        for (EditText editText : list) {
+            editText.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+
+                public void onFocusChange(View v, boolean hasFocus) {
+                    if (!hasFocus) {
+
+                        registerForm.maleLessThanTwoMonths9 = AppUtil.getLongValue(maleLessThanTwoMonths.getText().toString());
+                        registerForm.maleTwoToTwelveMonths9 = AppUtil.getLongValue(maleTwoToTwelveMonths.getText().toString());
+                        registerForm.maleThirteenToTwentyFourMonths9 = AppUtil.getLongValue(maleThirteenToTwentyFourMonths.getText().toString());
+                        registerForm.maleTwentyFiveToFiftyNineMonths9 = AppUtil.getLongValue(maleTwentyFiveToFiftyNineMonths.getText().toString());
+                        registerForm.maleFiveToNine9 = AppUtil.getLongValue(maleFiveToNine.getText().toString());
+                        registerForm.maleTenToFourteen9 = AppUtil.getLongValue(maleTenToFourteen.getText().toString());
+                        registerForm.maleFifteenToNineteen9 = AppUtil.getLongValue(maleFifteenToNineteen.getText().toString());
+                        registerForm.maleTwentyToTwentyFour9 = AppUtil.getLongValue(maleTwentyToTwentyFour.getText().toString());
+                        registerForm.maleTwentyFiveToTwentyNine9 = AppUtil.getLongValue(maleTwentyFiveToTwentyNine.getText().toString());
+                        registerForm.maleThirtyToFortyNine9 = AppUtil.getLongValue(maleThirtyToFortyNine.getText().toString());
+                        registerForm.maleFiftyPlus9 = AppUtil.getLongValue(maleFiftyPlus.getText().toString());
+
+                        maleTotal.setText(AppUtil.getLongValue(registerForm.maleQuestion9()));
+                    }
+
+                }
+            });
+        }
+
+        list = new ArrayList<>();
+        list.add(femaleLessThanTwoMonths);
+        list.add(femaleTwoToTwelveMonths);
+        list.add(femaleThirteenToTwentyFourMonths);
+        list.add(femaleTwentyFiveToFiftyNineMonths);
+        list.add(femaleFiveToNine);
+        list.add(femaleTenToFourteen);
+        list.add(femaleFifteenToNineteen);
+        list.add(femaleTwentyToTwentyFour);
+        list.add(femaleTwentyFiveToTwentyNine);
+        list.add(femaleThirtyToFortyNine);
+        list.add(femaleFiftyPlus);
+
+        for (EditText editText : list) {
+            editText.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+
+                public void onFocusChange(View v, boolean hasFocus) {
+                    if (!hasFocus) {
+
+                        registerForm.femaleLessThanTwoMonths9 = AppUtil.getLongValue(femaleLessThanTwoMonths.getText().toString());
+                        registerForm.femaleTwoToTwelveMonths9 = AppUtil.getLongValue(femaleTwoToTwelveMonths.getText().toString());
+                        registerForm.femaleThirteenToTwentyFourMonths9 = AppUtil.getLongValue(femaleThirteenToTwentyFourMonths.getText().toString());
+                        registerForm.femaleTwentyFiveToFiftyNineMonths9 = AppUtil.getLongValue(femaleTwentyFiveToFiftyNineMonths.getText().toString());
+                        registerForm.femaleFiveToNine9 = AppUtil.getLongValue(femaleFiveToNine.getText().toString());
+                        registerForm.femaleTenToFourteen9 = AppUtil.getLongValue(femaleTenToFourteen.getText().toString());
+                        registerForm.femaleFifteenToNineteen9 = AppUtil.getLongValue(femaleFifteenToNineteen.getText().toString());
+                        registerForm.femaleTwentyToTwentyFour9 = AppUtil.getLongValue(femaleTwentyToTwentyFour.getText().toString());
+                        registerForm.femaleTwentyFiveToTwentyNine9 = AppUtil.getLongValue(femaleTwentyFiveToTwentyNine.getText().toString());
+                        registerForm.femaleThirtyToFortyNine9 = AppUtil.getLongValue(femaleThirtyToFortyNine.getText().toString());
+                        registerForm.femaleFiftyPlus9 = AppUtil.getLongValue(femaleFiftyPlus.getText().toString());
+
+                        femaleTotal.setText(AppUtil.getLongValue(registerForm.femaleQuestion9()));
+                    }
+
+                }
+            });
+        }
+
+        Button saveButton = (Button) dialog.findViewById(R.id.btn_save);
+        saveButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+
+                registerForm.maleLessThanTwoMonths9 = AppUtil.getLongValue(maleLessThanTwoMonths.getText().toString());
+                registerForm.maleTwoToTwelveMonths9 = AppUtil.getLongValue(maleTwoToTwelveMonths.getText().toString());
+                registerForm.maleThirteenToTwentyFourMonths9 = AppUtil.getLongValue(maleThirteenToTwentyFourMonths.getText().toString());
+                registerForm.maleTwentyFiveToFiftyNineMonths9 = AppUtil.getLongValue(maleTwentyFiveToFiftyNineMonths.getText().toString());
+                registerForm.maleFiveToNine9 = AppUtil.getLongValue(maleFiveToNine.getText().toString());
+                registerForm.maleTenToFourteen9 = AppUtil.getLongValue(maleTenToFourteen.getText().toString());
+                registerForm.maleFifteenToNineteen9 = AppUtil.getLongValue(maleFifteenToNineteen.getText().toString());
+                registerForm.maleTwentyToTwentyFour9 = AppUtil.getLongValue(maleTwentyToTwentyFour.getText().toString());
+                registerForm.maleTwentyFiveToTwentyNine9 = AppUtil.getLongValue(maleTwentyFiveToTwentyNine.getText().toString());
+                registerForm.maleThirtyToFortyNine9 = AppUtil.getLongValue(maleThirtyToFortyNine.getText().toString());
+                registerForm.maleFiftyPlus9 = AppUtil.getLongValue(maleFiftyPlus.getText().toString());
+                registerForm.femaleLessThanTwoMonths9 = AppUtil.getLongValue(femaleLessThanTwoMonths.getText().toString());
+                registerForm.femaleTwoToTwelveMonths9 = AppUtil.getLongValue(femaleTwoToTwelveMonths.getText().toString());
+                registerForm.femaleThirteenToTwentyFourMonths9 = AppUtil.getLongValue(femaleThirteenToTwentyFourMonths.getText().toString());
+                registerForm.femaleTwentyFiveToFiftyNineMonths9 = AppUtil.getLongValue(femaleTwentyFiveToFiftyNineMonths.getText().toString());
+                registerForm.femaleFiveToNine9 = AppUtil.getLongValue(femaleFiveToNine.getText().toString());
+                registerForm.femaleTenToFourteen9 = AppUtil.getLongValue(femaleTenToFourteen.getText().toString());
+                registerForm.femaleFifteenToNineteen9 = AppUtil.getLongValue(femaleFifteenToNineteen.getText().toString());
+                registerForm.femaleTwentyToTwentyFour9 = AppUtil.getLongValue(femaleTwentyToTwentyFour.getText().toString());
+                registerForm.femaleTwentyFiveToTwentyNine9 = AppUtil.getLongValue(femaleTwentyFiveToTwentyNine.getText().toString());
+                registerForm.femaleThirtyToFortyNine9 = AppUtil.getLongValue(femaleThirtyToFortyNine.getText().toString());
+                registerForm.femaleFiftyPlus9 = AppUtil.getLongValue(femaleFiftyPlus.getText().toString());
+
+                upDateForm();
+                dialog.dismiss();
+            }
+        });
+
+        dialog.setCancelable(true);
+        dialog.show();
+
+    }
+
     public void upDateForm() {
 
         btn_question_one.setText(this.getString(R.string.register_question_one)
@@ -2046,6 +2415,8 @@ public class MonthReportFormActivity extends MenuBar implements View.OnClickList
 
         btn_question_nine.setText(this.getString(R.string.pmtct_eid));
         btn_question_ten.setText(this.getString(R.string.pmtct_stat));
+        btn_question_thirteen.setText("Tx-Curr [ " + (registerForm.maleQuestion9() + registerForm.femaleQuestion9()) + " ]");
+        btn_question_twelve.setText("Tx-New [ " + (registerForm.maleQuestion10() + registerForm.femaleQuestion10()) + " ]");
     }
 }
 
