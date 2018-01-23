@@ -337,13 +337,15 @@
                     android:layout_height="wrap_content"
                     android:layout_width="200dp"
                     android:paddingBottom="20dp"
+                    android:id="@+id/dateDefaulterTrackingImplementedLabel"
+                    android:visibility="gone"
                     android:text="14. Date Began Implementing defaulter Tracking" />
 
                 <EditText
                     android:id="@+id/dateDefaulterTrackingImplemented"
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
-                    android:enabled="false"
+                    android:visibility="gone"
                     android:inputType="number" />
             </TableRow>
 
@@ -375,13 +377,15 @@
                         android:layout_height="wrap_content"
                         android:layout_width="200dp"
                         android:paddingBottom="20dp"
+                        android:id="@+id/dateIndexTestingImplementedLabel"
+                        android:visibility="gone"
                         android:text="16. Date began implementing Index Case Testing" />
 
                 <EditText
                         android:id="@+id/dateIndexTestingImplemented"
                         android:layout_width="120dp"
                         android:layout_height="wrap_content"
-                        android:enabled="false"
+                        android:visibility="gone"
                         android:inputType="number" />
             </TableRow>
 
@@ -413,13 +417,15 @@
                         android:layout_height="wrap_content"
                         android:layout_width="200dp"
                         android:paddingBottom="20dp"
+                        android:id="@+id/dateRetestPriorToARTInitiationImplementedLabel"
+                        android:visibility="gone"
                         android:text="18. Date began Implementing Re-testing prior to ART Initiation" />
 
                 <EditText
                         android:id="@+id/dateRetestPriorToARTInitiationImplemented"
                         android:layout_width="120dp"
                         android:layout_height="wrap_content"
-                        android:enabled="false"
+                        android:visibility="gone"
                         android:inputType="number" />
             </TableRow>
 
@@ -451,13 +457,15 @@
                     android:layout_width="200dp"
                     android:paddingBottom="20dp"
                     android:layout_height="wrap_content"
+                    android:id="@+id/dateStaticHTSHRSDeployedLabel"
+                    android:visibility="gone"
                     android:text="20. Date static HRH HTS deployed" />
 
                 <EditText
                     android:id="@+id/dateStaticHTSHRSDeployed"
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
-                    android:enabled="false"
+                    android:visibility="gone"
                     android:inputType="number" />
             </TableRow>
 
@@ -489,13 +497,15 @@
                         android:layout_width="200dp"
                         android:paddingBottom="20dp"
                         android:layout_height="wrap_content"
+                        android:id="@+id/dateStaticTXNEWHRHDeployedLabel"
+                        android:visibility="gone"
                         android:text="22. Date static HRH TX_NEW deployed" />
 
                 <EditText
                         android:id="@+id/dateStaticTXNEWHRHDeployed"
                         android:layout_width="120dp"
                         android:layout_height="wrap_content"
-                        android:enabled="false"
+                        android:visibility="gone"
                         android:inputType="number" />
             </TableRow>
 
@@ -527,13 +537,15 @@
                         android:layout_width="200dp"
                         android:paddingBottom="20dp"
                         android:layout_height="wrap_content"
+                        android:id="@+id/dateMultiMonthDrugDispensingStartedLabel"
+                        android:visibility="gone"
                         android:text="24. Date multi-month drug dispensing Started" />
 
                 <EditText
                         android:id="@+id/dateMultiMonthDrugDispensingStarted"
                         android:layout_width="120dp"
                         android:layout_height="wrap_content"
-                        android:enabled="false"
+                        android:visibility="gone"
                         android:inputType="number" />
             </TableRow>
 

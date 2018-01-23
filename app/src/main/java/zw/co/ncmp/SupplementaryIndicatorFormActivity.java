@@ -93,6 +93,13 @@ public class SupplementaryIndicatorFormActivity extends MenuBar implements View.
     EditText facility_label;
     ArrayAdapter<YesNo> adapter;
 
+    TextView dateDefaulterTrackingImplementedLabel;
+    TextView dateIndexTestingImplementedLabel;
+    TextView dateRetestPriorToARTInitiationImplementedLabel;
+    TextView dateStaticHTSHRSDeployedLabel;
+    TextView dateStaticTXNEWHRHDeployedLabel;
+    TextView dateMultiMonthDrugDispensingStartedLabel;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -156,6 +163,12 @@ public class SupplementaryIndicatorFormActivity extends MenuBar implements View.
         numberOfEIDResultsReceivedAndSuccessfullyIssuedToCaregivers = (EditText) findViewById(R.id.numberOfEIDResultsReceivedAndSuccessfullyIssuedToCaregivers);
         numberOfHIVInfectedInfantsTrackedAndLinkedBackToCare = (EditText) findViewById(R.id.numberOfHIVInfectedInfantsTrackedAndLinkedBackToCare);
         numberOfVillageHealthWorkersWorkingWithITECH = (EditText) findViewById(R.id.numberOfVillageHealthWorkersWorkingWithITECH);
+        dateDefaulterTrackingImplementedLabel = (TextView) findViewById(R.id.dateDefaulterTrackingImplementedLabel);
+        dateIndexTestingImplementedLabel = (TextView) findViewById(R.id.dateIndexTestingImplementedLabel);
+        dateRetestPriorToARTInitiationImplementedLabel = (TextView) findViewById(R.id.dateRetestPriorToARTInitiationImplementedLabel);
+        dateStaticHTSHRSDeployedLabel = (TextView) findViewById(R.id.dateStaticHTSHRSDeployedLabel);
+        dateStaticTXNEWHRHDeployedLabel = (TextView) findViewById(R.id.dateStaticTXNEWHRHDeployedLabel);
+        dateMultiMonthDrugDispensingStartedLabel = (TextView) findViewById(R.id.dateMultiMonthDrugDispensingStartedLabel);
         adapter = new ArrayAdapter<>(this, R.layout.check_box_item, YesNo.values());
         areYouImplementingDefaulterTracking.setAdapter(adapter);
         areYouImplementingDefaulterTracking.setItemsCanFocus(false);
@@ -165,9 +178,11 @@ public class SupplementaryIndicatorFormActivity extends MenuBar implements View.
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 YesNo item = adapter.getItem(position);
                 if(item.equals(YesNo.YES)){
-                    dateDefaulterTrackingImplemented.setEnabled(true);
+                    dateDefaulterTrackingImplemented.setVisibility(View.VISIBLE);
+                    dateDefaulterTrackingImplementedLabel.setVisibility(View.VISIBLE);
                 }else{
-                    dateDefaulterTrackingImplemented.setEnabled(false);
+                    dateDefaulterTrackingImplemented.setVisibility(View.GONE);
+                    dateDefaulterTrackingImplementedLabel.setVisibility(View.GONE);
                 }
 
             }
@@ -181,9 +196,11 @@ public class SupplementaryIndicatorFormActivity extends MenuBar implements View.
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 YesNo item = adapter.getItem(position);
                 if(item.equals(YesNo.YES)){
-                    dateIndexTestingImplemented.setEnabled(true);
+                    dateIndexTestingImplemented.setVisibility(View.VISIBLE);
+                    dateIndexTestingImplementedLabel.setVisibility(View.VISIBLE);
                 }else{
-                    dateIndexTestingImplemented.setEnabled(false);
+                    dateIndexTestingImplemented.setVisibility(View.GONE);
+                    dateIndexTestingImplementedLabel.setVisibility(View.GONE);
                 }
 
             }
@@ -197,9 +214,11 @@ public class SupplementaryIndicatorFormActivity extends MenuBar implements View.
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 YesNo item = adapter.getItem(position);
                 if(item.equals(YesNo.YES)){
-                    dateRetestPriorToARTInitiationImplemented.setEnabled(true);
+                    dateRetestPriorToARTInitiationImplemented.setVisibility(View.VISIBLE);
+                    dateRetestPriorToARTInitiationImplementedLabel.setVisibility(View.VISIBLE);
                 }else{
-                    dateRetestPriorToARTInitiationImplemented.setEnabled(false);
+                    dateRetestPriorToARTInitiationImplemented.setVisibility(View.GONE);
+                    dateRetestPriorToARTInitiationImplementedLabel.setVisibility(View.GONE);
                 }
 
             }
@@ -213,9 +232,11 @@ public class SupplementaryIndicatorFormActivity extends MenuBar implements View.
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 YesNo item = adapter.getItem(position);
                 if(item.equals(YesNo.YES)){
-                    dateStaticHTSHRSDeployed.setEnabled(true);
+                    dateStaticHTSHRSDeployed.setVisibility(View.VISIBLE);
+                    dateStaticHTSHRSDeployedLabel.setVisibility(View.VISIBLE);
                 }else{
-                    dateStaticHTSHRSDeployed.setEnabled(false);
+                    dateStaticHTSHRSDeployed.setVisibility(View.GONE);
+                    dateStaticHTSHRSDeployedLabel.setVisibility(View.GONE);
                 }
 
             }
@@ -229,9 +250,11 @@ public class SupplementaryIndicatorFormActivity extends MenuBar implements View.
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 YesNo item = adapter.getItem(position);
                 if(item.equals(YesNo.YES)){
-                    dateStaticTXNEWHRHDeployed.setEnabled(true);
+                    dateStaticTXNEWHRHDeployed.setVisibility(View.VISIBLE);
+                    dateStaticTXNEWHRHDeployedLabel.setVisibility(View.VISIBLE);
                 }else{
-                    dateStaticTXNEWHRHDeployed.setEnabled(false);
+                    dateStaticTXNEWHRHDeployed.setVisibility(View.GONE);
+                    dateStaticTXNEWHRHDeployedLabel.setVisibility(View.GONE);
                 }
 
             }
@@ -245,9 +268,11 @@ public class SupplementaryIndicatorFormActivity extends MenuBar implements View.
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 YesNo item = adapter.getItem(position);
                 if(item.equals(YesNo.YES)){
-                    dateMultiMonthDrugDispensingStarted.setEnabled(true);
+                    dateMultiMonthDrugDispensingStarted.setVisibility(View.VISIBLE);
+                    dateMultiMonthDrugDispensingStartedLabel.setVisibility(View.VISIBLE);
                 }else{
-                    dateMultiMonthDrugDispensingStarted.setEnabled(false);
+                    dateMultiMonthDrugDispensingStarted.setVisibility(View.GONE);
+                    dateMultiMonthDrugDispensingStartedLabel.setVisibility(View.GONE);
                 }
 
             }
@@ -571,22 +596,22 @@ public class SupplementaryIndicatorFormActivity extends MenuBar implements View.
                     form.dateCATSDeployed = DateUtil.getDateFromString(dateCATSDeployed.getText().toString());
                 }
                 form.dateCLFsDeployed = DateUtil.getDateFromString(dateCLFsDeployed.getText().toString());
-                if(dateDefaulterTrackingImplemented.isEnabled()){
+                if(dateDefaulterTrackingImplemented.getVisibility() == View.VISIBLE){
                     form.dateDefaulterTrackingImplemented = DateUtil.getDateFromString(dateDefaulterTrackingImplemented.getText().toString());
                 }
-                if(dateIndexTestingImplemented.isEnabled()){
+                if(dateIndexTestingImplemented.getVisibility() == View.VISIBLE){
                     form.dateIndexTestingImplemented = DateUtil.getDateFromString(dateIndexTestingImplemented.getText().toString());
                 }
-                if(dateRetestPriorToARTInitiationImplemented.isEnabled()){
+                if(dateRetestPriorToARTInitiationImplemented.getVisibility() == View.VISIBLE){
                     form.dateRetestPriorToARTInitiationImplemented = DateUtil.getDateFromString(dateRetestPriorToARTInitiationImplemented.getText().toString());
                 }
-                if(dateStaticHTSHRSDeployed.isEnabled()){
+                if(dateStaticHTSHRSDeployed.getVisibility() == View.VISIBLE){
                     form.dateStaticHTSHRSDeployed = DateUtil.getDateFromString(dateStaticHTSHRSDeployed.getText().toString());
                 }
-                if(dateStaticTXNEWHRHDeployed.isEnabled()){
+                if(dateStaticTXNEWHRHDeployed.getVisibility() == View.VISIBLE){
                     form.dateStaticTXNEWHRHDeployed = DateUtil.getDateFromString(dateStaticTXNEWHRHDeployed.getText().toString());
                 }
-                if(dateMultiMonthDrugDispensingStarted.isEnabled()){
+                if(dateMultiMonthDrugDispensingStarted.getVisibility() == View.VISIBLE){
                     form.dateMultiMonthDrugDispensingStarted = DateUtil.getDateFromString(dateMultiMonthDrugDispensingStarted.getText().toString());
                 }
                 form.dateCreated = AppUtil.getDate(dateCreated.getText().toString());
@@ -732,7 +757,7 @@ public class SupplementaryIndicatorFormActivity extends MenuBar implements View.
         }
 
         name = dateDefaulterTrackingImplemented.getText().toString();
-        if(dateDefaulterTrackingImplemented.isEnabled() && name.isEmpty()){
+        if(dateDefaulterTrackingImplemented.getVisibility() == View.VISIBLE && name.isEmpty()){
             dateDefaulterTrackingImplemented.setError(getResources().getString(R.string.required_field_error));
             valid = false;
         }else{
@@ -749,7 +774,7 @@ public class SupplementaryIndicatorFormActivity extends MenuBar implements View.
         }
 
         name = dateIndexTestingImplemented.getText().toString();
-        if(dateIndexTestingImplemented.isEnabled() && name.isEmpty()){
+        if(dateIndexTestingImplemented.getVisibility() == View.VISIBLE && name.isEmpty()){
             dateIndexTestingImplemented.setError(getResources().getString(R.string.required_field_error));
             valid = false;
         }else{
@@ -766,7 +791,7 @@ public class SupplementaryIndicatorFormActivity extends MenuBar implements View.
         }
 
         name = dateRetestPriorToARTInitiationImplemented.getText().toString();
-        if(dateRetestPriorToARTInitiationImplemented.isEnabled() && name.isEmpty()){
+        if(dateRetestPriorToARTInitiationImplemented.getVisibility() == View.VISIBLE && name.isEmpty()){
             dateRetestPriorToARTInitiationImplemented.setError(getResources().getString(R.string.required_field_error));
             valid = false;
         }else{
@@ -783,7 +808,7 @@ public class SupplementaryIndicatorFormActivity extends MenuBar implements View.
         }
 
         name = dateStaticHTSHRSDeployed.getText().toString();
-        if(dateStaticHTSHRSDeployed.isEnabled() && name.isEmpty()){
+        if(dateStaticHTSHRSDeployed.getVisibility() == View.VISIBLE && name.isEmpty()){
             dateStaticHTSHRSDeployed.setError(getResources().getString(R.string.required_field_error));
             valid = false;
         }else{
@@ -800,7 +825,7 @@ public class SupplementaryIndicatorFormActivity extends MenuBar implements View.
         }
 
         name = dateStaticTXNEWHRHDeployed.getText().toString();
-        if(dateStaticTXNEWHRHDeployed.isEnabled() && name.isEmpty()){
+        if(dateStaticTXNEWHRHDeployed.getVisibility() == View.VISIBLE && name.isEmpty()){
             dateStaticTXNEWHRHDeployed.setError(getResources().getString(R.string.required_field_error));
             valid = false;
         }else{
@@ -817,7 +842,7 @@ public class SupplementaryIndicatorFormActivity extends MenuBar implements View.
         }
 
         name = dateMultiMonthDrugDispensingStarted.getText().toString();
-        if(dateMultiMonthDrugDispensingStarted.isEnabled() && name.isEmpty()){
+        if(dateMultiMonthDrugDispensingStarted.getVisibility() == View.VISIBLE && name.isEmpty()){
             dateMultiMonthDrugDispensingStarted.setError(getResources().getString(R.string.required_field_error));
             valid = false;
         }else{
