@@ -14,6 +14,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="?android:attr/dividerHorizontal" />
+
+            <Button
+                    android:id="@+id/btn_submit"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/selectable_item_background"
+                    android:text="Submit"
+                    android:textColor="@color/white" />
 
             <TextView
                     android:layout_width="match_parent"
@@ -171,6 +185,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Reason for not willing to be tested today"
+                    android:id="@+id/unwillingLabel"
+                    android:visibility="gone"
                     android:layout_marginTop="@dimen/activity_vertical_margin"
                     android:layout_marginStart="@dimen/activity_horizontal_margin"
                     android:layout_marginEnd="@dimen/activity_horizontal_margin"
@@ -185,6 +201,7 @@
                     android:layout_marginStart="@dimen/activity_horizontal_margin"
                     android:layout_marginEnd="@dimen/activity_horizontal_margin"
                     android:textSize="@dimen/text_size"
+                    android:visibility="gone"
                     android:dividerHeight="10.0sp" />
             <EditText
                     android:id="@+id/other"
@@ -201,6 +218,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Reason for being ineligible for HIV testing"
+                    android:id="@+id/ineligibleLabel"
+                    android:visibility="gone"
                     android:layout_marginTop="@dimen/activity_vertical_margin"
                     android:layout_marginStart="@dimen/activity_horizontal_margin"
                     android:layout_marginEnd="@dimen/activity_horizontal_margin"
@@ -215,6 +234,7 @@
                     android:layout_marginStart="@dimen/activity_horizontal_margin"
                     android:layout_marginEnd="@dimen/activity_horizontal_margin"
                     android:textSize="@dimen/text_size"
+                    android:visibility="gone"
                     android:dividerHeight="10.0sp" />
             <EditText
                     android:id="@+id/other1"
@@ -258,6 +278,22 @@
                     style="@style/ButtonStyle"
                     android:text="@string/btn_save_label"
             />
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="?android:attr/dividerHorizontal" />
+            <Button
+                    android:id="@+id/btn_completed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@null"
+                    android:drawablePadding="16dp"
+                    android:drawableTop="@mipmap/ic_check"
+                    android:text="Submitted"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp" />
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

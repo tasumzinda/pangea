@@ -10,6 +10,7 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -47,6 +48,8 @@ public class CaseFileActivity extends MenuBar implements View.OnClickListener, L
     private Location location;
     protected GoogleApiClient mGoogleApiClient;
     protected Location mLastLocation;
+    private static final String[] PERMISSIONS_LOCATION = new String[]{Manifest.permission.ACCESS_FINE_LOCATION};
+    PermissionsChecker checker;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +59,7 @@ public class CaseFileActivity extends MenuBar implements View.OnClickListener, L
         Intent intent = getIntent();
         Long case_file_id = intent.getLongExtra(AppUtil.CASE_ID, 0);
         Long id = intent.getLongExtra(AppUtil.ID, 0);
+        checker = new PermissionsChecker(this);
 
         buildGoogleApiClient();
         location = getLocation();
@@ -182,6 +186,7 @@ public class CaseFileActivity extends MenuBar implements View.OnClickListener, L
 
     @Override
     public void onLocationChanged(Location m) {
+        Log.d("Test", String.valueOf(m == null));
         if (m != null) {
             longitude_created.setText(String.valueOf(m.getLongitude()));
             latitude_created.setText(String.valueOf(m.getLatitude()));
@@ -189,7 +194,12 @@ public class CaseFileActivity extends MenuBar implements View.OnClickListener, L
     }
 
     public void loadGooglePlayLocation() {
-        mLastLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
+        if(checker.lacksPermissions(PERMISSIONS_LOCATION)){
+            PermissionsActivity.startActivityForResult(this, 0, PERMISSIONS_LOCATION);
+        }else{
+            mLastLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
+        }
+
     }
 
     private Location getLocation() {
@@ -214,16 +224,14 @@ public class CaseFileActivity extends MenuBar implements View.OnClickListener, L
     @Override
     protected void onResume() {
         super.onResume();
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+        /*if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED
                     || checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
                 locationManager.requestLocationUpdates(provider, 400, 1, this);
             }
         } else {
             locationManager.requestLocationUpdates(provider, 400, 1, this);
-        }
-
-
+        }*/
     }
 
     /* Remove the locationlistener updates when Activity is paused */

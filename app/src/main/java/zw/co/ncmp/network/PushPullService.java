@@ -66,13 +66,8 @@ public class PushPullService extends IntentService {
                 if (httpUrl.equals(AppUtil.getPeriodUrl(context))) {
                     loadPeriods(AppUtil.run(httpUrl, context));
                 }
-                if (httpUrl.equals(AppUtil.getProvinceUrl(context))) {
-                    loadProvince(AppUtil.run(httpUrl, context));
-                }
-                if (httpUrl.equals(AppUtil.getDistrictUrl(context))) {
-                    loadDistricts(AppUtil.run(httpUrl, context));
-                }
-                if (httpUrl.equals(AppUtil.getFacilityUrl(context))) {
+
+                if (httpUrl.equals(AppUtil.getMentorFacilitiesUrl(context))) {
                     loadFactilities(AppUtil.run(httpUrl, context));
                 }
             } catch (IOException e) {
@@ -346,6 +341,15 @@ public class PushPullService extends IntentService {
             result = Activity.RESULT_CANCELED;
         }
 
+        try {
+            for (HTSEligibilityScreeningForm m : HTSEligibilityScreeningForm.getFilesToUpload()) {
+                save(run(AppUtil.getPushHTSEligibilityScreenReportUrl(context, m.facility.serverId), m), m);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            result = Activity.RESULT_CANCELED;
+        }
+
         publishResults(result);
     }
 
@@ -357,9 +361,7 @@ public class PushPullService extends IntentService {
 
     public List<HttpUrl> getHttpUrls() {
         List<HttpUrl> static_lists = new ArrayList<>();
-        static_lists.add(AppUtil.getProvinceUrl(context));
-        static_lists.add(AppUtil.getDistrictUrl(context));
-        static_lists.add(AppUtil.getFacilityUrl(context));
+        static_lists.add(AppUtil.getMentorFacilitiesUrl(context));
         static_lists.add(AppUtil.getChallengeStatusUrl(context));
         static_lists.add(AppUtil.getChallengeUrl(context));
         static_lists.add(AppUtil.getDesignationUrl(context));
@@ -1034,6 +1036,18 @@ public class PushPullService extends IntentService {
 
     }
 
+    private String run(HttpUrl httpUrl, HTSEligibilityScreeningForm form) {
+
+        OkHttpClient client = new OkHttpClient();
+        client = AppUtil.connectionSettings(client);
+        client = AppUtil.getUnsafeOkHttpClient(client);
+        client = AppUtil.createAuthenticationData(client, context);
+        form.dateC = AppUtil.getStringDate(form.date);
+        String json = gson.toJson(form);
+        return AppUtil.getResponeBody(client, httpUrl, json);
+
+    }
+
     public CaseFile save(String data, CaseFile item) {
         try {
             Long id = Long.valueOf(data);
@@ -1111,6 +1125,18 @@ public class PushPullService extends IntentService {
     }
 
     public ARTForm save(String data, ARTForm item) {
+        try {
+            Long id = Long.valueOf(data);
+            item.serverId = id;
+            item.save();
+            return item;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public HTSEligibilityScreeningForm save(String data, HTSEligibilityScreeningForm item) {
         try {
             Long id = Long.valueOf(data);
             item.serverId = id;

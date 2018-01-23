@@ -30,9 +30,11 @@ public class HTSEligibilityScreeningForm extends Model{
     @Column
     public Integer cardNumber;
 
-    @Expose
     @Column
     public Date date;
+
+    @Expose
+    public String dateC;
 
     @Expose
     @Column
@@ -40,7 +42,7 @@ public class HTSEligibilityScreeningForm extends Model{
 
     @Expose
     @Column
-    public String time;
+    public String mTime;
 
     @Expose
     @Column
@@ -62,19 +64,16 @@ public class HTSEligibilityScreeningForm extends Model{
     @Column
     public String reasonForUnwillingnessToBeTested;
 
-    public ReasonForUnwillingnessToBeTested reasonForUnwillingness;
-
     @Expose
     @Column
     public String reasonForIneligibilityForTesting;
-
-    public ReasonForIneligibilityForTesting reasonForIneligibility;
 
     @Expose
     @Column
     public String servicesBeingSought;
 
-    public ClientServices clientServices;
+    @Column(name = "date_submitted", notNull = false)
+    public Date dateSubmitted;
 
     public HTSEligibilityScreeningForm(){
         super();
@@ -87,9 +86,24 @@ public class HTSEligibilityScreeningForm extends Model{
                 .executeSingle();
     }
 
+    public static HTSEligibilityScreeningForm findById(Long Id){
+        return new Select()
+                .from(HTSEligibilityScreeningForm.class)
+                .where("Id = ?", Id)
+                .executeSingle();
+    }
+
     public static List<HTSEligibilityScreeningForm> getAll(){
         return new Select()
                 .from(HTSEligibilityScreeningForm.class)
+                .execute();
+    }
+
+    public static List<HTSEligibilityScreeningForm> getFilesToUpload() {
+        return new Select()
+                .from(HTSEligibilityScreeningForm.class)
+                .where("serverId is null")
+                .where("date_submitted is not null")
                 .execute();
     }
 

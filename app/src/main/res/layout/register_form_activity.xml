@@ -156,6 +156,98 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="TX Curr" />
+            <TextView
+                    android:text="PMTCT"
+                    style="@style/TextViewStyle"></TextView>
+            <Button
+                    android:id="@+id/btn_question_fourteen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="P1 - Pregnant Women booking for first ANC VisitTX Curr" />
+
+            <Button
+                    android:id="@+id/btn_question_fifteen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="P2 - Pregnant women booking for first ANC visit with known HIV positive result" />
+
+            <Button
+                    android:id="@+id/btn_question_sixteen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="P3 - Pregnant Women HIV tested first time in ANC and received results" />
+
+            <Button
+                    android:id="@+id/btn_question_seventeen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="P4 - Pregnant Women newly testing HIV positive in ANC" />
+
+            <Button
+                    android:id="@+id/btn_question_eighteen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="P6 - Pregnant Women testing HIV positive at retest in ANC" />
+
+            <Button
+                    android:id="@+id/btn_question_nineteen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="P10 - Pregnant Women booking for first ANC visit already on ART" />
+
+            <Button
+                    android:id="@+id/btn_question_twenty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="P11 - HIV positive Pregnant Women initiated on ART in ANC &lt; 32 weeks" />
+
+            <Button
+                    android:id="@+id/btn_question_twenty_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="P12 - HIV positive Pregnant Women initiated on ART in ANC &gt;&#61; 32 weeks" />
+
+            <Button
+                    android:id="@+id/btn_question_twenty_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="P17 - Pregnant Women arriving in LD with unknown HIV Status" />
+
+            <Button
+                    android:id="@+id/btn_question_twenty_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="P18 - Pregnant Women tested in LD for the first time and received results" />
+
+            <Button
+                    android:id="@+id/btn_question_twenty_four"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="P19 - Pregnant Women testing HIV Positive at first test in LD" />
+
+            <Button
+                    android:id="@+id/btn_question_twenty_five"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="P20 - Pregnant Women arriving in LD with Negative HIV test results (due for retest)" />
+
+            <Button
+                    android:id="@+id/btn_question_twenty_six"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="P21 - Pregnant Women retested in LD and received results" />
+
+            <Button
+                    android:id="@+id/btn_question_twenty_seven"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="P22 - Pregnant Women testing HIV Positive at retesting in LD" />
+
+            <Button
+                    android:id="@+id/btn_question_twenty_eight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="P23 - HIV positive pregnant women initiated on ART in LD" />
 
             <Button
                 android:id="@+id/btn_save"

@@ -1101,6 +1101,561 @@ public class RegisterForm extends Model {
     @Column
     public Long femaleFiftyPlus10;
 
+    @Expose
+    @Column
+    public Long maleTenToFourteen11;
+    @Expose
+    @Column
+    public Long femaleTenToFourteen11;
+    @Expose
+    @Column
+    public Long maleFifteenToNineteen11;
+    @Expose
+    @Column
+    public Long femaleFifteenToNineteen11;
+    @Expose
+    @Column
+    public Long maleTwentyToTwentyFour11;
+    @Expose
+    @Column
+    public Long femaleTwentyToTwentyFour11;
+    @Expose
+    @Column
+    public Long maleTwentyFiveToTwentyNine11;
+    @Expose
+    @Column
+    public Long femaleTwentyFiveToTwentyNine11;
+    @Expose
+    @Column
+    public Long maleThirtyToFortyNine11;
+    @Expose
+    @Column
+    public Long femaleThirtyToFortyNine11;
+    @Expose
+    @Column
+    public Long maleFiftyPlus11;
+    @Expose
+    @Column
+    public Long femaleFiftyPlus11;
+
+    @Expose
+    @Column
+    public Long maleTenToFourteen12;
+    @Expose
+    @Column
+    public Long femaleTenToFourteen12;
+    @Expose
+    @Column
+    public Long maleFifteenToNineteen12;
+    @Expose
+    @Column
+    public Long femaleFifteenToNineteen12;
+    @Expose
+    @Column
+    public Long maleTwentyToTwentyFour12;
+    @Expose
+    @Column
+    public Long femaleTwentyToTwentyFour12;
+    @Expose
+    @Column
+    public Long maleTwentyFiveToTwentyNine12;
+    @Expose
+    @Column
+    public Long femaleTwentyFiveToTwentyNine12;
+    @Expose
+    @Column
+    public Long maleThirtyToFortyNine12;
+    @Expose
+    @Column
+    public Long femaleThirtyToFortyNine12;
+    @Expose
+    @Column
+    public Long maleFiftyPlus12;
+    @Expose
+    @Column
+    public Long femaleFiftyPlus12;
+
+    @Expose
+    @Column
+    public Long maleTenToFourteen13;
+    @Expose
+    @Column
+    public Long femaleTenToFourteen13;
+    @Expose
+    @Column
+    public Long maleFifteenToNineteen13;
+    @Expose
+    @Column
+    public Long femaleFifteenToNineteen13;
+    @Expose
+    @Column
+    public Long maleTwentyToTwentyFour13;
+    @Expose
+    @Column
+    public Long femaleTwentyToTwentyFour13;
+    @Expose
+    @Column
+    public Long maleTwentyFiveToTwentyNine13;
+    @Expose
+    @Column
+    public Long femaleTwentyFiveToTwentyNine13;
+    @Expose
+    @Column
+    public Long maleThirtyToFortyNine13;
+    @Expose
+    @Column
+    public Long femaleThirtyToFortyNine13;
+    @Expose
+    @Column
+    public Long maleFiftyPlus13;
+    @Expose
+    @Column
+    public Long femaleFiftyPlus13;
+
+    @Expose
+    @Column
+    public Long maleTenToFourteen14;
+    @Expose
+    @Column
+    public Long femaleTenToFourteen14;
+    @Expose
+    @Column
+    public Long maleFifteenToNineteen14;
+    @Expose
+    @Column
+    public Long femaleFifteenToNineteen14;
+    @Expose
+    @Column
+    public Long maleTwentyToTwentyFour14;
+    @Expose
+    @Column
+    public Long femaleTwentyToTwentyFour14;
+    @Expose
+    @Column
+    public Long maleTwentyFiveToTwentyNine14;
+    @Expose
+    @Column
+    public Long femaleTwentyFiveToTwentyNine14;
+    @Expose
+    @Column
+    public Long maleThirtyToFortyNine14;
+    @Expose
+    @Column
+    public Long femaleThirtyToFortyNine14;
+    @Expose
+    @Column
+    public Long maleFiftyPlus14;
+    @Expose
+    @Column
+    public Long femaleFiftyPlus14;
+
+    @Expose
+    @Column
+    public Long maleTenToFourteen15;
+    @Expose
+    @Column
+    public Long femaleTenToFourteen15;
+    @Expose
+    @Column
+    public Long maleFifteenToNineteen15;
+    @Expose
+    @Column
+    public Long femaleFifteenToNineteen15;
+    @Expose
+    @Column
+    public Long maleTwentyToTwentyFour15;
+    @Expose
+    @Column
+    public Long femaleTwentyToTwentyFour15;
+    @Expose
+    @Column
+    public Long maleTwentyFiveToTwentyNine15;
+    @Expose
+    @Column
+    public Long femaleTwentyFiveToTwentyNine15;
+    @Expose
+    @Column
+    public Long maleThirtyToFortyNine15;
+    @Expose
+    @Column
+    public Long femaleThirtyToFortyNine15;
+    @Expose
+    @Column
+    public Long maleFiftyPlus15;
+    @Expose
+    @Column
+    public Long femaleFiftyPlus15;
+
+    @Expose
+    @Column
+    public Long maleTenToFourteen16;
+    @Expose
+    @Column
+    public Long femaleTenToFourteen16;
+    @Expose
+    @Column
+    public Long maleFifteenToNineteen16;
+    @Expose
+    @Column
+    public Long femaleFifteenToNineteen16;
+    @Expose
+    @Column
+    public Long maleTwentyToTwentyFour16;
+    @Expose
+    @Column
+    public Long femaleTwentyToTwentyFour16;
+    @Expose
+    @Column
+    public Long maleTwentyFiveToTwentyNine16;
+    @Expose
+    @Column
+    public Long femaleTwentyFiveToTwentyNine16;
+    @Expose
+    @Column
+    public Long maleThirtyToFortyNine16;
+    @Expose
+    @Column
+    public Long femaleThirtyToFortyNine16;
+    @Expose
+    @Column
+    public Long maleFiftyPlus16;
+    @Expose
+    @Column
+    public Long femaleFiftyPlus16;
+
+    @Expose
+    @Column
+    public Long maleTenToFourteen17;
+    @Expose
+    @Column
+    public Long femaleTenToFourteen17;
+    @Expose
+    @Column
+    public Long maleFifteenToNineteen17;
+    @Expose
+    @Column
+    public Long femaleFifteenToNineteen17;
+    @Expose
+    @Column
+    public Long maleTwentyToTwentyFour17;
+    @Expose
+    @Column
+    public Long femaleTwentyToTwentyFour17;
+    @Expose
+    @Column
+    public Long maleTwentyFiveToTwentyNine17;
+    @Expose
+    @Column
+    public Long femaleTwentyFiveToTwentyNine17;
+    @Expose
+    @Column
+    public Long maleThirtyToFortyNine17;
+    @Expose
+    @Column
+    public Long femaleThirtyToFortyNine17;
+    @Expose
+    @Column
+    public Long maleFiftyPlus17;
+    @Expose
+    @Column
+    public Long femaleFiftyPlus17;
+
+    @Expose
+    @Column
+    public Long maleTenToFourteen18;
+    @Expose
+    @Column
+    public Long femaleTenToFourteen18;
+    @Expose
+    @Column
+    public Long maleFifteenToNineteen18;
+    @Expose
+    @Column
+    public Long femaleFifteenToNineteen18;
+    @Expose
+    @Column
+    public Long maleTwentyToTwentyFour18;
+    @Expose
+    @Column
+    public Long femaleTwentyToTwentyFour18;
+    @Expose
+    @Column
+    public Long maleTwentyFiveToTwentyNine18;
+    @Expose
+    @Column
+    public Long femaleTwentyFiveToTwentyNine18;
+    @Expose
+    @Column
+    public Long maleThirtyToFortyNine18;
+    @Expose
+    @Column
+    public Long femaleThirtyToFortyNine18;
+    @Expose
+    @Column
+    public Long maleFiftyPlus18;
+    @Expose
+    @Column
+    public Long femaleFiftyPlus18;
+
+    @Expose
+    @Column
+    public Long maleTenToFourteen19;
+    @Expose
+    @Column
+    public Long femaleTenToFourteen19;
+    @Expose
+    @Column
+    public Long maleFifteenToNineteen19;
+    @Expose
+    @Column
+    public Long femaleFifteenToNineteen19;
+    @Expose
+    @Column
+    public Long maleTwentyToTwentyFour19;
+    @Expose
+    @Column
+    public Long femaleTwentyToTwentyFour19;
+    @Expose
+    @Column
+    public Long maleTwentyFiveToTwentyNine19;
+    @Expose
+    @Column
+    public Long femaleTwentyFiveToTwentyNine19;
+    @Expose
+    @Column
+    public Long maleThirtyToFortyNine19;
+    @Expose
+    @Column
+    public Long femaleThirtyToFortyNine19;
+    @Expose
+    @Column
+    public Long maleFiftyPlus19;
+    @Expose
+    @Column
+    public Long femaleFiftyPlus19;
+
+    @Expose
+    @Column
+    public Long maleTenToFourteen20;
+    @Expose
+    @Column
+    public Long femaleTenToFourteen20;
+    @Expose
+    @Column
+    public Long maleFifteenToNineteen20;
+    @Expose
+    @Column
+    public Long femaleFifteenToNineteen20;
+    @Expose
+    @Column
+    public Long maleTwentyToTwentyFour20;
+    @Expose
+    @Column
+    public Long femaleTwentyToTwentyFour20;
+    @Expose
+    @Column
+    public Long maleTwentyFiveToTwentyNine20;
+    @Expose
+    @Column
+    public Long femaleTwentyFiveToTwentyNine20;
+    @Expose
+    @Column
+    public Long maleThirtyToFortyNine20;
+    @Expose
+    @Column
+    public Long femaleThirtyToFortyNine20;
+    @Expose
+    @Column
+    public Long maleFiftyPlus20;
+    @Expose
+    @Column
+    public Long femaleFiftyPlus20;
+
+    @Expose
+    @Column
+    public Long maleTenToFourteen21;
+    @Expose
+    @Column
+    public Long femaleTenToFourteen21;
+    @Expose
+    @Column
+    public Long maleFifteenToNineteen21;
+    @Expose
+    @Column
+    public Long femaleFifteenToNineteen21;
+    @Expose
+    @Column
+    public Long maleTwentyToTwentyFour21;
+    @Expose
+    @Column
+    public Long femaleTwentyToTwentyFour21;
+    @Expose
+    @Column
+    public Long maleTwentyFiveToTwentyNine21;
+    @Expose
+    @Column
+    public Long femaleTwentyFiveToTwentyNine21;
+    @Expose
+    @Column
+    public Long maleThirtyToFortyNine21;
+    @Expose
+    @Column
+    public Long femaleThirtyToFortyNine21;
+    @Expose
+    @Column
+    public Long maleFiftyPlus21;
+    @Expose
+    @Column
+    public Long femaleFiftyPlus21;
+
+    @Expose
+    @Column
+    public Long maleTenToFourteen22;
+    @Expose
+    @Column
+    public Long femaleTenToFourteen22;
+    @Expose
+    @Column
+    public Long maleFifteenToNineteen22;
+    @Expose
+    @Column
+    public Long femaleFifteenToNineteen22;
+    @Expose
+    @Column
+    public Long maleTwentyToTwentyFour22;
+    @Expose
+    @Column
+    public Long femaleTwentyToTwentyFour22;
+    @Expose
+    @Column
+    public Long maleTwentyFiveToTwentyNine22;
+    @Expose
+    @Column
+    public Long femaleTwentyFiveToTwentyNine22;
+    @Expose
+    @Column
+    public Long maleThirtyToFortyNine22;
+    @Expose
+    @Column
+    public Long femaleThirtyToFortyNine22;
+    @Expose
+    @Column
+    public Long maleFiftyPlus22;
+    @Expose
+    @Column
+    public Long femaleFiftyPlus22;
+
+    @Expose
+    @Column
+    public Long maleTenToFourteen23;
+    @Expose
+    @Column
+    public Long femaleTenToFourteen23;
+    @Expose
+    @Column
+    public Long maleFifteenToNineteen23;
+    @Expose
+    @Column
+    public Long femaleFifteenToNineteen23;
+    @Expose
+    @Column
+    public Long maleTwentyToTwentyFour23;
+    @Expose
+    @Column
+    public Long femaleTwentyToTwentyFour23;
+    @Expose
+    @Column
+    public Long maleTwentyFiveToTwentyNine23;
+    @Expose
+    @Column
+    public Long femaleTwentyFiveToTwentyNine23;
+    @Expose
+    @Column
+    public Long maleThirtyToFortyNine23;
+    @Expose
+    @Column
+    public Long femaleThirtyToFortyNine23;
+    @Expose
+    @Column
+    public Long maleFiftyPlus23;
+    @Expose
+    @Column
+    public Long femaleFiftyPlus23;
+
+    @Expose
+    @Column
+    public Long maleTenToFourteen24;
+    @Expose
+    @Column
+    public Long femaleTenToFourteen24;
+    @Expose
+    @Column
+    public Long maleFifteenToNineteen24;
+    @Expose
+    @Column
+    public Long femaleFifteenToNineteen24;
+    @Expose
+    @Column
+    public Long maleTwentyToTwentyFour24;
+    @Expose
+    @Column
+    public Long femaleTwentyToTwentyFour24;
+    @Expose
+    @Column
+    public Long maleTwentyFiveToTwentyNine24;
+    @Expose
+    @Column
+    public Long femaleTwentyFiveToTwentyNine24;
+    @Expose
+    @Column
+    public Long maleThirtyToFortyNine24;
+    @Expose
+    @Column
+    public Long femaleThirtyToFortyNine24;
+    @Expose
+    @Column
+    public Long maleFiftyPlus24;
+    @Expose
+    @Column
+    public Long femaleFiftyPlus24;
+
+    @Expose
+    @Column
+    public Long maleTenToFourteen25;
+    @Expose
+    @Column
+    public Long femaleTenToFourteen25;
+    @Expose
+    @Column
+    public Long maleFifteenToNineteen25;
+    @Expose
+    @Column
+    public Long femaleFifteenToNineteen25;
+    @Expose
+    @Column
+    public Long maleTwentyToTwentyFour25;
+    @Expose
+    @Column
+    public Long femaleTwentyToTwentyFour25;
+    @Expose
+    @Column
+    public Long maleTwentyFiveToTwentyNine25;
+    @Expose
+    @Column
+    public Long femaleTwentyFiveToTwentyNine25;
+    @Expose
+    @Column
+    public Long maleThirtyToFortyNine25;
+    @Expose
+    @Column
+    public Long femaleThirtyToFortyNine25;
+    @Expose
+    @Column
+    public Long maleFiftyPlus25;
+    @Expose
+    @Column
+    public Long femaleFiftyPlus25;
+
     public static RegisterForm get(Long id) {
         return new Select().from(RegisterForm.class).where("Id = ?", id).executeSingle();
     }
@@ -1340,5 +1895,176 @@ public class RegisterForm extends Model {
                 getLong(femaleFifteenToNineteen10) +
                 getLong(femaleTwentyToTwentyFour10) + getLong(femaleTwentyFiveToTwentyNine10) +
                 getLong(femaleThirtyToFortyNine10) + getLong(femaleFiftyPlus10);
+    }
+
+    public Long maleQuestion11() {
+        return getLong(maleTenToFourteen11) + getLong(maleFifteenToNineteen11) +
+                getLong(maleTwentyToTwentyFour11) + getLong(maleTwentyFiveToTwentyNine11) +
+                getLong(maleThirtyToFortyNine11) + getLong(maleFiftyPlus11);}
+
+    public Long femaleQuestion11() {
+        return getLong(femaleTenToFourteen11) + getLong(femaleFifteenToNineteen11) +
+                getLong(femaleTwentyToTwentyFour11) + getLong(femaleTwentyFiveToTwentyNine11) +
+                getLong(femaleThirtyToFortyNine11) + getLong(femaleFiftyPlus11);
+    }
+
+    public Long maleQuestion12() {
+        return getLong(maleTenToFourteen12) + getLong(maleFifteenToNineteen12) +
+                getLong(maleTwentyToTwentyFour12) + getLong(maleTwentyFiveToTwentyNine12) +
+                getLong(maleThirtyToFortyNine12) + getLong(maleFiftyPlus12);}
+
+    public Long femaleQuestion12() {
+        return getLong(femaleTenToFourteen12) + getLong(femaleFifteenToNineteen12) +
+                getLong(femaleTwentyToTwentyFour12) + getLong(femaleTwentyFiveToTwentyNine12) +
+                getLong(femaleThirtyToFortyNine12) + getLong(femaleFiftyPlus12);
+    }
+
+    public Long maleQuestion13() {
+        return getLong(maleTenToFourteen13) + getLong(maleFifteenToNineteen13) +
+                getLong(maleTwentyToTwentyFour13) + getLong(maleTwentyFiveToTwentyNine13) +
+                getLong(maleThirtyToFortyNine13) + getLong(maleFiftyPlus13);}
+
+    public Long femaleQuestion13() {
+        return getLong(femaleTenToFourteen13) + getLong(femaleFifteenToNineteen13) +
+                getLong(femaleTwentyToTwentyFour13) + getLong(femaleTwentyFiveToTwentyNine13) +
+                getLong(femaleThirtyToFortyNine13) + getLong(femaleFiftyPlus13);
+    }
+
+    public Long maleQuestion14() {
+        return getLong(maleTenToFourteen14) + getLong(maleFifteenToNineteen14) +
+                getLong(maleTwentyToTwentyFour14) + getLong(maleTwentyFiveToTwentyNine14) +
+                getLong(maleThirtyToFortyNine14) + getLong(maleFiftyPlus14);}
+
+    public Long femaleQuestion14() {
+        return getLong(femaleTenToFourteen14) + getLong(femaleFifteenToNineteen14) +
+                getLong(femaleTwentyToTwentyFour14) + getLong(femaleTwentyFiveToTwentyNine14) +
+                getLong(femaleThirtyToFortyNine14) + getLong(femaleFiftyPlus14);
+    }
+
+    public Long maleQuestion15() {
+        return getLong(maleTenToFourteen15) + getLong(maleFifteenToNineteen15) +
+                getLong(maleTwentyToTwentyFour15) + getLong(maleTwentyFiveToTwentyNine15) +
+                getLong(maleThirtyToFortyNine15) + getLong(maleFiftyPlus15);}
+
+    public Long femaleQuestion15() {
+        return getLong(femaleTenToFourteen15) + getLong(femaleFifteenToNineteen15) +
+                getLong(femaleTwentyToTwentyFour15) + getLong(femaleTwentyFiveToTwentyNine15) +
+                getLong(femaleThirtyToFortyNine15) + getLong(femaleFiftyPlus15);
+    }
+
+    public Long maleQuestion16() {
+        return getLong(maleTenToFourteen16) + getLong(maleFifteenToNineteen16) +
+                getLong(maleTwentyToTwentyFour16) + getLong(maleTwentyFiveToTwentyNine16) +
+                getLong(maleThirtyToFortyNine16) + getLong(maleFiftyPlus16);}
+
+    public Long femaleQuestion16() {
+        return getLong(femaleTenToFourteen16) + getLong(femaleFifteenToNineteen16) +
+                getLong(femaleTwentyToTwentyFour16) + getLong(femaleTwentyFiveToTwentyNine16) +
+                getLong(femaleThirtyToFortyNine16) + getLong(femaleFiftyPlus16);
+    }
+
+    public Long maleQuestion17() {
+        return getLong(maleTenToFourteen17) + getLong(maleFifteenToNineteen17) +
+                getLong(maleTwentyToTwentyFour17) + getLong(maleTwentyFiveToTwentyNine17) +
+                getLong(maleThirtyToFortyNine17) + getLong(maleFiftyPlus17);}
+
+    public Long femaleQuestion17() {
+        return getLong(femaleTenToFourteen17) + getLong(femaleFifteenToNineteen17) +
+                getLong(femaleTwentyToTwentyFour17) + getLong(femaleTwentyFiveToTwentyNine17) +
+                getLong(femaleThirtyToFortyNine17) + getLong(femaleFiftyPlus17);
+    }
+
+    public Long maleQuestion18() {
+        return getLong(maleTenToFourteen18) + getLong(maleFifteenToNineteen18) +
+                getLong(maleTwentyToTwentyFour18) + getLong(maleTwentyFiveToTwentyNine18) +
+                getLong(maleThirtyToFortyNine18) + getLong(maleFiftyPlus18);}
+
+    public Long femaleQuestion18() {
+        return getLong(femaleTenToFourteen18) + getLong(femaleFifteenToNineteen18) +
+                getLong(femaleTwentyToTwentyFour18) + getLong(femaleTwentyFiveToTwentyNine18) +
+                getLong(femaleThirtyToFortyNine18) + getLong(femaleFiftyPlus18);
+    }
+
+    public Long maleQuestion19() {
+        return getLong(maleTenToFourteen19) + getLong(maleFifteenToNineteen19) +
+                getLong(maleTwentyToTwentyFour19) + getLong(maleTwentyFiveToTwentyNine19) +
+                getLong(maleThirtyToFortyNine19) + getLong(maleFiftyPlus19);}
+
+    public Long femaleQuestion19() {
+        return getLong(femaleTenToFourteen19) + getLong(femaleFifteenToNineteen19) +
+                getLong(femaleTwentyToTwentyFour19) + getLong(femaleTwentyFiveToTwentyNine19) +
+                getLong(femaleThirtyToFortyNine19) + getLong(femaleFiftyPlus19);
+    }
+
+    public Long maleQuestion20() {
+        return getLong(maleTenToFourteen20) + getLong(maleFifteenToNineteen20) +
+                getLong(maleTwentyToTwentyFour20) + getLong(maleTwentyFiveToTwentyNine20) +
+                getLong(maleThirtyToFortyNine20) + getLong(maleFiftyPlus20);
+    }
+
+    public Long femaleQuestion20() {
+        return getLong(femaleTenToFourteen20) + getLong(femaleFifteenToNineteen20) +
+                getLong(femaleTwentyToTwentyFour20) + getLong(femaleTwentyFiveToTwentyNine20) +
+                getLong(femaleThirtyToFortyNine20) + getLong(femaleFiftyPlus20);
+    }
+
+    public Long maleQuestion21() {
+        return getLong(maleTenToFourteen21) + getLong(maleFifteenToNineteen21) +
+                getLong(maleTwentyToTwentyFour21) + getLong(maleTwentyFiveToTwentyNine21) +
+                getLong(maleThirtyToFortyNine21) + getLong(maleFiftyPlus21);
+    }
+
+    public Long femaleQuestion21() {
+        return getLong(femaleTenToFourteen21) + getLong(femaleFifteenToNineteen21) +
+                getLong(femaleTwentyToTwentyFour21) + getLong(femaleTwentyFiveToTwentyNine21) +
+                getLong(femaleThirtyToFortyNine21) + getLong(femaleFiftyPlus21);
+    }
+
+    public Long maleQuestion22() {
+        return getLong(maleTenToFourteen22) + getLong(maleFifteenToNineteen22) +
+                getLong(maleTwentyToTwentyFour22) + getLong(maleTwentyFiveToTwentyNine22) +
+                getLong(maleThirtyToFortyNine22) + getLong(maleFiftyPlus22);
+    }
+
+    public Long femaleQuestion22() {
+        return getLong(femaleTenToFourteen22) + getLong(femaleFifteenToNineteen22) +
+                getLong(femaleTwentyToTwentyFour22) + getLong(femaleTwentyFiveToTwentyNine22) +
+                getLong(femaleThirtyToFortyNine22) + getLong(femaleFiftyPlus22);
+    }
+
+    public Long maleQuestion23() {
+        return getLong(maleTenToFourteen23) + getLong(maleFifteenToNineteen23) +
+                getLong(maleTwentyToTwentyFour23) + getLong(maleTwentyFiveToTwentyNine23) +
+                getLong(maleThirtyToFortyNine23) + getLong(maleFiftyPlus23);
+    }
+
+    public Long femaleQuestion23() {
+        return getLong(femaleTenToFourteen23) + getLong(femaleFifteenToNineteen23) +
+                getLong(femaleTwentyToTwentyFour23) + getLong(femaleTwentyFiveToTwentyNine23) +
+                getLong(femaleThirtyToFortyNine23) + getLong(femaleFiftyPlus23);
+    }
+
+    public Long maleQuestion24() {
+        return getLong(maleTenToFourteen24) + getLong(maleFifteenToNineteen24) +
+                getLong(maleTwentyToTwentyFour24) + getLong(maleTwentyFiveToTwentyNine24) +
+                getLong(maleThirtyToFortyNine24) + getLong(maleFiftyPlus24);
+    }
+
+    public Long femaleQuestion24() {
+        return getLong(femaleTenToFourteen24) + getLong(femaleFifteenToNineteen24) +
+                getLong(femaleTwentyToTwentyFour24) + getLong(femaleTwentyFiveToTwentyNine24) +
+                getLong(femaleThirtyToFortyNine24) + getLong(femaleFiftyPlus24);
+    }
+
+    public Long maleQuestion25() {
+        return getLong(maleTenToFourteen25) + getLong(maleFifteenToNineteen25) +
+                getLong(maleTwentyToTwentyFour25) + getLong(maleTwentyFiveToTwentyNine25) +
+                getLong(maleThirtyToFortyNine25) + getLong(maleFiftyPlus25);
+    }
+
+    public Long femaleQuestion25() {
+        return getLong(femaleTenToFourteen25) + getLong(femaleFifteenToNineteen25) +
+                getLong(femaleTwentyToTwentyFour25) + getLong(femaleTwentyFiveToTwentyNine25) +
+                getLong(femaleThirtyToFortyNine25) + getLong(femaleFiftyPlus25);
     }
 }

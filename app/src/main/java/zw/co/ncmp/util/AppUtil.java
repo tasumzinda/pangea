@@ -291,6 +291,12 @@ public class AppUtil {
                 .build();
     }
 
+    public static HttpUrl getPushHTSEligibilityScreenReportUrl(Context context, Long id) {
+        return HttpUrl.parse(getWebService(context).concat("esta/hts-eligibility")).newBuilder()
+                .setQueryParameter("id", String.valueOf(id))
+                .build();
+    }
+
 
     public static HttpUrl getQualificationsUrl(Context context) {
         return HttpUrl.parse(getWebService(context).concat("static/qualifications"));
@@ -318,18 +324,6 @@ public class AppUtil {
 
     public static HttpUrl getPeriodUrl(Context context) {
         return HttpUrl.parse(getWebService(context).concat("static/period"));
-    }
-
-    public static HttpUrl getDistrictUrl(Context context) {
-        return HttpUrl.parse(getWebService(context).concat("static/district"));
-    }
-
-    public static HttpUrl getProvinceUrl(Context context) {
-        return HttpUrl.parse(getWebService(context).concat("static/province"));
-    }
-
-    public static HttpUrl getFacilityUrl(Context context) {
-        return HttpUrl.parse(getWebService(context).concat("static/facility"));
     }
 
     public static Date getDate(String dateInString) {
