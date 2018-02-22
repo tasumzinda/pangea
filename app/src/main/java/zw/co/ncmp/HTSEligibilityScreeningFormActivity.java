@@ -54,6 +54,8 @@ public class HTSEligibilityScreeningFormActivity extends MenuBar implements View
     ArrayAdapter<ReasonForIneligibilityForTesting> reasonForIneligibilityForTestingArrayAdapter;
     ListView clientServices;
     ArrayAdapter<ClientServices> clientServicesArrayAdapter;
+    ListView screeningEntryStream;
+    ArrayAdapter<ScreeningEntryStream> screeningEntryStreamArrayAdapter;
     @BindView(R.id.other)
     EditText other;
     @BindView(R.id.other1)
@@ -87,6 +89,7 @@ public class HTSEligibilityScreeningFormActivity extends MenuBar implements View
         reasonForUnwillingnessToBeTested = (ListView) findViewById(R.id.reasonForUnwillingnessToBeTested);
         reasonForIneligibilityForTesting = (ListView) findViewById(R.id.reasonForIneligibilityForTesting);
         clientServices = (ListView) findViewById(R.id.clientServices);
+        screeningEntryStream = (ListView) findViewById(R.id.screeningEntryStream);
         genderArrayAdapter = new ArrayAdapter<>(this, R.layout.check_box_item, Gender.values());
         gender.setAdapter(genderArrayAdapter);
         gender.setItemsCanFocus(false);
@@ -110,6 +113,10 @@ public class HTSEligibilityScreeningFormActivity extends MenuBar implements View
         clientServices.setAdapter(clientServicesArrayAdapter);
         clientServices.setItemsCanFocus(false);
         clientServices.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+        screeningEntryStreamArrayAdapter = new ArrayAdapter<>(this, R.layout.check_box_item, ScreeningEntryStream.values());
+        screeningEntryStream.setAdapter(screeningEntryStreamArrayAdapter);
+        screeningEntryStream.setItemsCanFocus(false);
+        screeningEntryStream.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
         datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
 
             public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
@@ -143,6 +150,8 @@ public class HTSEligibilityScreeningFormActivity extends MenuBar implements View
                     reasonForIneligibilityForTesting.setVisibility(View.VISIBLE);
                     ineligibleLabel.setVisibility(View.VISIBLE);
                     willingLayout.setVisibility(View.GONE);
+                    reasonForUnwillingnessToBeTested.setVisibility(View.GONE);
+                    unwillingLabel.setVisibility(View.GONE);
 
                 }else{
                     reasonForIneligibilityForTesting.setVisibility(View.GONE);
@@ -271,14 +280,22 @@ public class HTSEligibilityScreeningFormActivity extends MenuBar implements View
             for(i = 0; i < count; i++){
                 ClientServices current = clientServicesArrayAdapter.getItem(i);
                 if(current.getName().equals(result)){
-                    reasonForIneligibilityForTesting.setItemChecked(i, true);
+                    clientServices.setItemChecked(i, true);
                 }
             }
             if(getClientServices() == null){
                 int k = clientServicesArrayAdapter.getPosition(ClientServices.OTHER);
                 other2.setVisibility(View.VISIBLE);
                 other2.setText(result);
-                reasonForIneligibilityForTesting.setItemChecked(k, true);
+                clientServices.setItemChecked(k, true);
+            }
+            result = item.screeningEntryStream;
+            count = screeningEntryStreamArrayAdapter.getCount();
+            for(i = 0; i < count; i++){
+                ScreeningEntryStream current = screeningEntryStreamArrayAdapter.getItem(i);
+                if(current.getName().equals(result)){
+                    screeningEntryStream.setItemChecked(i, true);
+                }
             }
         }else{
             item = new HTSEligibilityScreeningForm();
@@ -363,7 +380,7 @@ public class HTSEligibilityScreeningFormActivity extends MenuBar implements View
                     item.servicesBeingSought = getClientServices().getName();
                 }
             }
-
+            item.screeningEntryStream = getScreeningEntryStream().getName();
             item.save();
             btn_submit.setVisibility(View.VISIBLE);
             AppUtil.createShortNotification(this, "Saved");
@@ -430,6 +447,16 @@ public class HTSEligibilityScreeningFormActivity extends MenuBar implements View
         return item;
     }
 
+    public ScreeningEntryStream getScreeningEntryStream(){
+        ScreeningEntryStream item = null;
+        for(int i = 0; i < screeningEntryStream.getCount(); i++){
+            if(screeningEntryStream.isItemChecked(i)){
+                item = screeningEntryStreamArrayAdapter.getItem(i);
+            }
+        }
+        return item;
+    }
+
     public boolean validate(){
         boolean isValid = true;
         if(firstName.getText().toString().isEmpty()){
@@ -481,9 +508,11 @@ public class HTSEligibilityScreeningFormActivity extends MenuBar implements View
             isValid = false;
         }
 
-        if(getWillingToBeTested() == null){
-            AppUtil.createShortNotification(this, "Please select willing to be tested");
-            isValid = false;
+        if(getEligibleForTesting() != null && getEligibleForTesting().equals(YesNo.YES)){
+            if(getWillingToBeTested() == null){
+                AppUtil.createShortNotification(this, "Please select willing to be tested");
+                isValid = false;
+            }
         }
 
         if(getWillingToBeTested() != null && getWillingToBeTested().equals(YesNo.NO)){
@@ -532,6 +561,11 @@ public class HTSEligibilityScreeningFormActivity extends MenuBar implements View
             }else{
                 other2.setError(null);
             }
+        }
+
+        if(getScreeningEntryStream() == null){
+            AppUtil.createShortNotification(this, "Please select screening entry stream");
+            isValid = false;
         }
         return isValid;
     }

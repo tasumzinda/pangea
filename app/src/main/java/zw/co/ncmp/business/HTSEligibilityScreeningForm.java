@@ -79,6 +79,10 @@ public class HTSEligibilityScreeningForm extends Model{
     @Column(name = "date_submitted", notNull = false)
     public Date dateSubmitted;
 
+    @Expose
+    @Column
+    public String screeningEntryStream;
+
     public HTSEligibilityScreeningForm(){
         super();
     }

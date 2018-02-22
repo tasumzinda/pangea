@@ -4,7 +4,7 @@ import zw.co.ncmp.util.StringUtils;
 
 public enum ClientServices {
 
-    OPD(1), IN_PATIENT(2), OI_ART(3), TB(4), STI(5), PMTCT(6), FHS(7), OTHER(8);
+    OPD(1), IN_PATIENT(2), OI_ART(3), TB(4), STI(5), PMTCT(6), FHS(7), ANC(8), PNC(9), OTHER(10);
 
     private final Integer code;
 

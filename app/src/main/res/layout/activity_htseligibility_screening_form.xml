@@ -62,7 +62,7 @@
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Card Number"
+                    android:text="HIV testing referral number"
                     android:layout_marginTop="@dimen/activity_vertical_margin"
                     android:layout_marginStart="@dimen/activity_horizontal_margin"
                     android:layout_marginEnd="@dimen/activity_horizontal_margin"
@@ -71,7 +71,7 @@
             <EditText
                     android:id="@+id/cardNumber"
                     android:inputType="number"
-                    android:hint="Card Number"
+                    android:hint="HIV testing referral number"
                     style="@style/TextBoxStyle"/>
 
             <TextView
@@ -246,7 +246,7 @@
             <ListView
                     android:id="@+id/reasonForIneligibilityForTesting"
                     android:layout_width="match_parent"
-                    android:layout_height="250dp"
+                    android:layout_height="450dp"
                     android:divider="@android:color/transparent"
                     android:layout_marginStart="@dimen/activity_horizontal_margin"
                     android:layout_marginEnd="@dimen/activity_horizontal_margin"
@@ -278,7 +278,7 @@
             <ListView
                     android:id="@+id/clientServices"
                     android:layout_width="match_parent"
-                    android:layout_height="350dp"
+                    android:layout_height="400dp"
                     android:divider="@android:color/transparent"
                     android:layout_marginStart="@dimen/activity_horizontal_margin"
                     android:layout_marginEnd="@dimen/activity_horizontal_margin"
@@ -290,6 +290,25 @@
                     android:visibility="gone"
                     android:hint="Other(Please specifty)"
                     style="@style/TextBoxStyle2"/>
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Screening Entry Stream"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_size"
+            />
+            <ListView
+                    android:id="@+id/screeningEntryStream"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:divider="@android:color/transparent"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:textSize="@dimen/text_size"
+                    android:dividerHeight="10.0sp" />
             <android.support.v7.widget.AppCompatButton
                     android:id="@+id/btn_save"
                     style="@style/ButtonStyle"
