@@ -44,7 +44,7 @@ public class HTSEligibilityScreeningFormAdapter extends ArrayAdapter<HTSEligibil
 
         ViewHolder holder = (ViewHolder) rowView.getTag();
         HTSEligibilityScreeningForm item = list.get(position);
-        holder.name.setText((position + 1) + ". " + item.clientName + " " + item.facility);
+        holder.name.setText((position + 1) + ". " + item.firstName + " " + item.lastName + " " + item.facility);
         return rowView;
     }
 

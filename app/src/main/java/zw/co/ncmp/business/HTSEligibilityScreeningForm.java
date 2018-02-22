@@ -24,7 +24,11 @@ public class HTSEligibilityScreeningForm extends Model{
 
     @Expose
     @Column
-    public String clientName;
+    public String firstName;
+
+    @Expose
+    @Column
+    public String lastName;
 
     @Expose
     @Column

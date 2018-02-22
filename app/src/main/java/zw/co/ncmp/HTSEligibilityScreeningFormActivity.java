@@ -24,8 +24,10 @@ import java.util.Date;
 
 public class HTSEligibilityScreeningFormActivity extends MenuBar implements View.OnClickListener {
 
-    @BindView(R.id.name)
-    EditText clientName;
+    @BindView(R.id.first_name)
+    EditText firstName;
+    @BindView(R.id.surname)
+    EditText surname;
     @BindView(R.id.btn_save)
     Button save;
     @BindView(R.id.cardNumber)
@@ -190,7 +192,8 @@ public class HTSEligibilityScreeningFormActivity extends MenuBar implements View
         btn_submit.setOnClickListener(this);
         if(id != 0){
             item = HTSEligibilityScreeningForm.findById(id);
-            clientName.setText(item.clientName);
+            firstName.setText(item.firstName);
+            surname.setText(item.lastName);
             cardNumber.setText(String.valueOf(item.cardNumber));
             updateLabel(date, item.date);
             int i = 0;
@@ -322,7 +325,8 @@ public class HTSEligibilityScreeningFormActivity extends MenuBar implements View
 
     public void save(){
         if(validate()){
-            item.clientName = clientName.getText().toString();
+            item.firstName = firstName.getText().toString();
+            item.lastName = surname.getText().toString();
             item.cardNumber = Integer.parseInt(cardNumber.getText().toString());
             item.date = DateUtil.getDateFromString(date.getText().toString());
             item.facility = (Facility) facility.getSelectedItem();
@@ -423,11 +427,18 @@ public class HTSEligibilityScreeningFormActivity extends MenuBar implements View
 
     public boolean validate(){
         boolean isValid = true;
-        if(clientName.getText().toString().isEmpty()){
-            clientName.setError(getResources().getString(R.string.required_field_error));
+        if(firstName.getText().toString().isEmpty()){
+            firstName.setError(getResources().getString(R.string.required_field_error));
             isValid = false;
         }else{
-            clientName.setError(null);
+            firstName.setError(null);
+        }
+
+        if(surname.getText().toString().isEmpty()){
+            surname.setError(getResources().getString(R.string.required_field_error));
+            isValid = false;
+        }else{
+            surname.setError(null);
         }
 
         if(cardNumber.getText().toString().isEmpty()){
