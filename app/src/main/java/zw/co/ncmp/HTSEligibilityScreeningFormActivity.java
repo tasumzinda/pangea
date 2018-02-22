@@ -68,6 +68,8 @@ public class HTSEligibilityScreeningFormActivity extends MenuBar implements View
     TextView unwillingLabel;
     @BindView(R.id.ineligibleLabel)
     TextView ineligibleLabel;
+    @BindView(R.id.willingLayout)
+    LinearLayout willingLayout;
     HTSEligibilityScreeningForm item;
 
     @Override
@@ -140,9 +142,12 @@ public class HTSEligibilityScreeningFormActivity extends MenuBar implements View
                 if(item.equals(YesNo.NO)){
                     reasonForIneligibilityForTesting.setVisibility(View.VISIBLE);
                     ineligibleLabel.setVisibility(View.VISIBLE);
+                    willingLayout.setVisibility(View.GONE);
+
                 }else{
                     reasonForIneligibilityForTesting.setVisibility(View.GONE);
                     ineligibleLabel.setVisibility(View.GONE);
+                    willingLayout.setVisibility(View.VISIBLE);
                 }
             }
         });
