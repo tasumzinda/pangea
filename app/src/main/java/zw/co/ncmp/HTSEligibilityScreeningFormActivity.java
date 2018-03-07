@@ -19,8 +19,10 @@ import zw.co.ncmp.business.util.*;
 import zw.co.ncmp.util.AppUtil;
 import zw.co.ncmp.util.DateUtil;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 public class HTSEligibilityScreeningFormActivity extends MenuBar implements View.OnClickListener {
 
@@ -90,7 +92,7 @@ public class HTSEligibilityScreeningFormActivity extends MenuBar implements View
         reasonForIneligibilityForTesting = (ListView) findViewById(R.id.reasonForIneligibilityForTesting);
         clientServices = (ListView) findViewById(R.id.clientServices);
         screeningEntryStream = (ListView) findViewById(R.id.screeningEntryStream);
-        genderArrayAdapter = new ArrayAdapter<>(this, R.layout.check_box_item, Gender.values());
+        genderArrayAdapter = new ArrayAdapter<>(this, R.layout.check_box_item, Gender.getItems());
         gender.setAdapter(genderArrayAdapter);
         gender.setItemsCanFocus(false);
         gender.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
@@ -108,7 +110,7 @@ public class HTSEligibilityScreeningFormActivity extends MenuBar implements View
         reasonForIneligibilityForTestingArrayAdapter = new ArrayAdapter<>(this, R.layout.check_box_item, ReasonForIneligibilityForTesting.values());
         reasonForIneligibilityForTesting.setAdapter(reasonForIneligibilityForTestingArrayAdapter);
         reasonForIneligibilityForTesting.setItemsCanFocus(false);
-        reasonForIneligibilityForTesting.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+        reasonForIneligibilityForTesting.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
         clientServicesArrayAdapter = new ArrayAdapter<>(this, R.layout.check_box_item, ClientServices.values());
         clientServices.setAdapter(clientServicesArrayAdapter);
         clientServices.setItemsCanFocus(false);
@@ -196,7 +198,6 @@ public class HTSEligibilityScreeningFormActivity extends MenuBar implements View
                 }
             }
         });
-
         facilityArrayAdapter = new ArrayAdapter<>(getApplicationContext(), R.layout.spinner_item, Facility.getAll());
         facilityArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         facility.setAdapter(facilityArrayAdapter);
@@ -358,11 +359,23 @@ public class HTSEligibilityScreeningFormActivity extends MenuBar implements View
             item.eligibleForHIVTest = getEligibleForTesting();
             item.willingToBeTestedToday = getWillingToBeTested();
             if(getReasonForIneligibilityForTesting() != null){
-                if(getReasonForIneligibilityForTesting().getName().equals("Other")){
-                    item.reasonForIneligibilityForTesting = other1.getText().toString();
-                }else{
-                    item.reasonForIneligibilityForTesting = getReasonForIneligibilityForTesting().getName();
+                String name = "";
+                int count = 0;
+                for(ReasonForIneligibilityForTesting m : getReasonForIneligibilityForTesting()){
+                    if(m.getName().equals("Other")){
+                        item.reasonForIneligibilityForTesting = other1.getText().toString();
+                    }else{
+                        if(count < getReasonForIneligibilityForTesting().size() - 1){
+                            name += m.getName() + ", ";
+                        }else{
+                            name = m.getName();
+                        }
+                    }
                 }
+                if( ! name.isEmpty()){
+                    item.reasonForIneligibilityForTesting = name;
+                }
+
             }
 
             if(getReasonForUnwillingnessToBeTested() != null){
@@ -417,11 +430,11 @@ public class HTSEligibilityScreeningFormActivity extends MenuBar implements View
         return item;
     }
 
-    public ReasonForIneligibilityForTesting getReasonForIneligibilityForTesting(){
-        ReasonForIneligibilityForTesting item = null;
+    public List<ReasonForIneligibilityForTesting> getReasonForIneligibilityForTesting(){
+        List<ReasonForIneligibilityForTesting> item = new ArrayList<>();
         for(int i = 0; i < reasonForIneligibilityForTesting.getCount(); i++){
             if(reasonForIneligibilityForTesting.isItemChecked(i)){
-                item = reasonForIneligibilityForTestingArrayAdapter.getItem(i);
+                item.add(reasonForIneligibilityForTestingArrayAdapter.getItem(i));
             }
         }
         return item;

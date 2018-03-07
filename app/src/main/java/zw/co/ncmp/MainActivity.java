@@ -1,8 +1,7 @@
 package zw.co.ncmp;
 
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
+import android.app.ProgressDialog;
+import android.content.*;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.provider.Settings;
@@ -20,6 +19,7 @@ import java.util.ArrayList;
 import zw.co.ncmp.adpater.FacilityAdapter;
 import zw.co.ncmp.business.Facility;
 import zw.co.ncmp.business.Mentor;
+import zw.co.ncmp.network.PushPullService;
 import zw.co.ncmp.util.AppUtil;
 
 public class MainActivity extends MenuBar implements View.OnClickListener, AdapterView.OnItemClickListener {
@@ -46,7 +46,7 @@ public class MainActivity extends MenuBar implements View.OnClickListener, Adapt
         versionManager.setRemindMeLaterLabel("");
         versionManager.checkVersion();
         if (savedInstanceState == null) {
-            syncAppData();
+            pullAppData();
         }
 
         setContentView(R.layout.activity_main);
@@ -171,5 +171,48 @@ public class MainActivity extends MenuBar implements View.OnClickListener, Adapt
         return true;
     }
 
+    public void pullAppData() {
+        if (AppUtil.isInternetPresent(context)) {
+            progressDialog = ProgressDialog.show(this, "Please wait", "Syncing with Server...", true);
+            progressDialog.setCancelable(true);
+            Intent intent = new Intent(this, PushPullService.class);
+            startService(intent);
+        } else {
+            AppUtil.createShortNotification(this, "No Internet, Check Connectivity!");
+        }
+    }
 
+    private BroadcastReceiver receiver = new BroadcastReceiver() {
+
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            Bundle bundle = intent.getExtras();
+            if (progressDialog != null && progressDialog.isShowing()) {
+                progressDialog.dismiss();
+            }
+            updateView();
+            if (bundle != null) {
+                int resultCode = bundle.getInt(PushPullService.RESULT);
+                if (resultCode == RESULT_OK) {
+                    createNotificationDataSync("Sync Success", "Application Data Updated");
+                    AppUtil.createShortNotification(context, "Application Data Updated");
+                } else {
+                    createNotificationDataSync("Sync Fail", "Incomplete Application Data");
+                    AppUtil.createShortNotification(context, "Incomplete Application Data");
+                }
+            }
+        }
+    };
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        registerReceiver(receiver, new IntentFilter(PushPullService.NOTIFICATION));
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        unregisterReceiver(receiver);
+    }
 }

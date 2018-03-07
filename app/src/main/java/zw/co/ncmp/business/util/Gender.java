@@ -24,6 +24,12 @@ public enum Gender {
         throw new IllegalArgumentException("Unknown parameter passed to method");
     }
 
+    private static final Gender[] VALUES = {Gender.MALE, Gender.FEMALE};
+
+    public static Gender[] getItems(){
+       return VALUES.clone();
+    }
+
     public String getName(){
         return StringUtils.toCamelCase3(super.name());
     }

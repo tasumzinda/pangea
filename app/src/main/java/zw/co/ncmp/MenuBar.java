@@ -23,6 +23,7 @@ import java.text.SimpleDateFormat;
 import zw.co.ncmp.business.NCMP;
 import zw.co.ncmp.network.AsyncTaskResultEvent;
 import zw.co.ncmp.network.PushPullService;
+import zw.co.ncmp.network.PushService;
 import zw.co.ncmp.util.AppUtil;
 
 /**
@@ -151,7 +152,7 @@ public class MenuBar extends AppCompatActivity {
         if (AppUtil.isInternetPresent(context)) {
             progressDialog = ProgressDialog.show(this, "Please wait", "Syncing with Server...", true);
             progressDialog.setCancelable(true);
-            Intent intent = new Intent(this, PushPullService.class);
+            Intent intent = new Intent(this, PushService.class);
             startService(intent);
         } else {
             AppUtil.createShortNotification(this, "No Internet, Check Connectivity!");
@@ -168,7 +169,7 @@ public class MenuBar extends AppCompatActivity {
             }
             updateView();
             if (bundle != null) {
-                int resultCode = bundle.getInt(PushPullService.RESULT);
+                int resultCode = bundle.getInt(PushService.RESULT);
                 if (resultCode == RESULT_OK) {
                     createNotificationDataSync("Sync Success", "Application Data Updated");
                     AppUtil.createShortNotification(context, "Application Data Updated");
@@ -200,7 +201,7 @@ public class MenuBar extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        registerReceiver(receiver, new IntentFilter(PushPullService.NOTIFICATION));
+        registerReceiver(receiver, new IntentFilter(PushService.NOTIFICATION));
     }
 
     @Override

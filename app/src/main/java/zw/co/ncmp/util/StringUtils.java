@@ -27,15 +27,10 @@ public class StringUtils {
     private static String capitalizeWord(String word) {
 
         if (word != null && !word.trim().equals("")) {
-            return word.substring(0, 1).toUpperCase() + word.substring(1, word.length()).toLowerCase();
+            return word.substring(0, 1).toUpperCase() + word.substring(1, word.length()).toUpperCase();
         } else {
             return word;
         }
     }
 
-    public static String getWeeksFromName(String name){
-        int firstIndex = name.lastIndexOf("(");
-        int lastIndex = name.lastIndexOf(")");
-        return name.substring(firstIndex + 1, lastIndex - 3).trim();
-    }
 }
